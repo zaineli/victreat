@@ -1,37 +1,39 @@
 'use client'
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const ScrollText = ({ text }) => {
-  const textRef = useRef(null);
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 0.1 });
 
   useEffect(() => {
-    const words = Array.from(textRef.current.children);
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('text-blue-500');
-          } else {
-            entry.target.classList.remove('text-blue-500');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+    if (inView) {
+      controls.start('visible');
+    } else {
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
 
-    words.forEach((word) => observer.observe(word));
-
-    return () => {
-      words.forEach((word) => observer.unobserve(word));
-    };
-  }, []);
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
-    <div ref={textRef} className="flex flex-wrap text-2xl">
+    <div className="flex flex-wrap text-2xl">
       {text.split(' ').map((word, index) => (
-        <span key={index} className="transition-colors duration-300 mx-1">
+        <motion.span
+          key={index}
+          className="mx-1"
+          ref={ref}
+          initial="hidden"
+          animate={controls}
+          variants={variants}
+          transition={{ duration: 0.3, delay: index * 0.1 }}
+        >
           {word}
-        </span>
+        </motion.span>
       ))}
     </div>
   );
