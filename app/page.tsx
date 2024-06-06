@@ -4,10 +4,13 @@ import SearchBar from "@/components/custom/searchBar";
 
 export default function Home() {
   return (
-    <div className="bg-customGray h-screen flex items-center flex-col justify-center gap-24">
-      <HeroText />
-      <SearchBar/>
-      <ScrollText text="Unlock the Future of Authentication with Next.js and Tailwind CSS. Experience the power of dynamic styling and seamless scrolling effects." />
+    <div className="bg-customGray ">
+      <div className="h-screen flex items-center flex-col justify-center gap-24">
+
+        <HeroText />
+        <SearchBar />
+      </div>
+      <ScrollText text="Our mission is to empower cancer patients by providing clear, comprehensive information about the treatment options available for their specific diagnosis. We support patients and their families by offering up-to-date resources, expert insights, and personalized guidance. Whether newly diagnosed or exploring new treatments, our platform helps you make informed decisions and navigate your path to recovery with confidence and hope." />
     </div>
   );
 }
