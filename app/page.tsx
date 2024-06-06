@@ -1,4 +1,5 @@
 import HeroText from "@/components/custom/HeroText";
+import Carousel from "@/components/custom/caruosel";
 import ScrollText from "@/components/custom/scrollText";
 import SearchBar from "@/components/custom/searchBar";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroText />
       <SearchBar/>
       <ScrollText text="Unlock the Future of Authentication with Next.js and Tailwind CSS. Experience the power of dynamic styling and seamless scrolling effects." />
+
     </div>
   );
 }
