@@ -74,3 +74,22 @@
       @apply bg-background text-foreground;
     }
   }
+
+  .scroll-text {
+    background: linear-gradient(to right, black 50%, grey 50%);
+    background-size: 200% 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: scroll-animation 0.01s linear forwards;
+
+  }
+
+  @keyframes scroll-animation {
+    0% {
+      background-position: 000% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
