@@ -1,9 +1,9 @@
 'use client'
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const useIntersectionObserver = (ref: , options) => {
+const useIntersectionObserver = (ref, options) => {
   const [isIntersecting, setIsIntersecting] = useState(false);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const ScrollText = ({ text }) => {
               key={index}
               initial={{ opacity: 0 }}
               animate={{ opacity: isVisible ? 1 : 0 }}
-              transition={{ delay: index * 0.3, duration: 0.5 }}
+              transition={{ delay: index * 0.3, duration: 0.1 }}
               style={{ display: 'inline-block', marginRight: '5px' }}
             >
               {word}
