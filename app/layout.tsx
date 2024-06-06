@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(
-        "min-h-screen bg-background font-sans antialiased",
+        "min-h-screen bg-customGray font-sans antialiased flex-col items-center justify-center",
         fontSans.variable
       )}>
         <Nav />

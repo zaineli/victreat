@@ -1,58 +1,13 @@
-import Image from "next/image";
+import HeroText from "@/components/custom/HeroText";
+import ScrollText from "@/components/custom/scrollText";
+import SearchBar from "@/components/custom/searchBar";
 
 export default function Home() {
   return (
-    <div className="">
-      <section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="py-12 md:py-20">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-extrabold mb-5">Hero</h1>
-              <p className="text-xl text-gray-600">This is the about page</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="py-12 md:py-20">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-extrabold mb-5">Problem</h1>
-              <p className="text-xl text-gray-600">This is the about page</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="py-12 md:py-20">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-extrabold mb-5">Tech and Sol</h1>
-              <p className="text-xl text-gray-600">This is the about page</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="py-12 md:py-20">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-extrabold mb-5">News</h1>
-              <p className="text-xl text-gray-600">This is the about page</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="py-12 md:py-20">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-extrabold mb-5">Team</h1>
-              <p className="text-xl text-gray-600">This is the about page</p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="bg-customGray h-screen flex items-center flex-col justify-center gap-24">
+      <HeroText />
+      <SearchBar/>
+      <ScrollText text="Unlock the Future of Authentication with Next.js and Tailwind CSS. Experience the power of dynamic styling and seamless scrolling effects." />
     </div>
   );
 }

@@ -3,18 +3,36 @@ import React from 'react'
 
 function Nav() {
     return (
-        <div className='flex justify-between items-center p-4  bg-black text-xl text-white'>
-            <Link href='/' className='text-2xl '>Victreat</Link>
-            <div className='flex space-x-4'>
-                <Link href='/' className=''>Home</Link>
-                <Link href='/about' className=''>About</Link>
-                <Link href='/discover' className=''>Discover</Link>
-                <Link href='/careers' className=''>Careers</Link>
-            </div>
-            <div>
-                <Link href='/api' className=''>Logout</Link>
-            </div>
+        <nav className="bg-white  fixed top-2 w-[65%] min-w-max left-[50%] translate-x-[-50%] rounded-full mx-auto mt-4 max-w-5xl px-4 py-2 flex gap-8 items-center justify-between">
+        <div className="flex items-center">
+          <span className="text-xl font-bold">Victreat</span>
         </div>
+        <div className="flex items-center space-x-6">
+          <Link href="/">
+            <div className="text-gray-700 hover:text-black">Home</div>
+          </Link>
+          <Link href="/vision">
+            <div className="text-gray-700 hover:text-black">Vision</div>
+          </Link>
+          <Link href="/discover">
+            <div className="text-gray-700 hover:text-black">Discover</div>
+          </Link>
+          <Link href="/news">
+            <div className="text-gray-700 hover:text-black">News</div>
+          </Link>
+          <Link href="/careers">
+            <div className="text-gray-700 hover:text-black">Careers</div>
+          </Link>
+          <Link href="/about">
+            <div className="text-gray-700 hover:text-black">About</div>
+          </Link>
+        </div>
+        <div>
+          <Link href="/try-multi-pass">
+            <div className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Try Multi-Pass</div>
+          </Link>
+        </div>
+      </nav>
     )
 }
 
