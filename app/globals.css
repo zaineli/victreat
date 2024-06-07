@@ -116,3 +116,37 @@
 .custom-scroll ::-webkit-scrollbar {
   display: none;
 }
+  @keyframes wipe-animation {
+    0% {
+      background-position: 000% 0;
+    }
+    100% {
+      background-position: 000% 100%;
+    }
+  }
+
+  .outofview {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      transition: all 2s ease;
+    }
+  }
+
+  .inofview {
+    &::before {
+      top: 100%;
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      transition: all 2s ease;
+    }
+  }
