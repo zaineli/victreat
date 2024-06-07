@@ -74,3 +74,43 @@
       @apply bg-background text-foreground;
     }
   }
+
+  .scroll-text {
+    background: linear-gradient(to right, black 50%, grey 50%);
+    background-size: 200% 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: scroll-animation 0.01s linear forwards;
+
+  }
+
+  @keyframes scroll-animation {
+    0% {
+      background-position: 000% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
+  .wipe {
+    background: linear-gradient(to bottom, white 50%, black 50%);
+    background-size: 100% 200%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: wipe-animation 0.01s linear forwards;
+    animation-timeline: view();
+    animation-range: 50% cover 55%;
+
+  }
+
+  @keyframes wipe-animation {
+    0% {
+      background-position: 000% 0;
+    }
+    100% {
+      background-position: 000% 100%;
+    }
+  }

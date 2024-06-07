@@ -4,11 +4,14 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const useIntersectionObserver = (ref, options) => {
-  const [isIntersecting, setIsIntersecting] = useState(false);
+  // const [isIntersecting, setIsIntersecting] = useState(false);
+  const [ratio, setRatio] = useState(0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      setIsIntersecting(entry.isIntersecting);
+      // setIsIntersecting(entry.isIntersecting);
+      setRatio(entry.intersectionRatio);
+      console.log(entry.intersectionRatio);
     }, options);
 
     if (ref.current) {
@@ -22,33 +25,39 @@ const useIntersectionObserver = (ref, options) => {
     };
   }, [ref, options]);
 
-  return isIntersecting;
+  return ratio;
+  // return true;
+  // return isIntersecting;
 };
 
 const ScrollText = ({ text }) => {
   const ref = useRef();
-  const isVisible = useIntersectionObserver(ref, { threshold: 0.1 });
+  const ratio = useIntersectionObserver(ref, { threshold: Array.from({ length: 101 }).fill(0).map((_, i) => i * 0.01) });
 
-  const words = text.split(' ');
+  const words = text.split('');
 
   return (
-    <div className="flex flex-wrap text-2xl h-screen">
-      <div className="border-2 border-black h-max">
+    <div ref={ref} className="flex flex-wrap justify-center text-2xl h-[100vh]">
+      {/* {ratio} */}
+      {/* <div className="fixed inset-0 flex justify-center items-center ">
 
-        <div ref={ref}>
-          {words.map((word, index) => (
-            <motion.span
-              key={index}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: isVisible ? 1 : 0 }}
-              transition={{ delay: index * 0.3, duration: 0.1 }}
-              style={{ display: 'inline-block', marginRight: '5px' }}
-            >
-              {word}
-            </motion.span>
-          ))}
+        <div className=' text-center  text-6xl h-max  w-[70vw]'>
+          {
+            words.map((l, index) => (
+              <span
+                style={{
+                  // animationDelay: `${index * 0.01}s`,
+                  // animationDelay: `${index * 0.01}s`,
+                  opacity: ratio > 0.5 ? (ratio < 0.6 ? (ratio - 0.5) / 0.1 : 1) : 0,
+                  color: index / words.length < (ratio - 0.6) / 0.4 ? 'white' : 'gray',
+                }}
+                className='scroll-text'>{l}</span>
+            ))
+          }
         </div>
-      </div>
+
+
+      </div> */}
     </div>
   );
 };
