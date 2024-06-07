@@ -39,15 +39,7 @@ const ScrollText = ({ text }) => {
   return (
     <div ref={ref} className="flex flex-wrap justify-center text-2xl h-[100vh]">
       {/* {ratio} */}
-      <div
-        style={
-          {
-            backgroundColor: 'black',
-                  opacity: ratio > 0.5 ? (ratio < 0.6 ? (ratio - 0.5) / 0.1 : 1) : 0,
-            // backgroundColor: ratio > 0.3 ? (ratio < 0.7 ? `rgba(0, 0, 0, ${255-(ratio - 0.3) / 0.4})` : 'black') : 'transparent',
-          }
-        }
-        className="fixed inset-0 flex justify-center items-center ">
+      {/* <div className="fixed inset-0 flex justify-center items-center ">
 
         <div className=' text-center  text-6xl h-max  w-[70vw]'>
           {
@@ -65,7 +57,7 @@ const ScrollText = ({ text }) => {
         </div>
 
 
-      </div>
+      </div> */}
     </div>
   );
 };
