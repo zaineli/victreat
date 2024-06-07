@@ -22,7 +22,8 @@ const AnimatedImage: React.FC<AnimatedImageProps> = ({
       initial="hidden"
       animate={inView ? "animate" : "hidden"}
       variants={containerVariants}
-      className="w-full md:w-1/2 lg:w-1/2"
+      className="w-max max-w-full h-auto"
+      // className="w-full md:w-1/2 lg:w-1/2"
     >
       <motion.img
         src={src}

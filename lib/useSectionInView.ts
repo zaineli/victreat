@@ -21,7 +21,7 @@ const useSectionInView = (options) => {
     };
   }, [options]);
 
-  return [sectionRef, inView];
+  return [sectionRef, inView] as const;
 };
 
 export default useSectionInView;
