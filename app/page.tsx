@@ -2,6 +2,7 @@
 
 import HeroText from "@/components/custom/HeroText";
 import News from "@/components/custom/news";
+import Carousel from "@/components/custom/caruosel";
 import ScrollText from "@/components/custom/scrollText";
 import SearchBar from "@/components/custom/searchBar";
 
