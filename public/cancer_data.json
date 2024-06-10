@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "stage": 1,
+        "mutation": 1,
+        "name":"Lung Cancer",
+        "success rate": 0.5,
+        "cost": 1000, 
+        "2nd mutations": [
+            {
+                "mutation": 2,
+                "success rate": 0.3,
+                "cost": 2000
+            },
+            {
+                "mutation": 3,
+                "success rate": 0.2,
+                "cost": 3000
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "stage": 2,
+        "mutation": 4,
+        "name": "Breast Cancer",
+        "success rate": 0.6,
+        "cost": 1500,
+        "2nd mutations": [
+            {
+                "mutation": 5,
+                "success rate": 0.4,
+                "cost": 2500
+            },
+            {
+                "mutation": 6,
+                "success rate": 0.25,
+                "cost": 3500
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "stage": 1,
+        "mutation": 7,
+        "name": "Prostate Cancer",
+        "success rate": 0.55,
+        "cost": 1200,
+        "2nd mutations": [
+            {
+                "mutation": 8,
+                "success rate": 0.35,
+                "cost": 2200
+            },
+            {
+                "mutation": 9,
+                "success rate": 0.15,
+                "cost": 3200
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "stage": 3,
+        "mutation": 10,
+        "name": "Colon Cancer",
+        "success rate": 0.45,
+        "cost": 1800,
+        "2nd mutations": [
+            {
+                "mutation": 11,
+                "success rate": 0.25,
+                "cost": 2800
+            },
+            {
+                "mutation": 12,
+                "success rate": 0.1,
+                "cost": 3800
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "stage": 2,
+        "mutation": 13,
+        "name": "Skin Cancer",
+        "success rate": 0.65,
+        "cost": 1100,
+        "2nd mutations": [
+            {
+                "mutation": 14,
+                "success rate": 0.45,
+                "cost": 2100
+            },
+            {
+                "mutation": 15,
+                "success rate": 0.2,
+                "cost": 3100
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "stage": 1,
+        "mutation": 16,
+        "name": "Ovarian Cancer",
+        "success rate": 0.5,
+        "cost": 1400,
+        "2nd mutations": [
+            {
+                "mutation": 17,
+                "success rate": 0.3,
+                "cost": 2400
+            },
+            {
+                "mutation": 18,
+                "success rate": 0.2,
+                "cost": 3400
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "stage": 3,
+        "mutation": 19,
+        "name": "Pancreatic Cancer",
+        "success rate": 0.4,
+        "cost": 1600,
+        "2nd mutations": [
+            {
+                "mutation": 20,
+                "success rate": 0.2,
+                "cost": 2600
+            },
+            {
+                "mutation": 21,
+                "success rate": 0.1,
+                "cost": 3600
+            }
+        ]
+    }
+]

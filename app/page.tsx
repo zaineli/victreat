@@ -9,6 +9,11 @@ import AnimatedText from "@/components/custom/animatedText";
 import AnimatedImage from "@/components/custom/animatedImage";
 import News from "@/components/custom/news";
 import TextSplitter from "@/components/custom/textSpiltter";
+import CancerCarousel from "@/components/custom/cancer";
+import { useEffect, useState } from "react";
+import MutationCarousel from "@/components/custom/MutationCarousel";
+import Head from "next/head";
+import Carousel from "@/components/custom/carousell";
 
 export default function Home() {
   const purposeLines =
@@ -16,7 +21,6 @@ export default function Home() {
 
   const technologyLines =
     "Our technology harnesses cutting-edge innovations to deliver precise and personalized cancer treatments, improving patient outcomes. We integrate advanced research with state-of-the-art tools to lead the future of oncology care.";
-
 
   const containerVariantsA: Variants = {
     hidden: { opacity: 0, x: 100 },
@@ -40,8 +44,46 @@ export default function Home() {
     },
   };
 
+  const [data, setData] = useState([]);
+  const [selectedCancerIndex, setSelectedCancerIndex] = useState(0);
+
+  useEffect(() => {
+    fetch("/cancer_data.json")
+      .then((response) => response.json())
+      .then((jsonData) => setData(jsonData))
+      .catch((error) => console.error("Error fetching JSON data:", error));
+  }, []);
+
+  const handleCancerSelect = (index) => {
+    if (index < data.length) {
+      setSelectedCancerIndex(index);
+    }
+  };
+
+  const selectedCancer = data[selectedCancerIndex];
+
   return (
     <div className="bg-customGray ">
+      {/* <Head>
+        <title>Cancer Data Carousel</title>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/react-responsive-carousel/3.2.23/carousel.min.css"
+        /> */}
+      {/* </Head> */}
+      <section className="h-screen flex items-center flex-col justify-center gap-24">
+        {/* {data.length > 0 ? (
+          <>
+            <CancerCarousel data={data} onCancerSelect={handleCancerSelect} />
+            {selectedCancer && selectedCancer["2nd mutations"] && (
+              <MutationCarousel mutations={selectedCancer["2nd mutations"]} />
+            )}
+          </>
+        ) : (
+          <p>Loading...</p>
+        )} */}
+        <Carousel></Carousel>
+      </section>
       <section className="h-screen flex items-center flex-col justify-center gap-24">
         <HeroText />
         <SearchBar />
