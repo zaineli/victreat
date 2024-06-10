@@ -10,6 +10,7 @@ import AnimatedImage from "@/components/custom/animatedImage";
 import News from "@/components/custom/news";
 import TextSplitter from "@/components/custom/textSpiltter";
 
+
 export default function Home() {
   const purposeLines =
     "Our purpose is to revolutionize cancer treatment with innovative therapies ensuring personalized and effective care for every patient.";
@@ -46,7 +47,7 @@ export default function Home() {
       <section className="relative">
 
         <section ref={ref} className="h-screen flex items-center flex-col justify-center gap-8">
-          <h1 className="text-8xl text-center">Treat you Cancer <br /> with Victreat</h1>
+          <h1 className="text-6xl text-center">Treat you Cancer <br /> with Victreat</h1>
           <ul className="flex gap-4 text-2xl w-48 text-center">
             <li className="rounded-full bg-neutral-500 aspect-square flex-1 block text-white">a</li>
             <li className="rounded-full bg-neutral-500 aspect-square flex-1 block text-white">b</li>
@@ -59,13 +60,19 @@ export default function Home() {
             <button className="px-4 bg-white rounded-full">Search</button>
           </div>
         </section>
-        
-        <section className=" z-50 relative h-screen flex flex-col md:flex-row items-start justify-between gap-8 md:gap-24 px-4 md:px-12 lg:px-40">
+
+        <section className=" z-50 relative flex flex-col md:flex-row items-start justify-between gap-8 md:gap-24 px-4 md:px-12 lg:px-40">
           <div className="flex-1">
             <h1 className="text-3xl font-semibold mb-8">\ Purpose</h1>
-            <TextSplitter text={purposeLines} />
+            <div className=" my-16">
+              <TextSplitter text={"Cancer Research is growing at a rapid speed and better Treatments are being discovered."} />
+            </div>
+            <div className="my-16">
+
+              <TextSplitter text={"But the treatment industry is lagging and uses old methods. There is a gap between research and medicene"} />
+            </div>
           </div>
-          <div className="flex-1 max-w-[calc(50%-2rem)] h-full flex items-center justify-center ">
+          <div className="flex-1 max-w-[calc(50%-2rem)] h-full flex items-start justify-center ">
             <AnimatedImage
               src="https://images.unsplash.com/photo-1581360742512-021d5b2157d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGhvc3BpdGFsfGVufDB8fDB8fHww"
               alt="hero"
@@ -77,26 +84,26 @@ export default function Home() {
         <div className={`circle-a ${isInView ? '' : 'expand'}`}></div>
         <div className={`circle-b ${isInView ? '' : 'expand'}`}></div>
       </section>
-      <section className="bg-white h-screen flex flex-col md:flex-row items-center justify-between gap-8 md:gap-24 px-4 md:px-12 lg:px-40">
-        <div className="flex-1 max-w-[calc(50%-2rem)] h-full flex items-center justify-center ">
+      <section className=" z-50 relative my-64 flex flex-col md:flex-row-reverse items-start justify-between gap-8 md:gap-24 px-4 md:px-12 lg:px-40">
+        <div className="flex-1">
+          <h1 className="text-3xl font-semibold mb-8">\ Purpose</h1>
+          <div className=" my-16">
+            <TextSplitter text={"Cancer Research is growing at a rapid speed and better Treatments are being discovered."} />
+          </div>
+          <div className="my-16">
+
+            <TextSplitter text={"But the treatment industry is lagging and uses old methods. There is a gap between research and medicene"} />
+          </div>
+        </div>
+        <div className="flex-1 max-w-[calc(50%-2rem)] h-full flex items-start justify-center ">
           <AnimatedImage
             src="https://images.unsplash.com/photo-1581360742512-021d5b2157d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGhvc3BpdGFsfGVufDB8fDB8fHww"
             alt="hero"
             containerVariants={containerVariantsA}
           />
         </div>
-        <div className="flex-1">
-          <h1 className="text-3xl font-semibold mb-8">\ Purpose</h1>
-          <TextSplitter text={purposeLines} />
-        </div>
       </section>
-      <section className="bg-white h-screen flex flex-col md:flex-row items-center justify-between gap-8 md:gap-24 px-4 md:px-12 lg:px-40">
-        <AnimatedImage
-          src="https://images.unsplash.com/photo-1581360742512-021d5b2157d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGhvc3BpdGFsfGVufDB8fDB8fHww"
-          alt="hero"
-          containerVariants={containerVariantsB}
-        />
-      </section>
+      
       <CallToAction />
       <News />
       <Footer />

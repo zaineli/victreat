@@ -7,27 +7,26 @@ import { motion, useInView, Variants } from "framer-motion";
 const TextSplitter = ({ text }: { text: string }) => {
   // const containerRef = useRef<HTMLDivElement>(null);
   const [lines, setLines] = useState<string[]>([]);
-  const [containerRef, inView] = useSectionInView({ threshold: 0.1 });
+  const [containerRef, inView] = useSectionInView({ threshold: 0.95 });
   console.log({ inView })
 
   const containerVariants: Variants = {
     hidden: { opacity: 1 },
     animate: {
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: -0.2,
+        staggerChildren: 0.075,
+        // delayChildren: 0.2,
       },
     },
   };
 
   const childVariants: Variants = {
-    hidden: { opacity: 0, y: 100, x: -100 },
+    hidden: { opacity: 0, y: 100 },
     animate: {
       opacity: 1,
       y: 0,
-      x: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.75,
         // delay: 0.1,
       },
     },
@@ -44,10 +43,11 @@ const TextSplitter = ({ text }: { text: string }) => {
       const tempSpan = document.createElement("span");
       tempSpan.style.visibility = "hidden";
       tempSpan.style.whiteSpace = "nowrap";
-      tempSpan.style.fontSize = "3rem";
-      tempSpan.style.lineHeight = "2";
       tempSpan.style.fontWeight = "300";
-      tempSpan.style.fontFamily = "sans-serif";
+      tempSpan.style.fontSize = "2.25rem";
+      tempSpan.style.lineHeight = "3rem";
+      tempSpan.style.lineHeight = "1";
+      tempSpan.style.fontFamily = "var(--font-sans)";
       // tempSpan.style.display = "block";
       container.appendChild(tempSpan);
       const words = text.split(" ");
@@ -57,13 +57,14 @@ const TextSplitter = ({ text }: { text: string }) => {
       setLines([]);
       words.forEach((word) => {
         tempSpan.innerText = "";
-        const widthBefore = container.offsetWidth;
+        const widthBefore = container.offsetWidth - 1;
         tempSpan.innerText = currentLine + word + " ";
         console.log("sapn width: ", tempSpan.offsetWidth, 'container width: ', container.offsetWidth)
         if (tempSpan.offsetWidth >= widthBefore) {
           lines = [...lines, currentLine.trim()];
           // setLines(prevLines => [...prevLines, currentLine.trim()]);
-          console.log(currentLine.trim());
+          tempSpan.innerText = currentLine  + " ";
+          console.log(currentLine.trim(), tempSpan.offsetWidth, widthBefore);
           currentLine = word + " ";
           // tempSpan.innerText = currentLine;
         } else {
@@ -92,14 +93,20 @@ const TextSplitter = ({ text }: { text: string }) => {
       // className="w-full  box-border border-2 border-black"
     >
       <div
-        className="text-gray-800 w-full overflow-hidden">
+        className="text-gray-800 w-full overflow-hidden ">
         {lines.map((line, index) => (
 
           <div className="overflow-hidden">
             <motion.div
               key={index}
               variants={childVariants}
-              className="text-black text-5xl font-light"
+              style={{
+                lineHeight: "3rem",
+                fontSize: "2.25rem",
+                fontWeight: 300,
+                fontFamily: "var(--font-sans)",
+              }}
+              // className="text-black text-4xl font-light [line-height:3rem]"
             >
               {line}
             </motion.div>
