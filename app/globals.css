@@ -150,3 +150,36 @@
       transition: all 2s ease;
     }
   }
+
+
+  .circle-a {
+    position: absolute;
+    /* left: 0;
+    top: 25%;
+    height: 100vh;
+    width: 100vw; */
+    inset: 0;
+    background: grey;
+    opacity: 0.5;
+    z-index: -1;
+    clip-path: circle(50% at 50% 60%);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .circle-b {
+    position: absolute;
+    inset: 0;
+    background: white;
+    /* left: 0;
+    top: 25%;
+    height: 100vh;
+    width: 100vw; */
+    /* opacity: 0.5; */
+    z-index: 1;
+    clip-path: circle(10% at 50% 50%);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .expand {
+    clip-path: circle(100% at 50% 110%);
+  }
