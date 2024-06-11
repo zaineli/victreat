@@ -18,6 +18,7 @@ import Carousel from "@/components/custom/carousell";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { IoMailOutline } from "react-icons/io5";
 import { RiTeamLine } from "react-icons/ri";
+import ScrollButton from "@/components/custom/scroll-button";
 
 
 
@@ -73,6 +74,7 @@ export default function Home() {
 
   return (
     <div className=" ">
+      <ScrollButton />
       <section className="relative">
 
         <section ref={ref} className="h-screen flex items-center flex-col justify-center gap-8">

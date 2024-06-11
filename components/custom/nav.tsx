@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import React from 'react'
 
-import { IoNewspaperOutline } from "react-icons/io5";
 
 
 function Nav() {
     return (
-        <nav className="bg-white  fixed top-2 w-[65%] min-w-max left-[50%] z-[100] translate-x-[-50%] rounded-full mx-auto mt-4 max-w-5xl px-4 py-2 flex gap-8 items-center justify-between">
+        <nav id="nav" className="bg-white  w-[65%] min-w-max mx-auto rounded-full mt-4 max-w-5xl px-4 py-2 flex gap-8 items-center justify-between">
+        {/* <nav className="bg-white fixed top-2 w-[65%] min-w-max left-[50%] z-[100] translate-x-[-50%] rounded-full mx-auto mt-4 max-w-5xl px-4 py-2 flex gap-8 items-center justify-between"> */}
         <div className="flex items-center">
           <span className="text-xl font-bold">Victreat</span>
         </div>
