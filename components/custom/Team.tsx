@@ -34,7 +34,7 @@ export default function Team() {
   
 
   return (
-    <div className="min-h-screen w-full flex flex-col justify-between mb-32 ">
+    <div className="min-h-screen w-full flex flex-col justify-between mb-32" id="team">
       <main className="flex-grow p-8 w-full">
       <section className="flex flex-col lg:flex-row justify-between items-center py-12 px-6 gap-24 lg:px-24">
       <div>

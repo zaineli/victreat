@@ -21,7 +21,8 @@ import { IoNewspaperOutline } from "react-icons/io5";
 import { IoMailOutline } from "react-icons/io5";
 import { RiTeamLine } from "react-icons/ri";
 import ScrollButton from "@/components/custom/scroll-button";
-
+import { SiTarget } from "react-icons/si";
+import { GrTechnology } from "react-icons/gr";
 
 
 
@@ -87,12 +88,13 @@ export default function Home() {
                 <IoNewspaperOutline />
               </a>
             </li>
-            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center"><IoMailOutline /></li>
-            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center"><RiTeamLine /></li>
-            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center">d</li>
+            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center"><a href="#team"><RiTeamLine/></a></li>
+            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center"><a href="#purpose"><SiTarget/></a></li>
+            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center"><a href="#technology"><GrTechnology /></a></li>
+
           </ul>
           <div className=" w-[40rem] rounded-lg text-2xl">
-            <Carousel />
+            <Carousel  />
           </div>
           <div className="w-[36rem] bg-white rounded-full flex p-1">
             <input type="text" name="" className=" flex-1 bg-transparent text-white py-2 px-4 placeholder:text-grey" id="" placeholder="Search Cancer ..." />
@@ -100,7 +102,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className=" z-50 relative flex flex-col md:flex-row items-start justify-between gap-8 md:gap-24 px-4 md:px-12 lg:px-40">
+        <section id="purpose" className=" z-50 relative flex flex-col md:flex-row items-start justify-between gap-8 md:gap-24 px-4 md:px-12 lg:px-40">
           <div className="flex-1">
             <h1 className="text-3xl font-semibold mb-8">\ Purpose</h1>
             <div className=" my-16">
@@ -124,7 +126,7 @@ export default function Home() {
         <div className={`circle-a ${isInView ? '' : 'expand'}`}></div>
         <div className={`circle-b ${isInView ? '' : 'expand'}`}></div>
       </section>
-      <section className=" z-50 relative my-64 flex flex-col md:flex-row-reverse items-start justify-between gap-8 md:gap-24 px-4 md:px-12 lg:px-40">
+      <section id="technology" className=" z-50 relative py-64 flex flex-col md:flex-row-reverse items-start justify-between gap-8 md:gap-24 px-4 md:px-12 lg:px-40">
         <div className="flex-1">
           <h1 className="text-3xl font-semibold mb-8">\ Purpose</h1>
           <div className=" my-16">
