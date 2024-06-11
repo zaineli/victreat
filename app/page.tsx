@@ -19,6 +19,7 @@ import { IoNewspaperOutline } from "react-icons/io5";
 import { IoMailOutline } from "react-icons/io5";
 import { RiTeamLine } from "react-icons/ri";
 import ScrollButton from "@/components/custom/scroll-button";
+import Newss from "@/components/custom/news-auto";
 
 
 
@@ -143,7 +144,7 @@ export default function Home() {
 
       <CallToAction />
 
-      <News />
+      <Newss />
       <Footer />
     </div>
   );

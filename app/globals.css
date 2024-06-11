@@ -201,3 +201,18 @@
 .expand {
   clip-path: circle(100vh at 50% 50%);
 }
+
+
+.card-autoflow {
+  animation: autoflow 3s linear infinite ;
+  --start: 100%;
+}
+
+@keyframes autoflow {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(-100% - 4rem));
+  }
+}

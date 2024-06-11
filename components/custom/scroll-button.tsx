@@ -2,9 +2,7 @@ import { FaChevronUp } from "react-icons/fa";
 import React, { useEffect, useState } from 'react'
 
 function ScrollButton() {
-    // get page scroll percent
     const [percent, setPercent] = useState(0)
-
     useEffect(() => {
         function handler() {
             const scroll = window.scrollY
@@ -23,8 +21,8 @@ function ScrollButton() {
 
     return (
         <div
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}     
-        className='fixed bottom-0 right-0 translate-x-[-50%] cursor-pointer opacity-50 hover:opacity-100 transition-opacity duration-300 translate-y-[-50%] bg-slate-500 w-24 h-24 rounded-full z-[100] p-1' style={{
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className='fixed bottom-0 right-0 translate-x-[-50%] cursor-pointer opacity-50 hover:opacity-100 transition-opacity duration-300 translate-y-[-50%] bg-slate-500 w-24 h-24 rounded-full z-[100] p-1' style={{
                 background: `conic-gradient( #f00 ${percent * 100}%, #000 0)`
             }}>
             <span className='w-full h-full  bg-black rounded-full flex pointer-events-none justify-center items-center'>
