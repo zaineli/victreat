@@ -11,7 +11,6 @@ const useIntersectionObserver = (ref, options) => {
     const observer = new IntersectionObserver(([entry]) => {
       // setIsIntersecting(entry.isIntersecting);
       setRatio(entry.intersectionRatio);
-      console.log(entry.intersectionRatio);
     }, options);
 
     if (ref.current) {

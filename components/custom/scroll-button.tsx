@@ -17,8 +17,6 @@ function ScrollButton() {
     }, [])
 
 
-    console.log({ percent })
-
     return (
         <div
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

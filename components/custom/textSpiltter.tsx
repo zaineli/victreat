@@ -8,7 +8,6 @@ const TextSplitter = ({ text }: { text: string }) => {
   // const containerRef = useRef<HTMLDivElement>(null);
   const [lines, setLines] = useState<string[]>([]);
   const [containerRef, inView] = useSectionInView({ threshold: 0.95 });
-  console.log({ inView })
 
   const containerVariants: Variants = {
     hidden: { opacity: 1 },
@@ -36,7 +35,6 @@ const TextSplitter = ({ text }: { text: string }) => {
   useEffect(() => {
     const container = containerRef.current;
     if (container && lines.length === 0) {
-      console.log(container.offsetWidth);
       // Clear existing spans
       // container.innerHTML = "";
       // Create a temporary span to measure text width
@@ -53,18 +51,15 @@ const TextSplitter = ({ text }: { text: string }) => {
       const words = text.split(" ");
       let currentLine = "";
       let lines: string[] = [];
-      console.log("Starting", words);
       setLines([]);
       words.forEach((word) => {
         tempSpan.innerText = "";
         const widthBefore = container.offsetWidth - 1;
         tempSpan.innerText = currentLine + word + " ";
-        console.log("sapn width: ", tempSpan.offsetWidth, 'container width: ', container.offsetWidth)
         if (tempSpan.offsetWidth >= widthBefore) {
           lines = [...lines, currentLine.trim()];
           // setLines(prevLines => [...prevLines, currentLine.trim()]);
           tempSpan.innerText = currentLine  + " ";
-          console.log(currentLine.trim(), tempSpan.offsetWidth, widthBefore);
           currentLine = word + " ";
           // tempSpan.innerText = currentLine;
         } else {
@@ -76,12 +71,9 @@ const TextSplitter = ({ text }: { text: string }) => {
         lines = [...lines, currentLine.trim()];
       }
       setLines(lines);
-      console.log({ lines });
       container.removeChild(tempSpan);
     }
   }, [text, lines, containerRef.current?.offsetWidth]);
-  console.log(lines);
-  console.log(containerRef.current?.offsetWidth);
 
   return (
     <motion.div

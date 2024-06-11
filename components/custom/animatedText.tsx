@@ -4,26 +4,7 @@ import { motion, Variants } from "framer-motion";
 import useSectionInView from "../../lib/useSectionInView";
 import TextSplitter from "./textSpiltter";
 
-const containerVariants: Variants = {
-  hidden: { opacity: 1 },
-  animate: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const childVariants: Variants = {
-  hidden: { opacity: 0, y: 100 },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.3,
-    },
-  },
-};
-
+ 
 type AnimatedTextProps = {
   title: string;
   textLines: string[];
@@ -33,7 +14,6 @@ function AnimatedText({ title, textLines }: AnimatedTextProps) {
   const [sectionRef, inView] = useSectionInView({ threshold: 0.1 });
 
   const text = title + textLines.join(" ");
-  console.log({text})
   return <TextSplitter text={text} />;
 
 

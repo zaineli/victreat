@@ -31,8 +31,6 @@ export default function Home() {
 
   const [ref, isInView] = useSectionInView({ threshold: 0.8 });
 
-  console.log({ isInView })
-
   const containerVariantsA: Variants = {
     hidden: { opacity: 0, x: 100 },
     animate: {

@@ -52,7 +52,6 @@ function News() {
             if (scrollRef.current) {
                 setScroll(scrollRef.current!.scrollLeft / scrollRef.current!.scrollWidth)
             }
-            console.log(scrollRef.current?.scrollLeft, scrollRef.current?.scrollWidth, scrollRef.current?.clientWidth)
         }
 
         function calculateThumbWidth() {

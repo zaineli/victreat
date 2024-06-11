@@ -204,7 +204,7 @@
 
 
 .card-autoflow {
-  animation: autoflow 3s linear infinite ;
+  animation: autoflow 3s linear ;
   --start: 100%;
 }
 
@@ -213,6 +213,6 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(calc(-100% - 4rem));
+    transform: translateX(calc(-100%));
   }
 }
