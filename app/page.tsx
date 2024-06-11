@@ -14,6 +14,8 @@ import { useEffect, useState } from "react";
 import MutationCarousel from "@/components/custom/MutationCarousel";
 import Head from "next/head";
 import Carousel from "@/components/custom/carousell";
+import TeamMember from "@/components/custom/TeamMember";
+import Team from "@/components/custom/Team";
 
 
 export default function Home() {
@@ -119,13 +121,16 @@ export default function Home() {
             <TextSplitter text={"But the treatment industry is lagging and uses old methods. There is a gap between research and medicene"} />
           </div>
         </div>
-        <div className="flex-1 max-w-[calc(50%-2rem)] h-full flex items-start justify-center ">
+        <div className="flex-1 w-full h-full flex items-start justify-center ">
           <AnimatedImage
             src="https://imgs.search.brave.com/S2kErgUGJFU7htcIAGksfd8Zhix60AgOMizyFu0kjQA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9ibG9n/Lmh1YnNwb3QuY29t/L2hzLWZzL2h1YmZz/L0dvb2dsZSUyMERy/aXZlJTIwSW50ZWdy/YXRpb24vdHlwZXMl/MjBvZiUyMGNoYXJ0/c18zMjAyMy1NYXkt/MjItMjAyMy0xMC0x/Ny0yNi0yOTk0LVBN/LnBuZz93aWR0aD02/MDAmaGVpZ2h0PTQ1/MSZuYW1lPXR5cGVz/JTIwb2YlMjBjaGFy/dHNfMzIwMjMtTWF5/LTIyLTIwMjMtMTAt/MTctMjYtMjk5NC1Q/TS5wbmc"
             alt="hero"
             containerVariants={containerVariantsA}
           />
         </div>
+      </section>
+      <section className="flex-1  flex items-start justify-center">
+          <Team />
       </section>
       
       <CallToAction />
