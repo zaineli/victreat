@@ -15,6 +15,13 @@ import MutationCarousel from "@/components/custom/MutationCarousel";
 import Head from "next/head";
 import Carousel from "@/components/custom/carousell";
 
+import { IoNewspaperOutline } from "react-icons/io5";
+import { IoMailOutline } from "react-icons/io5";
+import { RiTeamLine } from "react-icons/ri";
+
+
+
+
 
 export default function Home() {
   const purposeLines =
@@ -71,13 +78,17 @@ export default function Home() {
         <section ref={ref} className="h-screen flex items-center flex-col justify-center gap-8">
           <h1 className="text-6xl text-center">Treat you Cancer <br /> with Victreat</h1>
           <ul className="flex gap-4 text-2xl w-48 text-center">
-            <li className="rounded-full bg-neutral-500 aspect-square flex-1 block text-white">a</li>
-            <li className="rounded-full bg-neutral-500 aspect-square flex-1 block text-white">b</li>
-            <li className="rounded-full bg-neutral-500 aspect-square flex-1 block text-white">c</li>
-            <li className="rounded-full bg-neutral-500 aspect-square flex-1 block text-white">d</li>
+            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center">
+              <a href="#news">
+                <IoNewspaperOutline />
+              </a>
+            </li>
+            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center"><IoMailOutline /></li>
+            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center"><RiTeamLine /></li>
+            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center">d</li>
           </ul>
           <div className=" w-[40rem] rounded-lg text-2xl">
-            <Carousel />  
+            <Carousel />
           </div>
           <div className="w-[36rem] bg-white rounded-full flex p-1">
             <input type="text" name="" className=" flex-1 bg-transparent text-white py-2 px-4 placeholder:text-grey" id="" placeholder="Search Cancer ..." />
@@ -127,8 +138,9 @@ export default function Home() {
           />
         </div>
       </section>
-      
+
       <CallToAction />
+
       <News />
       <Footer />
     </div>

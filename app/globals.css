@@ -33,6 +33,8 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    scroll-behavior: smooth;
   }
 
   .dark {
@@ -116,6 +118,14 @@
 .custom-scroll ::-webkit-scrollbar {
   display: none;
 }
+/* .custom-scroll::-webkit-scrollbar {
+  display: none;
+} */
+
+.custom-scroll *::-webkit-scrollbar, .custom-scroll * {
+  scrollbar-width: none;
+}
+
 @keyframes wipe-animation {
   0% {
     background-position: 000% 0;
