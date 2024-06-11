@@ -80,7 +80,7 @@ function News() {
     }, [scrollRef.current]);
 
     return (
-        <section className='py-16 bg-neutral-300 custom-scroll'>
+        <section className='py-16  custom-scroll'>
             {/* <h1 className='text-8xl font-bold'>News</h1> */}
             <div ref={scrollRef} className=' p-16 px-64 flex gap-16 overflow-x-scroll'>
                 {news.map((n, i) => <NewsCard key={i} news={n}

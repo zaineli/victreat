@@ -116,39 +116,38 @@
 .custom-scroll ::-webkit-scrollbar {
   display: none;
 }
-  @keyframes wipe-animation {
-    0% {
-      background-position: 000% 0;
-    }
-    100% {
-      background-position: 000% 100%;
-    }
+@keyframes wipe-animation {
+  0% {
+    background-position: 000% 0;
   }
-
-  .outofview {
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: white;
-      transition: all 2s ease;
-    }
+  100% {
+    background-position: 000% 100%;
   }
+}
 
-  .inofview {
-    &::before {
-      top: 100%;
-      content: '';
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: white;
-      transition: all 2s ease;
-    }
+.outofview {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: all 2s ease;
+  }
+}
+
+.inofview {
+  &::before {
+    top: 100%;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: all 2s ease;
   }
 
   .carousel .slide {
@@ -159,4 +158,36 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+}
+  
+.circle-a {
+  position: absolute;
+  /* left: 0;
+    top: 25%;
+    height: 100vh;
+    width: 100vw; */
+  inset: 0;
+  background: #DBE2EC;
+  z-index: -1;
+  clip-path: circle(65vh at 50vw 100vh);
+  transition: all 0.5s ease-in-out;
+}
+
+.circle-b {
+  position: absolute;
+  inset: 0;
+  background: white;
+  /* left: 0;
+    top: 25%;
+    height: 100vh;
+    width: 100vw; */
+  /* opacity: 0.5; */
+  z-index: 1;
+  clip-path: circle(10vh at 50vw 100vh);
+  transition: all 0.5s ease-in-out;
+}
+
+.expand {
+  clip-path: circle(100vh at 50% 50%);
 }

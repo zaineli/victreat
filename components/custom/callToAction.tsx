@@ -3,21 +3,15 @@ import SearchBar from './searchBar'
 
 function CallToAction() {
     return (
-        <section className='bg-blue-600 text-white m-16 p-16 rounded-2xl text-xl'>
+        <section className='bg-[#DBE2EC] text-black m-16 p-16 rounded-2xl text-xl'>
             <p>
                 Discover comprehensive cancer treatment options effortlessly.
                 Explore our intuitive platform for tailored information, empowering you to make informed decisions confidently. Start now!
             </p>
-            <div className="relative mx-auto mt-16 w-full max-w-2xl text-black">
-                <input
-                    type="text"
-                    placeholder="Search for..."
-                    className="w-full py-3 pl-10 pr-4 text-lg bg-white rounded-full shadow-lg focus:outline-none"
-                />
-                <div className="absolute top-0 left-0 flex items-center h-full pl-3">
-                    🔍
-                </div>
-            </div>
+            <div className="w-[36rem] mx-auto mt-8 bg-white rounded-full flex p-1">
+            <input type="text" name="" className=" flex-1 bg-transparent text-white py-2 px-4 placeholder:text-grey" id="" placeholder="Search Cancer ..." />
+            <button className="px-4 bg-[#DBE2EC] text-white rounded-full">Search</button>
+          </div>
 
         </section>
     )

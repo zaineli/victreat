@@ -15,12 +15,14 @@ import MutationCarousel from "@/components/custom/MutationCarousel";
 import Head from "next/head";
 import Carousel from "@/components/custom/carousell";
 
+
 export default function Home() {
   const purposeLines =
     "Our purpose is to revolutionize cancer treatment with innovative therapies ensuring personalized and effective care for every patient.";
 
-  const technologyLines =
-    "Our technology harnesses cutting-edge innovations to deliver precise and personalized cancer treatments, improving patient outcomes. We integrate advanced research with state-of-the-art tools to lead the future of oncology care.";
+  const [ref, isInView] = useSectionInView({ threshold: 0.8 });
+
+  console.log({ isInView })
 
   const containerVariantsA: Variants = {
     hidden: { opacity: 0, x: 100 },
@@ -63,67 +65,69 @@ export default function Home() {
   const selectedCancer = data[selectedCancerIndex];
 
   return (
-    <div className="bg-customGray ">
-      {/* <Head>
-        <title>Cancer Data Carousel</title>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/react-responsive-carousel/3.2.23/carousel.min.css"
-        /> */}
-      {/* </Head> */}
-      <section className="h-screen flex items-center flex-col justify-center gap-24">
-        {/* {data.length > 0 ? (
-          <>
-            <CancerCarousel data={data} onCancerSelect={handleCancerSelect} />
-            {selectedCancer && selectedCancer["2nd mutations"] && (
-              <MutationCarousel mutations={selectedCancer["2nd mutations"]} />
-            )}
-          </>
-        ) : (
-          <p>Loading...</p>
-        )} */}
-        <Carousel></Carousel>
+    <div className=" ">
+      <section className="relative">
+
+        <section ref={ref} className="h-screen flex items-center flex-col justify-center gap-8">
+          <h1 className="text-6xl text-center">Treat you Cancer <br /> with Victreat</h1>
+          <ul className="flex gap-4 text-2xl w-48 text-center">
+            <li className="rounded-full bg-neutral-500 aspect-square flex-1 block text-white">a</li>
+            <li className="rounded-full bg-neutral-500 aspect-square flex-1 block text-white">b</li>
+            <li className="rounded-full bg-neutral-500 aspect-square flex-1 block text-white">c</li>
+            <li className="rounded-full bg-neutral-500 aspect-square flex-1 block text-white">d</li>
+          </ul>
+          <div className=" w-[40rem] rounded-lg text-2xl">
+            <Carousel />  
+          </div>
+          <div className="w-[36rem] bg-white rounded-full flex p-1">
+            <input type="text" name="" className=" flex-1 bg-transparent text-white py-2 px-4 placeholder:text-grey" id="" placeholder="Search Cancer ..." />
+            <button className="px-4 bg-[#DBE2EC] text-white rounded-full">Search</button>
+          </div>
+        </section>
+
+        <section className=" z-50 relative flex flex-col md:flex-row items-start justify-between gap-8 md:gap-24 px-4 md:px-12 lg:px-40">
+          <div className="flex-1">
+            <h1 className="text-3xl font-semibold mb-8">\ Purpose</h1>
+            <div className=" my-16">
+              <TextSplitter text={"Cancer Research is growing at a rapid speed and better Treatments are being discovered."} />
+            </div>
+            <div className="my-16">
+
+              <TextSplitter text={"But the treatment industry is lagging and uses old methods. There is a gap between research and medicene"} />
+            </div>
+          </div>
+          <div className="flex-1 max-w-[calc(50%-2rem)] h-full flex items-start justify-center ">
+            <AnimatedImage
+              src="https://imgs.search.brave.com/g3rChyKsltNYFPFk7CIOEGlPK8BZi3n70WOahxXGoUc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM2/NzEyNDc5NS9waG90/by9ncmVlbi1kbmEu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PVlvTHJ1c29kUnlH/Q00yajRpOV9EUnNu/MEFyZFNVaE1uYTB2/VmRHYW0zNzQ9"
+              alt="hero"
+              containerVariants={containerVariantsA}
+            />
+          </div>
+        </section>
+
+        <div className={`circle-a ${isInView ? '' : 'expand'}`}></div>
+        <div className={`circle-b ${isInView ? '' : 'expand'}`}></div>
       </section>
-      <section className="h-screen flex items-center flex-col justify-center gap-24">
-        <HeroText />
-        <SearchBar />
-      </section>
-      <section className="bg-white h-screen flex flex-col md:flex-row items-center justify-between gap-8 md:gap-24 px-4 md:px-12 lg:px-40">
-        {/* <AnimatedText title="/ Purpose" textLines={purposeLines} /> */}
+      <section className=" z-50 relative my-64 flex flex-col md:flex-row-reverse items-start justify-between gap-8 md:gap-24 px-4 md:px-12 lg:px-40">
         <div className="flex-1">
           <h1 className="text-3xl font-semibold mb-8">\ Purpose</h1>
-          <TextSplitter text={purposeLines} />
+          <div className=" my-16">
+            <TextSplitter text={"Cancer Research is growing at a rapid speed and better Treatments are being discovered."} />
+          </div>
+          <div className="my-16">
+
+            <TextSplitter text={"But the treatment industry is lagging and uses old methods. There is a gap between research and medicene"} />
+          </div>
         </div>
-        <div className="flex-1 max-w-[calc(50%-2rem)] h-full flex items-center justify-center ">
+        <div className="flex-1 max-w-[calc(50%-2rem)] h-full flex items-start justify-center ">
           <AnimatedImage
-            src="https://images.unsplash.com/photo-1581360742512-021d5b2157d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGhvc3BpdGFsfGVufDB8fDB8fHww"
+            src="https://imgs.search.brave.com/S2kErgUGJFU7htcIAGksfd8Zhix60AgOMizyFu0kjQA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9ibG9n/Lmh1YnNwb3QuY29t/L2hzLWZzL2h1YmZz/L0dvb2dsZSUyMERy/aXZlJTIwSW50ZWdy/YXRpb24vdHlwZXMl/MjBvZiUyMGNoYXJ0/c18zMjAyMy1NYXkt/MjItMjAyMy0xMC0x/Ny0yNi0yOTk0LVBN/LnBuZz93aWR0aD02/MDAmaGVpZ2h0PTQ1/MSZuYW1lPXR5cGVz/JTIwb2YlMjBjaGFy/dHNfMzIwMjMtTWF5/LTIyLTIwMjMtMTAt/MTctMjYtMjk5NC1Q/TS5wbmc"
             alt="hero"
             containerVariants={containerVariantsA}
           />
         </div>
       </section>
-      <section className="bg-white h-screen flex flex-col md:flex-row items-center justify-between gap-8 md:gap-24 px-4 md:px-12 lg:px-40">
-        {/* <AnimatedText title="/ Purpose" textLines={purposeLines} /> */}
-        <div className="flex-1 max-w-[calc(50%-2rem)] h-full flex items-center justify-center ">
-          <AnimatedImage
-            src="https://images.unsplash.com/photo-1581360742512-021d5b2157d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGhvc3BpdGFsfGVufDB8fDB8fHww"
-            alt="hero"
-            containerVariants={containerVariantsA}
-          />
-        </div>
-        <div className="flex-1">
-          <h1 className="text-3xl font-semibold mb-8">\ Purpose</h1>
-          <TextSplitter text={purposeLines} />
-        </div>
-      </section>
-      <section className="bg-white h-screen flex flex-col md:flex-row items-center justify-between gap-8 md:gap-24 px-4 md:px-12 lg:px-40">
-        <AnimatedImage
-          src="https://images.unsplash.com/photo-1581360742512-021d5b2157d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGhvc3BpdGFsfGVufDB8fDB8fHww"
-          alt="hero"
-          containerVariants={containerVariantsB}
-        />
-        {/* <AnimatedText title="/ Technology" textLines={technologyLines} /> */}
-      </section>
+      
       <CallToAction />
       <News />
       <Footer />
