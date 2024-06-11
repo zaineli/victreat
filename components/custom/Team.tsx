@@ -31,22 +31,19 @@ export default function Team() {
     },
   ];
 
+  
+
   return (
-    <div className="min-h-screen w-full flex flex-col justify-between">
+    <div className="min-h-screen w-full flex flex-col justify-between mb-32 ">
       <main className="flex-grow p-8 w-full">
       <section className="flex flex-col lg:flex-row justify-between items-center py-12 px-6 gap-24 lg:px-24">
       <div>
-        <h2 className="text-orange-600 text-lg mb-2 flex-[3_3_0]">Meet Our Team:</h2>
-        <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-          Bringing Passion and
-          <br /> Expertise Together
+        <h1 className="text-3xl font-semibold">
+          \ Meet Our Team
         </h1>
       </div>
-      <div className="mt-6 lg:mt-0 lg:ml-12 text-lg flex-1">
-        <p>Welcome to our team page, where you get a glimpse into the heart and soul of our organization. We are a diverse group of individuals, each bringing unique talents, perspectives, and passions to the table.</p>
-      </div>
     </section>
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 mt-16">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 mt-4">
           {teamMembers.map((member, index) => (
             <TeamMember key={index} index={index} {...member} />
           ))}

@@ -17,6 +17,14 @@ import Carousel from "@/components/custom/carousell";
 import TeamMember from "@/components/custom/TeamMember";
 import Team from "@/components/custom/Team";
 
+import { IoNewspaperOutline } from "react-icons/io5";
+import { IoMailOutline } from "react-icons/io5";
+import { RiTeamLine } from "react-icons/ri";
+import ScrollButton from "@/components/custom/scroll-button";
+
+
+
+
 
 export default function Home() {
   const purposeLines =
@@ -68,18 +76,23 @@ export default function Home() {
 
   return (
     <div className=" ">
+      <ScrollButton />
       <section className="relative">
 
         <section ref={ref} className="h-screen flex items-center flex-col justify-center gap-8">
           <h1 className="text-6xl text-center">Treat you Cancer <br /> with Victreat</h1>
           <ul className="flex gap-4 text-2xl w-48 text-center">
-            <li className="rounded-full bg-neutral-500 aspect-square flex-1 block text-white">a</li>
-            <li className="rounded-full bg-neutral-500 aspect-square flex-1 block text-white">b</li>
-            <li className="rounded-full bg-neutral-500 aspect-square flex-1 block text-white">c</li>
-            <li className="rounded-full bg-neutral-500 aspect-square flex-1 block text-white">d</li>
+            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center">
+              <a href="#news">
+                <IoNewspaperOutline />
+              </a>
+            </li>
+            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center"><IoMailOutline /></li>
+            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center"><RiTeamLine /></li>
+            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center">d</li>
           </ul>
           <div className=" w-[40rem] rounded-lg text-2xl">
-            <Carousel />  
+            <Carousel />
           </div>
           <div className="w-[36rem] bg-white rounded-full flex p-1">
             <input type="text" name="" className=" flex-1 bg-transparent text-white py-2 px-4 placeholder:text-grey" id="" placeholder="Search Cancer ..." />
@@ -100,6 +113,7 @@ export default function Home() {
           </div>
           <div className="flex-1 max-w-[calc(50%-2rem)] h-full flex items-start justify-center ">
             <AnimatedImage
+            className="w-max max-w-full h-auto"
               src="https://imgs.search.brave.com/g3rChyKsltNYFPFk7CIOEGlPK8BZi3n70WOahxXGoUc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM2/NzEyNDc5NS9waG90/by9ncmVlbi1kbmEu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PVlvTHJ1c29kUnlH/Q00yajRpOV9EUnNu/MEFyZFNVaE1uYTB2/VmRHYW0zNzQ9"
               alt="hero"
               containerVariants={containerVariantsA}
@@ -123,6 +137,7 @@ export default function Home() {
         </div>
         <div className="flex-1 w-full h-full flex items-start justify-center ">
           <AnimatedImage
+          className="w-max max-w-full h-auto"
             src="https://imgs.search.brave.com/S2kErgUGJFU7htcIAGksfd8Zhix60AgOMizyFu0kjQA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9ibG9n/Lmh1YnNwb3QuY29t/L2hzLWZzL2h1YmZz/L0dvb2dsZSUyMERy/aXZlJTIwSW50ZWdy/YXRpb24vdHlwZXMl/MjBvZiUyMGNoYXJ0/c18zMjAyMy1NYXkt/MjItMjAyMy0xMC0x/Ny0yNi0yOTk0LVBN/LnBuZz93aWR0aD02/MDAmaGVpZ2h0PTQ1/MSZuYW1lPXR5cGVz/JTIwb2YlMjBjaGFy/dHNfMzIwMjMtTWF5/LTIyLTIwMjMtMTAt/MTctMjYtMjk5NC1Q/TS5wbmc"
             alt="hero"
             containerVariants={containerVariantsA}
@@ -131,8 +146,7 @@ export default function Home() {
       </section>
       <section className="flex-1  flex items-start justify-center">
           <Team />
-      </section>
-      
+      </section>      
       <CallToAction />
       <News />
       <Footer />

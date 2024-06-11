@@ -3,19 +3,22 @@ import React, { useEffect, useRef, useState } from "react";
 import useSectionInView from "../../lib/useSectionInView";
 import { motion, useInView, Variants } from "framer-motion";
 
-
-const TextSplitter = ({ text }: { text: string }) => {
-  // const containerRef = useRef<HTMLDivElement>(null);
+type Props = {
+  text: string;
+  fontWeight?: string;
+  fontSize?: string;
+  className?: string;
+  lineHeight?: string;
+};
+const TextSplitter = ({text, fontWeight, fontSize, className, lineHeight}:Props) => {
   const [lines, setLines] = useState<string[]>([]);
   const [containerRef, inView] = useSectionInView({ threshold: 0.95 });
-  console.log({ inView })
 
   const containerVariants: Variants = {
     hidden: { opacity: 1 },
     animate: {
       transition: {
         staggerChildren: 0.075,
-        // delayChildren: 0.2,
       },
     },
   };
@@ -27,7 +30,6 @@ const TextSplitter = ({ text }: { text: string }) => {
       y: 0,
       transition: {
         duration: 0.75,
-        // delay: 0.1,
       },
     },
   };
@@ -36,52 +38,34 @@ const TextSplitter = ({ text }: { text: string }) => {
   useEffect(() => {
     const container = containerRef.current;
     if (container && lines.length === 0) {
-      console.log(container.offsetWidth);
-      // Clear existing spans
-      // container.innerHTML = "";
-      // Create a temporary span to measure text width
       const tempSpan = document.createElement("span");
       tempSpan.style.visibility = "hidden";
       tempSpan.style.whiteSpace = "nowrap";
-      tempSpan.style.fontWeight = "300";
-      tempSpan.style.fontSize = "2.25rem";
-      tempSpan.style.lineHeight = "3rem";
-      tempSpan.style.lineHeight = "1";
-      tempSpan.style.fontFamily = "var(--font-sans)";
-      // tempSpan.style.display = "block";
+      tempSpan.style.fontWeight = fontWeight || "300"; // default to 300 if not provided
+      tempSpan.style.fontSize = fontSize || "2.25rem"; // default to 2.25rem if not provided
       container.appendChild(tempSpan);
       const words = text.split(" ");
       let currentLine = "";
       let lines: string[] = [];
-      console.log("Starting", words);
-      setLines([]);
       words.forEach((word) => {
         tempSpan.innerText = "";
         const widthBefore = container.offsetWidth - 1;
         tempSpan.innerText = currentLine + word + " ";
-        console.log("sapn width: ", tempSpan.offsetWidth, 'container width: ', container.offsetWidth)
         if (tempSpan.offsetWidth >= widthBefore) {
           lines = [...lines, currentLine.trim()];
-          // setLines(prevLines => [...prevLines, currentLine.trim()]);
           tempSpan.innerText = currentLine  + " ";
-          console.log(currentLine.trim(), tempSpan.offsetWidth, widthBefore);
           currentLine = word + " ";
-          // tempSpan.innerText = currentLine;
         } else {
           currentLine += word + " ";
         }
       });
       if (currentLine) {
-        // setLines(prevLines => [...prevLines, currentLine.trim()]);
         lines = [...lines, currentLine.trim()];
       }
       setLines(lines);
-      console.log({ lines });
       container.removeChild(tempSpan);
     }
   }, [text, lines, containerRef.current?.offsetWidth]);
-  console.log(lines);
-  console.log(containerRef.current?.offsetWidth);
 
   return (
     <motion.div
@@ -89,24 +73,19 @@ const TextSplitter = ({ text }: { text: string }) => {
       initial="hidden"
       animate={inView ? "animate" : "hidden"}
       ref={containerRef}
-      className="w-full  box-border "
-      // className="w-full  box-border border-2 border-black"
+      className={`w-full box-border ${className}`} // apply custom className
     >
-      <div
-        className="text-gray-800 w-full overflow-hidden ">
+      <div className="text-gray-800 w-full overflow-hidden">
         {lines.map((line, index) => (
-
-          <div className="overflow-hidden">
+          <div className="overflow-hidden" key={index}>
             <motion.div
-              key={index}
               variants={childVariants}
               style={{
-                lineHeight: "3rem",
-                fontSize: "2.25rem",
-                fontWeight: 300,
+                lineHeight: lineHeight || "3rem",
+                fontSize: fontSize || "2.25rem", // default to 2.25rem if not provided
+                fontWeight: fontWeight || "300", // default to 300 if not provided
                 fontFamily: "var(--font-sans)",
               }}
-              // className="text-black text-4xl font-light [line-height:3rem]"
             >
               {line}
             </motion.div>

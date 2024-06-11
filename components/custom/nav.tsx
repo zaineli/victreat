@@ -1,9 +1,12 @@
 import Link from 'next/link'
 import React from 'react'
 
+
+
 function Nav() {
     return (
-        <nav className="bg-white  fixed top-2 w-[65%] min-w-max left-[50%] z-[100] translate-x-[-50%] rounded-full mx-auto mt-4 max-w-5xl px-4 py-2 flex gap-8 items-center justify-between">
+        <nav id="nav" className="bg-white  w-[65%] min-w-max mx-auto rounded-full mt-4 max-w-5xl px-4 py-2 flex gap-8 items-center justify-between">
+        {/* <nav className="bg-white fixed top-2 w-[65%] min-w-max left-[50%] z-[100] translate-x-[-50%] rounded-full mx-auto mt-4 max-w-5xl px-4 py-2 flex gap-8 items-center justify-between"> */}
         <div className="flex items-center">
           <span className="text-xl font-bold">Victreat</span>
         </div>
@@ -29,7 +32,7 @@ function Nav() {
         </div>
         <div>
           <Link href="/try-multi-pass">
-            <div className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Try Multi-Pass</div>
+            <div className="bg-[#9aa0a8] text-white px-4 py-2 rounded-full hover:bg-blue-600">Login</div>
           </Link>
         </div>
       </nav>
