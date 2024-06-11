@@ -53,7 +53,6 @@ export default function Team() {
           <p className="text-lg text-gray-600">Check out our <a href="/careers" className="text-blue-500">career page</a> for more information.</p>
         </section>
       </main>
-      {/* <WavyLines /> */}
     </div>
   );
 }

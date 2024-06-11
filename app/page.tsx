@@ -66,6 +66,7 @@ export default function Home() {
 
   return (
     <div className=" ">
+      
       <ScrollButton />
       <section className="relative">
 
