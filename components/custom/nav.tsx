@@ -29,7 +29,7 @@ function Nav() {
         </div>
         <div>
           <Link href="/try-multi-pass">
-            <div className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Try Multi-Pass</div>
+            <div className="bg-[#9aa0a8] text-white px-4 py-2 rounded-full hover:bg-blue-600">Login</div>
           </Link>
         </div>
       </nav>
