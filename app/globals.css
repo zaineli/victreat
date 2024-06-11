@@ -216,3 +216,17 @@
     transform: translateX(calc(-100%));
   }
 }
+
+/* .myscroll {
+  animation: myscroll 5s linear;
+} */
+
+/* @keyframes myscroll {
+  0% {
+    transform: translateX(0%);
+    scroll
+  }
+  100% {
+    transform: translateX(calc(-100%));
+  }
+} */

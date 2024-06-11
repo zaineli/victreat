@@ -63,7 +63,10 @@ function Newss() {
     const [scrollWidth, setScrollWidth] = useState(0);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
     const cardRef = useRef<HTMLAnchorElement>(null);
-    const [indicies, setIndicies] = useState([0, 1, 2, 3, 4, 5]);
+    const [indicies, setIndicies] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8]);
+    const [mouseOver, setMouseOver] = useState(false);
+
+
 
     useEffect(() => {
         timeoutRef.current = setTimeout(() => {
@@ -128,13 +131,12 @@ function Newss() {
         }
     }, [scrollRef.current]);
 
-    const indexedNews = indicies.map(i => news[i]);
 
     return (
         <section className='py-16  overflow-hidden custom-scroll' id="news">
             {/* <h1 className='text-8xl font-bold'>News</h1> */}
-            <div ref={scrollRef} className=' p-16 flex gap-16 overflow-x-scroll ' style={{ scrollbarWidth: 'none' }}>
-                {indexedNews.map((n, i) => <NewsCard target={indicies[i]} initial={i} key={i} news={n}
+            <div ref={scrollRef} className=' p-16 flex gap-16 myscroll ' style={{ scrollbarWidth: 'none' }}>
+                {news.map((n, i) => <NewsCard target={indicies[i]} initial={i} key={i} news={n}
                     delay={i * 100}
                 />)}
             </div>
@@ -146,11 +148,11 @@ function Newss() {
 function CustomScroll({ scroll, scrollWidth }: { scroll: number, scrollWidth: number }) {
     return (
         <div className='flex justify-center items-center gap-2'>
-            <div className='relative w-[40%] min-w-[400px] h-1 bg-neutral-500 rounded-full overflow-hidden'>
+            <div className='relative w-[40%] min-w-[400px] h-1 bg-[#DBE2EC]  rounded-full overflow-hidden'>
                 <div style={{
                     width: `${scrollWidth * 100}%`,
                     left: `${scroll * 100}%`,
-                }} className='h-full bg-blue-500 absolute rounded-full'></div>
+                }} className='h-full  bg-neutral-500 absolute rounded-full'></div>
             </div>
         </div>
     )
@@ -174,30 +176,32 @@ function NewsCard({ news, initial, target }: { news?: News, delay?: number, isLi
     //     </Link >
     // )
 
-    useEffect(() => {
-        if (!ref.current) return;
+    // useEffect(() => {
+    //     if (!ref.current) return;
 
-        const element = ref.current as HTMLDivElement;
-        element.animate([
-            { transform: 'translateX(calc(100% + 2rem))' },
-            { transform: 'translateX(0)' }
-        ], {
-            duration: 1000,
-            delay: 0,
-            easing: 'linear',
-            fill: 'forwards'
-        });
+    //     const element = ref.current as HTMLDivElement;
+    //     element.animate([
+    //         { transform: 'translateX(calc(100% + 2rem))' },
+    //         { transform: 'translateX(0)' }
+    //     ], {
+    //         duration: 1000,
+    //         delay: 0,
+    //         easing: 'linear',
+    //         fill: 'forwards'
+    //     });
 
-    }, [target])
+    // }, [target])
 
     return (
         <div
-            ref={ref} className='card-autoflow' style={{
-                '--start': 'calc(100% + 4rem)',
+            ref={ref} className='relative' style={{
+                'translate': `calc(${(-initial+target-1) * 100}% + ${(target-initial-1) * 4}rem)`,
+                opacity: target === 0 ? 0 : 1,
+                transition: 'translate 3s linear'
             }}>
             <div
 
-                className=' relative rounded-xl overflow-hidden h-[450px] w-[300px]'>
+                className=' rounded-xl overflow-hidden h-[450px] w-[300px]'>
                 {
                     news!.image ?
                         <img src={news!.image} className='w-full h-full object-cover' alt='img  ' /> :
