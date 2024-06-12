@@ -1,6 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 
-const useSectionInView = (options) => {
+const useSectionInView = (options: {
+  threshold?: number;
+  rootMargin?: string;
+} = {
+}) => {
   const [inView, setInView] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 

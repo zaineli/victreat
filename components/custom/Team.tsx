@@ -1,7 +1,5 @@
-// pages/index.js
-import Head from 'next/head';
+import useSectionInView from '@/lib/useSectionInView';
 import TeamMember from './TeamMember';
-import WavyLines from './WavyLines';
 
 export default function Team() {
   const teamMembers = [
@@ -31,6 +29,7 @@ export default function Team() {
     },
   ];
 
+  const [ref, isInView] = useSectionInView({threshold: 0.9})
   
 
   return (

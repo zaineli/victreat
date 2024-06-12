@@ -81,7 +81,8 @@ function Newss() {
     })
 
     return (
-        <section className='py-16  overflow-hidden custom-scroll' id="news">
+        <section className='py-28 overflow-hidden custom-scroll px-4 md:px-12 lg:px-40' id="news">
+            <h1 className="text-3xl font-semibold mb-8">\ News</h1>
             <div ref={scrollRef} className=' p-16 flex gap-16 myscroll ' style={{ scrollbarWidth: 'none' }}>
                 {news.map((n, i) => <NewsCard target={indicies[i]} initial={i} key={i} news={n}
                     delay={i * 100}
@@ -129,7 +130,7 @@ function NewsCard({ news, initial, target }: { news?: News, delay?: number, isLi
     return (
         <div
             ref={ref} className='relative' style={{
-                'translate': `calc(${(-initial+target-1) * 100}% + ${(target-initial-1) * 4}rem)`,
+                'translate': `calc(${(-initial + target - 1) * 100}% + ${(target - initial - 1) * 4}rem)`,
                 opacity: target === 0 ? 0 : 1,
                 transition: 'translate 3s linear'
             }}>

@@ -56,19 +56,6 @@ function News() {
     )
 }
 
-function CustomScroll({ scroll, scrollWidth }: { scroll: number, scrollWidth: number }) {
-    return (
-        <div className='flex justify-center items-center gap-2'>
-            <div className='relative w-[40%] min-w-[400px] h-1 bg-neutral-500 rounded-full overflow-hidden'>
-                <div style={{
-                    width: `${scrollWidth * 100}%`,
-                    left: `${scroll * 100}%`,
-                }} className='h-full bg-blue-500 absolute rounded-full'></div>
-            </div>
-        </div>
-    )
-}
-
 function NewsCard({ news, delay, isLink }: { news?: News, delay?: number, isLink?: boolean }) {
     const elementRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
