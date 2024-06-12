@@ -255,7 +255,7 @@ function Page() {
       <h1 className='text-6xl font-bold text-center'>Find Your Cancer Treatment</h1>
 
       <section className='mt-16 w-[75%] border-2 border-gray-400 bg-gray-800 text-white rounded-lg overflow-hidden mx-auto'>
-        <div className="flex text-2xl items-center px-4 py-2 ">
+        <div className="flex text-2xl items-center px-4 py-4 ">
           <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} className='flex-1 outline-none bg-transparent' placeholder='Search your cancer type ...' />
           <IoSearchOutline />
         </div>
@@ -294,7 +294,7 @@ function Suggestions({ matchingCancerTypes, query }: { matchingCancerTypes: Canc
 
   return (
     <div ref={wrapperRef}>
-      <ul ref={contentRef} className='px-16'>
+      <ul ref={contentRef} className='px-16 border-t-2 border-gray-700'>
         {matchingCancerTypes.map((cancer, i) => (
           // <li key={i} className='px-4 animate-suggestion py-2 border-b border-gray-400' style={{
           //   animationDelay: `${i * 50 + 500}ms`
