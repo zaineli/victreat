@@ -4,6 +4,7 @@
 
 import React, { useEffect } from 'react'
 import { IoSearchOutline } from "react-icons/io5";
+import { FaArrowRight } from "react-icons/fa";
 
 type CancerType = {
   name: string;
@@ -294,35 +295,33 @@ function Suggestions({ matchingCancerTypes, query }: { matchingCancerTypes: Canc
 
 
   return (
-    <div ref={wrapperRef}>
-      <ul ref={contentRef} className='px-16 border-t-2 border-gray-700'>
-        {matchingCancerTypes.map((cancer, i) => (
-          // <li key={i} className='px-4 animate-suggestion py-2 border-b border-gray-400' style={{
-          //   animationDelay: `${i * 50 + 500}ms`
-          // }}>{cancer.name}</li>
-
-          <div
-            key={i}
-            className="flex items-center gap-4  py-4 border-b-2 border-gray-700  w-full animate-suggestion"
-          >
-            <img
-              src={cancer.image}
-              // alt={cancer.name}
-              className="w-12 h-12 object-cover rounded-full bg-gray-700"
-            />
-            <div className="flex flex-col">
-              <h2 className="text-lg font-semibold">
-                {highlightKeyword(cancer.name, query)}
-              </h2>
-              <p className="text-sm">{cancer.organ}</p>
-            </div>
-          </div>
-        ))}
-      </ul>
-    </div>
-  )
-}
-
+        <div ref={wrapperRef}>
+          <ul ref={contentRef} className="border-t-2 border-gray-700">
+            {matchingCancerTypes.map((cancer, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-4 justify-between group px-16 py-4 border-b-2 border-gray-700 w-full animate-suggestion hover:bg-gray-700 transition-colors duration-300"
+              >
+                <div className="flex items-center justify-start gap-4">
+                  <img
+                    src={cancer.image}
+                    alt={cancer.name}
+                    className="w-12 h-12 object-cover rounded-full bg-gray-700"
+                  />
+                  <div className="flex flex-col">
+                    <h2 className="text-lg font-semibold">
+                      {highlightKeyword(cancer.name, query)}
+                    </h2>
+                    <p className="text-sm">{cancer.organ}</p>
+                  </div>
+                </div>
+                <FaArrowRight className="arrow-icon justify-end group-hover:-rotate-45 transition-all duration-300" />
+              </div>
+            ))}
+          </ul>
+        </div>
+      );
+    }  
 // function Page() {
 
 
