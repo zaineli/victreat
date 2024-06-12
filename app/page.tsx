@@ -3,7 +3,6 @@ import Footer from "@/components/custom/footer";
 import CallToAction from "@/components/custom/callToAction";
 import { motion, Variants } from "framer-motion";
 import useSectionInView from "@/lib/useSectionInView";
-import News from "@/components/custom/news";
 import { useEffect, useState } from "react";
 import Carousel from "@/components/custom/carousell";
 import Team from "@/components/custom/Team";
@@ -124,7 +123,6 @@ export default function Home() {
       <CallToAction />
 
       <Newss />
-      {/* <News /> */}
       <section className="flex-1  flex items-start justify-center">
           <Team />
       </section>      
