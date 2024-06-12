@@ -5,6 +5,7 @@
 import React, { useEffect } from 'react'
 import { IoSearchOutline } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
+import Link from 'next/link';
 
 type CancerType = {
   name: string;
@@ -253,8 +254,8 @@ function Page() {
     query === '' ? [] : cancerTypes.filter(cancer => cancer.name.toLowerCase().includes(query.toLowerCase())).slice(0, top);
 
   return (
-    <div className='p-32'>
-      <h1 className='text-6xl font-bold text-center'>Find Your Cancer Treatment</h1>
+    <div className='px-32 py-20'>
+      <h1 className='text-6xl font-bold text-center'>Find Your Cancer <br /> Treatment</h1>
 
       <section className='mt-16 w-[75%] border-2 border-gray-400 bg-gray-800 text-white rounded-lg overflow-hidden mx-auto'>
         <div className="flex text-2xl items-center px-4 py-4 ">
@@ -298,11 +299,12 @@ function Suggestions({ matchingCancerTypes, query }: { matchingCancerTypes: Canc
         <div ref={wrapperRef}>
           <ul ref={contentRef} className="border-t-2 border-gray-700">
             {matchingCancerTypes.map((cancer, i) => (
-              <div
+              <Link
+                href={`/discover/${cancer.name.toLowerCase().replace(/\s/g, '-')}`}
                 key={i}
-                className="flex items-center gap-4 justify-between group px-16 py-4 border-b-2 border-gray-700 w-full animate-suggestion hover:bg-gray-700 transition-colors duration-300"
+                className="flex items-center gap-4 justify-between group px-16 py-4 border-b-2 cursor-pointer border-gray-700 w-full animate-suggestion hover:bg-gray-700 transition-colors duration-300"
               >
-                <div className="flex items-center justify-start gap-4">
+                <div className="flex items-center justify-start gap-4 ">
                   <img
                     src={cancer.image}
                     alt={cancer.name}
@@ -316,7 +318,7 @@ function Suggestions({ matchingCancerTypes, query }: { matchingCancerTypes: Canc
                   </div>
                 </div>
                 <FaArrowRight className="arrow-icon justify-end group-hover:-rotate-45 transition-all duration-300" />
-              </div>
+              </Link>
             ))}
           </ul>
         </div>
