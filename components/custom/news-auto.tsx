@@ -59,12 +59,8 @@ function Newss() {
     ]
 
     const scrollRef = useRef<HTMLDivElement>(null);
-    const [scroll, setScroll] = useState(0);
-    const [scrollWidth, setScrollWidth] = useState(0);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-    const cardRef = useRef<HTMLAnchorElement>(null);
     const [indicies, setIndicies] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8]);
-    const [mouseOver, setMouseOver] = useState(false);
 
 
 
@@ -82,81 +78,19 @@ function Newss() {
                 clearTimeout(timeoutRef.current);
             }
         }
-        // function handler() {
-        //     setIndicies((prev) => {
-        //         const newIndicies = [...prev];
-        //         newIndicies.push(newIndicies.shift()!);
-        //         return newIndicies;
-        //     });
-        //     console.log("Animation")
-        // }
-        // if (cardRef.current) {
-        //     cardRef.current.addEventListener('animationend', handler);
-        // }
-        // return () => {
-        //     if (cardRef.current) {
-        //         cardRef.current.removeEventListener('animationend', handler);
-        //     }
-        // }
     })
-
-    useEffect(() => {
-        function handler() {
-            if (scrollRef.current) {
-                setScroll(scrollRef.current!.scrollLeft / scrollRef.current!.scrollWidth)
-            }
-        }
-
-        function calculateThumbWidth() {
-            if (scrollRef.current) {
-                const { clientWidth, scrollWidth } = scrollRef.current;
-                const thumbWidth = (clientWidth / scrollWidth);
-                // const thumbWidth = (clientWidth / scrollWidth) * clientWidth;
-                setScrollWidth(thumbWidth);
-            }
-        };
-
-        calculateThumbWidth();
-
-        if (scrollRef.current) {
-            scrollRef.current.addEventListener('scroll', handler);
-            window.addEventListener('resize', calculateThumbWidth);
-        }
-
-        return () => {
-            if (scrollRef.current) {
-                scrollRef.current.removeEventListener('scroll', handler);
-                window.removeEventListener('resize', calculateThumbWidth);
-            }
-        }
-    }, [scrollRef.current]);
-
 
     return (
         <section className='py-16  overflow-hidden custom-scroll' id="news">
-            {/* <h1 className='text-8xl font-bold'>News</h1> */}
             <div ref={scrollRef} className=' p-16 flex gap-16 myscroll ' style={{ scrollbarWidth: 'none' }}>
                 {news.map((n, i) => <NewsCard target={indicies[i]} initial={i} key={i} news={n}
                     delay={i * 100}
                 />)}
             </div>
-            <CustomScroll {...{ scroll, scrollWidth }} />
         </section>
     )
 }
 
-function CustomScroll({ scroll, scrollWidth }: { scroll: number, scrollWidth: number }) {
-    return (
-        <div className='flex justify-center items-center gap-2'>
-            <div className='relative w-[40%] min-w-[400px] h-1 bg-[#DBE2EC]  rounded-full overflow-hidden'>
-                <div style={{
-                    width: `${scrollWidth * 100}%`,
-                    left: `${scroll * 100}%`,
-                }} className='h-full  bg-neutral-500 absolute rounded-full'></div>
-            </div>
-        </div>
-    )
-}
 
 function NewsCard({ news, initial, target }: { news?: News, delay?: number, isLink?: boolean, initial: number, target: number }) {
     const ref = useRef(null);

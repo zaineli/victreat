@@ -43,51 +43,15 @@ function News() {
         },
     ]
 
-    const scrollRef = useRef<HTMLDivElement>(null);
-    const [scroll, setScroll] = useState(0);
-    const [scrollWidth, setScrollWidth] = useState(0);
-
-    useEffect(() => {
-        function handler() {
-            if (scrollRef.current) {
-                setScroll(scrollRef.current!.scrollLeft / scrollRef.current!.scrollWidth)
-            }
-        }
-
-        function calculateThumbWidth() {
-            if (scrollRef.current) {
-                const { clientWidth, scrollWidth } = scrollRef.current;
-                const thumbWidth = (clientWidth / scrollWidth);
-                // const thumbWidth = (clientWidth / scrollWidth) * clientWidth;
-                setScrollWidth(thumbWidth);
-            }
-        };
-
-        calculateThumbWidth();
-
-        if (scrollRef.current) {
-            scrollRef.current.addEventListener('scroll', handler);
-            window.addEventListener('resize', calculateThumbWidth);
-        }
-
-        return () => {
-            if (scrollRef.current) {
-                scrollRef.current.removeEventListener('scroll', handler);
-                window.removeEventListener('resize', calculateThumbWidth);
-            }
-        }
-    }, [scrollRef.current]);
-
     return (
         <section className='py-16  overflow-hidden custom-scroll' id="news">
             {/* <h1 className='text-8xl font-bold'>News</h1> */}
-            <div ref={scrollRef} className=' p-16 px-64 flex gap-16 overflow-x-scroll ' style={{scrollbarWidth: 'none'}}>
+            <div className=' p-16 px-64 flex gap-16 overflow-x-scroll ' style={{scrollbarWidth: 'none'}}>
                 {news.map((n, i) => <NewsCard key={i} news={n}
                     delay={i * 100}
                 />)}
                 <NewsCard isLink delay={news.length * 100} />
             </div>
-            <CustomScroll {...{ scroll, scrollWidth }} />
         </section>
     )
 }
