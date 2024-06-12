@@ -10,7 +10,7 @@ type Props = {
   className?: string;
   lineHeight?: string;
 };
-const TextSplitter = ({text, fontWeight, fontSize, className, lineHeight}:Props) => {
+const TextSplitter = ({ text, fontWeight, fontSize, className, lineHeight }: Props) => {
   const [lines, setLines] = useState<string[]>([]);
   const [containerRef, inView] = useSectionInView({ threshold: 0.95 });
 
@@ -36,6 +36,16 @@ const TextSplitter = ({text, fontWeight, fontSize, className, lineHeight}:Props)
 
 
   useEffect(() => {
+    function handler() {
+      setLines([]);
+    }
+    window.addEventListener("resize", handler);
+    return () => {
+      window.removeEventListener("resize", handler);
+    };
+  }, [])
+
+  useEffect(() => {
     const container = containerRef.current;
     if (container && lines.length === 0) {
       const tempSpan = document.createElement("span");
@@ -53,7 +63,7 @@ const TextSplitter = ({text, fontWeight, fontSize, className, lineHeight}:Props)
         tempSpan.innerText = currentLine + word + " ";
         if (tempSpan.offsetWidth >= widthBefore) {
           lines = [...lines, currentLine.trim()];
-          tempSpan.innerText = currentLine  + " ";
+          tempSpan.innerText = currentLine + " ";
           currentLine = word + " ";
         } else {
           currentLine += word + " ";
