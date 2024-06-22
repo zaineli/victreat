@@ -24,12 +24,15 @@ import { TiTick } from "react-icons/ti";
 import { Button } from '@/components/ui/button';
 import { mutations, stages } from "../../data";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 
 function MutationPage({ params }: { params: { cancer: string, stage: string } }) {
   const { cancer, stage } = params;
   const cancerText = cancer.split('-').map((c) => c.charAt(0).toUpperCase() + c.slice(1)).join(' ');
   const stageText = "Stage " + stages[parseInt(stage)].stage;
+
+  const router = useRouter();
 
   return (
     <div className="px-32 pt-4">
@@ -59,8 +62,10 @@ function MutationPage({ params }: { params: { cancer: string, stage: string } })
                 <CommandEmpty>No results found.</CommandEmpty>
                 <CommandGroup heading="Mutations">
                   {
-                    mutations.map((mutation) =>
-                      <CommandItem>
+                    mutations.map((mutation, i) =>
+                      <CommandItem onSelect={() => {
+                        router.push(`/discover/${cancer}/${stage}/${i}/treatments`);
+                      }}>
                         <span className="ml-2">{mutation.name}</span>
                       </CommandItem>)
                   }
