@@ -281,3 +281,30 @@
     scale: 1;
   }
 }
+
+.custom-news-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 50px;
+}
+
+.custom-news-scrollbar::-webkit-scrollbar {
+  background: transparent;
+  height: 0.5rem;
+  border-radius: 50px;
+}
+
+
+.custom-news-scrollbar:hover::-webkit-scrollbar-track {
+  background: #DBE2EC;
+}
+
+.custom-news-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: lightblue; 
+  border-radius: 50px;
+}
+
+
+.custom-news-scrollbar::-webkit-scrollbar-button {
+  background: transparent; 
+  width: 10%;
+}
