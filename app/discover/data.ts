@@ -1,106 +1,273 @@
 export type Mutation = {
-    name: string;
-    description: string;
-}
+  name: string;
+  description: string;
+};
 
 export const mutations: Mutation[] = [
-    {
-        name: "Deletion",
-        description: "A deletion mutation is a type of mutation in which a part of the chromosome is lost."
-    },
-    {
-        name: "Duplication",
-        description: "A duplication mutation is a type of mutation in which a part of the chromosome is copied."
-    },
-    {
-        name: "Insertion",
-        description: "An insertion mutation is a type of mutation in which a part of the chromosome is added."
-    },
-    {
-        name: "Inversion",
-        description: "An inversion mutation is a type of mutation in which a part of the chromosome is reversed."
-    },
-    {
-        name: "Deletion",
-        description: "A deletion mutation is a type of mutation in which a part of the chromosome is lost."
-    },
-    {
-        name: "Duplication",
-        description: "A duplication mutation is a type of mutation in which a part of the chromosome is copied."
-    },
-    {
-        name: "Insertion",
-        description: "An insertion mutation is a type of mutation in which a part of the chromosome is added."
-    },
-    {
-        name: "Inversion",
-        description: "An inversion mutation is a type of mutation in which a part of the chromosome is reversed."
-    },
-    {
-        name: "Deletion",
-        description: "A deletion mutation is a type of mutation in which a part of the chromosome is lost."
-    },
-    {
-        name: "Duplication",
-        description: "A duplication mutation is a type of mutation in which a part of the chromosome is copied."
-    },
-    {
-        name: "Insertion",
-        description: "An insertion mutation is a type of mutation in which a part of the chromosome is added."
-    },
-    {
-        name: "Inversion",
-        description: "An inversion mutation is a type of mutation in which a part of the chromosome is reversed."
-    },
-    {
-        name: "Deletion",
-        description: "A deletion mutation is a type of mutation in which a part of the chromosome is lost."
-    },
-    {
-        name: "Duplication",
-        description: "A duplication mutation is a type of mutation in which a part of the chromosome is copied."
-    },
-    {
-        name: "Insertion",
-        description: "An insertion mutation is a type of mutation in which a part of the chromosome is added."
-    },
-    {
-        name: "Inversion",
-        description: "An inversion mutation is a type of mutation in which a part of the chromosome is reversed."
-    },
-]
+  {
+    name: "Deletion",
+    description:
+      "A deletion mutation is a type of mutation in which a part of the chromosome is lost.",
+  },
+  {
+    name: "Duplication",
+    description:
+      "A duplication mutation is a type of mutation in which a part of the chromosome is copied.",
+  },
+  {
+    name: "Insertion",
+    description:
+      "An insertion mutation is a type of mutation in which a part of the chromosome is added.",
+  },
+  {
+    name: "Inversion",
+    description:
+      "An inversion mutation is a type of mutation in which a part of the chromosome is reversed.",
+  },
+  {
+    name: "Deletion",
+    description:
+      "A deletion mutation is a type of mutation in which a part of the chromosome is lost.",
+  },
+  {
+    name: "Duplication",
+    description:
+      "A duplication mutation is a type of mutation in which a part of the chromosome is copied.",
+  },
+  {
+    name: "Insertion",
+    description:
+      "An insertion mutation is a type of mutation in which a part of the chromosome is added.",
+  },
+  {
+    name: "Inversion",
+    description:
+      "An inversion mutation is a type of mutation in which a part of the chromosome is reversed.",
+  },
+  {
+    name: "Deletion",
+    description:
+      "A deletion mutation is a type of mutation in which a part of the chromosome is lost.",
+  },
+  {
+    name: "Duplication",
+    description:
+      "A duplication mutation is a type of mutation in which a part of the chromosome is copied.",
+  },
+  {
+    name: "Insertion",
+    description:
+      "An insertion mutation is a type of mutation in which a part of the chromosome is added.",
+  },
+  {
+    name: "Inversion",
+    description:
+      "An inversion mutation is a type of mutation in which a part of the chromosome is reversed.",
+  },
+  {
+    name: "Deletion",
+    description:
+      "A deletion mutation is a type of mutation in which a part of the chromosome is lost.",
+  },
+  {
+    name: "Duplication",
+    description:
+      "A duplication mutation is a type of mutation in which a part of the chromosome is copied.",
+  },
+  {
+    name: "Insertion",
+    description:
+      "An insertion mutation is a type of mutation in which a part of the chromosome is added.",
+  },
+  {
+    name: "Inversion",
+    description:
+      "An inversion mutation is a type of mutation in which a part of the chromosome is reversed.",
+  },
+];
+
+export type Treatment = {
+  type: "Preffered" | "Alternative" | "Experimental";
+  name: string;
+  description: string;
+};
+
+export const treatments = [
+  {
+    type: "Preffered",
+    name: "Chemotherapy",
+    description:
+      "Chemotherapy is a type of cancer treatment that uses drugs to kill cancer cells.",
+  },
+  {
+    type: "Preffered",
+    name: "Radiation Therapy",
+    description:
+      "Radiation therapy is a type of cancer treatment that uses high doses of radiation to kill cancer cells and shrink tumors.",
+  },
+  {
+    type: "Preffered",
+    name: "Surgery",
+    description:
+      "Surgery is a type of cancer treatment that involves removing the tumor and some of the surrounding tissue.",
+  },
+  {
+    type: "Preffered",
+    name: "Immunotherapy",
+    description:
+      "Immunotherapy is a type of cancer treatment that helps your immune system fight cancer.",
+  },
+  {
+    type: "Preffered",
+    name: "Targeted Therapy",
+    description:
+      "Targeted therapy is a type of cancer treatment that targets the changes in cancer cells that help them grow, divide, and spread.",
+  },
+  {
+    type: "Preffered",
+    name: "Hormone Therapy",
+    description:
+      "Hormone therapy is a type of cancer treatment that slows or stops the growth of cancer that uses hormones to grow.",
+  },
+  {
+    type: "Preffered",
+    name: "Stem Cell Transplant",
+    description:
+      "Stem cell transplant is a type of cancer treatment that replaces blood-forming stem cells.",
+  },
+  {
+    type: "Preffered",
+    name: "Chemotherapy",
+    description:
+      "Chemotherapy is a type of cancer treatment that uses drugs to kill cancer cells.",
+  },
+  {
+    type: "Preffered",
+    name: "Radiation Therapy",
+    description:
+      "Radiation therapy is a type of cancer treatment that uses high doses of radiation to kill cancer cells and shrink tumors.",
+  },
+  {
+    type: "Preffered",
+    name: "Surgery",
+    description:
+      "Surgery is a type of cancer treatment that involves removing the tumor and some of the surrounding tissue.",
+  },
+  {
+    type: "Preffered",
+    name: "Immunotherapy",
+    description:
+      "Immunotherapy is a type of cancer treatment that helps your immune system fight cancer.",
+  },
+  {
+    type: "Preffered",
+    name: "Targeted Therapy",
+    description:
+      "Targeted therapy is a type of cancer treatment that targets the changes in cancer cells that help them grow, divide, and spread.",
+  },
+  {
+    type: "Preffered",
+    name: "Hormone Therapy",
+    description:
+      "Hormone therapy is a type of cancer treatment that slows or stops the growth of cancer that uses hormones to grow.",
+  },
+  {
+    type: "Preffered",
+    name: "Stem Cell Transplant",
+    description:
+      "Stem cell transplant is a type of cancer treatment that replaces blood-forming stem cells.",
+  },
+  {
+    type: "Alternative",
+    name: "Chemotherapy",
+    description:
+      "Chemotherapy is a type of cancer treatment that uses drugs to kill cancer cells.",
+  },
+  {
+    type: "Alternative",
+    name: "Radiation Therapy",
+    description:
+      "Radiation therapy is a type of cancer treatment that uses high doses of radiation to kill cancer cells and shrink tumors.",
+  },
+  {
+    type: "Alternative",
+    name: "Surgery",
+    description:
+      "Surgery is a type of cancer treatment that involves removing the tumor and some of the surrounding tissue.",
+  },
+  {
+    type: "Alternative",
+    name: "Immunotherapy",
+    description:
+      "Immunotherapy is a type of cancer treatment that helps your immune system fight cancer.",
+  },
+  {
+    type: "Alternative",
+    name: "Targeted Therapy",
+    description:
+      "Targeted therapy is a type of cancer treatment that targets the changes in cancer cells that help them grow, divide, and spread.",
+  },
+  {
+    type: "Alternative",
+    name: "Hormone Therapy",
+    description:
+      "Hormone therapy is a type of cancer treatment that slows or stops the growth of cancer that uses hormones to grow.",
+  },
+  {
+    type: "Alternative",
+    name: "Stem Cell Transplant",
+    description:
+      "Stem cell transplant is a type of cancer treatment that replaces blood-forming stem cells.",
+  },
+  {
+    type: "Exlperimental",
+    name: "Chemotherapy",
+    description:
+      "Chemotherapy is a type of cancer treatment that uses drugs to kill cancer cells.",
+  },
+  {
+    type: "Exlperimental",
+    name: "Radiation Therapy",
+    description:
+      "Radiation therapy is a type of cancer treatment that uses high doses of radiation to kill cancer cells and shrink tumors.",
+  },
+  {
+    type: "Exlperimental",
+    name: "Surgery",
+    description:
+      "Surgery is a type of cancer treatment that involves removing the tumor and some of the surrounding tissue.",
+  },
+  {
+    type: "Exlperimental",
+    name: "Immunotherapy",
+    description:
+      "Immunotherapy is a type of cancer treatment that helps your immune system fight cancer.",
+  },
+  {
+    type: "Exlperimental",
+    name: "Targeted Therapy",
+    description:
+      "Targeted therapy is a type of cancer treatment that targets the changes in cancer cells that help them grow, divide, and spread.",
+  },
+  {
+    type: "Exlperimental",
+    name: "Hormone Therapy",
+    description:
+      "Hormone therapy is a type of cancer treatment that slows or stops the growth of cancer that uses hormones to grow.",
+  },
+  {
+    type: "Exlperimental",
+    name: "Stem Cell Transplant",
+    description:
+      "Stem cell transplant is a type of cancer treatment that replaces blood-forming stem cells.",
+  },
+];
 
 export type CancerType = {
   name: string;
   image: string;
   organ: string;
 };
-
-export const stages = [
-  {
-    stage: "I",
-    description:
-      "Stage 1 is the earliest stage of cancer. It is usually small and hasn’t spread to other parts of the body. It is often called early-stage cancer.",
-  },
-
-  {
-    stage: "II",
-    description:
-      "Stage 2 means the cancer has grown, but it is still contained in the organ where it started. It has not spread to other parts of the body.",
-  },
-
-  {
-    stage: "III",
-    description:
-      "Stage 3 means the cancer has spread to nearby tissues or lymph nodes. It may have also spread to other parts of the body.",
-  },
-
-  {
-    stage: "IV",
-    description:
-      "Stage 4 means the cancer has spread to other parts of the body. It is also called advanced or metastatic cancer.",
-  },
-];
 
 export const cancerTypes: CancerType[] = [
   {
@@ -313,5 +480,31 @@ export const cancerTypes: CancerType[] = [
     name: "Vulvar Cancer",
     image: "https://baconmockup.com/642/400",
     organ: "Vulva",
+  },
+];
+
+export const stages = [
+  {
+    stage: "I",
+    description:
+      "Stage 1 is the earliest stage of cancer. It is usually small and hasn’t spread to other parts of the body. It is often called early-stage cancer.",
+  },
+
+  {
+    stage: "II",
+    description:
+      "Stage 2 means the cancer has grown, but it is still contained in the organ where it started. It has not spread to other parts of the body.",
+  },
+
+  {
+    stage: "III",
+    description:
+      "Stage 3 means the cancer has spread to nearby tissues or lymph nodes. It may have also spread to other parts of the body.",
+  },
+
+  {
+    stage: "IV",
+    description:
+      "Stage 4 means the cancer has spread to other parts of the body. It is also called advanced or metastatic cancer.",
   },
 ];

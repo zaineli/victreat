@@ -54,13 +54,16 @@ function MutationPage({ params }: { params: { cancer: string, stage: string } })
         <div className="flex flex-1 flex-col w-full overflow-hidden justify-center gap-32">
           <section className='mt-16 gap-16 flex justify-between mx-auto w-full'>
             <Command className="rounded-lg border shadow-md">
-              <CommandInput placeholder="Type a Mutation or search..." />
+              <CommandInput placeholder="Search Mutations..." />
               <CommandList>
                 <CommandEmpty>No results found.</CommandEmpty>
                 <CommandGroup heading="Mutations">
-                  {mutations.map((mutation) => <CommandItem>
-                    <span className="ml-2">{mutation.name}</span>
-                  </CommandItem>)}
+                  {
+                    mutations.map((mutation) =>
+                      <CommandItem>
+                        <span className="ml-2">{mutation.name}</span>
+                      </CommandItem>)
+                  }
 
                 </CommandGroup>
               </CommandList>

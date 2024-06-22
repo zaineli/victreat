@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" >
       <body className={cn(
         " font-sans antialiased flex-col items-center justify-center m-0",
         fontSans.variable

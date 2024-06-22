@@ -1,10 +1,21 @@
 "use client";
 
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from "@/components/ui/command"
 import React, { useEffect, useState } from "react";
 import { IoSearchOutline } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
 import Link from 'next/link';
 import { CancerType, cancerTypes } from "./data";
+import { useRouter } from "next/navigation";
 
 
 const highlightKeyword = (text: string, keyword: string) => {
@@ -22,10 +33,11 @@ const highlightKeyword = (text: string, keyword: string) => {
   );
 };
 
-function Page() {
+function DiscoverPage() {
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState("all");
   const top = 5;
+  const router = useRouter();
 
   const filterCancerTypes = (cancer: CancerType) => {
     const lowerQuery = query.toLowerCase();
@@ -42,6 +54,15 @@ function Page() {
     return false;
   };
 
+  const groups = cancerTypes.reduce((acc, cancer) => {
+    const key = cancer.organ;
+    if (!acc[key]) {
+      acc[key] = [];
+    }
+    acc[key].push(cancer);
+    return acc;
+  }, {} as { [key: string]: CancerType[] });
+
   const matchingCancerTypes =
     query === "" ? [] : cancerTypes.filter(filterCancerTypes).slice(0, top);
 
@@ -50,7 +71,7 @@ function Page() {
   }
 
   return (
-    <div className="px-32 pt-16">
+    <div className="px-32 pt-16 dark">
       <div className="font text-center">
         <div className="font-thin text-4xl">
           Find Your
@@ -58,7 +79,7 @@ function Page() {
         <span className='font-light text-7xl text-slate-500'>Cancer Treatment</span>
       </div>
 
-      <section className="mt-16 w-[75%] border-2 border-gray-400 bg-slate-500 text-white rounded-lg overflow-hidden mx-auto">
+      {/* <section className="mt-16 w-[75%] border-2 border-gray-400 bg-slate-500 text-white rounded-lg overflow-hidden mx-auto">
         <div className="flex text-2xl items-center px-4 py-4 gap-4">
           <IoSearchOutline />
           <input
@@ -98,7 +119,33 @@ function Page() {
           </div>
         </div>
         <Suggestions {...{ matchingCancerTypes, query, filter }} />
-      </section>
+      </section> */}
+
+      <Command className="rounded-lg border shadow-md">
+        <CommandInput placeholder="Search Mutations..." />
+        <CommandList>
+          <CommandEmpty>No results found.</CommandEmpty>
+          {Object.entries(groups).map(([group, types]) =>
+            <>
+              <CommandGroup heading={group}>
+                {
+                  types.map(({ name, image }) =>
+                    <CommandItem onSelect={() => {
+                      router.push(`/discover/${name.toLowerCase().replace(/\s/g, "-")}`);
+                    }}>
+                      <img src={image} alt="" className="w-4 h-4 rounded-full" />
+                      <span className="ml-2">{name}</span>
+                      {/* only for searching and not displying */}
+                      <span className="sr-only">{group}</span>
+                    </CommandItem>
+                    )
+                }
+              </CommandGroup>
+              <CommandSeparator />
+            </>
+          )}
+        </CommandList>
+      </Command>
     </div>
   );
 }
@@ -175,4 +222,4 @@ function Suggestions({
   );
 }
 
-export default Page;
+export default DiscoverPage;
