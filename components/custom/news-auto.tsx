@@ -63,10 +63,12 @@ function Newss() {
             <div className="px-4 md:px-12 lg:px-40">
                 <h1 className="text-3xl font-semibold mb-8 ">\ News</h1>
             </div>
-            <div className=' flex gap-16 max-w-screen overflow-hidden' >
+            <div className=' flex gap-16 max-w-screen overflow-hidden relative' >
                 <Marquee pauseOnHover className=''>
                     {news.map((n, i) => <NewsCard news={n} />)}
                 </Marquee>
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
             </div>
         </section>
     )
