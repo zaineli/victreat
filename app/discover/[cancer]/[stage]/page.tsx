@@ -1,8 +1,16 @@
-
 // TODO: make only the search bar client side
-
 'use client';
 
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from "@/components/ui/command"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -12,24 +20,16 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import React, { useEffect, useState } from 'react'
-import { IoSearchOutline } from "react-icons/io5";
-import { FaArrowRight } from "react-icons/fa";
-import Link from 'next/link';
 import { TiTick } from "react-icons/ti";
 import { Button } from '@/components/ui/button';
-import { stages } from "../data";
+import { mutations, stages } from "../../data";
+import Link from "next/link";
 
 
-function Page({ params }: { params: { cancer: string } }) {
-  console.log({ params })
-
-  const { cancer } = params;
-
+function MutationPage({ params }: { params: { cancer: string, stage: string } }) {
+  const { cancer, stage } = params;
   const cancerText = cancer.split('-').map((c) => c.charAt(0).toUpperCase() + c.slice(1)).join(' ');
-
-  const [stage, setStage] = useState(0);
-
-
+  const stageText = "Stage " + stages[parseInt(stage)].stage;
 
   return (
     <div className="px-32 pt-4">
@@ -40,25 +40,31 @@ function Page({ params }: { params: { cancer: string } }) {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>Cancer Stage</BreadcrumbPage>
+            <BreadcrumbLink href={`/discover/${cancer}`}>{stageText}</BreadcrumbLink>
+            <BreadcrumbPage>{ }</BreadcrumbPage>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>Select Mutation</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
       <div className=' py-20 flex h-[calc(100vh-4rem)] flex-col'>
-        <h1 className='text-6xl font-normal text-center'>What is your stage of {cancerText}?</h1>
+        <h1 className='text-6xl font-normal text-center'>What is your mutation of {cancerText}?</h1>
         <div className="flex flex-1 flex-col w-full overflow-hidden justify-center gap-32">
           <section className='mt-16 gap-16 flex justify-between mx-auto w-full'>
-            {stages.map((s, index) => (
-              <div onClick={() => setStage(index)} key={index} className={`relative cursor-pointer flex-1 gap-4 aspect-square w-96 flex items-center justify-center transition-all duration-300 ${stage !== index ? "border-4 border-gray-400" : "border-4 border-gray-700"}  rounded-xl`}>
-                <h2 className=' font-semibold text-3xl shadow'>Stage {s.stage}</h2>
-                <p className='hidden'>{s.description}</p>
-                {stage === index &&
-                  <div className="absolute w-8 h-8 top-0 left-[50%] translate-y-[-50%] translate-x-[-50%] rounded-full bg-gray-700 text-white text-2xl flex justify-center items-center tick-animation">
-                    <TiTick />
-                  </div>
-                }
-              </div>
-            ))}
+            <Command className="rounded-lg border shadow-md">
+              <CommandInput placeholder="Type a Mutation or search..." />
+              <CommandList>
+                <CommandEmpty>No results found.</CommandEmpty>
+                <CommandGroup heading="Mutations">
+                  {mutations.map((mutation) => <CommandItem>
+                    <span className="ml-2">{mutation.name}</span>
+                  </CommandItem>)}
+
+                </CommandGroup>
+              </CommandList>
+            </Command>
           </section>
           <div className="flex justify-center gap-2 ">
             <Button className='px-16 rounded-full' variant={'outline'} asChild>
@@ -74,4 +80,4 @@ function Page({ params }: { params: { cancer: string } }) {
   )
 }
 
-export default Page;
+export default MutationPage;
