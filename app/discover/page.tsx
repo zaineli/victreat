@@ -71,7 +71,7 @@ function DiscoverPage() {
   }
 
   return (
-    <div className="px-32 pt-16 dark">
+    <div className="px-32 py-16 gap-20 dark flex flex-col h-[calc(100vh-5rem)]">
       <div className="font text-center">
         <div className="font-thin text-4xl">
           Find Your
@@ -121,9 +121,9 @@ function DiscoverPage() {
         <Suggestions {...{ matchingCancerTypes, query, filter }} />
       </section> */}
 
-      <Command className="rounded-lg border shadow-md">
+      <Command className="rounded-lg border shadow-md h-min">
         <CommandInput placeholder="Search Mutations..." />
-        <CommandList>
+        <CommandList className="max-h-[unset]">
           <CommandEmpty>No results found.</CommandEmpty>
           {Object.entries(groups).map(([group, types]) =>
             <>
