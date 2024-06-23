@@ -263,6 +263,22 @@
   }
 }
 
+/* Add this to your CSS file */
+.globe-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 50vh; /* Ensures only the top half is visible */
+  overflow: hidden;
+}
+
+.globe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the globe fits within the container */
+}
 
 
 .tick-animation {
