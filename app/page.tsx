@@ -15,6 +15,7 @@ import { GrTechnology } from "react-icons/gr";
 import Section from "@/components/custom/Section";
 import Globe from "@/components/magicui/globe";
 
+
 export default function Home() {
   const [ref, isInView] = useSectionInView({ threshold: 0.8 });
 
@@ -59,7 +60,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       <ScrollButton />
-      <section className="relative">
+      <section className="relative mb-32">
         <section ref={ref} className="h-screen flex items-center flex-col justify-center gap-8">
           <h1 className="text-6xl text-center">Treat your Cancer <br /> with Victreat</h1>
           <ul className="flex gap-4 text-2xl w-48 text-center">
