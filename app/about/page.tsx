@@ -4,7 +4,7 @@ export default function CancerDiagnosisPage() {
   return (
     <div className="relative h-screen flex flex-col justify-center items-center bg-white w-full p-8">
       <main className="w-full max-w-screen-lg">
-        <section className="mb-16 text-center self-start">
+        <section className="mb-16 text-center ">
           <h1 className="text-6xl font-light leading-tight">
             Helping <span className="font-bold">Cancer Diagnosis</span><br />and Treatment
           </h1>
