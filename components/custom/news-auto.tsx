@@ -1,7 +1,6 @@
 'use client';
-
-import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react'
+import Marquee from '@/components/ui/marquee';
 
 type News = {
     title: string
@@ -58,42 +57,25 @@ function Newss() {
         },
     ]
 
-    const scrollRef = useRef<HTMLDivElement>(null);
-    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-    const [indicies, setIndicies] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8]);
-
-
-
-    useEffect(() => {
-        timeoutRef.current = setTimeout(() => {
-            setIndicies((prev) => {
-                const newIndicies = [...prev];
-                newIndicies.push(newIndicies.shift()!);
-                return newIndicies;
-            });
-        }, 3000);
-
-        return () => {
-            if (timeoutRef.current) {
-                clearTimeout(timeoutRef.current);
-            }
-        }
-    })
 
     return (
-        <section className='py-28 overflow-hidden custom-scroll px-4 md:px-12 lg:px-40' id="news">
-            <h1 className="text-3xl font-semibold mb-8">\ News</h1>
-            <div ref={scrollRef} className=' p-16 flex gap-16 myscroll ' style={{ scrollbarWidth: 'none' }}>
-                {news.map((n, i) => <NewsCard target={indicies[i]} initial={i} key={i} news={n}
-                    delay={i * 100}
-                />)}
+        <section className='py-28 overflow-hidden' id="news">
+            <div className="px-4 md:px-12 lg:px-40">
+                <h1 className="text-3xl font-semibold mb-8 ">\ News</h1>
+            </div>
+            <div className=' flex gap-16 max-w-screen overflow-hidden relative' >
+                <Marquee pauseOnHover className=''>
+                    {news.map((n, i) => <NewsCard news={n} />)}
+                </Marquee>
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
             </div>
         </section>
     )
 }
 
 
-function NewsCard({ news, initial, target }: { news?: News, delay?: number, isLink?: boolean, initial: number, target: number }) {
+function NewsCard({ news }: { news?: News }) {
     const ref = useRef(null);
 
 
@@ -128,12 +110,7 @@ function NewsCard({ news, initial, target }: { news?: News, delay?: number, isLi
     // }, [target])
 
     return (
-        <div
-            ref={ref} className='relative' style={{
-                'translate': `calc(${(-initial + target - 1) * 100}% + ${(target - initial - 1) * 4}rem)`,
-                opacity: target === 0 ? 0 : 1,
-                transition: 'translate 3s linear'
-            }}>
+        <div className='relative'>
             <div
 
                 className=' rounded-xl overflow-hidden h-[450px] w-[300px]'>
@@ -143,7 +120,7 @@ function NewsCard({ news, initial, target }: { news?: News, delay?: number, isLi
                         <div className='bg-neutral-700 w-full h-full'></div>
                 }
                 <div className='absolute inset-0 p-4 group flex flex-col hover:opacity-100 opacity-0 justify-end transition-all cursor-pointer custom-mask'>
-                    <div className="absolute inset-0 z-[1] bg-black opacity-55"></div>
+                    <div className="absolute inset-0 z-[1] bg-black opacity-55 rounded-xl"></div>
                     <div className=" text-white z-10">
 
                         <h2 className='text-xl'>{news!.title}</h2>

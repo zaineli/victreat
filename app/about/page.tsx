@@ -1,6 +1,7 @@
 'use client'
 import { motion } from "framer-motion";
 
+<<<<<<< HEAD
 const textVariant = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 1 } }
@@ -31,6 +32,9 @@ const borderVariant = {
 };
 
 export default function CancerDiagnosisPage() {
+=======
+export default function About() {
+>>>>>>> discover-v2
   return (
     <div className="relative h-screen flex flex-col justify-start items-start bg-white w-full px-48 py-32 ">
       <main className="w-full ">

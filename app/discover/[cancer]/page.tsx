@@ -12,8 +12,6 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import React, { useEffect, useState } from 'react'
-import { IoSearchOutline } from "react-icons/io5";
-import { FaArrowRight } from "react-icons/fa";
 import Link from 'next/link';
 import { TiTick } from "react-icons/ti";
 import { Button } from '@/components/ui/button';
@@ -32,7 +30,7 @@ function Page({ params }: { params: { cancer: string } }) {
 
 
   return (
-    <div className="px-32 pt-4">
+    <div className="px-32 pt-4 h-[calc(100vh-5rem)]">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -44,7 +42,7 @@ function Page({ params }: { params: { cancer: string } }) {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <div className=' py-20 flex h-[calc(100vh-4rem)] flex-col'>
+      <div className=' py-20 flex flex-col'>
         <h1 className='text-6xl font-normal text-center'>What is your stage of {cancerText}?</h1>
         <div className="flex flex-1 flex-col w-full overflow-hidden justify-center gap-32">
           <section className='mt-16 gap-16 flex justify-between mx-auto w-full'>
