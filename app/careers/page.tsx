@@ -91,7 +91,7 @@ function Page() {
       </div>
       <div className='flex flex-col justify-center py-10'>
         <motion.div
-          className="bg-white p-6"
+          className="bg-white px-6 py-6"
           initial="hidden"
           animate="visible"
           variants={textVariants}
