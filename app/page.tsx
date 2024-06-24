@@ -81,12 +81,12 @@ export default function Home() {
     <section className="relative mb-48">
       <section className="h-screen flex items-center flex-col justify-center gap-8">
         <motion.h1
-          className="text-6xl text-center"
+          className="text-6xl text-center text-slate-600"
           initial="hidden"
           animate="visible"
           variants={textVariant}
         >
-          Treat your Cancer <br /> with Victreat
+          Treat your <b>Cancer</b> <br /> with Victreat
         </motion.h1>
         <motion.ul
           className="flex gap-4 text-2xl w-48 text-center"
@@ -150,7 +150,7 @@ export default function Home() {
           <input
             type="text"
             name=""
-            className="flex-1 bg-transparent text-slate-600 selection:placeholder:open:none py-2 px-4 placeholder:text-grey"
+            className="flex-1 bg-transparent text-slate-600 py-2 px-4 placeholder:text-grey"
             id=""
             placeholder="Search Cancer ..."
           />

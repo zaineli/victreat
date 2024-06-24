@@ -24,7 +24,7 @@ const Section = ({
   return (
     <section id={id} className={`z-50 relative py-36 flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} md:flex-row items-start justify-between gap-8 md:gap-24 px-4 md:px-12 lg:px-40`}>
       <div className="flex-1">
-        <h1 className="text-3xl font-semibold mb-8">\ {title}</h1>
+        <h1 className="text-3xl font-semibold mb-8 text-slate-600">\ {title}</h1>
         <div className="my-16">
           <TextSplitter text={text1} />
 
