@@ -1,18 +1,19 @@
 // components/TeamMember.js
 import Image from "next/image";
 import AnimatedImage from "./animatedImage";
-import { Variants } from "framer-motion";
+import { Variants, delay } from "framer-motion";
 import TextSplitter from "./textSpiltter";
 
 const TeamMember = ({ name, title, imageSrc, bgColor, index }) => {
 
   const containerVariantsA: Variants = {
-    hidden: { opacity: 0, x: -100 },
+    hidden: { opacity: 0, x: -50 },
     animate: {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 1,
+        duration: 0.5,
+        delay: 0.25 * index,
       },
     },
   };
