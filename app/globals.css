@@ -299,7 +299,7 @@
 }
 
 .custom-news-scrollbar:hover::-webkit-scrollbar-thumb {
-  background: lightblue; 
+  background: black; 
   border-radius: 50px;
 }
 
