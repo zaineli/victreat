@@ -41,6 +41,24 @@ export default function Home() {
     },
   };
 
+  const textVariant = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } }
+  };
+
+  const staggeredIcons = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delayChildren: 0.3, // Delay each icon animation by 0.3 seconds
+        staggerChildren: 0.2 // Stagger icon animations by 0.2 seconds
+      }
+    }
+  };
+
   const [data, setData] = useState([]);
   const [selectedCancerIndex, setSelectedCancerIndex] = useState(0);
 
@@ -60,35 +78,95 @@ export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       <ScrollButton />
-      <section className="relative mb-32">
-        <section ref={ref} className="h-screen flex items-center flex-col justify-center gap-8">
-          <h1 className="text-6xl text-center">Treat your Cancer <br /> with Victreat</h1>
-          <ul className="flex gap-4 text-2xl w-48 text-center">
-            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center"><a href="#purpose"><SiTarget/></a></li>
-            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center"><a href="#technology"><GrTechnology /></a></li>
-            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center">
-              <a href="#news">
-                <IoNewspaperOutline />
-              </a>
-            </li>
-            <li className="rounded-full bg-white aspect-square flex-1 text-grey-500 flex justify-center items-center"><a href="#team"><RiTeamLine/></a></li>
-          </ul>
-          <div className=" w-[40rem] rounded-lg text-2xl">
-            <Carousel />
-          </div>
-          <div className="w-[36rem] bg-white rounded-full flex p-1">
-            <input type="text" name="" className=" flex-1 bg-transparent text-white py-2 px-4 placeholder:text-grey" id="" placeholder="Search Cancer ..." />
-            <button className="px-4 bg-[#DBE2EC] text-white rounded-full">Search</button>
-          </div>
-        </section>
-
-
-        {/* Replace the ellipses with the Globe component */}
-        <div className="absolute scale-[1.9] bottom-[-250px] -z-[99] w-screen h-[80%] overflow-hidden">
-
-            <Globe />
-        </div>  
+    <section className="relative mb-48">
+      <section className="h-screen flex items-center flex-col justify-center gap-8">
+        <motion.h1
+          className="text-6xl text-center"
+          initial="hidden"
+          animate="visible"
+          variants={textVariant}
+        >
+          Treat your Cancer <br /> with Victreat
+        </motion.h1>
+        <motion.ul
+          className="flex gap-4 text-2xl w-48 text-center"
+          initial="hidden"
+          animate="visible"
+          variants={staggeredIcons}
+        >
+          <motion.li variants={staggeredIcons}>
+            <motion.a
+              href="#purpose"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <SiTarget />
+            </motion.a>
+          </motion.li>
+          <motion.li variants={staggeredIcons}>
+            <motion.a
+              href="#technology"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <GrTechnology />
+            </motion.a>
+          </motion.li>
+          <motion.li variants={staggeredIcons}>
+            <motion.a
+              href="#news"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <IoNewspaperOutline />
+            </motion.a>
+          </motion.li>
+          <motion.li variants={staggeredIcons}>
+            <motion.a
+              href="#team"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <RiTeamLine />
+            </motion.a>
+          </motion.li>
+        </motion.ul>
+        <motion.div
+          className="w-[40rem] rounded-lg text-2xl"
+          initial="hidden"
+          animate="visible"
+          variants={textVariant}
+        >
+          <Carousel />
+        </motion.div>
+        <motion.div
+          className="w-[36rem] bg-white rounded-full flex p-1 border-2 "
+          initial="hidden"
+          animate="visible"
+          variants={textVariant}
+          whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+        >
+          <input
+            type="text"
+            name=""
+            className="flex-1 bg-transparent text-slate-600 selection:placeholder:open:none py-2 px-4 placeholder:text-grey"
+            id=""
+            placeholder="Search Cancer ..."
+          />
+          <motion.button
+            className="px-4 bg-[#DBE2EC] text-slate-400 rounded-full ml-2"
+            
+          >
+            Search
+          </motion.button>
+        </motion.div>
       </section>
+
+      <div className="absolute scale-[1.9] bottom-[-250px] -z-[99] w-screen h-[80%] overflow-hidden">
+        <Globe />
+      </div>
+    </section>
         <Section
           id="purpose"
           title="Purpose"
