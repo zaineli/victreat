@@ -1,6 +1,6 @@
-'use client';
+'use client'
 import { motion } from 'framer-motion';
-import { Heading } from 'lucide-react';
+import { ForwardIcon, Heading } from 'lucide-react';
 import React, { useState } from 'react';
 import { TiTick } from "react-icons/ti";
 
@@ -57,11 +57,22 @@ export default function Page({ }: Props) {
     };
 
     return (
-        <main className="min-h-screen flex flex-col items-center w-full p-8 bg-gray-100">
-            <div className="flex flex-col md:flex-row w-full gap-8">
+        <main className='h-[calc(100vh-5rem)] flex flex-col items-center w-full p-8 bg-gray-100'>
+            <div className="flex flex-col md:flex-row w-full gap-8 h-full">
                 <div className="bg-white rounded-lg shadow-lg p-6 flex-1">
                     <div className="mb-6">
                         <h2 className="text-2xl font-bold">Questions</h2>
+                    </div>
+                    <div className="mb-6">
+                        {questions.map((q, index) => (
+                            <div key={index} className="flex items-center mb-2">
+                                {/* You can adjust the size as needed */}
+                                <p className={`ml-2 text-lg ${currentQuestion === index ? 'text-blue-500' : (answers[index] ? 'text-green-500' : 'text-gray-800')}`}>
+                                    {q.heading}
+                                    {answers[index] && <TiTick className="ml-2 inline-block text-green-500" />}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                     {currentQuestion < questions.length ? (
                         <motion.div
@@ -72,7 +83,7 @@ export default function Page({ }: Props) {
                             variants={variants}
                             className="mb-6"
                         >
-                            <h3 className="text-lg mt-4">{questions[currentQuestion].question}</h3>
+                            <h3 className="text-4xl mt-32">{questions[currentQuestion].question}</h3>
                             <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {questions[currentQuestion].options.length > 0 ? (
                                     questions[currentQuestion].options.map((option, index) => (
@@ -97,7 +108,7 @@ export default function Page({ }: Props) {
                                             className="bg-blue-500 text-white px-4 py-2 rounded-lg"
                                             onClick={() => handleAnswer((document.querySelector('input') as HTMLInputElement).value)}
                                         >
-                                            Submit
+                                            <ForwardIcon />
                                         </button>
                                     </div>
                                 )}
@@ -107,15 +118,17 @@ export default function Page({ }: Props) {
                         <p className="text-gray-600">All questions answered.</p>
                     )}
                 </div>
-                <div className="bg-white rounded-lg shadow-lg p-6 flex-1">
-                    <div className="mb-6">
-                        <h3 className="text-lg font-bold">Patient Report</h3>
+                <div className="bg-white rounded-lg shadow-lg p-6 flex-1 h-full">
+                    <div className="mb-6 border">
+                        <h3 className="text-4xl text-center font-bold">Patient Report</h3>
                     </div>
                     <div>
                         {questions.map((q, index) => (
-                            <div key={index} className="mb-4">
+                            <div key={index} className="mb-12 flex border-b-2">
                                 <p className="font-semibold text-gray-800">{q.heading}:</p>
-                                <p className="ml-2 text-gray-600">{answers[index] || '-'}</p>
+                                <p className={`ml-2 ${answers[index] ? 'text-green-500 font-bold' : 'text-gray-600'}`}>
+                                    {answers[index]} {answers[index] && <TiTick className="ml-2 inline-block text-green-500" />}
+                                </p>
                             </div>
                         ))}
                     </div>
