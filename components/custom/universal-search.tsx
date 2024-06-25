@@ -1,16 +1,16 @@
 import { cancerTypes, mutations, treatments } from "@/app/discover/data";
 import Fuse from 'fuse.js';
 
-export function queryData(s: string) {
+export function queryData(s: string, filters: { cancer: boolean, mutation: boolean, treatment: boolean }) {
     const data = [];
-    data.push(
-        cancerTypes.map((cancer, i) => ({term: cancer.name.toLowerCase() + "  " + cancer.organ.toLowerCase(), i, type: "cancer"}))
+    if (filters.cancer) data.push(
+        cancerTypes.map((cancer, i) => ({ term: cancer.name.toLowerCase() + "  " + cancer.organ.toLowerCase(), i, type: "cancer" }))
     )
-    data.push(
-        mutations.map((mutation, i) => ({term: mutation.name.toLowerCase(), i, type: "mutation"}))
+    if (filters.mutation) data.push(
+        mutations.map((mutation, i) => ({ term: mutation.name.toLowerCase(), i, type: "mutation" }))
     )
-    data.push(
-        treatments.map((treatment, i) => ({term: treatment.name.toLowerCase(), i, type: "treatment"}))
+    if (filters.treatment) data.push(
+        treatments.map((treatment, i) => ({ term: treatment.name.toLowerCase(), i, type: "treatment" }))
     )
     console.log(data.flat());
     const fuse = new Fuse(data.flat(), {
@@ -29,13 +29,13 @@ export function queryData(s: string) {
     ).sort((a, b) => a.score - b.score).slice(0, 6);
     const items = result.map((r) => {
         if (r.type === "cancer") {
-            return {item: cancerTypes[r.i], type: "cancer"};
+            return { item: cancerTypes[r.i], type: "cancer" };
         }
         if (r.type === "mutation") {
-            return {item: mutations[r.i], type: "mutation"};
+            return { item: mutations[r.i], type: "mutation" };
         }
         if (r.type === "treatment") {
-            return {item: treatments[r.i], type: "treatment"};
+            return { item: treatments[r.i], type: "treatment" };
         }
     });
     console.log(items)

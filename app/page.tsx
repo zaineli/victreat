@@ -26,6 +26,7 @@ import { queryData } from "@/components/custom/universal-search";
 export default function Home() {
   const { ref: searchRef, isFocused } = useOnFocus();
   const [query, setQuery] = useState('');
+  const [filters, setFilters] = useState({ cancer: true, mutation: true, treatment: true });
   const containerVariantsA: Variants = {
     hidden: { opacity: 0, x: 100 },
     animate: {
@@ -69,7 +70,7 @@ export default function Home() {
   // const filteredCancerTypes = cancerTypes.filter((cancer) => cancer.name.toLowerCase().includes(query.toLowerCase())).slice(0, 6);
   // const filteredTreatmentTypes = treatments.filter((treatment) => treatment.name.toLowerCase().includes(query.toLowerCase())).slice(0, 6);
   // const filteredMutationTypes = mutations.filter((mutation) => mutation.name.toLowerCase().includes(query.toLowerCase())).slice(0, 6);
-  const items = queryData(query);
+  const items = queryData(query, filters);
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -163,13 +164,19 @@ export default function Home() {
             </motion.div>
             <div className={cn(" w-full transition-all overflow-hidden p-2 duration-300 ", { 'h-0': !isFocused })}>
               <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-4"><Switch className='bg-red-200' />Treatments</div>
-                <div className="flex items-center gap-4"><Switch />Cancer Types</div>
-                <div className="flex items-center gap-4"><Switch />Mutations</div>
+                <div className="flex items-center gap-4"><Switch checked={filters.treatment} onCheckedChange={(checked) => {
+                  setFilters({ ...filters, treatment: checked })
+                }} className='bg-red-200' />Treatments</div>
+                <div className="flex items-center gap-4"><Switch checked={filters.cancer} onCheckedChange={(checked) => {
+                  setFilters({ ...filters, cancer: checked })
+                }} />Cancer Types</div>
+                <div className="flex items-center gap-4"><Switch checked={filters.mutation} onCheckedChange={(checked) => {
+                  setFilters({ ...filters, mutation: checked })
+                }} />Mutations</div>
               </div>
               <div className="grid grid-cols-3">
                 {
-                  items.map((item, index) => {
+                  items.length > 0 ? items.map((item, index) => {
                     if (item?.type === 'cancer') {
                       const cancer = item.item as CancerType;
                       return <div key={index} className="flex items-center gap-2 p-2 rounded-lg hover:bg-neutral-200 cursor-pointer">
@@ -201,7 +208,7 @@ export default function Home() {
                       </div>
                     }
                   }
-                  )
+                  ): <div className="text-center col-span-3 italic my-2">No Results Found</div>
                 }
               </div>
             </div>
