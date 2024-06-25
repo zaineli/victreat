@@ -1,7 +1,7 @@
 import { cancerTypes, mutations, treatments } from "@/app/discover/data";
 import Fuse from 'fuse.js';
 
-export function queryData(s: string, filters: { cancer: boolean, mutation: boolean, treatment: boolean }) {
+export function queryData(s: string, filters: { cancer: boolean, mutation: boolean, treatment: boolean }, maxItems: number = 6) {
     const data = [];
     if (filters.cancer) data.push(
         cancerTypes.map((cancer, i) => ({ term: cancer.name.toLowerCase() + "  " + cancer.organ.toLowerCase(), i, type: "cancer" }))
@@ -26,7 +26,7 @@ export function queryData(s: string, filters: { cancer: boolean, mutation: boole
             score: r.score,
         };
     }
-    ).sort((a, b) => a.score - b.score).slice(0, 6);
+    ).sort((a, b) => a.score - b.score).slice(0, maxItems);
     const items = result.map((r) => {
         if (r.type === "cancer") {
             return { item: cancerTypes[r.i], type: "cancer" };
