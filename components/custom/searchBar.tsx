@@ -8,6 +8,9 @@ import { Switch } from "@/components/ui/switch";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import { CiSearch } from "react-icons/ci";
+import { Button } from "../ui/button";
+import { CancerType, Mutation } from "@/app/discover/data";
 
 interface SearchBarProps {
   query: string;
@@ -31,56 +34,50 @@ const SearchBar: React.FC<SearchBarProps> = ({
   return (
     <div className="rounded-3xl  w-[50rem] border-2 bg-white transition-all flex flex-col">
       <motion.div
-        className="w-full bg-white rounded-full flex p-1  "
+        className="w-full bg-white rounded-full flex p-1 items-center gap-2 pl-4"
         initial="hidden"
         animate="visible"
       >
+        <CiSearch className="w-6 h-6 text-slate-600" />
         <input
           type="text"
           ref={searchRef}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           name=""
-          className="flex-1 bg-transparent text-slate-600 selection:placeholder:open:none py-2 px-4 placeholder:text-grey outline-none"
+          className="flex-1 bg-transparent text-slate-600 selection:placeholder:open:none py-2 pr-4 placeholder:text-grey outline-none"
           id=""
           placeholder="Search Cancer ..."
         />
-        <motion.button className="px-4 bg-[#DBE2EC] text-slate-400 rounded-full ml-2">
-          Search
-        </motion.button>
-      </motion.div>
-      <div className={cn(" w-full transition-all overflow-hidden duration-300 ", { 'h-0': !isFocused })}>
-        <div className="flex flex-col p-2  px-2 gap-2">
-          <div className="flex items-center gap-4 ">
-            <Switch
-              checked={filters.treatment}
-              onCheckedChange={(checked) => {
-                setFilters({ ...filters, treatment: checked });
-              }}
-              className="bg-red-200"
-            />
-            Treatments
-          </div>
-          <div className="flex items-center gap-4">
-            <Switch
-              checked={filters.cancer}
-              onCheckedChange={(checked) => {
-                setFilters({ ...filters, cancer: checked });
-              }}
-            />
-            Cancer Types
-          </div>
-          <div className="flex items-center gap-4">
-            <Switch
-              checked={filters.mutation}
-              onCheckedChange={(checked) => {
-                setFilters({ ...filters, mutation: checked });
-              }}
-            />
-            Mutations
-          </div>
+        <div className="flex p-2  px-2 gap-2">
+
+          <button onClick={() => {
+            setFilters({ ...filters, treatment: !filters.treatment});
+          }}>
+            <Badge variant={!filters.treatment ? 'outline' : 'default'} className="flex items-center gap-4 ">
+              Treatments
+            </Badge>
+          </button>
+          <button onClick={() => {
+            setFilters({ ...filters, cancer: !filters.cancer });
+          }}>
+            <Badge variant={!filters.cancer ? 'outline' : 'default'} className="flex items-center gap-4">
+              Cancer Types
+            </Badge>
+          </button>
+          <button onClick={() => {
+            setFilters({ ...filters, mutation: !filters.mutation});
+          }}>
+            <Badge variant={!filters.mutation ? 'outline' : 'default'} className="flex items-center gap-4">
+              Mutations
+            </Badge>
+          </button>
         </div>
-        <div className="grid grid-cols-3">
+      </motion.div>
+
+      <div className={cn(" w-full transition-all overflow-hidden duration-300 ", { 'h-0': !isFocused || !query })}>
+        
+        <div className="grid grid-cols-3 p-2">
           {items.length > 0 ? (
             items.map((item, index) => {
               if (item?.type === "cancer") {
@@ -115,7 +112,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
                     <div className="flex-col">
                       <div>{cancer.name}</div>
                       <Badge className="text-xs" variant={"outline"}>
-                        Mutation
+                        Treatment
                       </Badge>
                     </div>
                   </Link>
