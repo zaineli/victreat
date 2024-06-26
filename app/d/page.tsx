@@ -203,9 +203,13 @@ export default function Page({ searchParams }: Props) {
 
     // const [currentQuestion, setCurrentQuestion] = useState(0);
     // const [answers, setAnswers] = useState<(string | null)[]>(new Array(questions.length).fill(null));
+    // const answers = [name, age, cancer, stage, mutation, treatments];
     const answers = [name, age, cancer, stage, mutation, treatments];
+    const ordererdQuestions = questions.map(q => ({...q, answer: searchParams[q.param], answered: searchParams.hasOwnProperty(q.param)})).toSorted((a, b) => b.answered - a.answered);
+    console.log({ ordererdQuestions })
 
-    const currentQuestion = questions.find((q) => !searchParams.hasOwnProperty(q.param));
+
+    const currentQuestion = ordererdQuestions.find((q) => !q.answered);
     useEffect(() => {
         if (!currentQuestion) {
             router.push('/d/treatments?' + new URLSearchParams(searchParams).toString());
@@ -271,12 +275,11 @@ export default function Page({ searchParams }: Props) {
             <div className="flex flex-col md:flex-row w-full gap-8 h-full">
                 <div className="bg-white rounded-lg shadow-lg p-6 flex-1">
                     <div className="mb-6">
-                        {questions.map((q, index) => (
+                        {ordererdQuestions.map((q, index) => (
                             <div key={index} className="flex items-center mb-2">
-                                {/* You can adjust the size as needed */}
-                                <p className={`ml-2 text-lg transition-all origin-left duration-300 ${currentQuestion === q ? 'text-blue-500 scale-110' : (answers[index] ? 'text-green-500' : 'text-gray-800')}`}>
+                                <p className={`ml-2 text-lg transition-all origin-left duration-300 ${currentQuestion === q ? 'text-blue-500 scale-110' : (q.answered ? 'text-green-500' : 'text-gray-800')}`}>
                                     {q.heading}
-                                    {answers[index] && <TiTick className="ml-2 inline-block text-green-500" />}
+                                    {q.answered && <TiTick className="ml-2 inline-block text-green-500" />}
                                 </p>
                             </div>
                         ))}
