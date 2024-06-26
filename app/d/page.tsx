@@ -161,7 +161,7 @@ function SearchCancer({ addSearchParam }: { addSearchParam: (key: string, value:
                                 key={index}
                                 className="w-max cursor-pointer "
                             >
-                                <Badge variant={'outline'}>
+                                <Badge variant={'secondary'}>
                                     <div>{cancer.name}</div>
                                 </Badge>
                             </button>

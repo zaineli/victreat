@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { CiSearch } from 'react-icons/ci';
-import { treatments } from '@/app/discover/data';
+import { Treatment, treatments } from '@/app/discover/data';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardDescription, CardFooter, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -39,6 +39,12 @@ function TreatmentsPage({ searchParams }) {
     }
     return false; // Exclude treatment if no filters match
   });
+
+  const preferredTreatments = filteredTreatments.filter((treatment) => treatment.type === "Preffered");
+  const alternativeTreatments = filteredTreatments.filter((treatment) => treatment.type === "Alternative");
+  const experimentalTreatments = filteredTreatments.filter((treatment) => treatment.type === "Experimental");
+
+
 
   console.log(filteredTreatments, filters, treatments)
 
@@ -99,38 +105,64 @@ function TreatmentsPage({ searchParams }) {
       </div>
 
       {/* Treatment Cards */}
-      <div className="grid grid-cols-2  my-16 gap-16">
-        {filteredTreatments.length > 0 ? (
-          filteredTreatments.map((treatment) => (
-            <Card key={treatment.id}>
-              <CardHeader>
-                <div className="flex justify-between items-center">
-                  {treatment.name}
-                  <Badge
-                    className={cn(
-                      {
-                        'bg-green-400': treatment.type === "Preffered",
-                        'bg-blue-400': treatment.type === "Alternative",
-                        'bg-red-400': treatment.type === "Experimental"
-                      }
-                    )}
-                  >
-                    {treatment.type}
-                  </Badge>
-                </div>
-                <CardDescription>{treatment.description}</CardDescription>
-              </CardHeader>
-              <CardFooter className="flex justify-end">
-                <Button size={'sm'} variant={'secondary'}>Learn More</Button>
-              </CardFooter>
-            </Card>
-          ))
-        ) : (
-          <p className="text-center italic col-span-2">No treatments found</p>
-        )}
+      <div className="">
+        {filters.preferred &&
+          <>
+            <h3 className='text-2xl mt-8 mb-4'>Prefered Treatments</h3>
+            <Treatments treatments={preferredTreatments} />
+          </>
+        }
+        {filters.alternative &&
+          <>
+            <h3 className='text-2xl mt-8 mb-4'>Alternative Treatments</h3>
+            <Treatments treatments={alternativeTreatments} />
+          </>
+        }
+
+        {filters.experimental &&
+          <>
+            <h3 className='text-2xl mt-8 mb-4'>Experimental Treatments</h3>
+            <Treatments treatments={experimentalTreatments} />
+          </>
+        }
       </div>
     </div>
   );
+}
+
+function Treatments({ treatments }: { treatments: Treatment[] }) {
+  return (
+    <div className="grid grid-cols-2  mb-16 gap-8">
+      {treatments.length > 0 ? (
+        treatments.map((treatment) => (
+          <Card key={treatment.id}>
+            <CardHeader>
+              <div className="flex justify-between items-center">
+                {treatment.name}
+                <Badge
+                  className={cn(
+                    {
+                      'bg-green-400': treatment.type === "Preffered",
+                      'bg-blue-400': treatment.type === "Alternative",
+                      'bg-red-400': treatment.type === "Experimental"
+                    }
+                  )}
+                >
+                  {treatment.type}
+                </Badge>
+              </div>
+              <CardDescription>{treatment.description}</CardDescription>
+            </CardHeader>
+            <CardFooter className="flex justify-end">
+              <Button size={'sm'} variant={'secondary'}>Learn More</Button>
+            </CardFooter>
+          </Card>
+        ))
+      ) : (
+        <p className="text-center italic col-span-2">No treatments found</p>
+      )}
+    </div>
+  )
 }
 
 export default TreatmentsPage;
