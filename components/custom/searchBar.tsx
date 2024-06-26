@@ -1,41 +1,155 @@
-import React from 'react';
+import { motion } from "framer-motion";
+import { useRef } from "react";
+import { GiSelfLove } from "react-icons/gi";
+import { IoNewspaperOutline } from "react-icons/io5";
+import { RiTeamLine } from "react-icons/ri";
+import { SiTarget } from "react-icons/si";
+import { Switch } from "@/components/ui/switch";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
 
-const categories = [
-  { name: 'Lungs', icon: '🔍' },
-  { name: 'Breast', icon: '🖼️' },
-  { name: 'Liver', icon: '📹' },
-  { name: 'Kidney', icon: '🛍️' },
-  { name: 'Clavical', icon: '📰' },
-];
+interface SearchBarProps {
+  query: string;
+  setQuery: (query: string) => void;
+  isFocused: boolean;
+  searchRef: React.MutableRefObject<HTMLInputElement>;
+  filters: { cancer: boolean; mutation: boolean; treatment: boolean };
+  setFilters: (filters: { cancer: boolean; mutation: boolean; treatment: boolean }) => void;
+  items: any[]; // Adjust type as needed
+}
 
-const SearchBar = () => {
+const SearchBar: React.FC<SearchBarProps> = ({
+  query,
+  setQuery,
+  isFocused,
+  searchRef,
+  filters,
+  setFilters,
+  items,
+}) => {
   return (
-    <div className="flex flex-col items-center p-4 space-y-4 bg-customGray">
-      <div className="relative w-full max-w-2xl">
+    <div className="rounded-3xl  w-[50rem] border-2 bg-white transition-all flex flex-col">
+      <motion.div
+        className="w-full bg-white rounded-full flex p-1  "
+        initial="hidden"
+        animate="visible"
+      >
         <input
           type="text"
-          placeholder="Search for..."
-          className="w-full py-3 pl-10 pr-4 text-lg bg-white rounded-full shadow-lg focus:outline-none"
+          ref={searchRef}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          name=""
+          className="flex-1 bg-transparent text-slate-600 selection:placeholder:open:none py-2 px-4 placeholder:text-grey outline-none"
+          id=""
+          placeholder="Search Cancer ..."
         />
-        <div className="absolute top-0 left-0 flex items-center h-full pl-3">
-          🔍
+        <motion.button className="px-4 bg-[#DBE2EC] text-slate-400 rounded-full ml-2">
+          Search
+        </motion.button>
+      </motion.div>
+      <div className={cn(" w-full transition-all overflow-hidden duration-300 ", { 'h-0': !isFocused })}>
+        <div className="flex flex-col p-2  px-2 gap-2">
+          <div className="flex items-center gap-4 ">
+            <Switch
+              checked={filters.treatment}
+              onCheckedChange={(checked) => {
+                setFilters({ ...filters, treatment: checked });
+              }}
+              className="bg-red-200"
+            />
+            Treatments
+          </div>
+          <div className="flex items-center gap-4">
+            <Switch
+              checked={filters.cancer}
+              onCheckedChange={(checked) => {
+                setFilters({ ...filters, cancer: checked });
+              }}
+            />
+            Cancer Types
+          </div>
+          <div className="flex items-center gap-4">
+            <Switch
+              checked={filters.mutation}
+              onCheckedChange={(checked) => {
+                setFilters({ ...filters, mutation: checked });
+              }}
+            />
+            Mutations
+          </div>
         </div>
-      </div>
-      <div className="flex flex-wrap justify-center gap-3">
-        {categories.map((category) => (
-          <button
-            key={category.name}
-            className={`flex items-center px-4 py-2 space-x-2 border rounded-full ${
-              category.name === 'SEO' ? 'bg-black text-white' : 'border-black'
-            } hover:bg-gray-200`}
-          >
-            <span>{category.icon}</span>
-            <span>{category.name}</span>
-          </button>
-        ))}
+        <div className="grid grid-cols-3">
+          {items.length > 0 ? (
+            items.map((item, index) => {
+              if (item?.type === "cancer") {
+                const cancer = item.item as CancerType;
+                return (
+                  <Link
+                    href={`/d?cancer=${cancer.name.replaceAll(" ", "+")}`}
+                    key={index}
+                    className="flex items-center gap-2 p-2 rounded-lg hover:bg-neutral-200 cursor-pointer"
+                  >
+                    <img
+                      src={cancer.image}
+                      alt=""
+                      className="w-12 h-12 rounded-full"
+                    />
+                    <div className="flex-col">
+                      <div>{cancer.name}</div>
+                      <div className="text-sm">{cancer.organ}</div>
+                    </div>
+                  </Link>
+                );
+              }
+              if (item?.type === "treatment") {
+                const cancer = item.item as Treatment;
+                return (
+                  <Link
+                    href={`/d?treatments=${cancer.name.replaceAll(" ", "+")}`}
+                    key={index}
+                    className="flex items-center gap-2 p-2 rounded-lg hover:bg-neutral-200 cursor-pointer"
+                  >
+                    <GiSelfLove className="w-12 h-12 rounded-full" />
+                    <div className="flex-col">
+                      <div>{cancer.name}</div>
+                      <Badge className="text-xs" variant={"outline"}>
+                        Mutation
+                      </Badge>
+                    </div>
+                  </Link>
+                );
+              }
+              if (item?.type === "mutation") {
+                const cancer = item.item as Mutation;
+                return (
+                  <Link
+                    href={`/d?cancer=${cancer.name.replaceAll(" ", "+")}`}
+                    key={index}
+                    className="flex items-center gap-2 p-2 rounded-lg hover:bg-neutral-200 cursor-pointer"
+                  >
+                    <GiSelfLove className="w-12 h-12 rounded-full" />
+                    <div className="flex-col">
+                      <div>{cancer.name}</div>
+                      <Badge className="text-xs" variant={"outline"}>
+                        Mutation
+                      </Badge>
+                    </div>
+                  </Link>
+                );
+              }
+            })
+          ) : (
+            <div className="text-center col-span-3 italic my-2">
+              No Results Found
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
 };
 
 export default SearchBar;
+

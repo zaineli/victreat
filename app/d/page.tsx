@@ -48,7 +48,7 @@ const questions = [
     },
     {
         question: 'What treatments have you undergone?',
-        heading: 'Treatments',
+        heading: 'Already Taken Treatments',
         param: "treatments",
         options: ['Chemotherapy', 'Radiation Therapy', 'Immunotherapy', 'Surgery', 'Other'],
     }
@@ -318,7 +318,7 @@ export default function Page({ searchParams }: Props) {
                                             type="text"
                                             name="answer"
                                             className="border-2 border-gray-300 p-2 rounded-lg w-full"
-                                            required
+                                            // required
                                             // onBlur={ }
                                             placeholder={`Enter your ${currentQuestion.heading.toLowerCase()}`}
                                         />
