@@ -10,6 +10,10 @@ import { GiSelfLove } from 'react-icons/gi';
 import { TiTick } from "react-icons/ti";
 import { ProgressTracker, type Stages } from '@atlaskit/progress-tracker';
 import { Input } from '@/components/ui/input';
+import Link from 'next/link';
+import { CancerType } from '../discover/data';
+import { CiSearch } from 'react-icons/ci';
+import { Badge } from '@/components/ui/badge';
 
 type Props = {
     // params
@@ -68,86 +72,248 @@ function SearchCancer({ addSearchParam }: { addSearchParam: (key: string, value:
     const items = queryData(query, { cancer: true, mutation: false, treatment: false }, 9);
     const cancers = items.map((item) => item?.item);
 
+    const defaultCancers = [
+        {
+            name: "Adrenal Cancer",
+            image: "https://baconmockup.com/600/400",
+            organ: "Adrenal Glands",
+        },
+        {
+            name: "Cervical Cancer",
+            image: "https://baconmockup.com/606/400",
+            organ: "Cervix",
+        },
+        {
+            name: "Colon Cancer",
+            image: "https://baconmockup.com/607/400",
+            organ: "Colon",
+        },
+        {
+            name: "Colorectal Cancer",
+            image: "https://baconmockup.com/608/400",
+            organ: "Colon and Rectum",
+        }
+    ]
+
     return (
-        <div className="rounded-3xl  w-full border-2 border-red-400 bg-white transition-all flex flex-col">
-            <div className="w-full bg-white rounded-full flex p-1 border-2 ">
-                <input
-                    type="text"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    name=""
-                    className="flex-1 bg-transparent text-slate-600 selection:placeholder:open:none py-2 px-4 placeholder:text-grey outline-none"
-                    id=""
-                    placeholder="Search Cancer ..."
-                />
-                <button
-                    className="px-4 bg-[#DBE2EC] text-slate-400 rounded-full ml-2"
+
+        <div className='w-full'>
+            <h3 className="text-5xl text-center mt-32 mb-8">What is your cancer type?</h3>
+            <div className="rounded-3xl w-2/3 mx-auto border-2 bg-white transition-all flex flex-col">
+                <motion.div
+                    className="w-full bg-white rounded-full flex p-1 items-center gap-2 pl-4"
+                    initial="hidden"
+                    animate="visible"
                 >
-                    Search
-                </button>
-            </div>
-            <div className={cn(" w-full transition-all overflow-hidden p-2 duration-300 ")}>
-                <div className="grid grid-cols-3">
-                    {
-                        cancers.length > 0 ? cancers.map((cancer, index) =>
-                            <div key={index} onClick={() => {
-                                addSearchParam('cancer', cancer.name);
-                            }} className="flex items-center gap-2 p-2 rounded-lg hover:bg-neutral-200 cursor-pointer">
-                                <img src={cancer.image} alt="" className="w-12 h-12 rounded-full" />
-                                <div className="flex-col">
-                                    <div className="">{cancer.name}</div>
-                                    <div className="text-sm">{cancer.organ}</div>
+                    <CiSearch className="w-6 h-6 text-slate-600" />
+                    <input
+                        type="text"
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                        name=""
+                        className="flex-1 bg-transparent text-slate-600 selection:placeholder:open:none py-2 pr-4 placeholder:text-grey outline-none"
+                        id=""
+                        placeholder="Search Cancer ..."
+                    />
+                </motion.div>
+
+                <div className={cn(" w-full transition-all overflow-hidden duration-300 ", { 'h-0': !query })}>
+
+                    <div className="grid grid-cols-3 p-2">
+                        {cancers.length > 0 ?
+                            cancers.map((cancer: CancerType, index: number) => (
+                                <button
+                                    // href={`/d?cancer=${cancer.name.replaceAll(" ", "+")}`}
+                                    onClick={() => {
+                                        addSearchParam('cancer', cancer.name);
+                                    }}
+                                    key={index}
+                                    className="flex items-center gap-2 p-2 rounded-lg hover:bg-neutral-200 cursor-pointer"
+                                >
+                                    <img
+                                        src={cancer.image}
+                                        alt=""
+                                        className="w-12 h-12 rounded-full"
+                                    />
+                                    <div className="flex-col">
+                                        <div>{cancer.name}</div>
+                                        <div className="text-sm">{cancer.organ}</div>
+                                    </div>
+                                </button>
+                            ))
+                            : (
+                                <div className="text-center col-span-3 italic my-2">
+                                    No Results Found
                                 </div>
-                            </div>
-                        ) : <div className="text-center col-span-3 italic my-2">No Results Found</div>
-                    }
+                            )}
+                    </div>
                 </div>
             </div>
+            {
+                !query &&
+                <div className="flex gap-4 pt-4 -z-100 w-fit place-items-center align-middle mx-auto">
+                    {
+                        defaultCancers.map((cancer: CancerType, index: number) => (
+                            <button
+                                onClick={() => {
+                                    addSearchParam('cancer', cancer.name);
+                                }}
+                                key={index}
+                                className="w-max cursor-pointer "
+                            >
+                                <Badge variant={'outline'}>
+                                    <div>{cancer.name}</div>
+                                </Badge>
+                            </button>
+                        ))
+                    }
+                </div>
+            }
         </div>)
 }
 
-function SearchTreamtments({ addSearchParam }: { addSearchParam: (key: string, value: string) => void }) {
-    const [query, setQuery] = useState("");
+// function SearchTreamtments({ addSearchParam }: { addSearchParam: (key: string, value: string) => void }) {
+//     const [query, setQuery] = useState("");
 
-    const items = queryData(query, { cancer: false, mutation: false, treatment: true }, 9);
-    const cancers = items.map((item) => item?.item);
+//     const items = queryData(query, { cancer: false, mutation: false, treatment: true }, 9);
+//     const cancers = items.map((item) => item?.item);
+
+//     return (
+//         <div className="rounded-3xl  w-full border-2 border-red-400 bg-white }
+//                                 if (item?.type === "treatment") {
+//                                     const cancer = item.item as Treatment;
+//                                     return (
+//                                         <Link
+//                                             href={`/d?treatments=${cancer.name.replaceAll(" ", "+")}`}
+//                                             key={index}
+//                                             className="flex items-center gap-2 p-2 rounded-lg hover:bg-neutral-200 cursor-pointer"
+//                                         >
+//                                             <GiSelfLove className="w-12 h-12 rounded-full" />
+//                                             <div className="flex-col">
+//                                                 <div>{cancer.name}</div>
+//                                                 <Badge className="text-xs" variant={"outline"}>
+//                                                     Treatment
+//                                                 </Badge>
+//                                             </div>
+//                                         </Link>
+//                                     );
+//                                 }
+//                                 if (item?.type === "mutation") {
+//                                     const cancer = item.item as Mutation;
+//                                     return (
+//                                         <Link
+//                                             href={`/d?cancer=${cancer.name.replaceAll(" ", "+")}`}
+//                                             key={index}
+//                                             className="flex items-center gap-2 p-2 rounded-lg hover:bg-neutral-200 cursor-pointer"
+//                                         >
+//                                             <GiSelfLove className="w-12 h-12 rounded-full" />
+//                                             <div className="flex-col">
+//                                                 <div>{cancer.name}</div>
+//                                                 <Badge className="text-xs" variant={"outline"}>
+//                                                     Mutation
+//                                                 </Badge>
+//                                             </div>
+//                                         </Link>
+//                                     );
+//                                 }
+//                             })
+//                         ) transition-all flex flex-col">
+//             <div className="w-full bg-white rounded-full flex p-1 border-2 ">
+//                 <input
+//                     type="text"
+//                     value={query}
+//                     onChange={(e) => setQuery(e.target.value)}
+//                     name=""
+//                     className="flex-1 bg-transparent text-slate-600 selection:placeholder:open:none py-2 px-4 placeholder:text-grey outline-none"
+//                     id=""
+//                     placeholder="Search Treatments ..."
+//                 />
+//                 <button
+//                     className="px-4 bg-[#DBE2EC] text-slate-400 rounded-full ml-2"
+//                 >
+//                     Search
+//                 </button>
+//             </div>
+//             <div className={cn(" w-full transition-all overflow-hidden p-2 duration-300 ")}>
+//                 <div className="grid grid-cols-3">
+//                     {
+//                         cancers.length > 0 ? cancers.map((cancer, index) =>
+//                             <div key={index} onClick={() => {
+//                                 addSearchParam('treatments', treatment.name);
+//                             }} className="flex items-center gap-2 p-2 rounded-lg hover:bg-neutral-200 cursor-pointer">
+//                                 <img src={cancer.image} alt="" className="w-12 h-12 rounded-full" />
+//                                 <div className="flex-col">
+//                                     <div className="">{cancer.name}</div>
+//                                     <div className="text-sm">{cancer.organ}</div>
+//                                 </div>
+//                             </div>
+//                         ) : <div className="text-center col-span-3 italic my-2">No Results Found</div>
+//                     }
+//                 </div>
+//             </div>
+//         </div>)
+// }
+
+function Question({ q, searchParams }: { q: { question: string, heading: string, param: string, options: string[] }, searchParams: Record<string, string> }) {
+
+    const router = useRouter();
+    const pathname = usePathname();
+
+    const handleAnswer = (answer: string) => {
+        const params = new URLSearchParams(searchParams);
+        params.set(q.param, answer);
+        router.push(pathname + '?' + params.toString());
+    };
+
+    function addSearchParam(key: string, value: string) {
+        const params = new URLSearchParams(searchParams);
+        params.set(key, value);
+        router.push(pathname + '?' + params.toString());
+    }
+
+    if (q.param === 'cancer') {
+        return <SearchCancer addSearchParam={addSearchParam} />
+    }
 
     return (
-        <div className="rounded-3xl  w-full border-2 border-red-400 bg-white transition-all flex flex-col">
-            <div className="w-full bg-white rounded-full flex p-1 border-2 ">
-                <input
-                    type="text"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    name=""
-                    className="flex-1 bg-transparent text-slate-600 selection:placeholder:open:none py-2 px-4 placeholder:text-grey outline-none"
-                    id=""
-                    placeholder="Search Treatments ..."
-                />
-                <button
-                    className="px-4 bg-[#DBE2EC] text-slate-400 rounded-full ml-2"
-                >
-                    Search
-                </button>
+        <>
+            <h3 className="text-5xl mt-32">{q.question}</h3>
+            <div className="mt-2  w-2/3  gap-4">
+                {q.options.length > 0 ? (
+                    <div className="grid gap-4 grid-cols-2">
+                        {q.options.map((option, index) => (
+                            <div
+                                key={index}
+                                className={`cursor-pointer flex items-center justify-center p-4 rounded-lg shadow-md transition-all ${'bg-gray-200 text-gray-700 hover:bg-blue-100'}`}
+                                onClick={() => handleAnswer(option)}
+                            >
+                                <div>{option}</div>
+                            </div>))}
+                    </div>
+                ) : (
+                    <form onSubmit={(e) => {
+                        e.preventDefault();
+                        const value = e.target[0].value;
+                        if (value === '') return;
+                        handleAnswer(value);
+                        e.target[0].value = '';
+                    }} className="flex min-w-full self-start gap-4 items-center">
+                        <Input
+                            type="text"
+                            name="answer"
+                            className="w-full"
+                            placeholder={`Enter your ${q.heading.toLowerCase()}`}
+                        />
+                        <button className="bg-blue-500 text-white px-4 py-2 rounded-lg">
+                            <ForwardIcon />
+                        </button>
+                    </form>
+                )}
             </div>
-            <div className={cn(" w-full transition-all overflow-hidden p-2 duration-300 ")}>
-                <div className="grid grid-cols-3">
-                    {
-                        cancers.length > 0 ? cancers.map((cancer, index) =>
-                            <div key={index} onClick={() => {
-                                addSearchParam('treatments', treatment.name);
-                            }} className="flex items-center gap-2 p-2 rounded-lg hover:bg-neutral-200 cursor-pointer">
-                                <img src={cancer.image} alt="" className="w-12 h-12 rounded-full" />
-                                <div className="flex-col">
-                                    <div className="">{cancer.name}</div>
-                                    <div className="text-sm">{cancer.organ}</div>
-                                </div>
-                            </div>
-                        ) : <div className="text-center col-span-3 italic my-2">No Results Found</div>
-                    }
-                </div>
-            </div>
-        </div>)
+        </>
+
+    )
+
 }
 
 function SearchMutation({ addSearchParam }: { addSearchParam: (key: string, value: string) => void }) {
@@ -198,7 +364,7 @@ export default function Page({ searchParams }: Props) {
     const { name, age, cancer, stage, mutation, treatments } = searchParams;
     console.log(searchParams)
     const router = useRouter();
-    const pathname = usePathname();
+    // const pathname = usePathname();
     // const params = useSearchParams();
 
     // params.get()
@@ -206,10 +372,10 @@ export default function Page({ searchParams }: Props) {
     // const [currentQuestion, setCurrentQuestion] = useState(0);
     // const [answers, setAnswers] = useState<(string | null)[]>(new Array(questions.length).fill(null));
     // const answers = [name, age, cancer, stage, mutation, treatments];
-    const answers = [name, age, cancer, stage, mutation, treatments];
+    // const answers = [name, age, cancer, stage, mutation, treatments];
     const ordererdQuestions = questions.map(q => ({ ...q, answer: searchParams[q.param], answered: searchParams.hasOwnProperty(q.param) })).sort((a, b) => (b.answered ? 1 : 0) - (a.answered ? 1 : 0))
     const currentQuestion = ordererdQuestions.find((q) => !q.answered);
-    const getCurrentQuestionIndex = () => ordererdQuestions.indexOf(currentQuestion);
+    // const getCurrentQuestionIndex = () => ordererdQuestions.indexOf(currentQuestion);
     // const currentQuestionIndex = ordererdQuestions.indexOf(currentQuestion);
     console.log(ordererdQuestions, currentQuestion, searchParams);
     // useEffect(() => {
@@ -240,17 +406,7 @@ export default function Page({ searchParams }: Props) {
         }
     }, [currentQuestion])
 
-    const handleAnswer = (answer: string) => {
-        const params = new URLSearchParams(searchParams);
-        params.set(currentQuestion.param, answer);
-        router.push(pathname + '?' + params.toString());
-    };
 
-    function addSearchParam(key: string, value: string) {
-        const params = new URLSearchParams(searchParams);
-        params.set(key, value);
-        router.push(pathname + '?' + params.toString());
-    }
 
     return (
         <main className="h-[calc(100vh-5rem)] flex flex-col items-center w-full p-8 bg-white">
@@ -295,39 +451,7 @@ export default function Page({ searchParams }: Props) {
                             variants={variants}
                             className="mb-6 w-full flex flex-col gap-4 items-center"
                         >
-                            <h3 className="text-5xl mt-32">{currentQuestion.question}</h3>
-                            <div className="mt-2  w-2/3  gap-4">
-                                {currentQuestion.options.length > 0 ? (
-                                    <div className="grid gap-4 grid-cols-2">
-                                        {currentQuestion.options.map((option, index) => (
-                                            <div
-                                                key={index}
-                                                className={`cursor-pointer flex items-center justify-center p-4 rounded-lg shadow-md transition-all ${answers[currentQuestion] === option ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-blue-100'}`}
-                                                onClick={() => handleAnswer(option)}
-                                            >
-                                                <div>{option}</div>
-                                            </div>))}
-                                    </div>
-                                ) : (
-                                    <form onSubmit={(e) => {
-                                        e.preventDefault();
-                                        const value = e.target[0].value;
-                                        if (value === '') return;
-                                        handleAnswer(value);
-                                        e.target[0].value = '';
-                                    }} className="flex min-w-full self-start gap-4 items-center">
-                                        <Input
-                                            type="text"
-                                            name="answer"
-                                            className="w-full"
-                                            placeholder={`Enter your ${currentQuestion.heading.toLowerCase()}`}
-                                        />
-                                        <button className="bg-blue-500 text-white px-4 py-2 rounded-lg">
-                                            <ForwardIcon />
-                                        </button>
-                                    </form>
-                                )}
-                            </div>
+                            <Question q={currentQuestion} searchParams={searchParams} />
                         </motion.div>
                     ) : (
                         <p className="text-gray-600">All questions answered.</p>

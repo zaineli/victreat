@@ -15,12 +15,7 @@ import { GrTechnology } from "react-icons/gr";
 import Section from "@/components/custom/Section";
 import Globe from "@/components/magicui/globe";
 import useOnFocus from "@/lib/useOnFocus";
-import { cn } from "@/lib/utils";
-import { Switch } from "@/components/ui/switch";
-import { CancerType, Mutation, Treatment } from "./discover/data";
-import { GiSelfLove } from "react-icons/gi";
 import { queryData } from "@/components/custom/universal-search";
-import Link from "next/link";
 import SearchBar from "@/components/custom/searchBar";
 
 export default function Home() {

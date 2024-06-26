@@ -12,7 +12,6 @@ export function queryData(s: string, filters: { cancer: boolean, mutation: boole
     if (filters.treatment) data.push(
         treatments.map((treatment, i) => ({ term: treatment.name.toLowerCase(), i, type: "treatment" }))
     )
-    console.log(data.flat());
     const fuse = new Fuse(data.flat(), {
         keys: ["term"],
         includeScore: true,
@@ -38,6 +37,5 @@ export function queryData(s: string, filters: { cancer: boolean, mutation: boole
             return { item: treatments[r.i], type: "treatment" };
         }
     });
-    console.log(items)
     return items;
 }
