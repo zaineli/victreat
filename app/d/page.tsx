@@ -8,6 +8,8 @@ import { redirect, usePathname, useRouter, useSearchParams } from 'next/navigati
 import React, { useEffect, useState } from 'react';
 import { GiSelfLove } from 'react-icons/gi';
 import { TiTick } from "react-icons/ti";
+import { ProgressTracker, type Stages } from '@atlaskit/progress-tracker';
+import { Input } from '@/components/ui/input';
 
 type Props = {
     // params
@@ -51,7 +53,7 @@ const questions = [
         heading: 'Already Taken Treatments',
         param: "treatments",
         options: ['Chemotherapy', 'Radiation Therapy', 'Immunotherapy', 'Surgery', 'Other'],
-    }
+    },
 ];
 
 const variants = {
@@ -205,27 +207,42 @@ export default function Page({ searchParams }: Props) {
     // const [answers, setAnswers] = useState<(string | null)[]>(new Array(questions.length).fill(null));
     // const answers = [name, age, cancer, stage, mutation, treatments];
     const answers = [name, age, cancer, stage, mutation, treatments];
-    const ordererdQuestions = questions.map(q => ({...q, answer: searchParams[q.param], answered: searchParams.hasOwnProperty(q.param)})).toSorted((a, b) => b.answered - a.answered);
-    console.log({ ordererdQuestions })
-
-
+    const ordererdQuestions = questions.map(q => ({ ...q, answer: searchParams[q.param], answered: searchParams.hasOwnProperty(q.param) })).sort((a, b) => (b.answered ? 1 : 0) - (a.answered ? 1 : 0))
     const currentQuestion = ordererdQuestions.find((q) => !q.answered);
+    const getCurrentQuestionIndex = () => ordererdQuestions.indexOf(currentQuestion);
+    // const currentQuestionIndex = ordererdQuestions.indexOf(currentQuestion);
+    console.log(ordererdQuestions, currentQuestion, searchParams);
+    // useEffect(() => {
+    //     // Check if there is no question left
+    //     if (currentQuestion === questions.length) {
+    //         // redirect to another page
+    //         router.push('/d/treatments');
+    //     }
+    // }, [currentQuestion]);
+    const items: Stages[] = ordererdQuestions.map((q, index) => ({
+        id: `step-${index + 1}`,
+        label: q.heading,
+        percentageComplete: q.answered ? 100 : 0,
+        status: q.answered ? 'visited' : currentQuestion === q ? 'current' : 'unvisited',
+        href: '#',
+    })).slice(0, -1).concat({
+        ...ordererdQuestions[ordererdQuestions.length - 1],
+        id: `step-${ordererdQuestions.length}`,
+        label: ordererdQuestions[ordererdQuestions.length - 1].heading,
+        status: ordererdQuestions[ordererdQuestions.length - 1].answered ? 'visited' : currentQuestion === ordererdQuestions[ordererdQuestions.length - 1] ? 'current' : 'unvisited',
+        href: '#',
+    });
+
+
     useEffect(() => {
         if (!currentQuestion) {
             router.push('/d/treatments?' + new URLSearchParams(searchParams).toString());
         }
-        console.log('hello')
     }, [currentQuestion])
 
     const handleAnswer = (answer: string) => {
-        // const updatedAnswers = [...answers];
-        // updatedAnswers[currentQuestion] = answer;
-        // setAnswers(updatedAnswers);
-        // setCurrentQuestion(currentQuestion + 1);
-
-        const index = questions.findIndex((q) => q === currentQuestion);
         const params = new URLSearchParams(searchParams);
-        params.set(currentQuestion!.param, answer);
+        params.set(currentQuestion.param, answer);
         router.push(pathname + '?' + params.toString());
     };
 
@@ -235,57 +252,39 @@ export default function Page({ searchParams }: Props) {
         router.push(pathname + '?' + params.toString());
     }
 
-    // let question;
-    // if (!cancer) {
-    //     question = <SearchCancer {...{ addSearchParam }} />;
-    // }
-    // else if (!mutation) {
-    //     question = <SearchMutation {...{ addSearchParam }} />;
-    // }
-    // else if (!age) {
-    //     question = (
-    //         <div className="flex flex-col gap-4">
-    //             <div className="text-2xl font-semibold">What is your age?</div>
-    //             <div className="flex gap-4">
-    //                 <button onClick={() => handleAnswer('18-30')} className="flex-1 p-4 bg-white border-2 border-black rounded-lg">
-    //                     18-30
-    //                 </button>
-    //                 <button onClick={() => handleAnswer('30-50')} className="flex-1 p-4 bg-white border-2 border-black rounded-lg">
-    //                     30-50
-    //                 </button>
-    //                 <button onClick={() => handleAnswer('50-70')} className="flex-1 p-4 bg-white border-2 border-black rounded-lg">
-    //                     50-70
-    //                 </button>
-    //                 <button onClick={() => handleAnswer('70+')} className="flex-1 p-4 bg-white border-2 border-black rounded-lg">
-    //                     70+
-    //                 </button>
-    //             </div>
-    //         </div>
-    //     )
-    // }
-    // else if (!name) {
-    //     question = <SearchMutation {...{ addSearchParam }} />;
-    // }
-    // else if (!treatments) {
-    //     question = <SearchTreamtments {...{ addSearchParam }} />;
-    // }
-
     return (
-        <main className='h-[calc(100vh-5rem)] flex flex-col items-center w-full p-8 bg-gray-100'>
+        <main className="h-[calc(100vh-5rem)] flex flex-col items-center w-full p-8 bg-white">
             <div className="flex flex-col md:flex-row w-full gap-8 h-full">
-                <div className="bg-white rounded-lg shadow-lg p-6 flex-1">
-                    <div className="mb-6">
-                        {ordererdQuestions.map((q, index) => (
+                <div className="bg-white p-6 flex-1 flex flex-col">
+                    <div className="mb-6 self-center">
+
+                        <ProgressTracker
+                            items={items}
+                            spacing="cozy"
+                            animated={true}
+                            render={{
+                                link: ({ item }) => (
+                                    <a
+                                        href={item.href}
+                                        className={`block py-2 px-4 transition-all duration-300 ${item.status === 'current' ? ' text-blue-500' : item.status === 'visited' ? ' text-green-500' : ' text-gray-800'}`}
+                                    >
+                                        {item.label}
+                                    </a>
+                                )
+                            }}
+                            label="Progress Tracker"
+                        />
+
+                        {/* {ordererdQuestions.map((q, index) => (
                             <div key={index} className="flex items-center mb-2 relative">
-                                <span className='w-2 h-2 bg-red-500 shadow shadow-red-300 rounded-full relative'>
-                                </span>
+                                <span className="w-2 h-2 bg-red-500 shadow shadow-red-300 rounded-full relative"></span>
                                 <p className={cn("ml-2 text-lg transition-all origin-left duration-300", currentQuestion === q ? 'text-blue-500 scale-110' : (q.answered ? 'text-green-500' : 'text-gray-800'))}>
                                     {q.heading}
                                     {q.answered && <TiTick className="ml-2 inline-block text-green-500" />}
                                 </p>
-                                <span className=' absolute top-[calc(50%+0.3rem)] w-1 left-[0.125rem] h-full bg-blue-500 '></span>
+                                <span className="absolute top-[calc(50%+0.3rem)] w-1 left-[0.125rem] h-full bg-blue-500"></span>
                             </div>
-                        ))}
+                        ))} */}
                     </div>
                     {currentQuestion ? (
                         <motion.div
@@ -294,44 +293,36 @@ export default function Page({ searchParams }: Props) {
                             animate="animate"
                             exit="exit"
                             variants={variants}
-                            className="mb-6"
+                            className="mb-6 w-full flex flex-col gap-4 items-center"
                         >
-                            <h3 className="text-4xl mt-32">{currentQuestion.question}</h3>
-                            <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <h3 className="text-5xl mt-32">{currentQuestion.question}</h3>
+                            <div className="mt-2  w-2/3  gap-4">
                                 {currentQuestion.options.length > 0 ? (
-                                    currentQuestion.options.map((option, index) => (
-                                        <div
-                                            key={index}
-                                            className={`cursor-pointer flex items-center justify-center p-4 rounded-lg shadow-md transition-all ${answers[currentQuestion] === option ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-blue-100'}`}
-                                            onClick={() => handleAnswer(option)}
-                                        >
-                                            {/* {answers[currentQuestion] === option ? <TiTick className="mr-2 text-white" /> : <div className="mr-2 w-5 h-5 rounded-full bg-gray-400" />} */}
-                                            <div>{option}</div>
-                                        </div>
-                                    ))
+                                    <div className="grid gap-4 grid-cols-2">
+                                        {currentQuestion.options.map((option, index) => (
+                                            <div
+                                                key={index}
+                                                className={`cursor-pointer flex items-center justify-center p-4 rounded-lg shadow-md transition-all ${answers[currentQuestion] === option ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-blue-100'}`}
+                                                onClick={() => handleAnswer(option)}
+                                            >
+                                                <div>{option}</div>
+                                            </div>))}
+                                    </div>
                                 ) : (
-                                    <form onSubmit={
-                                        (e) => {
-                                            e.preventDefault();
-                                            const value = e.target[0].value;
-                                            console.log({ value });
-                                            if (value === '') return;
-                                            handleAnswer(value);
-                                            e.target[0].value = '';
-                                        }
-                                    } className="flex flex-col md:flex-row gap-4 items-center">
-                                        <input
+                                    <form onSubmit={(e) => {
+                                        e.preventDefault();
+                                        const value = e.target[0].value;
+                                        if (value === '') return;
+                                        handleAnswer(value);
+                                        e.target[0].value = '';
+                                    }} className="flex min-w-full self-start gap-4 items-center">
+                                        <Input
                                             type="text"
                                             name="answer"
-                                            className="border-2 border-gray-300 p-2 rounded-lg w-full"
-                                            // required
-                                            // onBlur={ }
+                                            className="w-full"
                                             placeholder={`Enter your ${currentQuestion.heading.toLowerCase()}`}
                                         />
-                                        <button
-                                            className="bg-blue-500 text-white px-4 py-2 rounded-lg"
-                                            // onClick={() => handleAnswer((document.querySelector('input') as HTMLInputElement).value)}
-                                        >
+                                        <button className="bg-blue-500 text-white px-4 py-2 rounded-lg">
                                             <ForwardIcon />
                                         </button>
                                     </form>
@@ -341,21 +332,6 @@ export default function Page({ searchParams }: Props) {
                     ) : (
                         <p className="text-gray-600">All questions answered.</p>
                     )}
-                </div>
-                <div className="bg-white rounded-lg shadow-lg p-6 flex-1 h-full">
-                    <div className="mb-6 border">
-                        <h3 className="text-4xl text-center font-bold">Patient Report</h3>
-                    </div>
-                    <div>
-                        {questions.map((q, index) => (
-                            <div key={index} className="mb-12 flex border-b-2">
-                                <p className="font-semibold text-gray-800">{q.heading}:</p>
-                                <p className={`ml-2 ${answers[index] ? 'text-green-500 font-bold' : 'text-gray-600'}`}>
-                                    {answers[index]} {answers[index] && <TiTick className="ml-2 inline-block text-green-500" />}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
                 </div>
             </div>
         </main>

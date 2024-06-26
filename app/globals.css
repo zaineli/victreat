@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @import "node_modules/progress-tracker/src/styles/progress-tracker.css"; */
 
 @layer base {
   :root {
