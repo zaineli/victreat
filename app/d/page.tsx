@@ -235,40 +235,40 @@ export default function Page({ searchParams }: Props) {
         router.push(pathname + '?' + params.toString());
     }
 
-    let question;
-    if (!cancer) {
-        question = <SearchCancer {...{ addSearchParam }} />;
-    }
-    else if (!mutation) {
-        question = <SearchMutation {...{ addSearchParam }} />;
-    }
-    else if (!age) {
-        question = (
-            <div className="flex flex-col gap-4">
-                <div className="text-2xl font-semibold">What is your age?</div>
-                <div className="flex gap-4">
-                    <button onClick={() => handleAnswer('18-30')} className="flex-1 p-4 bg-white border-2 border-black rounded-lg">
-                        18-30
-                    </button>
-                    <button onClick={() => handleAnswer('30-50')} className="flex-1 p-4 bg-white border-2 border-black rounded-lg">
-                        30-50
-                    </button>
-                    <button onClick={() => handleAnswer('50-70')} className="flex-1 p-4 bg-white border-2 border-black rounded-lg">
-                        50-70
-                    </button>
-                    <button onClick={() => handleAnswer('70+')} className="flex-1 p-4 bg-white border-2 border-black rounded-lg">
-                        70+
-                    </button>
-                </div>
-            </div>
-        )
-    }
-    else if (!name) {
-        question = <SearchMutation {...{ addSearchParam }} />;
-    }
-    else if (!treatments) {
-        question = <SearchTreamtments {...{ addSearchParam }} />;
-    }
+    // let question;
+    // if (!cancer) {
+    //     question = <SearchCancer {...{ addSearchParam }} />;
+    // }
+    // else if (!mutation) {
+    //     question = <SearchMutation {...{ addSearchParam }} />;
+    // }
+    // else if (!age) {
+    //     question = (
+    //         <div className="flex flex-col gap-4">
+    //             <div className="text-2xl font-semibold">What is your age?</div>
+    //             <div className="flex gap-4">
+    //                 <button onClick={() => handleAnswer('18-30')} className="flex-1 p-4 bg-white border-2 border-black rounded-lg">
+    //                     18-30
+    //                 </button>
+    //                 <button onClick={() => handleAnswer('30-50')} className="flex-1 p-4 bg-white border-2 border-black rounded-lg">
+    //                     30-50
+    //                 </button>
+    //                 <button onClick={() => handleAnswer('50-70')} className="flex-1 p-4 bg-white border-2 border-black rounded-lg">
+    //                     50-70
+    //                 </button>
+    //                 <button onClick={() => handleAnswer('70+')} className="flex-1 p-4 bg-white border-2 border-black rounded-lg">
+    //                     70+
+    //                 </button>
+    //             </div>
+    //         </div>
+    //     )
+    // }
+    // else if (!name) {
+    //     question = <SearchMutation {...{ addSearchParam }} />;
+    // }
+    // else if (!treatments) {
+    //     question = <SearchTreamtments {...{ addSearchParam }} />;
+    // }
 
     return (
         <main className='h-[calc(100vh-5rem)] flex flex-col items-center w-full p-8 bg-gray-100'>
@@ -276,11 +276,14 @@ export default function Page({ searchParams }: Props) {
                 <div className="bg-white rounded-lg shadow-lg p-6 flex-1">
                     <div className="mb-6">
                         {ordererdQuestions.map((q, index) => (
-                            <div key={index} className="flex items-center mb-2">
-                                <p className={`ml-2 text-lg transition-all origin-left duration-300 ${currentQuestion === q ? 'text-blue-500 scale-110' : (q.answered ? 'text-green-500' : 'text-gray-800')}`}>
+                            <div key={index} className="flex items-center mb-2 relative">
+                                <span className='w-2 h-2 bg-red-500 shadow shadow-red-300 rounded-full relative'>
+                                </span>
+                                <p className={cn("ml-2 text-lg transition-all origin-left duration-300", currentQuestion === q ? 'text-blue-500 scale-110' : (q.answered ? 'text-green-500' : 'text-gray-800'))}>
                                     {q.heading}
                                     {q.answered && <TiTick className="ml-2 inline-block text-green-500" />}
                                 </p>
+                                <span className=' absolute top-[calc(50%+0.3rem)] w-1 left-[0.125rem] h-full bg-blue-500 '></span>
                             </div>
                         ))}
                     </div>
