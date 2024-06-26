@@ -274,7 +274,7 @@ export default function Page({ searchParams }: Props) {
                         {questions.map((q, index) => (
                             <div key={index} className="flex items-center mb-2">
                                 {/* You can adjust the size as needed */}
-                                <p className={`ml-2 text-lg ${currentQuestion === index ? 'text-blue-500' : (answers[index] ? 'text-green-500' : 'text-gray-800')}`}>
+                                <p className={`ml-2 text-lg transition-all origin-left duration-300 ${currentQuestion === q ? 'text-blue-500 scale-110' : (answers[index] ? 'text-green-500' : 'text-gray-800')}`}>
                                     {q.heading}
                                     {answers[index] && <TiTick className="ml-2 inline-block text-green-500" />}
                                 </p>
