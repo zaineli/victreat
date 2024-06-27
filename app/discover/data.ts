@@ -92,7 +92,7 @@ export type Treatment = {
   description: string;
 };
 
-export const treatments = [
+export const treatments: Treatment[] = [
   {
     type: "Preffered",
     name: "Chemotherapy",
@@ -220,43 +220,43 @@ export const treatments = [
       "Stem cell transplant is a type of cancer treatment that replaces blood-forming stem cells.",
   },
   {
-    type: "Exlperimental",
+    type: "Experimental",
     name: "Chemotherapy",
     description:
       "Chemotherapy is a type of cancer treatment that uses drugs to kill cancer cells.",
   },
   {
-    type: "Exlperimental",
+    type: "Experimental",
     name: "Radiation Therapy",
     description:
       "Radiation therapy is a type of cancer treatment that uses high doses of radiation to kill cancer cells and shrink tumors.",
   },
   {
-    type: "Exlperimental",
+    type: "Experimental",
     name: "Surgery",
     description:
       "Surgery is a type of cancer treatment that involves removing the tumor and some of the surrounding tissue.",
   },
   {
-    type: "Exlperimental",
+    type: "Experimental",
     name: "Immunotherapy",
     description:
       "Immunotherapy is a type of cancer treatment that helps your immune system fight cancer.",
   },
   {
-    type: "Exlperimental",
+    type: "Experimental",
     name: "Targeted Therapy",
     description:
       "Targeted therapy is a type of cancer treatment that targets the changes in cancer cells that help them grow, divide, and spread.",
   },
   {
-    type: "Exlperimental",
+    type: "Experimental",
     name: "Hormone Therapy",
     description:
       "Hormone therapy is a type of cancer treatment that slows or stops the growth of cancer that uses hormones to grow.",
   },
   {
-    type: "Exlperimental",
+    type: "Experimental",
     name: "Stem Cell Transplant",
     description:
       "Stem cell transplant is a type of cancer treatment that replaces blood-forming stem cells.",
