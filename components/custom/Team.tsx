@@ -6,25 +6,25 @@ export default function Team() {
     {
       name: 'Kaiya Rhiel Madsen',
       title: 'Senior Developer',
-      imageSrc: '/images/neymar.png', // Replace with correct path
+      imageSrc: '/images/team.png', // Replace with correct path
       bgColor: 'bg-gray-200'
     },
     {
       name: 'Charlie Stanton',
       title: 'Senior Developer',
-      imageSrc: '/images/messi.png', // Replace with correct path
+      imageSrc: '/images/team.png', // Replace with correct path
       bgColor: 'bg-yellow-200'
     },
     {
       name: 'Makenna Kenter',
       title: 'Senior Developer',
-      imageSrc: '/images/ronaldo.png', // Replace with correct path
+      imageSrc: '/images/team.png', // Replace with correct path
       bgColor: 'bg-red-200'
     },
     {
       name: 'Angel Mango',
       title: 'Senior Developer',
-      imageSrc: '/images/neymar.png', // Replace with correct path
+      imageSrc: '/images/team.png', // Replace with correct path
       bgColor: 'bg-blue-200'
     },
   ];

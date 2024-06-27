@@ -3,19 +3,16 @@ import { ForwardIcon } from 'lucide-react';
 import { queryData } from '@/components/custom/universal-search';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
-import { Heading, Search } from 'lucide-react';
-import { redirect, usePathname, useRouter, useSearchParams } from 'next/navigation';
+import {  usePathname, useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import { GiSelfLove } from 'react-icons/gi';
-import { TiTick } from "react-icons/ti";
 import { ProgressTracker, type Stages } from '@atlaskit/progress-tracker';
 import { Input } from '@/components/ui/input';
-import Link from 'next/link';
 import { CancerType } from '../discover/data';
 import { CiSearch } from 'react-icons/ci';
 import { Badge } from '@/components/ui/badge';
 
-type Props = {
+type QuestionType = {
     // params
     // name?: string;
     // age?: number;
@@ -47,7 +44,7 @@ const questions = [
         options: ['Stage 0', 'Stage I', 'Stage II', 'Stage III', 'Stage IV'],
     },
     {
-        question: 'What is the mutation type (if known)?',
+        question: 'What is the mutation type?',
         heading: 'Mutation Type',
         param: "mutation",
         options: ['EGFR', 'KRAS', 'HER2', 'BRAF', 'Other', 'Unknown'],
@@ -360,31 +357,17 @@ function SearchMutation({ addSearchParam }: { addSearchParam: (key: string, valu
         </div>)
 }
 
-export default function Page({ searchParams }: Props) {
-    const { name, age, cancer, stage, mutation, treatments } = searchParams;
-    console.log(searchParams)
+export default function Page({ searchParams }: {searchParams: {
+    name?: string;
+    age?: string;
+    cancer?: string;
+    mutation?: string;
+    treatments?: string;
+}}) {
     const router = useRouter();
-    // const pathname = usePathname();
-    // const params = useSearchParams();
-
-    // params.get()
-
-    // const [currentQuestion, setCurrentQuestion] = useState(0);
-    // const [answers, setAnswers] = useState<(string | null)[]>(new Array(questions.length).fill(null));
-    // const answers = [name, age, cancer, stage, mutation, treatments];
-    // const answers = [name, age, cancer, stage, mutation, treatments];
     const ordererdQuestions = questions.map(q => ({ ...q, answer: searchParams[q.param], answered: searchParams.hasOwnProperty(q.param) })).sort((a, b) => (b.answered ? 1 : 0) - (a.answered ? 1 : 0))
     const currentQuestion = ordererdQuestions.find((q) => !q.answered);
-    // const getCurrentQuestionIndex = () => ordererdQuestions.indexOf(currentQuestion);
-    // const currentQuestionIndex = ordererdQuestions.indexOf(currentQuestion);
-    console.log(ordererdQuestions, currentQuestion, searchParams);
-    // useEffect(() => {
-    //     // Check if there is no question left
-    //     if (currentQuestion === questions.length) {
-    //         // redirect to another page
-    //         router.push('/d/treatments');
-    //     }
-    // }, [currentQuestion]);
+
     const items: Stages[] = ordererdQuestions.map((q, index) => ({
         id: `step-${index + 1}`,
         label: q.heading,

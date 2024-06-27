@@ -21,17 +21,21 @@ const TeamMember = ({ name, title, imageSrc, bgColor, index }) => {
   function currentIndex(index) {
     return (
       <AnimatedImage
-        className={`overflow-hidden w-72 h-96 flex items-center justify-center rounded-[3rem] ${bgColor}`}
-          src={imageSrc}
-          alt={`${name}'s photo`}
-          fit="contain"
-          containerVariants={containerVariantsA}
-        />
+        className={`overflow-hidden h-full flex items-center justify-center rounded-[3rem] ${bgColor}`}
+        src={imageSrc}
+        alt={`${name}'s photo`}
+        fit="contain"
+        containerVariants={containerVariantsA}
+        imageClasses="w-full h-full object-cover"
+      />
     );
   }
   return (
-    <div className="flex flex-col items-center">
-      {currentIndex(index)}
+    <div className="flex flex-col h-96 items-center">
+      <div className="h-96">
+        {currentIndex(index)}
+      </div>
+
       <TextSplitter lineHeight="1.125rem" fontSize="1.125rem" className="text-lg font-bold mt-4 text-center" text={name} />
       <TextSplitter fontSize="1.125rem" className="text-sm text-gray-600 text-center" text={title} />
       {/* <h3 className="text-lg font-bold mt-4">{name}</h3>

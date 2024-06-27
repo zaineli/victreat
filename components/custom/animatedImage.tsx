@@ -9,6 +9,7 @@ type AnimatedImageProps = {
   containerVariants: Variants;
   className?: string;
   fit?: "contain" | "cover";
+  imageClasses?: string;
 };
 
 const AnimatedImage: React.FC<AnimatedImageProps> = ({
@@ -16,7 +17,8 @@ const AnimatedImage: React.FC<AnimatedImageProps> = ({
   alt,
   containerVariants,
   className,
-  fit
+  fit,
+  imageClasses
 }) => {
 
     const [sectionRef, inView] = useSectionInView({ threshold: 0.1 });
@@ -32,7 +34,7 @@ const AnimatedImage: React.FC<AnimatedImageProps> = ({
       <motion.img
         src={src}
         alt={alt}
-        className={`w-full h-auto rounded-lg shadow-lg `+ fit}
+        className={`w-full h-auto rounded-lg  shadow-lg `+ fit + " " + imageClasses}
       />
     </motion.div>
   );
