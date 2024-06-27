@@ -166,7 +166,7 @@ export default function Home() {
       />
 
       <CallToAction />
-      <Newss />
+      {/* <Newss /> */}
       <section className="flex-1 flex items-start justify-center">
         <Team />
       </section>
