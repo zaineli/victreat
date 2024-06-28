@@ -17,6 +17,8 @@ import Globe from "@/components/magicui/globe";
 import useOnFocus from "@/lib/useOnFocus";
 import { queryData } from "@/components/custom/universal-search";
 import SearchBar from "@/components/custom/searchBar";
+import Trials from "./news/page";
+import AnimatedImage from "@/components/custom/animatedImage";
 
 export default function Home() {
   const { ref: searchRef, isFocused } = useOnFocus();
@@ -147,12 +149,16 @@ export default function Home() {
         </div>
       </section>
       <Section
-        id="purpose"
-        title="Purpose"
-        text1="Cancer Research is growing at a rapid speed and better Treatments are being discovered."
-        text2="But the treatment industry is lagging and uses old methods. There is a gap between research and medicine."
-        imageUrl="https://imgs.search.brave.com/g3rChyKsltNYFPFk7CIOEGlPK8BZi3n70WOahxXGoUc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM2/NzEyNDc5NS9waG90/by9ncmVlbi1kbmEu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PVlvTHJ1c29kUnlH/Q00yajRpOV9EUnNu/MEFyZFNVaE1uYTB2/VmRHYW0zNzQ9"
-        containerVariants={containerVariantsA}
+        className="mt-48"
+        id="technology"
+        title="Technology"
+        text1="Advancements in technology are revolutionizing the field of cancer research."
+        text2="With the integration of AI and big data analytics, new breakthroughs are within reach."
+        containerVariants={containerVariantsB}
+        component={
+          <Trials />
+        }
+        reverse={false}
       />
 
       <Section
@@ -160,8 +166,15 @@ export default function Home() {
         title="Technology"
         text1="Advancements in technology are revolutionizing the field of cancer research."
         text2="With the integration of AI and big data analytics, new breakthroughs are within reach."
-        imageUrl="https://imgs.search.brave.com/S2kErgUGJFU7htcIAGksfd8Zhix60AgOMizyFu0kjQA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9ibG9n/Lmh1YnNwb3QuY29t/L2hzLWZzL2h1YmZz/L0dvb2dsZSUyMERy/aXZlJTIwSW50ZWdy/YXRpb24vdHlwZXMl/MjBvZiUyMGNoYXJ0/c18zMjAyMy1NYXkt/MjItMjAyMy0xMC0x/Ny0yNi0yOTk0LVBN/LnBuZz93aWR0aD02/MDAmaGVpZ2h0PTQ1/MSZuYW1lPXR5cGVz/JTIwb2YlMjBjaGFy/dHNfMzIwMjMtTWF5/LTIyLTIwMjMtMTAt/MTctMjYtMjk5NC1Q/TS5wbmc"
         containerVariants={containerVariantsB}
+        component={
+          <AnimatedImage
+            className="w-max max-w-full h-auto"
+            src="https://imgs.search.brave.com/S2kErgUGJFU7htcIAGksfd8Zhix60AgOMizyFu0kjQA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9ibG9n/Lmh1YnNwb3QuY29t/L2hzLWZzL2h1YmZz/L0dvb2dsZSUyMERy/aXZlJTIwSW50ZWdy/YXRpb24vdHlwZXMl/MjBvZiUyMGNoYXJ0/c18zMjAyMy1NYXkt/MjItMjAyMy0xMC0x/Ny0yNi0yOTk0LVBN/LnBuZz93aWR0aD02/MDAmaGVpZ2h0PTQ1/MSZuYW1lPXR5cGVz/JTIwb2YlMjBjaGFy/dHNfMzIwMjMtTWF5/LTIyLTIwMjMtMTAt/MTctMjYtMjk5NC1Q/TS5wbmc"
+            alt="hero"
+            containerVariants={containerVariantsB}
+          />
+        }
         reverse={true}
       />
 
