@@ -39,7 +39,10 @@ const HorizontalChart: React.FC = () => {
         nodes={nodes}
         edges={edges}
         onConnect={onConnect}
-        connectionLineType={ConnectionLineType.SmoothStep}
+        connectionLineType={ConnectionLineType.Bezier}
+        snapToGrid={true}
+        snapGrid={[15, 15]}
+        style={{ background: '#f0f0f0' }}
       >
         <MiniMap />
         <Controls />
