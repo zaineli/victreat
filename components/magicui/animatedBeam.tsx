@@ -6,7 +6,7 @@ import { RefObject, useEffect, useId, useState } from "react";
 
 export interface AnimatedBeamProps {
   className?: string;
-  containerRef: RefObject<HTMLElement>;
+  containerRef: RefObject<HTMLElement>; // Container ref
   fromRef: RefObject<HTMLElement>;
   toRef: RefObject<HTMLElement>;
   curvature?: number;
@@ -30,7 +30,7 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
   fromRef,
   toRef,
   curvature = 0,
-  reverse = false,
+  reverse = false, // Include the reverse prop
   duration = Math.random() * 3 + 4,
   delay = 0,
   pathColor = "gray",
@@ -47,6 +47,7 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
   const [pathD, setPathD] = useState("");
   const [svgDimensions, setSvgDimensions] = useState({ width: 0, height: 0 });
 
+  // Calculate the gradient coordinates based on the reverse prop
   const gradientCoordinates = reverse
     ? {
         x1: ["90%", "-10%"],
@@ -89,18 +90,23 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
       }
     };
 
+    // Initialize ResizeObserver
     const resizeObserver = new ResizeObserver((entries) => {
+      // For all entries, recalculate the path
       for (let entry of entries) {
         updatePath();
       }
     });
 
+    // Observe the container element
     if (containerRef.current) {
       resizeObserver.observe(containerRef.current);
     }
 
+    // Call the updatePath initially to set the initial path
     updatePath();
 
+    // Clean up the observer on component unmount
     return () => {
       resizeObserver.disconnect();
     };
@@ -115,30 +121,20 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
     endYOffset,
   ]);
 
-  const createHexagonNodes = (x: number, y: number, size: number) => {
+  // Function to create a hexagon path
+  const createHexagonPath = (x: number, y: number, size: number) => {
     const angle = Math.PI / 3;
-    let nodes = [];
+    let path = "";
     for (let i = 0; i < 6; i++) {
       const xPoint = x + size * Math.cos(angle * i);
       const yPoint = y + size * Math.sin(angle * i);
-      nodes.push(<circle key={i} cx={xPoint} cy={yPoint} r={size / 3} fill={gradientStartColor} />);
-      nodes.push(
-        <line
-          key={`line-${i}`}
-          x1={x}
-          y1={y}
-          x2={xPoint}
-          y2={yPoint}
-          stroke={pathColor}
-          strokeWidth={pathWidth}
-          strokeOpacity={pathOpacity}
-        />
-      );
+      path += i === 0 ? `M ${xPoint},${yPoint}` : ` L ${xPoint},${yPoint}`;
     }
-    return nodes;
+    return path + " Z";
   };
 
-  const hexagonSize = 20;
+  // Hexagon size
+  const hexagonSize = 10;
 
   return (
     <svg
@@ -152,60 +148,36 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
       )}
       viewBox={`0 0 ${svgDimensions.width} ${svgDimensions.height}`}
     >
-      <circle
-        cx={
+      {/* Hexagon at the start */}
+      <path
+        d={createHexagonPath(
           fromRef.current?.getBoundingClientRect().left -
-          containerRef.current?.getBoundingClientRect().left +
-          fromRef.current?.getBoundingClientRect().width / 2 +
-          startXOffset
-        }
-        cy={
+            containerRef.current?.getBoundingClientRect().left +
+            fromRef.current?.getBoundingClientRect().width / 2 +
+            startXOffset,
           fromRef.current?.getBoundingClientRect().top -
-          containerRef.current?.getBoundingClientRect().top +
-          fromRef.current?.getBoundingClientRect().height / 2 +
-          startYOffset
-        }
-        r={hexagonSize / 3}
+            containerRef.current?.getBoundingClientRect().top +
+            fromRef.current?.getBoundingClientRect().height / 2 +
+            startYOffset,
+          hexagonSize,
+        )}
         fill={gradientStartColor}
       />
-      {createHexagonNodes(
-        fromRef.current?.getBoundingClientRect().left -
-          containerRef.current?.getBoundingClientRect().left +
-          fromRef.current?.getBoundingClientRect().width / 2 +
-          startXOffset,
-        fromRef.current?.getBoundingClientRect().top -
-          containerRef.current?.getBoundingClientRect().top +
-          fromRef.current?.getBoundingClientRect().height / 2 +
-          startYOffset,
-        hexagonSize
-      )}
-      <circle
-        cx={
+      {/* Hexagon at the end */}
+      <path
+        d={createHexagonPath(
           toRef.current?.getBoundingClientRect().left -
-          containerRef.current?.getBoundingClientRect().left +
-          toRef.current?.getBoundingClientRect().width / 2 +
-          endXOffset
-        }
-        cy={
+            containerRef.current?.getBoundingClientRect().left +
+            toRef.current?.getBoundingClientRect().width / 2 +
+            endXOffset,
           toRef.current?.getBoundingClientRect().top -
-          containerRef.current?.getBoundingClientRect().top +
-          toRef.current?.getBoundingClientRect().height / 2 +
-          endYOffset
-        }
-        r={hexagonSize / 3}
+            containerRef.current?.getBoundingClientRect().top +
+            toRef.current?.getBoundingClientRect().height / 2 +
+            endYOffset,
+          hexagonSize,
+        )}
         fill={gradientStopColor}
       />
-      {createHexagonNodes(
-        toRef.current?.getBoundingClientRect().left -
-          containerRef.current?.getBoundingClientRect().left +
-          toRef.current?.getBoundingClientRect().width / 2 +
-          endXOffset,
-        toRef.current?.getBoundingClientRect().top -
-          containerRef.current?.getBoundingClientRect().top +
-          toRef.current?.getBoundingClientRect().height / 2 +
-          endYOffset,
-        hexagonSize
-      )}
       <path
         d={pathD}
         stroke={pathColor}
@@ -240,7 +212,7 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
           transition={{
             delay,
             duration,
-            ease: [0.16, 1, 0.3, 1],
+            ease: [0.16, 1, 0.3, 1], // https://easings.net/#easeOutExpo
             repeat: Infinity,
             repeatDelay: 0,
           }}
