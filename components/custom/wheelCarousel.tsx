@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import useMouseHover from '@/lib/useMouseHover';
+import { AnimatedBeamMultipleOutputDemo } from '../AnimatedBeam';
 
 type WheelCarouselProps = {
     className?: string
@@ -23,6 +24,7 @@ function WheelCarousel({ className }: WheelCarouselProps) {
     const [index, setIndex] = useState(0);
     const interval = useRef<NodeJS.Timeout | null>(null);
     const ref = useRef<HTMLDivElement>(null);
+    // const isHovered = true;
     const isHovered = useMouseHover(ref);
 
     useEffect(() => {
@@ -42,20 +44,17 @@ function WheelCarousel({ className }: WheelCarouselProps) {
     }, [isHovered])
 
 
-    const show = 7;
+    const show = 5;
     const remaining = (index + show) - data.length;
     let slice = data.slice(index, index + show)
     if (remaining > 0) {
         slice = slice.concat(data.slice(0, remaining))
     }
-    console.log(slice);
-    // const slice = data.slice(index, index + 5).concat(data.slice(0, index))
-
     return (
-        <div ref={ref} className={cn('flex flex-col', className)}>
+        <div ref={ref} className={cn('flex flex-col justify-center', className)}>
             {slice.map((item, i) => (
                 <motion.div
-                    className=' origin-left text-2xl font-bold pl-2'
+                    className=' origin-left text-6xl font-bold pl-2 w-max'
                     initial={{
                         transform: `translateY(100%) scale(${1 - Math.abs(i - 1) / 2})`,
                         opacity: 1 - Math.abs(i - 1) / 2
@@ -66,7 +65,7 @@ function WheelCarousel({ className }: WheelCarouselProps) {
 
                         transition: { duration: 0.5, ease: 'easeInOut', }
                     }}
-                    key={item + i}
+                    key={i + item}
                 >
                     {item}
                 </motion.div>

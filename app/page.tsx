@@ -1,18 +1,13 @@
 import MutationSection from "@/components/custom/mutationSections";
-import MutationGraphic from "../components/custom/mutationGraphic";
+import { AnimatedBeamMultipleOutputDemo } from '@/components/AnimatedBeam'
 
-const mutations = [
-  'TP53',
-  'KRAS',
-  'EGFR',
-  'ALK',
-  'ROS1',
-  'BRAF',]
 
-export default function Home() {
+function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       <MutationSection />
     </div>
-  );
+  )
 }
+
+export default Home;
