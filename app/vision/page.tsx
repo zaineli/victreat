@@ -1,10 +1,11 @@
+import WheelCarousel from '@/components/custom/wheelCarousel'
 import React from 'react'
 
 type Props = {}
 
 function Page({}: Props) {
   return (
-    <div>Vision</div>
+    <WheelCarousel />
   )
 }
 
