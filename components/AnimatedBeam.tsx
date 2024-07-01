@@ -1,10 +1,10 @@
 "use client";
 
+import React, { useRef } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
-import React, { forwardRef, useRef } from "react";
 
-const Circle = forwardRef<
+const Circle = React.forwardRef<
   HTMLDivElement,
   { className?: string; children?: React.ReactNode }
 >(({ className, children }, ref) => {
@@ -21,119 +21,51 @@ const Circle = forwardRef<
   );
 });
 
+Circle.displayName = "Circle";
+
 export function AnimatedBeamMultipleOutputDemo({
   className,
+  dataPoints,
 }: {
   className?: string;
+  dataPoints: string[];
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const div1Ref = useRef<HTMLDivElement>(null);
-  const div2Ref = useRef<HTMLDivElement>(null);
-  const div3Ref = useRef<HTMLDivElement>(null);
-  const div4Ref = useRef<HTMLDivElement>(null);
-  const div5Ref = useRef<HTMLDivElement>(null);
-  const div6Ref = useRef<HTMLDivElement>(null);
-  const div7Ref = useRef<HTMLDivElement>(null);
-  const div8Ref = useRef<HTMLDivElement>(null);
-  const div9Ref = useRef<HTMLDivElement>(null);
-
-
+  const mainCircleRef = useRef<HTMLDivElement>(null);
+  const refs = useRef(dataPoints.map(() => React.createRef<HTMLDivElement>()));
 
   return (
-    <div
-      className={cn(
-        "relative flex w-full  items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-xl",
-        className
-      )}
-      ref={containerRef}
-    >
-      <div className="flex h-full w-full flex-row items-stretch justify-between gap-10">
-        <div className="flex flex-col justify-center">
-          <Circle ref={div7Ref}>
-            7
-          </Circle>
+    <div className={cn("flex flex-col items-center", className)}>
+      <div
+        className={cn(
+          "relative flex w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-xl",
+          className
+        )}
+        ref={containerRef}
+      >
+        <div className="flex h-full w-full flex-row items-stretch justify-between gap-10">
+          <div className="flex flex-col justify-center">
+            <Circle ref={mainCircleRef}>Main</Circle>
+          </div>
+          <div className="flex flex-col justify-center gap-2">
+            {dataPoints.map((item, index) => (
+              <Circle ref={refs.current[index]} key={index}>
+                {item}
+              </Circle>
+            ))}
+          </div>
         </div>
-        <div className="flex flex-col justify-center">
-          <Circle ref={div6Ref} className="h-16 w-16">
-            6
-          </Circle>
-        </div>
-        <div className="flex flex-col justify-center gap-2">
-          <Circle ref={div1Ref}>
-            1
-          </Circle>
-          <Circle ref={div2Ref}>
-            2
-          </Circle>
-          <Circle ref={div3Ref}>
-            3
-          </Circle>
-          <Circle ref={div4Ref}>
-            4
-          </Circle>
-          <Circle ref={div5Ref}>
-            5
-          </Circle>
-          <Circle ref={div8Ref}>
-            8
-            </Circle>
-            <Circle ref={div9Ref}>
-            9
-            </Circle>
 
-
-        </div>
+        {dataPoints.map((_, index) => (
+          <AnimatedBeam
+            key={index}
+            containerRef={containerRef}
+            fromRef={mainCircleRef}
+            toRef={refs.current[index]}
+            duration={3}
+          />
+        ))}
       </div>
-
-      <AnimatedBeam
-        containerRef={containerRef}
-        fromRef={div1Ref}
-        toRef={div6Ref}
-        duration={3}
-      />
-      <AnimatedBeam
-        containerRef={containerRef}
-        fromRef={div2Ref}
-        toRef={div6Ref}
-        duration={3}
-      />
-      <AnimatedBeam
-        containerRef={containerRef}
-        fromRef={div3Ref}
-        toRef={div6Ref}
-        duration={3}
-      />
-      <AnimatedBeam
-        containerRef={containerRef}
-        fromRef={div4Ref}
-        toRef={div6Ref}
-        duration={3}
-      />
-      <AnimatedBeam
-        containerRef={containerRef}
-        fromRef={div5Ref}
-        toRef={div6Ref}
-        duration={3}
-      />
-      <AnimatedBeam
-        containerRef={containerRef}
-        fromRef={div6Ref}
-        toRef={div7Ref}
-        duration={3}
-      />
-        <AnimatedBeam
-            containerRef={containerRef}
-            fromRef={div8Ref}
-            toRef={div6Ref}
-            duration={3}
-        />
-                <AnimatedBeam
-            containerRef={containerRef}
-            fromRef={div9Ref}
-            toRef={div6Ref}
-            duration={3}
-        />
-
     </div>
   );
 }
