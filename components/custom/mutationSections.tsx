@@ -46,9 +46,9 @@ function MutationSection() {
     console.log({ next, index })
 
     return (
-        <div ref={ref} className='flex gap-16 p-16 rounded-2xl bg-neutral-500 overflow-hidden  text-white'>
-            <WheelCarousel className=' w-1/3' />
-            <div className=" w-2/3 flex flex-col relative overflow-hidden">
+        <div ref={ref} className='flex gap-16 p-16 flex-col lg:flex-row items-stretch rounded-2xl bg-neutral-500 overflow-hidden  text-white'>
+            <WheelCarousel className='lg:justify-between lg:w-1/3 w-full' />
+            <div className=" lg:w-2/3 w-full lg:self-stretch  flex flex-col relative overflow-hidden">
                 <AnimatePresence mode='popLayout'>
                     <motion.div
                         key={index}

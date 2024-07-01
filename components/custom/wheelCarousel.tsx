@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import useMouseHover from '@/lib/useMouseHover';
 import { AnimatedBeamMultipleOutputDemo } from '../AnimatedBeam';
+import { useMediaQuery } from '@/lib/useMediaQuery';
 
 type WheelCarouselProps = {
     className?: string
@@ -21,6 +22,7 @@ function WheelCarousel({ className }: WheelCarouselProps) {
         "Lymphoma",
     ]
 
+    const large = useMediaQuery('(min-width: 1024px)');
     const [index, setIndex] = useState(0);
     const interval = useRef<NodeJS.Timeout | null>(null);
     const ref = useRef<HTMLDivElement>(null);
@@ -33,7 +35,7 @@ function WheelCarousel({ className }: WheelCarouselProps) {
         }
         if (!isHovered) {
             interval.current = setInterval(() => {
-                setIndex((prev) => (prev + 1) % data.length)
+                setIndex((prev) => (prev + (large ? +1 : -1) + data.length * 2) % data.length)
             }, 1000)
         }
         return () => {
@@ -41,8 +43,8 @@ function WheelCarousel({ className }: WheelCarouselProps) {
                 clearInterval(interval.current)
             }
         }
-    }, [isHovered])
-
+    }, [isHovered, large])
+    console.log(index)
 
     const show = 5;
     const remaining = (index + show) - data.length;
@@ -51,18 +53,17 @@ function WheelCarousel({ className }: WheelCarouselProps) {
         slice = slice.concat(data.slice(0, remaining))
     }
     return (
-        <div ref={ref} className={cn('flex flex-col justify-center', className)}>
+        <div ref={ref} className={cn('flex lg:flex-col bg-red-600 justify-center', className)}>
             {slice.map((item, i) => (
                 <motion.div
-                    className=' origin-left text-6xl font-bold pl-2 w-max'
+                    className=' lg:origin-left origin-top  text-center  text-3xl flex-1 flex  items-center justify-center lg:text-[3.24vw] font-bold pl-2 w-max min-w-max'
                     initial={{
-                        transform: `translateY(100%) scale(${1 - Math.abs(i - 1) / 2})`,
-                        opacity: 1 - Math.abs(i - 1) / 2
+                        transform: `translate(${large ? "0" : "-100"}%, ${!large ? "0" : "100"}%) scale(${1 - Math.abs(i - 2 + (large ? 1 : -1)) / 2})`,
+                        opacity: 1 - Math.abs(i - 2 + (large ? 1 : -1)) / 2
                     }}
                     animate={{
-                        transform: `translateY(0%) scale(${1 - Math.abs(i - 2) / 2})`,
+                        transform: `translate(0%, 0%) scale(${1 - Math.abs(i - 2) / 2})`,
                         opacity: 1 - Math.abs(i - 2) / 2,
-
                         transition: { duration: 0.5, ease: 'easeInOut', }
                     }}
                     key={i + item}
