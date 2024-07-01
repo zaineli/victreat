@@ -63,16 +63,16 @@ function WheelCarousel({
     }
 
     return (
-        <div ref={ref} className={cn('flex  lg:flex-col justify-center', className)}>
+        <div ref={ref} className={cn('flex lg:flex-col justify-center', className)}>
             {slice.map((item, i) => (
                 <motion.div
-                    className=' lg:origin-left origin-top  text-center min-w-1/3 w-1/3 max-w-1/3  text-3xl flex-1 flex  items-center justify-center lg:text-[3.24vw] font-bold  '
+                    className=' lg:origin-left origin-top  text-center w-full min-w-full sm:min-w-[33%]  text-3xl flex-1 flex  items-center justify-center lg:text-[3.24vw] font-bold lg:w-max lg:min-w-max'
                     initial={{
-                        transform: `translate(${large ? "0" : "-100"}%, ${!large ? "0" : "100"}%) `,
+                        transform: `translate(${large ? "0" : "-100"}%, ${!large ? "0" : "100"}%) scale(${1 - Math.abs(i - 2 + (large ? 1 : -1)) / 2})`,
                         opacity: 1 - Math.abs(i - 2 + (large ? 1 : -1)) / 2
                     }}
                     animate={{
-                        transform: `translate(0%, 0%) `,
+                        transform: `translate(0%, 0%) scale(${1 - Math.abs(i - 2) / 2})`,
                         opacity: 1 - Math.abs(i - 2) / 2,
                         transition: { duration: 0.5, ease: "easeInOut" },
                     }}
