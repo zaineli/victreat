@@ -31,7 +31,7 @@ function MutationSection() {
         if (!isHovered) {
             interval.current = setInterval(() => {
                 setIndex(
-                    (prev) => (prev + (large ? +1 : -1) + data.length * 2) % data.length
+                    (prev) => (prev + (large ? +1 : -1) + cancers.length * 2) % cancers.length
                 );
             }, 1000);
         }
@@ -47,7 +47,7 @@ function MutationSection() {
     near.push(cancers[(index - 1 + cancers.length) % cancers.length]);
     near.push(cancer);
     near.push(cancers[(index + 1 + cancers.length) % cancers.length]);
-    
+
 
     return (
         <div
@@ -55,31 +55,31 @@ function MutationSection() {
             className="flex gap-16 p-16 flex-col lg:flex-row items-stretch rounded-2xl bg-neutral-500 overflow-hidden"
         >
             <WheelCarousel
-                className="lg:justify-between lg:w-1/3 w-full"
-                // cancers={near}
-                setSelectedCancer={(cancer) => {
-                    const index = cancers.findIndex((c) => c.name === cancer);
-                    if (index !== -1) {
-                        setSelectedCancer(index);
-                    }
-                }}
+                cancers={near}
+                className=" lg:w-1/3 w-full"
             />
             <div className=" lg:w-2/3 w-full lg:self-stretch flex flex-col relative overflow-hidden">
                 <AnimatePresence mode="popLayout">
                     <motion.div
-                        key={selectedCancer}
+                        key={cancer.name}
                         initial={{
-                            transform: "translateY(100%)",
+                            transform: `translate(${large ? "0" : "-100"}%, ${!large ? "0" : "100"}%)`,
                         }}
                         animate={{
-                            transform: "translateY(0%)",
+                            transform: "translate(0%, 0%)",
+                            transition: { duration: 0.5, ease: 'easeInOut', }
                         }}
                         exit={{
-                            transform: "translateY(-100%)",
+                            transform: `translate(${large ? "0" : "100"}%, ${!large ? "0" : "-100"}%)`,
                         }}
                         className=""
                     >
-                        <AnimatedBeamMultipleOutputDemo className="" dataPoints={cancer.mutations} />
+                        <div className="">
+
+                            <AnimatedBeamMultipleOutputDemo className="" cancer={cancer} />
+                            <AnimatedBeamMultipleOutputDemo className="absolute inset-0 z-10 translate-x-[-10%] scale-[0.8] translate-y-[-20%] opacity-70" cancer={cancer} />
+                            <AnimatedBeamMultipleOutputDemo className="absolute inset-0 z-10 translate-x-[-10%] scale-[0.8] translate-y-[20%] opacity-70 " cancer={cancer} />
+                        </div>
                     </motion.div>
                 </AnimatePresence>
             </div>
