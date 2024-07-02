@@ -33,7 +33,8 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
   reverse = false, // Include the reverse prop
   duration = Math.random() * 3 + 4,
   delay = 0,
-  pathColor = "gray",
+  pathColor = "red",
+  // pathColor = "gray",
   pathWidth = 2,
   pathOpacity = 0.2,
   gradientStartColor = "#ffaa40",
@@ -107,7 +108,10 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
     }
 
     // Call the updatePath initially to set the initial path
-    updatePath();
+    setTimeout(() => {
+      updatePath();
+
+    }, 1000)
 
     // Clean up the observer on component unmount
     return () => {
@@ -136,20 +140,32 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
       )}
       viewBox={`0 0 ${svgDimensions.width} ${svgDimensions.height}`}
     >
-      <path
+      <motion.path
         d={pathD}
         stroke={pathColor}
         strokeWidth={pathWidth}
         strokeOpacity={pathOpacity}
         strokeLinecap="round"
+        // visibility={pathD ? "visible" : "hidden"}
+        initial={{
+          pathLength: 0,
+        }}
+        animate={{
+          pathLength: 1,
+          transition: {
+            delay: 1,
+            duration: 1,
+            ease: "easeInOut",
+          },
+        }}
       />
-      <path
+      {/* <path
         d={pathD}
         strokeWidth={pathWidth}
         stroke={`url(#${id})`}
         strokeOpacity="1"
         strokeLinecap="round"
-      />
+      /> */}
       <defs>
         <motion.linearGradient
           className="transform-gpu"

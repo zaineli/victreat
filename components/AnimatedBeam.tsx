@@ -28,6 +28,7 @@ export function AnimatedBeamMultipleOutputDemo({
   cancer,
   nextCancer,
   prevCancer,
+  showLines = true,
 }: {
   className?: string;
   cancer: {
@@ -42,6 +43,7 @@ export function AnimatedBeamMultipleOutputDemo({
     name: string;
     mutations: string[];
   };
+  showLines?: boolean;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mainCircleRef = useRef<HTMLDivElement>(null);
@@ -51,17 +53,17 @@ export function AnimatedBeamMultipleOutputDemo({
     <div className={cn("flex flex-col items-center", className)}>
       <div
         className={cn(
-          "relative flex w-full items-center justify-center overflow-hidden rounded-lg border  p-10 md:shadow-xl",
+          "relative flex  w-full items-center justify-center overflow-hidden rounded-lg   p-10 ",
           className
         )}
         ref={containerRef}
       >
-        <div className="flex h-full w-full flex-row items-stretch justify-between gap-10">
-          <div className="flex flex-col justify-center">
+        <div className="flex lg:flex-row lg:h-[400px] flex-col h-full w-full items-stretch justify-between lg:gap-10 gap-32">
+          <div className="flex lg:flex-col justify-center">
             {/* <Circle ref={mainCircleRef}>
               {cancer.name}
             </Circle> */}
-            <div ref={mainCircleRef} className="z-10 flex h-12 w-max items-center justify-center rounded-full border-2 p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]" >
+            <div ref={mainCircleRef} className="bg-white text-2xl px-3 z-10 flex h-12 w-max items-center justify-center rounded-full  p-3 " >
               {cancer.name}
             </div>
           </div>
@@ -79,16 +81,16 @@ export function AnimatedBeamMultipleOutputDemo({
               </Circle>
             ))}
           </div> */}
-          <div className="flex flex-col justify-center gap-2">
+          <div className="flex lg:flex-col justify-center gap-2">
             {cancer.mutations.map((item, index) => (
-              <Circle className={cn(index % 2 == 0 ? 'translate-x-[-100%]' : "")} ref={refs.current[index]} key={index}>
+              <Circle className={cn(index % 2 == 0 ? 'lg:translate-x-[-100%] translate-y-[-100%] lg:translate-y-0' : "")} ref={refs.current[index]} key={index}>
                 {item}
               </Circle>
             ))}
           </div>
         </div>
 
-        {cancer.mutations.map((_, index) => (
+        {showLines && cancer.mutations.map((_, index) => (
           <AnimatedBeam
             key={index}
             containerRef={containerRef}
