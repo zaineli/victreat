@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import Timeline from '@/components/custom/Timeline';
 import { AnimatedBeamMultipleOutputDemo } from '@/components/AnimatedBeam'; // Import AnimatedBeamMultipleOutputDemo
 import LineChart from '@/components/custom/line-chart';
+import MutationSection from '@/components/custom/mutationSections';
+import RibbonsCard from '@/components/custom/ribbonsCard';
 
 const animationVariants = {
   hidden: { y: "100%" },
@@ -71,7 +73,7 @@ const dataArray = [
 const charts = [
   { type: "AnimatedBeam", dataPoints: ["Data 1", "Data 2", "Data 3"] },
   { type: "AnimatedBeam", dataPoints: ["Data 32", "Data 2", "Data 3"] },
-  { type: "AnimatedBeam", dataPoints: ["Data 3242" , "Data 2", "Data 3"] },
+  { type: "AnimatedBeam", dataPoints: ["Data 3242", "Data 2", "Data 3"] },
 ];
 
 function Home() {
@@ -85,6 +87,13 @@ function Home() {
     return () => clearInterval(interval);
   }, []);
 
+
+  return (
+    <div className='mt-48 w-96 h-96 bg-red-200 rounded-[15%] p-4 m-2'>
+      <RibbonsCard />
+    </div>
+  );
+
   const renderChart = () => {
     const { type, dataPoints } = charts[activeIndex];
     switch (type) {
@@ -96,7 +105,7 @@ function Home() {
   };
 
   return (
-    <div className="relative h-screen overflow-hidden flex flex-col items-center ">
+    <div className="relative h-screen flex flex-col items-center ">
 
       <motion.div
         initial="hidden"
@@ -136,7 +145,7 @@ function Home() {
           custom="left"
           variants={cardVariants}
           transition={{ delay: 2.5, duration: 1, ease: "easeOut" }}
-          className="w-1/4 bg-gray-200 rounded-[15%] p-4 m-2"
+          className="w-1/4  bg-gray-200 rounded-[15%] p-4 m-2"
         >
           <img src="https://continentalhospitals.com/images/specialities/37d80f08e6ff7f95c8b9f41b1b0bc452.webp" alt="" />
         </motion.div>
@@ -146,9 +155,12 @@ function Home() {
           custom="center"
           variants={cardVariants}
           transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-          className="w-1/3 bg-gray-200 rounded-[15%] p-4 m-2"
+          className="w-96 h-96 bg-red-200 rounded-[15%] p-4 m-2"
         >
           {/* {renderChart()} */}
+          {/* <MutationSection /> */}
+          <RibbonsCard />
+
         </motion.div>
         <motion.div
           initial="hidden"
@@ -157,8 +169,8 @@ function Home() {
           variants={cardVariants}
           transition={{ delay: 2, duration: 1, ease: "easeOut" }}
           className="w-1/3 bg-white rounded-[15%] p-4 m-2 flex flex-col items-start justify-start"
-          style={{ 
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', 
+          style={{
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
             border: '1px solid #e0e0e0',
             padding: '20px',
             borderRadius: '10px',

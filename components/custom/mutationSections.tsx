@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useMediaQuery } from "@/lib/useMediaQuery";
 import { cn } from "@/lib/utils";
 
-function MutationSection() {
+function MutationSection({small = true}) {
     const interval = useRef<NodeJS.Timeout | null>(null);
     const ref = useRef<HTMLDivElement>(null);
     const isHovered = useMouseHover(ref);
@@ -45,23 +45,25 @@ function MutationSection() {
 
     const cancer = cancers[index];
     const near = [];
+    if (!small)
     near.push(cancers[(index - 1 + cancers.length) % cancers.length]);
     near.push(cancer);
-    near.push(cancers[(index + 1 + cancers.length) % cancers.length]);
+    if (!small)
+        near.push(cancers[(index + 1 + cancers.length) % cancers.length]);
 
 
-    const center = 1;
+    const center = small ? 0 : 1;
 
     return (
         <div
             ref={ref}
-            className="flex gap-16 p-16 flex-col lg:flex-row items-stretch rounded-2xl bg-neutral-200 overflow-hidden"
+            className="flex gap-16  flex-col lg:flex-row items-stretch rounded-2xl bg-neutral-200 overflow-hidden"
         >
             {/* <WheelCarousel
                 cancers={near}
                 className=" lg:w-1/3 w-full"
             /> */}
-            <div className=" lg:w-2/3 w-full lg:self-stretch flex flex-col relative overflow-hidden lg:origin-left origin-top">
+            <div className=" w-full lg:self-stretch flex flex-col relative overflow-hidden lg:origin-left origin-top">
                 <AnimatePresence mode="popLayout">
 
                     {near.map((cancer, i) => (
@@ -89,7 +91,7 @@ function MutationSection() {
                             key={cancer.name + i}
                         >
                             <AnimatedBeamMultipleOutputDemo
-                                cancer={cancer}
+                                cancer={!small ? cancer : {name: cancer.name, mutations: cancer.mutations.slice(0, 3)}}
                                 showLines={i === center}
                                 className="w-full h-full" />
                         </motion.div>)
