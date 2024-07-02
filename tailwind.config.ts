@@ -64,6 +64,11 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
         orbit: {
           "0%": {
               transform: "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
@@ -86,6 +91,7 @@ const config = {
         },
       },
       animation: {
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         "accordion-down": "accordion-down 0.2s ease-out",
         marquee: "marquee var(--duration) linear infinite",
         "accordion-up": "accordion-up 0.2s ease-out",
