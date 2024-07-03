@@ -149,7 +149,7 @@ function Home() {
             custom="left"
             variants={cardVariants}
             transition={{ delay: 2.5, duration: 1, ease: "easeOut" }}
-            className="w-[20%] bg-slate-900 aspect-square self-start rounded-[15%] p-4 m-2"
+            className="w-[20%] bg-gray-200 aspect-square self-start rounded-[15%] p-4 m-2"
           >
           </motion.div>
           <motion.div
@@ -158,7 +158,7 @@ function Home() {
             custom="center"
             variants={cardVariants}
             transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-            className="w-96 h-96 bg-red-200 rounded-[15%]"
+            className="w-96 h-96 bg-gray-300 rounded-[15%]"
           >
             {/* {renderChart()} */}
             {/* <MutationSection /> */}
@@ -170,7 +170,7 @@ function Home() {
             custom="right"
             variants={cardVariants}
             transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-            className="w-[20%] bg-slate-300  aspect-square rounded-[15%] p-4 m-2 flex flex-col items-start justify-start h-min relative overflow-hidden"
+            className="w-[20%] bg-gray-200  aspect-square rounded-[15%] p-4 m-2 flex flex-col items-start justify-start h-min relative overflow-hidden"
           >
             <div className='absolute top-10 left-10'>
               <div className='text-4xl font-semibold'>Trials</div>
@@ -204,7 +204,10 @@ function Home() {
         <p className='text-2xl text-center mx-auto my-16 w-4/5 mt-8'>
           With different cancer types, mutations, stages, treatments and trials, it's hard to keep track of everything. We're here to help.
         </p>
+        <div className="max-w-[70%] mx-auto">
+
         <MutationSection small={false} />
+        </div>
       </section>
 
       <section className='w-full  p-32 mt-12'>

@@ -12,7 +12,7 @@ const Circle = React.forwardRef<
     <div
       ref={ref}
       className={cn(
-        "z-10 flex h-16 w-16 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+        "z-10 flex  aspect-square w-max box-border  items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
         className
       )}
     >
@@ -64,7 +64,7 @@ export function AnimatedBeamMultipleOutputDemo({
             {/* <Circle ref={mainCircleRef}>
               {cancer.name}
             </Circle> */}
-            <div ref={mainCircleRef} className="bg-white text-2xl px-3 z-10 flex h-12 w-max items-center justify-center rounded-full  p-3 " >
+            <div ref={mainCircleRef} className="bg-gray-200 text-2xl px-4 z-10 flex h-12 w-max items-center justify-center rounded-full  p-3 " >
               {cancer.name}
             </div>
           </div>

@@ -58,7 +58,8 @@ function MutationSection({ small = true }) {
     return (
         <div
             ref={ref}
-            className="flex gap-16 w-full h-[500px] flex-col justify-center lg:items-center lg:flex-row items-stretch rounded-2xl bg-neutral-200 overflow-hidden"
+            className="flex gap-16 w-full h-[500px] flex-col justify-center lg:items-center lg:flex-row items-stretch rounded-2xl overflow-hidden"
+        // className="flex gap-16 w-full h-[500px] flex-col justify-center lg:items-center lg:flex-row items-stretch rounded-2xl bg-neutral-200 overflow-hidden"
         >
             {/* <WheelCarousel
                 cancers={near}
@@ -68,13 +69,14 @@ function MutationSection({ small = true }) {
                 <div className=" w-full lg:self-stretch  justify-center flex flex-col relative overflow-hidden lg:origin-left origin-top">
 
                     {near.map((cancer, i) => (
-                        (console.log(Math.pow(1 - Math.abs(i - center + (large ? +1 : -1)) / 2, 0.5), Math.pow(1 - Math.abs(i - center) / 2, 0.5)), <motion.div
+                        (<motion.div
                             className={cn("lg:origin-left origin-top invisible sm:visible", { "visible": i === center })}
                             initial={{
                                 transform: `translate(${!large ? (i - center - 1) / 2 * 55 : 0}%, ${!large ? 0 : (i - center + 1) / 2 * 55}%) scale(${Math.pow(1 - Math.abs(i - center + (large ? +1 : -1)) / 2, 0.5)})`,
                                 // transform: `translate(0, ${(i - center + 1) / 2 * 55}%) scale(${Math.pow(1 - Math.abs(i - center + 1) / 2, 0.5)})`,
                                 opacity: Math.pow(1 - Math.abs(i - center + 1) / 2, 1),
                                 position: i == center ? "static" : 'absolute',
+                                z: i == center ? 1 : 0,
                                 inset: 0
                             }}
                             animate={{
@@ -83,9 +85,11 @@ function MutationSection({ small = true }) {
                                 // transform: `translate(0%, ${(i - center) / 2 * 55}%) scale(${Math.pow(1 - Math.abs(i - center) / 2, 0.5)})`,
                                 opacity: Math.pow(1 - Math.abs(i - center) / 2, 1),
                                 position: i == center ? "static" : 'absolute',
+                                z: i == center ? 1 : 0,
                                 transition: { duration: 0.5, ease: 'easeInOut', }
                             }}
                             exit={{
+                                z: i == center ? 1 : 0,
                                 transform: `translate(${!large ? (i - center + 1) / 2 * 55 : 0}%, ${!large ? 0 : (i - center - 1) / 2 * 55}%) scale(${Math.pow(1 - Math.abs(i - center - (large ? +1 : -1)) / 2, 0.5)})`,
                                 opacity: Math.pow(1 - Math.abs(i - center - 1) / 2, 1),
                                 transition: { duration: 0.5, ease: 'easeInOut', }

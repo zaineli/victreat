@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import * as d3 from 'd3';
 import { motion } from 'framer-motion';
 import useSectionInView from '@/lib/useSectionInView';
@@ -44,18 +44,19 @@ const dataArray: Data[] = [
     { year: 2021, cancer: 7427 },
     { year: 2022, cancer: 7117 },
     { year: 2023, cancer: 7155 },
-    
+
 ];
 
-const Histogram: React.FC = () => {
+function Histogram({dimensions}: {dimensions: {width: number; height: number;}}) {
     const [svgRef, inView] = useSectionInView();
 
     useEffect(() => {
         if (!svgRef.current) return;
 
         const svg = d3.select(svgRef.current);
-        const width = 800;
-        const height = 400;
+        const width = dimensions.width;
+        const height = dimensions.height;
+        // const margin = { top: 0, right: 0, bottom: 0, left: 0 };
         const margin = { top: 20, right: 30, bottom: 40, left: 40 };
 
         // Clear previous content
@@ -130,15 +131,33 @@ const Histogram: React.FC = () => {
             .attr('transform', `translate(${margin.left},0)`)
             .call(d3.axisLeft(y));
 
-    }, [svgRef, inView]);
+    }, [svgRef, inView, dimensions]);
 
-    return <svg ref={svgRef} width={800} height={400}></svg>;
+    return <svg ref={svgRef} width={dimensions.width} height={dimensions.height}></svg>;
 }
 
-function Trials({className}: {className?: string}) {
+function Trials({ className }: { className?: string }) {
+    const ref = useRef<HTMLDivElement>(null);
+    const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+    useEffect(() => {
+        // update the dimensions when ref.current is resized
+        if (!ref.current) return;
+        const resizeObserver = new ResizeObserver((entries) => {
+            if (!ref.current) return;
+            const { width, height } = entries[0].contentRect;
+            console.log(width, height)
+            setDimensions({ width, height });
+        });
+        resizeObserver.observe(ref.current);
+        return () => {
+            resizeObserver.disconnect();
+        };
+    }, [ref.current]);
+
     return (
-        <div className={className}>
-            <Histogram />
+        <div ref={ref} className={" aspect-video h-auto max-h-[50vh]    " + className}>
+            <Histogram dimensions={dimensions} />
         </div>
     );
 }
