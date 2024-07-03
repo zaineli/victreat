@@ -118,26 +118,26 @@ function Home() {
           animate="visible"
           variants={animationVariants}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="absolute top-0 left-0 h-full w-72 bg-gradient-to-b from-[#DAE5EB] to-white rounded-tr-[100%] -z-30"
+          className="absolute top-0 left-0 h-full w-72 w-[15%] min-w-[150px] bg-gradient-to-b from-[#DAE5EB] to-white rounded-tr-[100%] -z-30"
         ></motion.div>
         <motion.div
           initial="hidden"
           animate="visible"
           variants={animationVariants}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="absolute top-0 right-0 h-full w-72 bg-gradient-to-b from-[#DAE5EB] to-white rounded-tl-[100%] -z-30 scale-x-[100%]"
+          className="absolute top-0 right-0 h-full w-72 w-[15%] min-w-[150px] bg-gradient-to-b from-[#DAE5EB] to-white rounded-tl-[100%] -z-30 scale-x-[100%]"
         ></motion.div>
         <motion.div
           initial="hidden"
           animate="visible"
           variants={textVariants}
           transition={{ delay: 1, duration: 1, ease: "easeOut" }}
-          className="flex flex-col items-center mt-48"
+          className="flex flex-col items-center mt-48 p-2"
         >
-          <div className='lg:text-6xl md:text-5xl text-4xl text-center font-bold '>
+          <div className='lg:text-6xl md:text-5xl text-3xl text-center font-bold '>
             FDA Accelerates Approval of <br />Oncology Medicines
           </div>
-          <p className='text-lg text-center w-2/5 mt-4'>
+          <p className='lg:text-lg text-sm sm:text-base w-4/5 text-center lg:w-2/5 mt-4'>
             With an increasingly complex treatment landscape, how will health systems ensure that the right patient is getting the right medicine?
           </p>
           <Timeline />
@@ -198,10 +198,10 @@ function Home() {
 
 
       <section id={'mutations'} className='w-full  mt-64 lg:p-32  p-4 sm:p-16 '>
-        <div className='lg:text-6xl md:text-5xl text-4xl text-center font-bold'>
+        <div className='lg:text-6xl md:text-5xl text-3xl text-center font-bold'>
           The complexity of a cancer <br /> is Overwhelming
         </div>
-        <p className='text-2xl text-center mx-auto my-16 w-4/5 mt-8'>
+        <p className='lg:text-lg text-sm sm:text-base text-center mx-auto my-16 w-4/5 mt-8'>
           With different cancer types, mutations, stages, treatments and trials, it's hard to keep track of everything. We're here to help.
         </p>
         <div className="lg:max-w-[75%] w-full mx-auto">
@@ -211,10 +211,10 @@ function Home() {
       </section>
 
       <section className='w-full mt-12 lg:p-32  p-4 sm:p-16'>
-        <div className='lg:text-6xl md:text-5xl text-4xl text-center font-bold'>
+        <div className='lg:text-6xl md:text-5xl text-3xl text-center font-bold'>
           Cancer Research is <br /> growing rapidly
         </div>
-        <p className='text-2xl text-center mx-auto my-16 w-4/5 mt-8'>
+        <p className='lg:text-lg text-sm sm:text-base text-center mx-auto my-16 w-4/5 mt-8'>
           But the gap between research and clinical practice is widening. We're here to bridge that gap.
         </p>
         {/* <LineChart data={dataArray} /> */}

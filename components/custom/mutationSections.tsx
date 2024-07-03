@@ -58,7 +58,7 @@ function MutationSection({ small = true }) {
     return (
         <div
             ref={ref}
-            className="flex gap-16 w-full h-[500px] flex-col justify-center lg:items-center lg:flex-row items-stretch rounded-2xl overflow-hidden"
+            className="flex gap-16 w-full md:h-[500px] flex-col justify-center lg:items-center lg:flex-row items-stretch rounded-2xl overflow-hidden"
         // className="flex gap-16 w-full h-[500px] flex-col justify-center lg:items-center lg:flex-row items-stretch rounded-2xl bg-neutral-200 overflow-hidden"
         >
             {/* <WheelCarousel

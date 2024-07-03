@@ -22,6 +22,8 @@ const Navbar = () => {
     exit: { opacity: 0, y: '-100%', transition: { duration: 0.5 } }
   };
 
+  return <div></div>;
+
   return (
     <nav className='absolute h-screen p-4 flex justify-center lg:w-1/3  justify-between w-full mx-auto left-[50%] translate-x-[-50%] z-[1500]'>
       <div className='text-xl font-semibold mr-24'>Victreat</div>
