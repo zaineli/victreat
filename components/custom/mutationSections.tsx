@@ -11,7 +11,8 @@ import { cn } from "@/lib/utils";
 function MutationSection({ small = true }) {
     const interval = useRef<NodeJS.Timeout | null>(null);
     const ref = useRef<HTMLDivElement>(null);
-    const isHovered = useMouseHover(ref);
+    const isHovered = false;
+    // const isHovered = useMouseHover(ref);
     const cancers = [
         { name: "Lung Cancer", mutations: ["EGFR", "KRAS", "ALK"] },
         { name: "Breast Cancer", mutations: ["BRCA1", "BRCA2", "HER2", "TP53"] },
@@ -34,7 +35,7 @@ function MutationSection({ small = true }) {
                 setIndex(
                     (prev) => (prev + (large ? +1 : -1) + cancers.length * 2) % cancers.length
                 );
-            }, 4000);
+            }, 3000);
         }
         return () => {
             if (interval.current) {
