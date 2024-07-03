@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import Timeline from '@/components/custom/Timeline';
 import { AnimatedBeamMultipleOutputDemo } from '@/components/AnimatedBeam'; // Import AnimatedBeamMultipleOutputDemo
 import LineChart from '@/components/custom/line-chart';
+import MutationSection from '@/components/custom/mutationSections';
+import RibbonsCard from '@/components/custom/ribbonsCard';
 
 const animationVariants = {
   hidden: { y: "100%" },
@@ -85,6 +87,13 @@ function Home() {
     return () => clearInterval(interval);
   }, []);
 
+
+    // return (
+    //   <div className='mt-48 w-96 h-96 bg-red-200 rounded-[15%] overflow-hidden m-2'>
+    //     <RibbonsCard />
+    //   </div>
+    // );
+
   const renderChart = () => {
     const { type, dataPoints } = charts[activeIndex];
     switch (type) {
@@ -96,7 +105,7 @@ function Home() {
   };
 
   return (
-    <div className="relative h-screen overflow-hidden flex flex-col items-center ">
+    <div className="relative h-screen flex flex-col items-center ">
 
       <motion.div
         initial="hidden"
@@ -136,7 +145,7 @@ function Home() {
           custom="left"
           variants={cardVariants}
           transition={{ delay: 2.5, duration: 1, ease: "easeOut" }}
-          className="w-[20%] bg-slate-900 rounded-[15%] p-4 m-2"
+          className="w-[20%] bg-slate-900 aspect-square self-start rounded-[15%] p-4 m-2"
         >
         </motion.div>
         <motion.div
@@ -145,10 +154,13 @@ function Home() {
           custom="center"
           variants={cardVariants}
           transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-          className="w-1/3 bg-gray-200 rounded-[15%] p-4 m-2"
+          className="w-96 h-96 bg-red-200 rounded-[15%]"
         >
           
           {/* {renderChart()} */}
+          {/* <MutationSection /> */}
+          <RibbonsCard />
+
         </motion.div>
         <motion.div
           initial="hidden"
@@ -156,7 +168,7 @@ function Home() {
           custom="right"
           variants={cardVariants}
           transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-          className="w-[20%] bg-slate-300 rounded-[15%] p-4 m-2 flex flex-col items-start justify-start relative overflow-hidden"
+          className="w-[20%] bg-slate-300 rounded-[15%] p-4 m-2 flex flex-col items-start justify-start h-min relative overflow-hidden"
 
         >
           <div className='absolute top-10 left-10'>

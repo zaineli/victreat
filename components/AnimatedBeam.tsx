@@ -53,12 +53,13 @@ export function AnimatedBeamMultipleOutputDemo({
     <div className={cn("flex flex-col items-center", className)}>
       <div
         className={cn(
-          "relative flex  w-full items-center justify-center overflow-hidden rounded-lg   p-10 ",
+          "relative flex  w-full items-center justify-center overflow-hidden rounded-lg   p-2 ",
           className
         )}
         ref={containerRef}
       >
-        <div className="flex lg:flex-row lg:h-[400px] flex-col h-full w-full items-stretch justify-between lg:gap-10 gap-32">
+        <div className="flex lg:flex-row flex-col h-full w-full items-stretch justify-between lg:gap-10 gap-32">
+        {/* <div className="flex lg:flex-row lg:h-[400px] flex-col h-full w-full items-stretch justify-between lg:gap-10 gap-32"> */}
           <div className="flex lg:flex-col justify-center">
             {/* <Circle ref={mainCircleRef}>
               {cancer.name}

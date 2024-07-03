@@ -15,12 +15,6 @@ function Nav() {
         <Link href="/vision">
           <div className="text-gray-700 hover:text-black">Vision</div>
         </Link>
-        <Link href="/d">
-          <div className="text-gray-700 hover:text-black">Treatments</div>
-        </Link>
-        <Link href="/news">
-          <div className="text-gray-700 hover:text-black">News</div>
-        </Link>
         <Link href="/careers">
           <div className="text-gray-700 hover:text-black">Careers</div>
         </Link>
