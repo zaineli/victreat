@@ -7,6 +7,9 @@ import LineChart from '@/components/custom/line-chart';
 import MutationSection from '@/components/custom/mutationSections';
 import RibbonsCard from '@/components/custom/ribbonsCard';
 import Trials from './news/page';
+import CallToAction from '@/components/custom/callToAction';
+import ScrollButton from '@/components/custom/scroll-button';
+import Footer from '@/components/custom/footer';
 
 const animationVariants = {
   hidden: { y: "100%" },
@@ -107,19 +110,20 @@ function Home() {
 
   return (
     <div className="relative min-h-screen flex flex-col items-center ">
+      <ScrollButton />
       <motion.div
         initial="hidden"
         animate="visible"
         variants={animationVariants}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="absolute top-0 left-0 h-full w-72 bg-gradient-to-b from-[#DAE5EB] to-white rounded-tr-[100%] z-30"
+        className="absolute top-0 left-0 h-full w-72 bg-gradient-to-b from-[#DAE5EB] to-white rounded-tr-[100%] -z-30"
       ></motion.div>
       <motion.div
         initial="hidden"
         animate="visible"
         variants={animationVariants}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="absolute top-0 right-0 h-full w-72 bg-gradient-to-b from-[#DAE5EB] to-white rounded-tl-[100%] z-30 scale-x-[100%]"
+        className="absolute top-0 right-0 h-full w-72 bg-gradient-to-b from-[#DAE5EB] to-white rounded-tl-[100%] -z-30 scale-x-[100%]"
       ></motion.div>
 
       <motion.div
@@ -138,7 +142,7 @@ function Home() {
         <Timeline />
       </motion.div>
 
-      <div className="flex justify-center mt-8 w-[90%] z-50">
+      <div className="flex justify-center mt-8 w-[90%]">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -196,7 +200,7 @@ function Home() {
         </motion.div>
 
       </div>
-      <section className='w-full z-[100] p-32 mt-64'>
+      <section className='w-full  p-32 mt-64'>
         <div className='text-6xl text-center font-bold'>
           The complexity of a cancer <br /> is Overwhelming
         </div>
@@ -206,7 +210,7 @@ function Home() {
         <MutationSection small={false} />
       </section>
 
-      <section className='w-full z-[100] p-32 mt-12'>
+      <section className='w-full  p-32 mt-12'>
         <div className='text-6xl text-center font-bold'>
           Cancer Research is <br /> growing rapidly
         </div>
@@ -215,6 +219,14 @@ function Home() {
         </p>
         {/* <LineChart data={dataArray} /> */}
         <Trials className={'flex justify-center'} />
+      </section>
+
+      <section>
+        <CallToAction />
+      </section>
+
+      <section className='w-full bg-black text-white'>
+        <Footer />
       </section>
     </div>
   );
