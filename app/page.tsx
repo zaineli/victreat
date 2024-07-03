@@ -134,7 +134,7 @@ function Home() {
           transition={{ delay: 1, duration: 1, ease: "easeOut" }}
           className="flex flex-col items-center mt-48"
         >
-          <div className='text-6xl text-center font-bold'>
+          <div className='lg:text-6xl md:text-5xl text-4xl text-center font-bold '>
             FDA Accelerates Approval of <br />Oncology Medicines
           </div>
           <p className='text-lg text-center w-2/5 mt-4'>
@@ -149,7 +149,7 @@ function Home() {
             custom="left"
             variants={cardVariants}
             transition={{ delay: 2.5, duration: 1, ease: "easeOut" }}
-            className="w-[20%] bg-gray-200 aspect-square self-start rounded-[15%] p-4 m-2"
+            className="w-[20%] hidden lg:block bg-gray-200 aspect-square self-start rounded-[15%] p-4 m-2"
           >
           </motion.div>
           <motion.div
@@ -158,7 +158,7 @@ function Home() {
             custom="center"
             variants={cardVariants}
             transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-            className="w-96 h-96 bg-gray-300 rounded-[15%]"
+            className="w-96 h-96 bg-gray-300 rounded-[15%] scale-125"
           >
             {/* {renderChart()} */}
             {/* <MutationSection /> */}
@@ -170,7 +170,7 @@ function Home() {
             custom="right"
             variants={cardVariants}
             transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-            className="w-[20%] bg-gray-200  aspect-square rounded-[15%] p-4 m-2 flex flex-col items-start justify-start h-min relative overflow-hidden"
+            className="w-[20%] bg-gray-200 hidden lg:flex  aspect-square rounded-[15%] p-4 m-2  flex-col items-start justify-start h-min relative overflow-hidden"
           >
             <div className='absolute top-10 left-10'>
               <div className='text-4xl font-semibold'>Trials</div>
@@ -197,28 +197,28 @@ function Home() {
       </section>
 
 
-      <section id={'mutations'} className='w-full  p-32 mt-64'>
-        <div className='text-6xl text-center font-bold'>
+      <section id={'mutations'} className='w-full  mt-64 lg:p-32  p-4 sm:p-16 '>
+        <div className='lg:text-6xl md:text-5xl text-4xl text-center font-bold'>
           The complexity of a cancer <br /> is Overwhelming
         </div>
         <p className='text-2xl text-center mx-auto my-16 w-4/5 mt-8'>
           With different cancer types, mutations, stages, treatments and trials, it's hard to keep track of everything. We're here to help.
         </p>
-        <div className="max-w-[70%] mx-auto">
+        <div className="lg:max-w-[75%] w-full mx-auto">
 
         <MutationSection small={false} />
         </div>
       </section>
 
-      <section className='w-full  p-32 mt-12'>
-        <div className='text-6xl text-center font-bold'>
+      <section className='w-full mt-12 lg:p-32  p-4 sm:p-16'>
+        <div className='lg:text-6xl md:text-5xl text-4xl text-center font-bold'>
           Cancer Research is <br /> growing rapidly
         </div>
         <p className='text-2xl text-center mx-auto my-16 w-4/5 mt-8'>
           But the gap between research and clinical practice is widening. We're here to bridge that gap.
         </p>
         {/* <LineChart data={dataArray} /> */}
-        <Trials className={'flex justify-center'} />
+        <Trials className={'flex justify-center mx-auto'} />
       </section>
 
       <section>

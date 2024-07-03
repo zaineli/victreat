@@ -33,7 +33,7 @@ function CallToAction() {
 
     return (
         <div className="p-10 min-h-screen w-full flex flex-col items-center justify-center">
-            <h1 className="text-4xl font-semibold mb-16 text-center text-slate-600">
+            <h1 className="lg:text-6xl md:text-5xl text-4xl font-semibold mb-16 text-center text-slate-600">
                 Leading Innovations in Cancer Treatment and Diagnosis
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl">
