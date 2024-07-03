@@ -36,7 +36,7 @@ function CallToAction() {
             <h1 className="lg:text-6xl md:text-5xl text-3xl font-semibold mb-16 text-center">
                 Leading Innovations in<br/> Cancer Treatment and Diagnosis
             </h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:max-w-7xl overflow-hidden">
                 <motion.div 
                     ref={sectionRef1}
                     className="bg-white p-6 rounded-lg shadow-md row-span-3 h-2/3 self-center mx-auto border border-gray-200 w-full"
