@@ -109,98 +109,95 @@ function Home() {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center ">
-      <ScrollButton />
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={animationVariants}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="absolute top-0 left-0 h-full w-72 bg-gradient-to-b from-[#DAE5EB] to-white rounded-tr-[100%] -z-30"
-      ></motion.div>
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={animationVariants}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="absolute top-0 right-0 h-full w-72 bg-gradient-to-b from-[#DAE5EB] to-white rounded-tl-[100%] -z-30 scale-x-[100%]"
-      ></motion.div>
+    <div className="">
 
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={textVariants}
-        transition={{ delay: 1, duration: 1, ease: "easeOut" }}
-        className="flex flex-col items-center mt-48"
-      >
-        <div className='text-6xl text-center font-bold'>
-          FDA Accelerates Approval of <br />Oncology Medicines
+      <section className='relative min-h-screen flex flex-col items-center'>
+        <ScrollButton />
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={animationVariants}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="absolute top-0 left-0 h-full w-72 bg-gradient-to-b from-[#DAE5EB] to-white rounded-tr-[100%] -z-30"
+        ></motion.div>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={animationVariants}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="absolute top-0 right-0 h-full w-72 bg-gradient-to-b from-[#DAE5EB] to-white rounded-tl-[100%] -z-30 scale-x-[100%]"
+        ></motion.div>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={textVariants}
+          transition={{ delay: 1, duration: 1, ease: "easeOut" }}
+          className="flex flex-col items-center mt-48"
+        >
+          <div className='text-6xl text-center font-bold'>
+            FDA Accelerates Approval of <br />Oncology Medicines
+          </div>
+          <p className='text-lg text-center w-2/5 mt-4'>
+            With an increasingly complex treatment landscape, how will health systems ensure that the right patient is getting the right medicine?
+          </p>
+          <Timeline />
+        </motion.div>
+        <div className="flex justify-center mt-8 w-[90%]">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            custom="left"
+            variants={cardVariants}
+            transition={{ delay: 2.5, duration: 1, ease: "easeOut" }}
+            className="w-[20%] bg-slate-900 aspect-square self-start rounded-[15%] p-4 m-2"
+          >
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            custom="center"
+            variants={cardVariants}
+            transition={{ delay: 2, duration: 1, ease: "easeOut" }}
+            className="w-96 h-96 bg-red-200 rounded-[15%]"
+          >
+            {/* {renderChart()} */}
+            {/* <MutationSection /> */}
+            <RibbonsCard />
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            custom="right"
+            variants={cardVariants}
+            transition={{ delay: 2, duration: 1, ease: "easeOut" }}
+            className="w-[20%] bg-slate-300  aspect-square rounded-[15%] p-4 m-2 flex flex-col items-start justify-start h-min relative overflow-hidden"
+          >
+            <div className='absolute top-10 left-10'>
+              <div className='text-4xl font-semibold'>Trials</div>
+              <div className='text-xl'>+99% increase</div>
+            </div>
+            <div className='-rotate-180 translate-x-8 translate-y-20 overflow-x-hidden'>
+              <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="
+              M10,150
+              C30,140, 50,150, 70,140
+              S110,130, 130,140
+              S170,170, 190,160
+              S230,120, 250,130
+              S290,90, 310,100
+              S350,80, 400,90
+            "
+                  style={{ fill: 'none', stroke: 'white', strokeWidth: 2 }}
+                />
+              </svg>
+            </div>
+          </motion.div>
         </div>
-        <p className='text-lg text-center w-2/5 mt-4'>
-          With an increasingly complex treatment landscape, how will health systems ensure that the right patient is getting the right medicine?
-        </p>
-        <Timeline />
-      </motion.div>
+      </section>
 
-      <div className="flex justify-center mt-8 w-[90%]">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          custom="left"
-          variants={cardVariants}
-          transition={{ delay: 2.5, duration: 1, ease: "easeOut" }}
-          className="w-[20%] bg-slate-900 aspect-square self-start rounded-[15%] p-4 m-2"
-        >
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          custom="center"
-          variants={cardVariants}
-          transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-          className="w-96 h-96 bg-red-200 rounded-[15%]"
-        >
 
-          {/* {renderChart()} */}
-          {/* <MutationSection /> */}
-          <RibbonsCard />
-
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          custom="right"
-          variants={cardVariants}
-          transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-          className="w-[20%] bg-slate-300  aspect-square rounded-[15%] p-4 m-2 flex flex-col items-start justify-start h-min relative overflow-hidden"
-
-        >
-          <div className='absolute top-10 left-10'>
-
-            <div className='text-4xl font-semibold'>Mutation</div>
-            <div className='text-xl'>+99%</div>
-            <sub>increase</sub>
-          </div>
-          <div className='-rotate-180 translate-x-8 translate-y-20 overflow-x-hidden'>
-            <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="
-            M10,150
-            C30,140, 50,150, 70,140
-            S110,130, 130,140
-            S170,170, 190,160
-            S230,120, 250,130
-            S290,90, 310,100
-            S350,80, 400,90
-          "
-                style={{ fill: 'none', stroke: 'white', strokeWidth: 2 }}
-              />
-            </svg>
-          </div>
-        </motion.div>
-
-      </div>
-      <section className='w-full  p-32 mt-64'>
+      <section id={'mutations'} className='w-full  p-32 mt-64'>
         <div className='text-6xl text-center font-bold'>
           The complexity of a cancer <br /> is Overwhelming
         </div>

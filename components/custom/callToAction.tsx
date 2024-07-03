@@ -2,6 +2,7 @@ import React from 'react';
 import { FaHeartbeat, FaMicroscope, FaUserMd, FaRadiation } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import useSectionInView from '@/lib/useSectionInView';
+import  Link  from 'next/link';
 
 function CallToAction() {
     const [sectionRef1, inView1] = useSectionInView();
@@ -85,11 +86,11 @@ function CallToAction() {
                         variants={topCardVariants}
                         transition={{ type: "spring", stiffness: 100 }}
                     >
-                        <h2 className="text-lg font-medium mb-4">See Our Impact</h2>
+                        <h2 className="text-lg font-medium mb-4 mr-16">Take part in this inovation</h2>
                         <div className='flex justify-between items-center'>
-                            <button className="bg-white text-black py-2 px-4 rounded-lg font-semibold">
-                                View Case Studies
-                            </button>
+                            <Link href='\careers' className="bg-white text-black py-2 px-4 rounded-lg font-semibold">
+                                Join Us
+                            </Link>
                             <div className="mt-4">
                                 <svg width="100" height="50" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="25" cy="25" r="20" stroke="white" strokeWidth="1" fill="none" />
