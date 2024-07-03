@@ -217,11 +217,10 @@ function Home() {
         <p className='lg:text-lg text-sm sm:text-base text-center mx-auto my-16 w-4/5 mt-8'>
           But the gap between research and clinical practice is widening. We're here to bridge that gap.
         </p>
-        {/* <LineChart data={dataArray} /> */}
         <Trials className={'flex justify-center mx-auto'} />
       </section>
 
-      <section>
+      <section className='w-full max-w-full'>
         <CallToAction />
       </section>
 

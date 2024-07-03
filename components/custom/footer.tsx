@@ -81,7 +81,7 @@ function Footer() {
 			</div>
 			<div className="flex flex-col justify-center items-center text-center  p-5 bg-gray-50">
 				<h1 className=" text-gray-900 font-semibold">
-					© 2024-2025 All rights reserved | Build with ❤ by{" "}
+					© 2024-2025 All rights reserved | Built by{" "}
 					<span className="hover:text-blue-600 font-semibold cursor-pointer">
 						victreat{" "}
 					</span>
