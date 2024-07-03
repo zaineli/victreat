@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { motion } from "framer-motion";
 
 const textVariant = {
@@ -32,11 +32,11 @@ const borderVariant = {
 
 export default function CancerDiagnosisPage() {
   return (
-    <div className="relative h-screen flex flex-col justify-start items-start bg-white w-full px-48 py-32 ">
-      <main className="w-full ">
-        <section className="mb-24 text-start ">
+    <div className="relative h-screen flex flex-col justify-start items-start bg-white w-full px-8 py-32 md:px-24 md:py-48">
+      <main className="w-full">
+        <section className="mb-12 md:mb-24 text-start">
           <motion.h1
-            className="text-7xl font-light leading-tight"
+            className="text-4xl md:text-7xl font-light leading-tight"
             initial="hidden"
             animate="visible"
             variants={textVariant}
@@ -45,9 +45,9 @@ export default function CancerDiagnosisPage() {
           </motion.h1>
         </section>
 
-        <section className="mb-16 text-left">
+        <section className="mb-8 md:mb-16 text-left">
           <motion.nav
-            className="flex justify-start space-x-6 text-gray-600"
+            className="flex flex-wrap justify-start space-x-4 md:space-x-6 text-gray-600"
             initial="hidden"
             animate="visible"
             variants={staggeredLinks}
@@ -57,8 +57,6 @@ export default function CancerDiagnosisPage() {
               className="hover:underline"
               variants={linkVariant}
               whileHover="hover"
-              initial="hidden"
-              animate="visible"
               whileTap={{ scale: 0.9 }}
               variants={linkHover}
             >
@@ -69,8 +67,6 @@ export default function CancerDiagnosisPage() {
               className="hover:underline"
               variants={linkVariant}
               whileHover="hover"
-              initial="hidden"
-              animate="visible"
               whileTap={{ scale: 0.9 }}
               variants={linkHover}
             >
@@ -81,25 +77,12 @@ export default function CancerDiagnosisPage() {
               className="hover:underline"
               variants={linkVariant}
               whileHover="hover"
-              initial="hidden"
-              animate="visible"
               whileTap={{ scale: 0.9 }}
               variants={linkHover}
             >
               Linkedin
             </motion.a>
-            <motion.a
-              href="#"
-              className="hover:underline"
-              variants={linkVariant}
-              whileHover="hover"
-              initial="hidden"
-              animate="visible"
-              whileTap={{ scale: 0.9 }}
-              variants={linkHover}
-            >
-              Twitter
-            </motion.a>
+
           </motion.nav>
         </section>
 
@@ -110,9 +93,9 @@ export default function CancerDiagnosisPage() {
           variants={borderVariant}
         />
 
-        <section className="flex flex-col w-full md:flex-row justify-between gap-24 items-center pt-10">
+        <section className="flex lg:flex-row w-full md:flex-col sm:flex-col justify-between gap-8 md:gap-24 items-start pt-10">
           <motion.p
-            className="text-gray-600 max-w-md"
+            className="text-gray-600 max-w-full md:max-w-md"
             initial="hidden"
             animate="visible"
             variants={textVariant}
@@ -120,7 +103,7 @@ export default function CancerDiagnosisPage() {
             Learn about different types of cancers, their symptoms, and how they are diagnosed using advanced medical technologies and procedures.
           </motion.p>
           <motion.p
-            className="text-gray-600 max-w-md"
+            className="text-gray-600 max-w-full md:max-w-md"
             initial="hidden"
             animate="visible"
             variants={textVariant}
