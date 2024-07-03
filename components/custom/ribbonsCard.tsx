@@ -30,9 +30,9 @@ function RibbonsCard() {
     'text-purple-500',
     'text-pink-500',
     'text-gray-500',
-    'text-purple-500',
-    'text-pink-500',
-    'text-gray-500'
+    // 'text-purple-500',
+    // 'text-pink-500',
+    // 'text-gray-500'
   ]
   useEffect(() => {
     intervalRef.current = setInterval(() => {

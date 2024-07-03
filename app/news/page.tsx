@@ -90,14 +90,14 @@ const Histogram: React.FC = () => {
             .attr('height', d => y(0) - y(d.cancer));
 
         // Draw white dots on top of each bar
-        barContainer.selectAll('.dot')
-            .data(dataArray)
-            .join('circle')
-            .attr('class', 'dot')
-            .attr('cx', d => x(d.year.toString())! + x.bandwidth() / 2)
-            .attr('cy', d => y(d.cancer))
-            .attr('r', x.bandwidth()/2)  // Radius of the dot
-            .attr('fill', '#ff0000');
+        // barContainer.selectAll('.dot')
+        //     .data(dataArray)
+        //     .join('circle')
+        //     .attr('class', 'dot')
+        //     .attr('cx', d => x(d.year.toString())! + x.bandwidth() / 2)
+        //     .attr('cy', d => y(d.cancer))
+        //     .attr('r', x.bandwidth()/2)  // Radius of the dot
+        //     .attr('fill', '#ff0000');
 
         // Add the line chart
         const line = d3.line<Data>()
@@ -135,9 +135,9 @@ const Histogram: React.FC = () => {
     return <svg ref={svgRef} width={800} height={400}></svg>;
 }
 
-function Trials() {
+function Trials({className}: {className?: string}) {
     return (
-        <div>
+        <div className={className}>
             <Histogram />
         </div>
     );

@@ -168,7 +168,7 @@ function Home() {
           custom="right"
           variants={cardVariants}
           transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-          className="w-[20%] bg-slate-300 rounded-[15%] p-4 m-2 flex flex-col items-start justify-start h-min relative overflow-hidden"
+          className="w-[20%] bg-slate-300  aspect-square rounded-[15%] p-4 m-2 flex flex-col items-start justify-start h-min relative overflow-hidden"
 
         >
           <div className='absolute top-10 left-10'>
