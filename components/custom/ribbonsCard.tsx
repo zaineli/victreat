@@ -30,6 +30,10 @@ function RibbonsCard() {
     'text-purple-500',
     'text-pink-500',
     'text-gray-500',
+    'text-emerald-500',
+    'text-cyan-500',
+    'text-fuchsia-500',
+    'text-rose-500',
     // 'text-purple-500',
     // 'text-pink-500',
     // 'text-gray-500'
@@ -61,7 +65,7 @@ function RibbonsCard() {
 
 
         <div className="  left-0 right-0 h-full absolute  justify-center items-center flex -bottom-[70%] ">
-          <AnimatePresence mode='popLayout'>
+          <AnimatePresence mode='sync'>
             <motion.div
               initial={{ transform: 'rotate(-165deg) translateY(-600%) rotate(165deg)' }}
               animate={{
