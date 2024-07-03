@@ -59,7 +59,7 @@ function RibbonsCard() {
   return (
     <Link href={'#mutations'} className='w-full h-full flex flex-col  justify-end  relative overflow-hidden group cursor-pointer'>
       <div className=" flex flex-col h-full  justify-between items-center ">
-        <div className='m-10 text-4xl self-start font-semibold'>
+        <div className='m-10 sm:text-4xl text-3xl self-start font-semibold'>
           Complexity
         </div>
         {/* <div className="flex gap-12 mb-11">
