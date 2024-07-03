@@ -89,7 +89,7 @@ function Home() {
 
 
   return (
-    <div className='mt-48 w-96 h-96 bg-red-200 rounded-[15%] p-4 m-2'>
+    <div className='mt-48 w-96 h-96 bg-red-200 rounded-[15%] overflow-hidden m-2'>
       <RibbonsCard />
     </div>
   );

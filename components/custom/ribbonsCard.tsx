@@ -1,7 +1,8 @@
 
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { IoArrowDownOutline } from "react-icons/io5";
-import React from 'react'
+import React, { useEffect } from 'react';
+import { NodeJS } from 'node';
 import { cn } from "@/lib/utils";
 
 function Ribbon({ className, style }: { className?: string, style?: React.CSSProperties }) {
@@ -17,6 +18,9 @@ function Ribbon({ className, style }: { className?: string, style?: React.CSSPro
 }
 
 function RibbonsCard() {
+  const intervalRef = React.useRef<NodeJS.Timeout>();
+  const [index, setIndex] = React.useState(0);
+
   const ribbonColors = [
     'text-red-500',
     'text-yellow-500',
@@ -25,62 +29,137 @@ function RibbonsCard() {
     'text-indigo-500',
     'text-purple-500',
     'text-pink-500',
+    'text-gray-500',
+    'text-purple-500',
+    'text-pink-500',
     'text-gray-500'
   ]
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      setIndex((prev) => (prev + 4) % ribbonColors.length);
+    }, 2000)
+    return () => {
+      clearInterval(intervalRef.current)
+    }
+  });
+
+
+
+  const smallRibbonA = ribbonColors[index % ribbonColors.length];
+  const smallRibbonB = ribbonColors[(index + 2) % ribbonColors.length];
+
+  const largeRibbonA = ribbonColors[(index + 1) % ribbonColors.length];
+  const largeRibbonB = ribbonColors[(index + 3) % ribbonColors.length];
 
   return (
-    <div className='w-full h-full flex flex-col  justify-end overflow-hidden'>
-      <div className=" flex  justify-center items-center relative">
+    <div className='w-full h-full flex flex-col  justify-end  relative overflow-hidden'>
+      <div className=" flex flex-col  justify-center items-center ">
+        {/* <div className="flex gap-12 mb-11">
+          <Ribbon className={cn("w-6 h-6 bg-white box-content rounded-full p-2", ribbonColors[0])} />
+          <Ribbon className={cn("w-6 h-6 bg-white box-content rounded-full p-2", ribbonColors[0])} />
+        </div> */}
 
-        {ribbonColors.map((_, i) => (
-          <motion.div
-            // initial={{ scale: 0 }}
-            // animate={{ scale: 1 }}
-            // transition={{ delay: i * 0.1 }}
-            key={i}
-            className={cn("absolute bg-white p-2 box-content rounded-full inset-0 left-[50%] top-[50%] w-8 h-8", ribbonColors[i])}
-            initial={{ transform: `translate(-50%, -50%) rotate(${i * 45 + 0}deg) translate(-300%, -300%) rotate(-${i * 45}deg)` }}
-            animate={{
-              transform: `translate(-50%, -50%) rotate(${i * 45 + 360}deg) translate(-300%, -300%) rotate(-${i * 45 + 360}deg)`,
-              transition: {
-                duration: 10,
-                ease: 'linear',
-                repeat: Infinity,
-                repeatType: 'loop',
-                // repeatDelay: 0.5 * i
-              }
-            }}
 
-          >
-            <Ribbon />
-          </motion.div>
-        ))}
+        <div className="  left-0 right-0 h-full absolute  justify-center items-center flex -bottom-[70%] ">
+          <AnimatePresence mode='popLayout'>
+            <motion.div
+              initial={{ transform: 'rotate(-165deg) translateY(-600%) rotate(165deg)' }}
+              animate={{
+                transform: 'rotate(15deg) translateY(-600%) rotate(-15deg)',
+                transition: {
+                  duration: 1
+                }
+              }}
+              exit={{
+                transform: 'rotate(195deg) translateY(-600%) rotate(-195deg)',
+                transition: {
+                  duration: 1
+                }
+              }}
+              className={cn("absolute", smallRibbonA)}
+              key={smallRibbonA}
+            >
+              <Ribbon className='p-2 w-6 h-6 bg-white box-content rounded-full ' />
+            </motion.div>
+            <motion.div
+              initial={{ transform: 'rotate(-195deg) translateY(-600%) rotate(195deg)' }}
+              animate={{
+                transform: 'rotate(-15deg) translateY(-600%) rotate(15deg)',
+                transition: {
+                  duration: 1
+                }
+              }}
+              exit={{
+                transform: 'rotate(165deg) translateY(-600%) rotate(-165deg)',
+                transition: {
+                  duration: 1
+                }
+              }}
+              className={cn("absolute", smallRibbonB)}
+              key={smallRibbonB}
+            >
+              <Ribbon className='p-2 w-6 h-6 bg-white box-content rounded-full ' />
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
-        {ribbonColors.map((_, i) => (
-          <motion.div
-            // initial={{ scale: 0 }}
-            // animate={{ scale: 1 }}
-            // transition={{ delay: i * 0.1 }}
-            key={i}
-            className={cn("absolute bg-white p-2 box-content rounded-full inset-0 left-[50%] top-[50%] w-8 h-8", ribbonColors[i])}
-            initial={{ transform: `translate(-50%, -50%) rotate(${i * 45 + 360}deg) translate(-180%, -180%) rotate(-${i * 45 + 360}deg)` }}
-            animate={{
-              transform: `translate(-50%, -50%) rotate(${i * 45 + 0}deg) translate(-180%, -180%) rotate(-${i * 45 + 0}deg)`,
-              transition: {
-                duration: 15,
-                ease: 'linear',
-                repeat: Infinity,
-                repeatType: 'loop',
-                // repeatDelay: 0.5 * i
-              }
-            }}
+        <div className='rounded-full border-2 border-gray-100 border-opacity-30 bg-gray-200 backdrop-filter backdrop-blur-sm bg-opacity-10 z-[7] absolute left-0 right-0 h-full -bottom-[70%]' />
+        <div className='rounded-full border-2 border-gray-100 border-opacity-30 bg-gray-200 backdrop-filter backdrop-blur-sm bg-opacity-10 z-0 absolute left-0 right-0 h-full scale-[1.20] -bottom-[70%]' />
 
-          >
-            <Ribbon />
-          </motion.div>
-        ))}
+        <div className="  left-0 right-0 h-full absolute justify-center items-center flex -bottom-[70%] ">
+          <AnimatePresence mode='popLayout'>
 
-        <IoArrowDownOutline className='text-8xl text-center bg-slate-200 rounded-full p-4' />
+            <motion.div
+              initial={{ transform: 'rotate(-90deg) translateY(-320%) rotate(45deg)' }}
+              animate={{
+                transform: 'rotate(45deg) translateY(-320%) rotate(-45deg)',
+                transition: {
+                  duration: 1
+                }
+              }}
+              exit={{
+                transform: 'rotate(180deg) translateY(-320%) rotate(-180deg)',
+                transition: {
+                  duration: 1
+                }
+              }}
+              className={cn("absolute", largeRibbonA)}
+              key={largeRibbonA}
+            >
+              <Ribbon className='p-2 w-12 h-12 bg-white box-content rounded-full' />
+            </motion.div>
+            <motion.div
+              initial={{ transform: 'rotate(-180deg) translateY(-320%) rotate(90deg)' }}
+              animate={{
+                transform: 'rotate(-45deg) translateY(-320%) rotate(45deg)',
+                transition: {
+                  duration: 1
+                }
+              }}
+              exit={{
+                transform: 'rotate(90deg) translateY(-320%) rotate(-90deg)',
+                transition: {
+                  duration: 1
+                }
+              }}
+              className={cn("absolute", largeRibbonB)}
+              key={largeRibbonB}
+            >
+              <Ribbon className='p-2 w-12 h-12 bg-white box-content rounded-full' />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* <div className="flex gap-[12rem] h-6 z-[5]"
+          style={{
+            transformOrigin: '50% calc(50%+12rem)',
+          }}
+        >
+          <Ribbon className={cn("w-12 h-12 bg-white box-content rounded-full p-2", ribbonColors[0])} />
+          <Ribbon className={cn("w-12 h-12 bg-white box-content rounded-full p-2", ribbonColors[0])} />
+        </div> */}
+
+        <IoArrowDownOutline className='text-8xl z-10 text-center bg-slate-200 rounded-full p-4' />
       </div>
     </div >
   )
