@@ -80,7 +80,7 @@ function CallToAction() {
                     </motion.div>
                     <motion.div 
                         ref={sectionRef3}
-                        className="bg-gradient-to-r from-blue-900 to-black p-6 rounded-lg shadow-md text-white max-w-s mx-auto"
+                        className="bg-gradient-to-r from-[#21333D] to-black p-6 rounded-lg shadow-md text-white max-w-s mx-auto"
                         initial="hidden"
                         animate={inView3 ? "visible" : "hidden"}
                         variants={topCardVariants}

@@ -134,7 +134,7 @@ function Home() {
           transition={{ delay: 1, duration: 1, ease: "easeOut" }}
           className="flex flex-col items-center mt-48 p-2"
         >
-          <div className='lg:text-6xl md:text-5xl text-3xl text-center font-bold '>
+          <div className='lg:text-6xl md:text-5xl text-3xl text-center font-bold text-[#21333D]'>
             FDA Accelerates Approval of <br />Oncology Medicines
           </div>
           <p className='lg:text-lg text-sm sm:text-base w-4/5 text-center lg:w-2/5 mt-4'>
@@ -149,7 +149,7 @@ function Home() {
             custom="left"
             variants={cardVariants}
             transition={{ delay: 2.5, duration: 1, ease: "easeOut" }}
-            className="w-[20%] hidden lg:block bg-gray-200 aspect-square self-start rounded-[15%] p-4 m-2"
+            className="w-[20%] hidden lg:block bg-[#DBE5EB] aspect-square self-start rounded-[15%] p-4 m-2"
           >
           </motion.div>
           <motion.div
@@ -158,7 +158,7 @@ function Home() {
             custom="center"
             variants={cardVariants}
             transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-            className="w-96 h-96 bg-gray-300 rounded-[15%] scale-125"
+            className="w-96 h-96 bg-[#DBE5EB] rounded-[15%] scale-125"
           >
             {/* {renderChart()} */}
             {/* <MutationSection /> */}
@@ -170,7 +170,7 @@ function Home() {
             custom="right"
             variants={cardVariants}
             transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-            className="w-[20%] bg-gray-200 hidden lg:flex  aspect-square rounded-[15%] p-4 m-2  flex-col items-start justify-start h-min relative overflow-hidden"
+            className="w-[20%] bg-[#DBE5EB] hidden lg:flex  aspect-square rounded-[15%] p-4 m-2  flex-col items-start justify-start h-min relative overflow-hidden"
           >
             <div className='absolute top-10 left-10'>
               <div className='text-4xl font-semibold'>Trials</div>
@@ -198,7 +198,7 @@ function Home() {
 
 
       <section id={'mutations'} className='w-full  mt-64 lg:p-32  p-4 sm:p-16 '>
-        <div className='lg:text-6xl md:text-5xl text-3xl text-center font-bold'>
+        <div className='lg:text-6xl md:text-5xl text-3xl text-center font-bold text-[#21333D]'>
           The complexity of a cancer <br /> is Overwhelming
         </div>
         <p className='lg:text-lg text-sm sm:text-base text-center mx-auto my-16 w-4/5 mt-8'>
