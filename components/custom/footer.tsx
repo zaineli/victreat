@@ -7,10 +7,10 @@ import { FaYoutube } from "react-icons/fa";
 function Footer() {
 	return (
 		<>
-			<div className="bg-gray-50 h-1/2 w-full flex md:flex-row flex-col justify-around items-start p-20">
+			<div className="bg-black h-1/2 w-full flex md:flex-row flex-col justify-around items-start p-20">
 				<div className="p-5 ">
 					<ul>
-						<p className="text-gray-800 font-bold text-3xl pb-6">
+						<p className="text-gray-100 font-bold text-3xl pb-6">
 							Victreat
 						</p>
 						<div className="flex gap-6 pb-5">
@@ -23,7 +23,7 @@ function Footer() {
 				</div>
 				<div className="p-5">
 					<ul>
-						<p className="text-gray-800 font-bold text-2xl pb-4">Product</p>
+						<p className="text-gray-100 font-bold text-2xl pb-4">Product</p>
 						<li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
 							Stocks
 						</li>
@@ -40,7 +40,7 @@ function Footer() {
 				</div>
 				<div className="p-5">
 					<ul>
-						<p className="text-gray-800 font-bold text-2xl pb-4">Company</p>
+						<p className="text-gray-100 font-bold text-2xl pb-4">Company</p>
 						<li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
 							About
 						</li>
@@ -60,7 +60,7 @@ function Footer() {
 				</div>
 				<div className="p-5">
 					<ul>
-						<p className="text-gray-800 font-bold text-2xl pb-4">Support</p>
+						<p className="text-gray-100 font-bold text-2xl pb-4">Support</p>
 						<li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
 							Contact
 						</li>
@@ -80,7 +80,7 @@ function Footer() {
 				</div>
 			</div>
 			<div className="flex flex-col justify-center items-center text-center  p-5 bg-gray-50">
-				<h1 className=" text-gray-800 font-semibold">
+				<h1 className=" text-gray-900 font-semibold">
 					© 2024-2025 All rights reserved | Build with ❤ by{" "}
 					<span className="hover:text-blue-600 font-semibold cursor-pointer">
 						victreat{" "}

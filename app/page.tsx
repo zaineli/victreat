@@ -4,6 +4,12 @@ import { useState, useEffect } from 'react';
 import Timeline from '@/components/custom/Timeline';
 import { AnimatedBeamMultipleOutputDemo } from '@/components/AnimatedBeam'; // Import AnimatedBeamMultipleOutputDemo
 import LineChart from '@/components/custom/line-chart';
+import MutationSection from '@/components/custom/mutationSections';
+import RibbonsCard from '@/components/custom/ribbonsCard';
+import Trials from './news/page';
+import CallToAction from '@/components/custom/callToAction';
+import ScrollButton from '@/components/custom/scroll-button';
+import Footer from '@/components/custom/footer';
 
 const animationVariants = {
   hidden: { y: "100%" },
@@ -85,6 +91,13 @@ function Home() {
     return () => clearInterval(interval);
   }, []);
 
+
+  // return (
+  //   <div className='mt-48 w-96 h-96 bg-red-200 rounded-[15%] overflow-hidden m-2'>
+  //     <RibbonsCard />
+  //   </div>
+  // );
+
   const renderChart = () => {
     const { type, dataPoints } = charts[activeIndex];
     switch (type) {
@@ -96,95 +109,126 @@ function Home() {
   };
 
   return (
-    <div className="relative h-screen overflow-hidden flex flex-col items-center ">
+    <div className="">
 
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={animationVariants}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="absolute top-0 left-0 h-full w-72 bg-gradient-to-b from-[#DAE5EB] to-white rounded-tr-[100%] z-30"
-      ></motion.div>
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={animationVariants}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="absolute top-0 right-0 h-full w-72 bg-gradient-to-b from-[#DAE5EB] to-white rounded-tl-[100%] z-30 scale-x-[100%]"
-      ></motion.div>
-
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={textVariants}
-        transition={{ delay: 1, duration: 1, ease: "easeOut" }}
-        className="flex flex-col items-center mt-48"
-      >
-        <div className='text-6xl text-center font-bold'>
-          FDA Accelerates Approval of <br />Oncology Medicines
-        </div>
-        <p className='text-lg text-center w-2/5 mt-4'>
-          With an increasingly complex treatment landscape, how will health systems ensure that the right patient is getting the right medicine?
-        </p>
-        <Timeline />
-      </motion.div>
-
-      <div className="flex justify-center mt-8 w-[90%] z-50">
+      <section className='relative min-h-screen flex flex-col items-center'>
+        <ScrollButton />
         <motion.div
           initial="hidden"
           animate="visible"
-          custom="left"
-          variants={cardVariants}
-          transition={{ delay: 2.5, duration: 1, ease: "easeOut" }}
-          className="w-[20%] bg-slate-900 rounded-[15%] p-4 m-2"
-        >
-        </motion.div>
+          variants={animationVariants}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="absolute top-0 left-0 h-full w-72 bg-gradient-to-b from-[#DAE5EB] to-white rounded-tr-[100%] -z-30"
+        ></motion.div>
         <motion.div
           initial="hidden"
           animate="visible"
-          custom="center"
-          variants={cardVariants}
-          transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-          className="w-1/3 bg-gray-200 rounded-[15%] p-4 m-2"
-        >
-          
-          {/* {renderChart()} */}
-        </motion.div>
+          variants={animationVariants}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="absolute top-0 right-0 h-full w-72 bg-gradient-to-b from-[#DAE5EB] to-white rounded-tl-[100%] -z-30 scale-x-[100%]"
+        ></motion.div>
         <motion.div
           initial="hidden"
           animate="visible"
-          custom="right"
-          variants={cardVariants}
-          transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-          className="w-[20%] bg-slate-300 rounded-[15%] p-4 m-2 flex flex-col items-start justify-start relative overflow-hidden"
-
+          variants={textVariants}
+          transition={{ delay: 1, duration: 1, ease: "easeOut" }}
+          className="flex flex-col items-center mt-48"
         >
-          <div className='absolute top-10 left-10'>
-            
-            <div className='text-4xl font-semibold'>Mutation</div>
-            <div className='text-xl'>+99%</div>
-            <sub>increase</sub>
+          <div className='text-6xl text-center font-bold'>
+            FDA Accelerates Approval of <br />Oncology Medicines
           </div>
-    <div className='-rotate-180 translate-x-8 translate-y-20 overflow-x-hidden'>
-      <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="
-            M10,150
-            C30,140, 50,150, 70,140
-            S110,130, 130,140
-            S170,170, 190,160
-            S230,120, 250,130
-            S290,90, 310,100
-            S350,80, 400,90
-          "
-          style={{ fill: 'none', stroke: 'white', strokeWidth: 2 }}
-        />
-      </svg>
-    </div>
+          <p className='text-lg text-center w-2/5 mt-4'>
+            With an increasingly complex treatment landscape, how will health systems ensure that the right patient is getting the right medicine?
+          </p>
+          <Timeline />
         </motion.div>
-
+        <div className="flex justify-center mt-8 w-[90%]">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            custom="left"
+            variants={cardVariants}
+            transition={{ delay: 2.5, duration: 1, ease: "easeOut" }}
+            className="w-[20%] bg-gray-200 aspect-square self-start rounded-[15%] p-4 m-2"
+          >
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            custom="center"
+            variants={cardVariants}
+            transition={{ delay: 2, duration: 1, ease: "easeOut" }}
+            className="w-96 h-96 bg-gray-300 rounded-[15%]"
+          >
+            {/* {renderChart()} */}
+            {/* <MutationSection /> */}
+            <RibbonsCard />
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            custom="right"
+            variants={cardVariants}
+            transition={{ delay: 2, duration: 1, ease: "easeOut" }}
+            className="w-[20%] bg-gray-200  aspect-square rounded-[15%] p-4 m-2 flex flex-col items-start justify-start h-min relative overflow-hidden"
+          >
+            <div className='absolute top-10 left-10'>
+              <div className='text-4xl font-semibold'>Trials</div>
+              <div className='text-xl'>+99% increase</div>
+            </div>
+            <div className='-rotate-180 translate-x-8 translate-y-20 overflow-x-hidden'>
+              <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="
+              M10,150
+              C30,140, 50,150, 70,140
+              S110,130, 130,140
+              S170,170, 190,160
+              S230,120, 250,130
+              S290,90, 310,100
+              S350,80, 400,90
+            "
+                  style={{ fill: 'none', stroke: 'white', strokeWidth: 2 }}
+                />
+              </svg>
+            </div>
+          </motion.div>
         </div>
-      </div>
+      </section>
+
+
+      <section id={'mutations'} className='w-full  p-32 mt-64'>
+        <div className='text-6xl text-center font-bold'>
+          The complexity of a cancer <br /> is Overwhelming
+        </div>
+        <p className='text-2xl text-center mx-auto my-16 w-4/5 mt-8'>
+          With different cancer types, mutations, stages, treatments and trials, it's hard to keep track of everything. We're here to help.
+        </p>
+        <div className="max-w-[70%] mx-auto">
+
+        <MutationSection small={false} />
+        </div>
+      </section>
+
+      <section className='w-full  p-32 mt-12'>
+        <div className='text-6xl text-center font-bold'>
+          Cancer Research is <br /> growing rapidly
+        </div>
+        <p className='text-2xl text-center mx-auto my-16 w-4/5 mt-8'>
+          But the gap between research and clinical practice is widening. We're here to bridge that gap.
+        </p>
+        {/* <LineChart data={dataArray} /> */}
+        <Trials className={'flex justify-center'} />
+      </section>
+
+      <section>
+        <CallToAction />
+      </section>
+
+      <section className='w-full bg-black text-white'>
+        <Footer />
+      </section>
+    </div>
   );
 }
 

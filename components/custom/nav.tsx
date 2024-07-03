@@ -6,7 +6,8 @@ import Example from './DrawOutlineButton';
 
 function Nav() {
   return (
-    <nav id="nav" className="bg-white fixed top-0 left-1/2 transform -translate-x-1/2 w-1/2 z-50 px-2 border-b-2 flex gap-8 items-center justify-between text-[#23333E]">
+    <nav id="nav" className="bg-white absolute top-4 left-1/2 translate-x-[-50%] w-1/2 z-50 px-2 border-b-2 flex gap-8 items-center justify-between text-[#23333E]">
+    {/* <nav id="nav" className="bg-white fixed top-0 left-1/2 transform-translate-x-1/2 w-1/2 z-50 px-2 border-b-2 flex gap-8 items-center justify-between text-[#23333E]"> */}
       <div className='text-2xl'>Victreat</div>
       <div className="flex items-center space-x-6">
         <Link href="/">
@@ -14,12 +15,6 @@ function Nav() {
         </Link>
         <Link href="/vision">
           <div className="text-gray-700 hover:text-black">Vision</div>
-        </Link>
-        <Link href="/d">
-          <div className="text-gray-700 hover:text-black">Treatments</div>
-        </Link>
-        <Link href="/news">
-          <div className="text-gray-700 hover:text-black">News</div>
         </Link>
         <Link href="/careers">
           <div className="text-gray-700 hover:text-black">Careers</div>
