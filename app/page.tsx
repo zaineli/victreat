@@ -6,6 +6,7 @@ import { AnimatedBeamMultipleOutputDemo } from '@/components/AnimatedBeam'; // I
 import LineChart from '@/components/custom/line-chart';
 import MutationSection from '@/components/custom/mutationSections';
 import RibbonsCard from '@/components/custom/ribbonsCard';
+import Trials from './news/page';
 
 const animationVariants = {
   hidden: { y: "100%" },
@@ -88,11 +89,11 @@ function Home() {
   }, []);
 
 
-    // return (
-    //   <div className='mt-48 w-96 h-96 bg-red-200 rounded-[15%] overflow-hidden m-2'>
-    //     <RibbonsCard />
-    //   </div>
-    // );
+  // return (
+  //   <div className='mt-48 w-96 h-96 bg-red-200 rounded-[15%] overflow-hidden m-2'>
+  //     <RibbonsCard />
+  //   </div>
+  // );
 
   const renderChart = () => {
     const { type, dataPoints } = charts[activeIndex];
@@ -105,8 +106,7 @@ function Home() {
   };
 
   return (
-    <div className="relative h-screen flex flex-col items-center ">
-
+    <div className="relative min-h-screen flex flex-col items-center ">
       <motion.div
         initial="hidden"
         animate="visible"
@@ -156,7 +156,7 @@ function Home() {
           transition={{ delay: 2, duration: 1, ease: "easeOut" }}
           className="w-96 h-96 bg-red-200 rounded-[15%]"
         >
-          
+
           {/* {renderChart()} */}
           {/* <MutationSection /> */}
           <RibbonsCard />
@@ -172,15 +172,15 @@ function Home() {
 
         >
           <div className='absolute top-10 left-10'>
-            
+
             <div className='text-4xl font-semibold'>Mutation</div>
             <div className='text-xl'>+99%</div>
             <sub>increase</sub>
           </div>
-    <div className='-rotate-180 translate-x-8 translate-y-20 overflow-x-hidden'>
-      <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="
+          <div className='-rotate-180 translate-x-8 translate-y-20 overflow-x-hidden'>
+            <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="
             M10,150
             C30,140, 50,150, 70,140
             S110,130, 130,140
@@ -189,14 +189,34 @@ function Home() {
             S290,90, 310,100
             S350,80, 400,90
           "
-          style={{ fill: 'none', stroke: 'white', strokeWidth: 2 }}
-        />
-      </svg>
-    </div>
+                style={{ fill: 'none', stroke: 'white', strokeWidth: 2 }}
+              />
+            </svg>
+          </div>
         </motion.div>
 
-        </div>
       </div>
+      <section className='w-full z-[100] p-32 mt-64'>
+        <div className='text-6xl text-center font-bold'>
+          The complexity of a cancer <br /> is Overwhelming
+        </div>
+        <p className='text-2xl text-center mx-auto my-16 w-4/5 mt-8'>
+          With different cancer types, mutations, stages, treatments and trials, it's hard to keep track of everything. We're here to help.
+        </p>
+        <MutationSection small={false} />
+      </section>
+
+      <section className='w-full z-[100] p-32 mt-12'>
+        <div className='text-6xl text-center font-bold'>
+          Cancer Research is <br /> growing rapidly
+        </div>
+        <p className='text-2xl text-center mx-auto my-16 w-4/5 mt-8'>
+          But the gap between research and clinical practice is widening. We're here to bridge that gap.
+        </p>
+        {/* <LineChart data={dataArray} /> */}
+        <Trials className={'flex justify-center'} />
+      </section>
+    </div>
   );
 }
 
