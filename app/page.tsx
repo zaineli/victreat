@@ -71,7 +71,7 @@ const dataArray = [
 const charts = [
   { type: "AnimatedBeam", dataPoints: ["Data 1", "Data 2", "Data 3"] },
   { type: "AnimatedBeam", dataPoints: ["Data 32", "Data 2", "Data 3"] },
-  { type: "AnimatedBeam", dataPoints: ["Data 3242" , "Data 2", "Data 3"] },
+  { type: "AnimatedBeam", dataPoints: ["Data 3242", "Data 2", "Data 3"] },
 ];
 
 function Home() {
@@ -136,9 +136,8 @@ function Home() {
           custom="left"
           variants={cardVariants}
           transition={{ delay: 2.5, duration: 1, ease: "easeOut" }}
-          className="w-1/4 bg-gray-200 rounded-[15%] p-4 m-2"
+          className="w-[20%] bg-slate-900 rounded-[15%] p-4 m-2"
         >
-          <img src="https://continentalhospitals.com/images/specialities/37d80f08e6ff7f95c8b9f41b1b0bc452.webp" alt="" />
         </motion.div>
         <motion.div
           initial="hidden"
@@ -148,6 +147,7 @@ function Home() {
           transition={{ delay: 2, duration: 1, ease: "easeOut" }}
           className="w-1/3 bg-gray-200 rounded-[15%] p-4 m-2"
         >
+          
           {/* {renderChart()} */}
         </motion.div>
         <motion.div
@@ -156,33 +156,35 @@ function Home() {
           custom="right"
           variants={cardVariants}
           transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-          className="w-1/3 bg-white rounded-[15%] p-4 m-2 flex flex-col items-start justify-start"
-          style={{ 
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', 
-            border: '1px solid #e0e0e0',
-            padding: '20px',
-            borderRadius: '10px',
-            background: '#f9f9f9'
-          }}
-        >
+          className="w-[20%] bg-slate-300 rounded-[15%] p-4 m-2 flex flex-col items-start justify-start relative overflow-hidden"
 
-          <div className="flex flex-col items-center justify-center w-full">
-            <div className="text-sm text-gray-500">Your earnings</div>
-            <div className="text-4xl font-bold text-gray-800">$30.00</div>
-            <div className="text-sm text-gray-500">Next payout in:</div>
-            <div className="text-xl font-bold text-gray-800">10,550 pts</div>
+        >
+          <div className='absolute top-10 left-10'>
+            
+            <div className='text-4xl font-semibold'>Mutation</div>
+            <div className='text-xl'>+99%</div>
+            <sub>increase</sub>
           </div>
-          <div className='absolute top-0 translate-x-12'>
-            <LineChart
-              width={400}
-              height={200}
-              data={dataArray}
-              className="absolute bottom-0 right-0"
-            />
-          </div>
-        </motion.div>
-      </div>
+    <div className='-rotate-180 translate-x-8 translate-y-20 overflow-x-hidden'>
+      <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="
+            M10,150
+            C30,140, 50,150, 70,140
+            S110,130, 130,140
+            S170,170, 190,160
+            S230,120, 250,130
+            S290,90, 310,100
+            S350,80, 400,90
+          "
+          style={{ fill: 'none', stroke: 'white', strokeWidth: 2 }}
+        />
+      </svg>
     </div>
+        </motion.div>
+
+        </div>
+      </div>
   );
 }
 
