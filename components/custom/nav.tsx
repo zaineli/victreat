@@ -25,12 +25,12 @@ const Navbar = () => {
   return <div></div>;
 
   return (
-    <nav className='absolute h-screen p-4 flex justify-center lg:w-1/3  justify-between w-full mx-auto left-[50%] translate-x-[-50%] z-[1500]'>
+    <nav className='absolute top-0 p-4 flex justify-center h-screen lg:w-1/3  justify-between w-full mx-auto left-[50%] translate-x-[-50%] z-[1500]'>
       <div className='text-xl font-semibold mr-24'>Victreat</div>
       <div className='hidden md:flex gap-8'>
         <Link href='/'><div className='text-lg'>Home</div></Link>
         <Link href='/about'><div className='text-lg'>About</div></Link>
-        <Link href='/services'><div className='text-lg'>Services</div></Link>
+        <Link href='/careers'><div className='text-lg'>Careers</div></Link>
         <Link href='/contact'><div className='text-lg'>Contact</div></Link>
       </div>
       <div className='md:hidden'>
@@ -53,7 +53,7 @@ const Navbar = () => {
             <div className='flex flex-col gap-4 mt-8 bg-white'>
               <Link href='/'><div className='text-lg' onClick={toggleMenu}>Home</div></Link>
               <Link href='/about'><div className='text-lg' onClick={toggleMenu}>About</div></Link>
-              <Link href='/services'><div className='text-lg' onClick={toggleMenu}>Services</div></Link>
+              <Link href='/careers'><div className='text-lg' onClick={toggleMenu}>Careers</div></Link>
               <Link href='/contact'><div className='text-lg' onClick={toggleMenu}>Contact</div></Link>
             </div>
           </motion.div>
