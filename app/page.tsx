@@ -149,7 +149,7 @@ function Home() {
             custom="left"
             variants={cardVariants}
             transition={{ delay: 2.5, duration: 1, ease: "easeOut" }}
-            className="w-[20%] hidden lg:block bg-gray-200 aspect-square self-start rounded-[15%] p-4 m-2"
+            className="w-[20%] hidden lg:block bg-[#DBE5EB] aspect-square self-start rounded-[15%] p-4 m-2"
           >
           </motion.div>
           <motion.div
@@ -171,7 +171,7 @@ function Home() {
             custom="right"
             variants={cardVariants}
             transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-            className="w-[20%] bg-gray-200 hidden lg:flex  aspect-square rounded-[15%] p-4 m-2  flex-col items-start justify-start h-min relative overflow-hidden"
+            className="w-[20%] bg-[#DBE5EB] hidden lg:flex  aspect-square rounded-[15%] p-4 m-2  flex-col items-start justify-start h-min relative overflow-hidden"
           >
             <div className='absolute top-10 left-10'>
               <div className='text-4xl font-semibold'>Trials</div>
