@@ -6,7 +6,7 @@ import { AnimatedBeamMultipleOutputDemo } from '@/components/AnimatedBeam'; // I
 import LineChart from '@/components/custom/line-chart';
 import MutationSection from '@/components/custom/mutationSections';
 import RibbonsCard from '@/components/custom/ribbonsCard';
-import Trials from './news/page';
+import Trials from '@/components/custom/trials';
 import CallToAction from '@/components/custom/callToAction';
 import ScrollButton from '@/components/custom/scroll-button';
 import Footer from '@/components/custom/footer';
@@ -22,7 +22,7 @@ const textVariants = {
 };
 
 const cardVariants = {
-  hidden: (direction) => ({
+  hidden: (direction: string) => ({
     opacity: 0,
     y: direction === 'center' ? '100%' : '50%',
     x: direction === 'center' ? 0 : direction === 'left' ? '-50%' : '50%',
@@ -98,15 +98,15 @@ function Home() {
   //   </div>
   // );
 
-  const renderChart = () => {
-    const { type, dataPoints } = charts[activeIndex];
-    switch (type) {
-      case "AnimatedBeam":
-        return <AnimatedBeamMultipleOutputDemo dataPoints={dataPoints} />;
-      default:
-        return null;
-    }
-  };
+  // const renderChart = () => {
+  //   const { type, dataPoints } = charts[activeIndex];
+  //   switch (type) {
+  //     case "AnimatedBeam":
+  //       return <AnimatedBeamMultipleOutputDemo dataPoints={dataPoints} />;
+  //     default:
+  //       return null;
+  //   }
+  // };
 
   return (
     <div className="">
@@ -134,11 +134,11 @@ function Home() {
           transition={{ delay: 1, duration: 1, ease: "easeOut" }}
           className="flex flex-col items-center mt-48 p-2"
         >
-          <div className='lg:text-6xl md:text-5xl text-3xl text-center font-bold '>
-            FDA Accelerates Approval of <br />Oncology Medicines
+          <div className='w-4/5 lg:text-6xl md:text-3xl text-3xl text-center font-semibold '>
+          With an increasingly complex treatment landscape, how can you ensure that you're getting the right drug for YOU? 
           </div>
           <p className='lg:text-lg text-sm sm:text-base w-4/5 text-center lg:w-2/5 mt-4'>
-            With an increasingly complex treatment landscape, how will health systems ensure that the right patient is getting the right medicine?
+             
           </p>
           <Timeline />
         </motion.div>
@@ -158,11 +158,12 @@ function Home() {
             custom="center"
             variants={cardVariants}
             transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-            className="w-96 h-96 bg-gray-300 rounded-[15%] scale-125"
+            className="bg-gray-300 rounded-[15%] scale-125"
           >
             {/* {renderChart()} */}
             {/* <MutationSection /> */}
-            <RibbonsCard />
+            {/* <RibbonsCard /> */}
+            <img src='/images/test.png' alt='Medical Research' className='w-full h-full object-contain' />
           </motion.div>
           <motion.div
             initial="hidden"
@@ -197,27 +198,24 @@ function Home() {
       </section>
 
 
+
+        <section className='w-full mt-12 lg:p-32  p-4 sm:p-16 flex flex-col items-center justify-center '>
+          <div className='lg:text-6xl md:text-3xl text-3xl font-semibold text-center'>
+            Meanwhile, exponential growth in trials will only add to the complexity in onology treatment landscape.
+            {/* Exponential growth in oncology trials */}
+          </div>
+          <p className='lg:text-lg text-sm sm:text-base  w-4/5 mb-16'>
+          </p>
+          <Trials className={'flex justify-center w-[80%] mx-auto'} />
+        </section>
       <section id={'mutations'} className='w-full  mt-64 lg:p-32  p-4 sm:p-16 '>
-        <div className='lg:text-6xl md:text-5xl text-3xl text-center font-bold'>
-          The complexity of a cancer <br /> is Overwhelming
+        <div className='lg:text-6xl md:text-4xl text-3xl text-center font-bold'>
+          Victreat aspires to be your partner at navigating  cancer stages, mutations and myriad of clinical trial options 
         </div>
-        <p className='lg:text-lg text-sm sm:text-base text-center mx-auto my-16 w-4/5 mt-8'>
-          With different cancer types, mutations, stages, treatments and trials, it's hard to keep track of everything. We're here to help.
-        </p>
         <div className="lg:max-w-[75%] w-full mx-auto">
 
         <MutationSection small={false} />
         </div>
-      </section>
-
-      <section className='w-full mt-12 lg:p-32  p-4 sm:p-16'>
-        <div className='lg:text-6xl md:text-5xl text-3xl text-center font-bold'>
-          Cancer Research is <br /> growing rapidly
-        </div>
-        <p className='lg:text-lg text-sm sm:text-base text-center mx-auto my-16 w-4/5 mt-8'>
-          But the gap between research and clinical practice is widening. We're here to bridge that gap.
-        </p>
-        <Trials className={'flex justify-center mx-auto'} />
       </section>
 
       <section className='w-full max-w-full'>

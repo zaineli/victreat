@@ -41,7 +41,7 @@ export default function CancerDiagnosisPage() {
             animate="visible"
             variants={textVariant}
           >
-            Helping <span className="font-bold">Cancer Diagnosis</span><br />and Treatment
+            Empowering patients to <span className="font-bold">navigate cancer</span><br />
           </motion.h1>
         </section>
 
@@ -55,7 +55,6 @@ export default function CancerDiagnosisPage() {
             <motion.a
               href="#"
               className="hover:underline"
-              variants={linkVariant}
               whileHover="hover"
               whileTap={{ scale: 0.9 }}
               variants={linkHover}
@@ -65,7 +64,6 @@ export default function CancerDiagnosisPage() {
             <motion.a
               href="#"
               className="hover:underline"
-              variants={linkVariant}
               whileHover="hover"
               whileTap={{ scale: 0.9 }}
               variants={linkHover}
@@ -75,7 +73,6 @@ export default function CancerDiagnosisPage() {
             <motion.a
               href="#"
               className="hover:underline"
-              variants={linkVariant}
               whileHover="hover"
               whileTap={{ scale: 0.9 }}
               variants={linkHover}
@@ -100,7 +97,7 @@ export default function CancerDiagnosisPage() {
             animate="visible"
             variants={textVariant}
           >
-            Learn about different types of cancers, their symptoms, and how they are diagnosed using advanced medical technologies and procedures.
+            Every patient AROUND the world should have access to a personalized and optimized treatment plan.  Unfortunately, access to such care and trial information is limited to certain tier 1 cancer centers in developed world.  We aim to change that.
           </motion.p>
           <motion.p
             className="text-gray-600 max-w-full md:max-w-md"
@@ -108,7 +105,7 @@ export default function CancerDiagnosisPage() {
             animate="visible"
             variants={textVariant}
           >
-            Our team of oncologists and healthcare professionals is dedicated to providing comprehensive, personalized treatment plans tailored to each patient's unique needs. We offer a full range of advanced therapies, including surgery, chemotherapy, and radiation therapy, to effectively target and treat various types of cancer. In addition to these core treatments, we incorporate the latest advancements in medical research and technology to enhance patient outcomes.
+            Victreat intends to democratize access to world-class cancer care - regardless of where a patient may be based.  We aspire to help patients think through the most optimal therapeutic options depending on their tumor type, tumor stage, performance status, mutational profile, prior lines of therapy and beyond.
           </motion.p>
         </section>
       </main>

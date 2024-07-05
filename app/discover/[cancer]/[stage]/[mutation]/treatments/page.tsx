@@ -41,7 +41,7 @@ function TreatmentsPage({ params }: { params: { cancer: string, stage: string, m
   const filteredTreatments = treatments.filter((treatment) => {
     if (!filters.preffered && treatment.type === "Preffered") return false;
     if (!filters.alternative && treatment.type === "Alternative") return false;
-    if (!filters.experimental && treatment.type === "Exlperimental") return false;
+    if (!filters.experimental && treatment.type === "Experimental") return false;
     if (filters.query && !treatment.name.toLowerCase().includes(filters.query.toLowerCase())) return false;
     return true;
   });
@@ -102,7 +102,7 @@ function TreatmentsPage({ params }: { params: { cancer: string, stage: string, m
         {filteredTreatments.length > 0 ? filteredTreatments.map((treatment) => <Card>
           <CardHeader>
             <CardTitle className="flex justify-between items-center">{treatment.name}<Badge variant={
-              ({ "Preffered": 'default', "Alternative": "secondary", "Exlperimental": "destructive" } as const)[treatment.type]
+              ({ "Preffered": 'default', "Alternative": "secondary", "Experimental": "destructive" } as const)[treatment.type]
             }>{treatment.type}</Badge></CardTitle>
             <CardDescription>{treatment.description}</CardDescription>
           </CardHeader>

@@ -5,7 +5,8 @@ type Props = {}
 
 function Page({}: Props) {
   return (
-    <WheelCarousel />
+    // <WheelCarousel />
+    <div></div>
   )
 }
 

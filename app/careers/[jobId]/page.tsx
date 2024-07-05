@@ -7,9 +7,9 @@ import { ArrowBigLeftIcon, ArrowLeft, ChevronLeft } from 'lucide-react';
 type Job = {
   id: string;
   title: string;
-  location: string;
-  description: string;
-  requirements: string[];
+  expectations: string;
+  wishlist: string[];
+  offerings: string;
 };
 
 type Props = {
@@ -21,6 +21,8 @@ type Props = {
 function JobDetails({ params }: Props) {
   const { jobId } = params;
   const [job, setJob] = useState<Job | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
 
   useEffect(() => {
     if (jobId) {
@@ -30,6 +32,21 @@ function JobDetails({ params }: Props) {
       }
     }
   }, [jobId]);
+
+  function submit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+    setLoading(true);
+    fetch('/api/mail', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then(() => { setLoading(false); setSent(true) })
+    // console.log(data);
+  }
 
   if (!job) {
     return <div>Loading...</div>;
@@ -63,85 +80,94 @@ function JobDetails({ params }: Props) {
         <div className="w-full md:w-1/2 px-4">
           <div className="bg-white p-8  rounded-lg">
             <h2 className="text-2xl font-bold mb-4">Apply for this job</h2>
-            <form>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">
-                  First name
-                </label>
-                <input
-                  id="firstName"
-                  type="text"
-                  placeholder="First name"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="lastName">
-                  Last name
-                </label>
-                <input
-                  id="lastName"
-                  type="text"
-                  placeholder="Last name"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                  Mail address
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="Email"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
-                  Phone number
-                </label>
-                <input
-                  id="phone"
-                  type="tel"
-                  placeholder="+32 *** ** ** **"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="resume">
-                  Resume or CV
-                </label>
-                <input
-                  id="resume"
-                  type="file"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="coverLetter">
-                  Cover letter
-                </label>
-                <textarea
-                  id="coverLetter"
-                  placeholder="Stand out from the crowd"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="inline-flex items-center">
-                  <input type="checkbox" className="form-checkbox h-5 w-5 text-blue-600" />
-                  <span className="ml-2 text-gray-700">I accept the Demaz privacy and terms</span>
-                </label>
-              </div>
-              <button
-                type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              >
-                Submit application
-              </button>
-            </form>
-          </div>
+            {
+              sent ? <div className="text-green-500">Application sent!</div> :
+                <form onSubmit={submit}>
+                  <input type="text" className=' hidden' name='position' value={job.title} />
+                  <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">
+                      First name
+                    </label>
+                    <input
+                      id="firstName"
+                      name="first_name"
+                      type="text"
+                      placeholder="First name"
+                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="lastName">
+                      Last name
+                    </label>
+                    <input
+                      id="lastName"
+                      name="last_name"
+                      type="text"
+                      placeholder="Last name"
+                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                      Mail address
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
+                      Phone number
+                    </label>
+                    <input
+                      id="phone"
+                      name='phone'
+                      type="tel"
+                      placeholder="+32 *** ** ** **"
+                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="resume">
+                      Resume or CV
+                    </label>
+                    <input
+                      id="resume"
+                      type="file"
+                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="coverLetter">
+                      Cover letter
+                    </label>
+                    <textarea
+                      id="coverLetter"
+                      name='cover'
+                      placeholder="Stand out from the crowd"
+                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="inline-flex items-center">
+                      <input type="checkbox" required className="form-checkbox h-5 w-5 text-blue-600" />
+                      <span className="ml-2 text-gray-700">I accept the Demaz privacy and terms</span>
+                    </label>
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="disabled:cursor-not-allowed disabled:opacity-50 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  >
+                    Submit application
+                  </button>
+                </form>
+            }          </div>
         </div>
       </div>
     </div>
