@@ -1,7 +1,10 @@
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-const MutationCarousel = ({ mutations }) => {
+const MutationCarousel = ({ mutations }: {
+    mutations: { mutation: string, imageUrl: string, "success rate": number }[];
+
+}) => {
     return (
                 <Carousel showThumbs={false} emulateTouch={true} showStatus={false}>
             {mutations.map((mutation) => (

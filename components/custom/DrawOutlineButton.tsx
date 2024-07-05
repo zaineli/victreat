@@ -8,7 +8,11 @@ const Example = () => {
   );
 };
 
-const DrawOutlineButton = ({ children, ...rest }) => {
+const DrawOutlineButton = ({ children, ...rest }: {
+  children: React.ReactNode;
+  [x: string]: any;
+
+}) => {
   return (
     <button
       {...rest}
