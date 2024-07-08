@@ -1,13 +1,11 @@
-import WheelCarousel from '@/components/custom/wheelCarousel'
-import React from 'react'
+'use client'
+import CustomBarChart1 from '@/components/custom/CustomBarChart1';
 
-type Props = {}
-
-function Page({}: Props) {
+export default function Page() {
   return (
-    // <WheelCarousel />
-    <div></div>
-  )
-}
+    <div className="flex justify-center items-center h-screen w-screen bg-gray-100">
+      <CustomBarChart1 />
 
-export default Page
+    </div>
+  );
+}
