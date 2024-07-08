@@ -40,10 +40,7 @@ function JobDetails({ params }: Props) {
     setLoading(true);
     fetch('/api/mail', {
       method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      body: formData, 
     }).then(() => { setLoading(false); setSent(true) })
     // console.log(data);
   }
@@ -133,12 +130,35 @@ function JobDetails({ params }: Props) {
                     />
                   </div>
                   <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="resume">
+                    {/* <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="resume">
                       Resume or CV
                     </label>
                     <input
                       id="resume"
                       type="file"
+                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    /> */}
+
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="resume">
+                      LinkedIn
+                    </label>
+                    <input
+                      id="linkedin"
+                      type="text"
+                      name='linkedin'
+                      placeholder='Your linkedIn profile link'
+                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="cv">
+                      CV
+                    </label>
+                    <input
+                      id="cv"
+                      name='cv'
+                      type='file'
+                      placeholder="Your updated CV."
                       className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     />
                   </div>
@@ -156,7 +176,7 @@ function JobDetails({ params }: Props) {
                   <div className="mb-4">
                     <label className="inline-flex items-center">
                       <input type="checkbox" required className="form-checkbox h-5 w-5 text-blue-600" />
-                      <span className="ml-2 text-gray-700">I accept the Demaz privacy and terms</span>
+                      <span className="ml-2 text-gray-700">I have read the job description and I have the skills required.</span>
                     </label>
                   </div>
                   <button
