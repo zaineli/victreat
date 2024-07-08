@@ -3,6 +3,8 @@ export type Mutation = {
   description: string;
 };
 
+export const yearApproved = [22, 14, 12, 11, 16, 19, 23, 19, 19, 33, 22, 31, 33, 49, 108, 58, 41, 45, 31]; // start 2006 end 2024
+
 export const mutations: Mutation[] = [
   {
     name: "Deletion",

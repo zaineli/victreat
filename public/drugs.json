@@ -1,0 +1,3032 @@
+[
+    {
+        "drug_name": "abatacept",
+        "date": "December 15, 2021",
+        "cancer_type": "prophylaxis of acute graft versus host disease"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "December 3, 2021",
+        "cancer_type": "adjuvant treatment of Stage IIB or IIC melanoma"
+    },
+    {
+        "drug_name": "rituximab",
+        "date": "December 2, 2021",
+        "cancer_type": "pediatric cancer indications"
+    },
+    {
+        "drug_name": "Darzalex Faspro, Kyprolis, and Dexamethasone",
+        "date": "December 01, 2021",
+        "cancer_type": "Multiple Myeloma"
+    },
+    {
+        "drug_name": "pafolacianine",
+        "date": "November 29, 2021",
+        "cancer_type": "identifying malignant ovarian cancer lesions"
+    },
+    {
+        "drug_name": "sirolimus protein-bound particles",
+        "date": "November 23, 2021",
+        "cancer_type": "malignant perivascular epithelioid cell tumor"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "November 17, 2021",
+        "cancer_type": "adjuvant treatment of renal cell carcinoma"
+    },
+    {
+        "drug_name": "asciminib",
+        "date": "October 29, 2021",
+        "cancer_type": "Philadelphia chromosome-positive chronic myeloid leukemia"
+    },
+    {
+        "drug_name": "atezolizumab",
+        "date": "October 15, 2021",
+        "cancer_type": "adjuvant treatment for non-small cell lung cancer"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "October 13, 2021",
+        "cancer_type": "first-line treatment of cervical cancer"
+    },
+    {
+        "drug_name": "abemaciclib",
+        "date": "October 12, 2021",
+        "cancer_type": "early breast cancer"
+    },
+    {
+        "drug_name": "Memorial Sloan-Kettering database of molecular tumor marker information",
+        "date": "October 7, 2021",
+        "cancer_type": "not specified"
+    },
+    {
+        "drug_name": "brexucabtagene autoleucel",
+        "date": "October 1, 2021",
+        "cancer_type": "relapsed or refractory B-cell precursor acute lymphoblastic leukemia"
+    },
+    {
+        "drug_name": "ruxolitinib",
+        "date": "September 22, 2021",
+        "cancer_type": "chronic graft-versus-host disease"
+    },
+    {
+        "drug_name": "tisotumab vedotin-tftv",
+        "date": "September 20, 2021",
+        "cancer_type": "recurrent or metastatic cervical cancer"
+    },
+    {
+        "drug_name": "cabozantinib",
+        "date": "September 17, 2021",
+        "cancer_type": "differentiated thyroid cancer"
+    },
+    {
+        "drug_name": "mobocertinib",
+        "date": "September 15, 2021",
+        "cancer_type": "metastatic non-small cell lung cancer with EGFR exon 20 insertion mutations"
+    },
+    {
+        "drug_name": "zanubrutinib",
+        "date": "September 14, 2021",
+        "cancer_type": "marginal zone lymphoma"
+    },
+    {
+        "drug_name": "zanubrutinib",
+        "date": "September 1, 2021",
+        "cancer_type": "Waldenström’s macroglobulinemia"
+    },
+    {
+        "drug_name": "ivosidenib",
+        "date": "August 25, 2021",
+        "cancer_type": "advanced or metastatic cholangiocarcinoma"
+    },
+    {
+        "drug_name": "nivolumab",
+        "date": "August 19, 2021",
+        "cancer_type": "adjuvant treatment of urothelial carcinoma"
+    },
+    {
+        "drug_name": "dostarlimab-gxly",
+        "date": "August 18, 2021",
+        "cancer_type": "dMMR advanced solid tumors"
+    },
+    {
+        "drug_name": "belzutifan",
+        "date": "August 13, 2021",
+        "cancer_type": "cancers associated with von Hippel-Lindau disease"
+    },
+    {
+        "drug_name": "lenvatinib plus pembrolizumab",
+        "date": "August 10, 2021",
+        "cancer_type": "advanced renal cell carcinoma"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "July 26, 2021",
+        "cancer_type": "high-risk early-stage triple-negative breast cancer"
+    },
+    {
+        "drug_name": "pembrolizumab and lenvatinib",
+        "date": "July 21, 2021",
+        "cancer_type": "advanced endometrial carcinoma"
+    },
+    {
+        "drug_name": "belumosudil",
+        "date": "July 16, 2021",
+        "cancer_type": "chronic graft-versus-host disease"
+    },
+    {
+        "drug_name": "daratumumab and hyaluronidase-fihj with pomalidomide and dexamethasone",
+        "date": "July 9, 2021",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "enfortumab vedotin-ejfv",
+        "date": "July 9, 2021",
+        "cancer_type": "locally advanced or metastatic urothelial cancer"
+    },
+    {
+        "drug_name": "asparaginase erwinia chrysanthemi (recombinant)",
+        "date": "July 1, 2021",
+        "cancer_type": "leukemia and lymphoma"
+    },
+    {
+        "drug_name": "avapritinib",
+        "date": "June 16, 2021",
+        "cancer_type": "advanced systemic mastocytosis"
+    },
+    {
+        "drug_name": "infigratinib",
+        "date": "May 28, 2021",
+        "cancer_type": "metastatic cholangiocarcinoma"
+    },
+    {
+        "drug_name": "sotorasib",
+        "date": "May 28, 2021",
+        "cancer_type": "KRAS G12C mutated NSCLC"
+    },
+    {
+        "drug_name": "amivantamab-vmjw",
+        "date": "May 21, 2021",
+        "cancer_type": "metastatic non-small cell lung cancer"
+    },
+    {
+        "drug_name": "nivolumab",
+        "date": "May 20, 2021",
+        "cancer_type": "resected esophageal or GEJ cancer"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "May 5, 2021",
+        "cancer_type": "HER2-positive gastric cancer"
+    },
+    {
+        "drug_name": "loncastuximab tesirine-lpyl",
+        "date": "April 23, 2021",
+        "cancer_type": "large B-cell lymphoma"
+    },
+    {
+        "drug_name": "dostarlimab-gxly",
+        "date": "April 22, 2021",
+        "cancer_type": "dMMR endometrial cancer"
+    },
+    {
+        "drug_name": "nivolumab in combination with chemotherapy",
+        "date": "April 16, 2021",
+        "cancer_type": "metastatic gastric cancer and esophageal adenocarcinoma"
+    },
+    {
+        "drug_name": "sacituzumab govitecan",
+        "date": "April 13, 2021",
+        "cancer_type": "advanced urothelial cancer"
+    },
+    {
+        "drug_name": "sacituzumab govitecan",
+        "date": "April 7, 2021",
+        "cancer_type": "triple-negative breast cancer"
+    },
+    {
+        "drug_name": "cetuximab",
+        "date": "April 6, 2021",
+        "cancer_type": "new dosing regimen"
+    },
+    {
+        "drug_name": "isatuximab-irfc",
+        "date": "March 31, 2021",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "idecabtagene vicleucel",
+        "date": "March 26, 2021",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "March 22, 2021",
+        "cancer_type": "esophageal or GEJ carcinoma"
+    },
+    {
+        "drug_name": "tivozanib",
+        "date": "March 10, 2021",
+        "cancer_type": "relapsed or refractory advanced renal cell carcinoma"
+    },
+    {
+        "drug_name": "axicabtagene ciloleucel",
+        "date": "March 5, 2021",
+        "cancer_type": "relapsed or refractory follicular lymphoma"
+    },
+    {
+        "drug_name": "lorlatinib",
+        "date": "March 3, 2021",
+        "cancer_type": "metastatic ALK-positive NSCLC"
+    },
+    {
+        "drug_name": "melphalan flufenamide",
+        "date": "February 26, 2021",
+        "cancer_type": "relapsed or refractory multiple myeloma"
+    },
+    {
+        "drug_name": "cemiplimab-rwlc",
+        "date": "February 22, 2021",
+        "cancer_type": "non-small cell lung cancer with high PD-L1 expression"
+    },
+    {
+        "drug_name": "cemiplimab-rwlc",
+        "date": "February 9, 2021",
+        "cancer_type": "locally advanced and metastatic basal cell carcinoma"
+    },
+    {
+        "drug_name": "epcoritamab-bysp",
+        "date": "June 26, 2024",
+        "cancer_type": "relapsed or refractory follicular lymphoma"
+    },
+    {
+        "drug_name": "adagrasib with cetuximab",
+        "date": "June 21, 2024",
+        "cancer_type": "KRAS G12C-mutated colorectal cancer"
+    },
+    {
+        "drug_name": "pembrolizumab with chemotherapy",
+        "date": "June 17, 2024",
+        "cancer_type": "primary advanced or recurrent endometrial carcinoma"
+    },
+    {
+        "drug_name": "blinatumomab",
+        "date": "June 14, 2024",
+        "cancer_type": "CD19-positive Philadelphia chromosome-negative B-cell precursor acute lymphoblastic leukemia"
+    },
+    {
+        "drug_name": "durvalumab with chemotherapy",
+        "date": "June 14, 2024",
+        "cancer_type": "mismatch repair deficient primary advanced or recurrent endometrial cancer"
+    },
+    {
+        "drug_name": "repotrectinib",
+        "date": "June 13, 2024",
+        "cancer_type": "NTRK gene fusion-positive solid tumors"
+    },
+    {
+        "drug_name": "selpercatinib",
+        "date": "June 12, 2024",
+        "cancer_type": "RET fusion-positive thyroid cancer"
+    },
+    {
+        "drug_name": "imetelstat",
+        "date": "June 6, 2024",
+        "cancer_type": "low- to intermediate-1 risk myelodysplastic syndromes with transfusion-dependent anemia"
+    },
+    {
+        "drug_name": "lisocabtagene maraleucel",
+        "date": "May 30, 2024",
+        "cancer_type": "relapsed or refractory mantle cell lymphoma"
+    },
+    {
+        "drug_name": "selpercatinib",
+        "date": "May 29, 2024",
+        "cancer_type": "RET-altered metastatic thyroid cancer or solid tumors in pediatric patients two years and older"
+    },
+    {
+        "drug_name": "tarlatamab-dlle",
+        "date": "May 16, 2024",
+        "cancer_type": "extensive stage small cell lung cancer"
+    },
+    {
+        "drug_name": "lisocabtagene maraleucel",
+        "date": "May 15, 2024",
+        "cancer_type": "follicular lymphoma"
+    },
+    {
+        "drug_name": "tisotumab vedotin-tftv",
+        "date": "April 29, 2024",
+        "cancer_type": "recurrent or metastatic cervical cancer"
+    },
+    {
+        "drug_name": "tovorafenib",
+        "date": "April 23, 2024",
+        "cancer_type": "relapsed or refractory BRAF-altered pediatric low-grade glioma"
+    },
+    {
+        "drug_name": "lutetium Lu 177 dotatate",
+        "date": "April 23, 2024",
+        "cancer_type": "GEP-NETS in pediatric patients 12 years and older"
+    },
+    {
+        "drug_name": "nogapendekin alfa inbakicept-pmln",
+        "date": "April 22, 2024",
+        "cancer_type": "BCG-unresponsive non-muscle invasive bladder cancer"
+    },
+    {
+        "drug_name": "alectinib",
+        "date": "April 18, 2024",
+        "cancer_type": "ALK-positive non-small cell lung cancer"
+    },
+    {
+        "drug_name": "fam-trastuzumab deruxtecan-nxki",
+        "date": "April 5, 2024",
+        "cancer_type": "unresectable or metastatic HER2-positive solid tumors"
+    },
+    {
+        "drug_name": "mirvetuximab soravtansine-gynx",
+        "date": "March 22, 2024",
+        "cancer_type": "FRα positive, platinum-resistant epithelial ovarian, fallopian tube, or primary peritoneal cancer"
+    },
+    {
+        "drug_name": "fluorouracil injection products",
+        "date": "March 21, 2024",
+        "cancer_type": "safety labeling changes regarding DPD deficiency"
+    },
+    {
+        "drug_name": "ponatinib with chemotherapy",
+        "date": "March 19, 2024",
+        "cancer_type": "newly diagnosed Philadelphia chromosome-positive acute lymphoblastic leukemia"
+    },
+    {
+        "drug_name": "zanubrutinib",
+        "date": "March 7, 2024",
+        "cancer_type": "relapsed or refractory follicular lymphoma"
+    },
+    {
+        "drug_name": "nivolumab in combination with cisplatin and gemcitabine",
+        "date": "March 7, 2024",
+        "cancer_type": "unresectable or metastatic urothelial carcinoma"
+    },
+    {
+        "drug_name": "inotuzumab ozogamicin",
+        "date": "March 6, 2024",
+        "cancer_type": "acute lymphoblastic leukemia in pediatric patients"
+    },
+    {
+        "drug_name": "amivantamab-vmjw",
+        "date": "March 1, 2024",
+        "cancer_type": "EGFR exon 20 insertion-mutated non-small cell lung cancer indications"
+    },
+    {
+        "drug_name": "osimertinib with chemotherapy",
+        "date": "February 16, 2024",
+        "cancer_type": "EGFR-mutated non-small cell lung cancer"
+    },
+    {
+        "drug_name": "lifileucel",
+        "date": "February 16, 2024",
+        "cancer_type": "unresectable or metastatic melanoma"
+    },
+    {
+        "drug_name": "tepotinib",
+        "date": "February 15, 2024",
+        "cancer_type": "metastatic non-small cell lung cancer"
+    },
+    {
+        "drug_name": "irinotecan liposome",
+        "date": "February 13, 2024",
+        "cancer_type": "first-line treatment of metastatic pancreatic adenocarcinoma"
+    },
+    {
+        "drug_name": "erdafitinib",
+        "date": "January 18, 2024",
+        "cancer_type": "locally advanced or metastatic urothelial carcinoma"
+    },
+    {
+        "drug_name": "pembrolizumab with chemoradiotherapy",
+        "date": "January 12, 2024",
+        "cancer_type": "FIGO 2014 Stage III-IVA cervical cancer"
+    },
+    {
+        "drug_name": "enfortumab vedotin-ejfv with pembrolizumab",
+        "date": "December 15, 2023",
+        "cancer_type": "locally advanced or metastatic urothelial cancer"
+    },
+    {
+        "drug_name": "belzutifan",
+        "date": "December 14, 2023",
+        "cancer_type": "advanced renal cell carcinoma"
+    },
+    {
+        "drug_name": "eflornithine",
+        "date": "December 13, 2023",
+        "cancer_type": "high-risk neuroblastoma in adult and pediatric patients"
+    },
+    {
+        "drug_name": "pirtobrutinib",
+        "date": "December 1, 2023",
+        "cancer_type": "chronic lymphocytic leukemia and small lymphocytic lymphoma"
+    },
+    {
+        "drug_name": "nirogacestat",
+        "date": "November 27, 2023",
+        "cancer_type": "desmoid tumors"
+    },
+    {
+        "drug_name": "enzalutamide",
+        "date": "November 17, 2023",
+        "cancer_type": "non-metastatic castration-sensitive prostate cancer with biochemical recurrence"
+    },
+    {
+        "drug_name": "capivasertib with fulvestrant",
+        "date": "November 16, 2023",
+        "cancer_type": "breast cancer"
+    },
+    {
+        "drug_name": "pembrolizumab with chemotherapy",
+        "date": "November 16, 2023",
+        "cancer_type": "HER2-negative gastric or gastroesophageal junction adenocarcinoma"
+    },
+    {
+        "drug_name": "repotrectinib",
+        "date": "November 15, 2023",
+        "cancer_type": "ROS1-positive non-small cell lung cancer"
+    },
+    {
+        "drug_name": "fruquintinib",
+        "date": "November 8, 2023",
+        "cancer_type": "refractory metastatic colorectal cancer"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "November 7, 2023",
+        "cancer_type": "gastric cancer indication amended"
+    },
+    {
+        "drug_name": "pembrolizumab with chemotherapy",
+        "date": "October 31, 2023",
+        "cancer_type": "biliary tract cancer"
+    },
+    {
+        "drug_name": "toripalimab-tpzi",
+        "date": "October 27, 2023",
+        "cancer_type": "nasopharyngeal carcinoma"
+    },
+    {
+        "drug_name": "ivosidenib",
+        "date": "October 24, 2023",
+        "cancer_type": "myelodysplastic syndromes"
+    },
+    {
+        "drug_name": "entrectinib",
+        "date": "October 20, 2023",
+        "cancer_type": "new pellet formulation and expanded pediatric indication"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "October 16, 2023",
+        "cancer_type": "resectable non-small cell lung cancer (neoadjuvant/adjuvant)"
+    },
+    {
+        "drug_name": "nivolumab",
+        "date": "October 13, 2023",
+        "cancer_type": "adjuvant treatment of Stage IIB/C melanoma"
+    },
+    {
+        "drug_name": "encorafenib with binimetinib",
+        "date": "October 11, 2023",
+        "cancer_type": "metastatic non-small cell lung cancer with a BRAF V600E mutation"
+    },
+    {
+        "drug_name": "bosutinib",
+        "date": "September 26, 2023",
+        "cancer_type": "pediatric patients with chronic myelogenous leukemia"
+    },
+    {
+        "drug_name": "temozolomide",
+        "date": "September 14, 2023",
+        "cancer_type": "new and updated indications under Project Renewal"
+    },
+    {
+        "drug_name": "melphalan",
+        "date": "August 14, 2023",
+        "cancer_type": "liver-directed treatment for uveal melanoma"
+    },
+    {
+        "drug_name": "elranatamab-bcmm",
+        "date": "August 14, 2023",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "niraparib and abiraterone acetate plus prednisone",
+        "date": "August 11, 2023",
+        "cancer_type": "BRCA-mutated metastatic castration-resistant prostate cancer"
+    },
+    {
+        "drug_name": "talquetamab-tgvs",
+        "date": "August 9, 2023",
+        "cancer_type": "relapsed or refractory multiple myeloma"
+    },
+    {
+        "drug_name": "pralsetinib",
+        "date": "August 9, 2023",
+        "cancer_type": "non-small cell lung cancer with RET gene fusions"
+    },
+    {
+        "drug_name": "trifluridine and tipiracil with bevacizumab",
+        "date": "August 2, 2023",
+        "cancer_type": "previously treated metastatic colorectal cancer"
+    },
+    {
+        "drug_name": "dostarlimab-gxly",
+        "date": "July 31, 2023",
+        "cancer_type": "endometrial cancer"
+    },
+    {
+        "drug_name": "quizartinib",
+        "date": "July 20, 2023",
+        "cancer_type": "newly diagnosed acute myeloid leukemia"
+    },
+    {
+        "drug_name": "talazoparib with enzalutamide",
+        "date": "June 20, 2023",
+        "cancer_type": "HRR gene-mutated metastatic castration-resistant prostate cancer"
+    },
+    {
+        "drug_name": "glofitamab-gxbm",
+        "date": "June 16, 2023",
+        "cancer_type": "selected relapsed or refractory large B-cell lymphomas"
+    },
+    {
+        "drug_name": "olaparib with abiraterone and prednisone (or prednisolone)",
+        "date": "May 31, 2023",
+        "cancer_type": "BRCA-mutated metastatic castration-resistant prostate cancer"
+    },
+    {
+        "drug_name": "epcoritamab-bysp",
+        "date": "May 19, 2023",
+        "cancer_type": "relapsed or refractory diffuse large B-cell lymphoma and high-grade B-cell lymphoma"
+    },
+    {
+        "drug_name": "polatuzumab vedotin-piiq",
+        "date": "April 19, 2023",
+        "cancer_type": "previously untreated diffuse large B-cell lymphoma, not otherwise specified, and high-grade B-cell lymphoma"
+    },
+    {
+        "drug_name": "omidubicel",
+        "date": "April 17, 2023",
+        "cancer_type": "reduction of time to neutrophil recovery and infection in patients with hematologic malignancies"
+    },
+    {
+        "drug_name": "enfortumab vedotin-ejfv with pembrolizumab",
+        "date": "April 3, 2023",
+        "cancer_type": "locally advanced or metastatic urothelial carcinoma"
+    },
+    {
+        "drug_name": "retifanlimab-dlwr",
+        "date": "March 22, 2023",
+        "cancer_type": "metastatic or recurrent locally advanced Merkel cell carcinoma"
+    },
+    {
+        "drug_name": "dabrafenib with trametinib",
+        "date": "March 16, 2023",
+        "cancer_type": "pediatric patients with low-grade glioma with a BRAF V600E mutation"
+    },
+    {
+        "drug_name": "abemaciclib",
+        "date": "March 3, 2023",
+        "cancer_type": "expanded early breast cancer indication with endocrine therapy"
+    },
+    {
+        "drug_name": "dostarlimab-gxly",
+        "date": "February 9, 2023",
+        "cancer_type": "dMMR endometrial cancer"
+    },
+    {
+        "drug_name": "sacituzumab govitecan-hziy",
+        "date": "February 3, 2023",
+        "cancer_type": "HR-positive breast cancer"
+    },
+    {
+        "drug_name": "elacestrant",
+        "date": "January 27, 2023",
+        "cancer_type": "ER-positive, HER2-negative, ESR1-mutated advanced or metastatic breast cancer"
+    },
+    {
+        "drug_name": "pirtobrutinib",
+        "date": "January 27, 2023",
+        "cancer_type": "relapsed or refractory mantle cell lymphoma"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "January 26, 2023",
+        "cancer_type": "adjuvant treatment for non-small cell lung cancer"
+    },
+    {
+        "drug_name": "zanubrutinib",
+        "date": "January 19, 2023",
+        "cancer_type": "chronic lymphocytic leukemia or small lymphocytic lymphoma"
+    },
+    {
+        "drug_name": "tucatinib with trastuzumab",
+        "date": "January 19, 2023",
+        "cancer_type": "colorectal cancer"
+    },
+    {
+        "drug_name": "mosunetuzumab-axgb",
+        "date": "December 23, 2022",
+        "cancer_type": "relapsed or refractory follicular lymphoma"
+    },
+    {
+        "drug_name": "adenoviral vector-based gene therapy",
+        "date": "December 16, 2022",
+        "cancer_type": "high-risk Bacillus Calmette-Guérin unresponsive non-muscle invasive bladder cancer"
+    },
+    {
+        "drug_name": "capecitabine tablets",
+        "date": "December 14, 2022",
+        "cancer_type": "updated drug labeling including new indications and dosing regimens under Project Renewal"
+    },
+    {
+        "drug_name": "adagrasib",
+        "date": "December 12, 2022",
+        "cancer_type": "KRAS G12C-mutated NSCLC"
+    },
+    {
+        "drug_name": "atezolizumab",
+        "date": "December 9, 2022",
+        "cancer_type": "alveolar soft part sarcoma"
+    },
+    {
+        "drug_name": "olutasidenib",
+        "date": "December 1, 2022",
+        "cancer_type": "relapsed or refractory acute myeloid leukemia with a susceptible IDH1 mutation"
+    },
+    {
+        "drug_name": "asparaginase erwinia chrysanthemi (recombinant)",
+        "date": "November 18, 2022",
+        "cancer_type": "new dosing regimen"
+    },
+    {
+        "drug_name": "mirvetuximab soravtansine-gynx",
+        "date": "November 14, 2022",
+        "cancer_type": "FRα positive, platinum-resistant epithelial ovarian, fallopian tube, or peritoneal cancer"
+    },
+    {
+        "drug_name": "tremelimumab with durvalumab and platinum-based chemotherapy",
+        "date": "November 10, 2022",
+        "cancer_type": "metastatic non-small cell lung cancer"
+    },
+    {
+        "drug_name": "brentuximab vedotin with chemotherapy",
+        "date": "November 10, 2022",
+        "cancer_type": "pediatric patients with classical Hodgkin lymphoma"
+    },
+    {
+        "drug_name": "cemiplimab-rwlc with platinum-based chemotherapy",
+        "date": "November 8, 2022",
+        "cancer_type": "non-small cell lung cancer"
+    },
+    {
+        "drug_name": "teclistamab-cqyv",
+        "date": "October 25, 2022",
+        "cancer_type": "relapsed or refractory multiple myeloma"
+    },
+    {
+        "drug_name": "tremelimumab with durvalumab",
+        "date": "October 21, 2022",
+        "cancer_type": "unresectable hepatocellular carcinoma"
+    },
+    {
+        "drug_name": "futibatinib",
+        "date": "September 30, 2022",
+        "cancer_type": "cholangiocarcinoma"
+    },
+    {
+        "drug_name": "selpercatinib",
+        "date": "September 21, 2022",
+        "cancer_type": "locally advanced or metastatic RET fusion-positive non-small cell lung cancer"
+    },
+    {
+        "drug_name": "selpercatinib",
+        "date": "September 21, 2022",
+        "cancer_type": "locally advanced or metastatic RET fusion-positive solid tumors"
+    },
+    {
+        "drug_name": "sodium thiosulfate",
+        "date": "September 20, 2022",
+        "cancer_type": "reduction of ototoxicity associated with cisplatin in pediatric patients with localized, non-metastatic solid tumors"
+    },
+    {
+        "drug_name": "durvalumab",
+        "date": "September 2, 2022",
+        "cancer_type": "locally advanced or metastatic biliary tract cancer"
+    },
+    {
+        "drug_name": "pemigatinib",
+        "date": "August 26, 2022",
+        "cancer_type": "relapsed or refractory myeloid/lymphoid neoplasms with FGFR1 rearrangement"
+    },
+    {
+        "drug_name": "ibrutinib",
+        "date": "August 24, 2022",
+        "cancer_type": "pediatric patients with chronic graft versus host disease, including a new oral suspension"
+    },
+    {
+        "drug_name": "fam-trastuzumab deruxtecan-nxki",
+        "date": "August 11, 2022",
+        "cancer_type": "HER2-mutant non-small cell lung cancer"
+    },
+    {
+        "drug_name": "capmatinib",
+        "date": "August 10, 2022",
+        "cancer_type": "metastatic non-small cell lung cancer"
+    },
+    {
+        "drug_name": "darolutamide tablets",
+        "date": "August 5, 2022",
+        "cancer_type": "metastatic hormone-sensitive prostate cancer"
+    },
+    {
+        "drug_name": "fam-trastuzumab deruxtecan-nxki",
+        "date": "August 5, 2022",
+        "cancer_type": "HER2-low breast cancer"
+    },
+    {
+        "drug_name": "crizotinib",
+        "date": "July 14, 2022",
+        "cancer_type": "ALK-positive inflammatory myofibroblastic tumor"
+    },
+    {
+        "drug_name": "lisocabtagene maraleucel",
+        "date": "June 24, 2022",
+        "cancer_type": "second-line treatment of large B-cell lymphoma"
+    },
+    {
+        "drug_name": "dabrafenib in combination with trametinib",
+        "date": "June 22, 2022",
+        "cancer_type": "unresectable or metastatic solid tumors with BRAF V600E mutation"
+    },
+    {
+        "drug_name": "tisagenlecleucel",
+        "date": "May 27, 2022",
+        "cancer_type": "relapsed or refractory follicular lymphoma"
+    },
+    {
+        "drug_name": "Opdivo in combination with chemotherapy and Opdivo in combination with Yervoy",
+        "date": "May 27, 2022",
+        "cancer_type": "first-line esophageal squamous cell carcinoma indications"
+    },
+    {
+        "drug_name": "ivosidenib in combination with azacitidine",
+        "date": "May 25, 2022",
+        "cancer_type": "newly diagnosed acute myeloid leukemia"
+    },
+    {
+        "drug_name": "azacitidine",
+        "date": "May 20, 2022",
+        "cancer_type": "newly diagnosed juvenile myelomonocytic leukemia"
+    },
+    {
+        "drug_name": "fam-trastuzumab deruxtecan-nxki",
+        "date": "May 4, 2022",
+        "cancer_type": "breast cancer"
+    },
+    {
+        "drug_name": "alpelisib",
+        "date": "April 6, 2022",
+        "cancer_type": "PIK3CA-related overgrowth spectrum"
+    },
+    {
+        "drug_name": "axicabtagene ciloleucel",
+        "date": "April 1, 2022",
+        "cancer_type": "second-line treatment of large B-cell lymphoma"
+    },
+    {
+        "drug_name": "Pluvicto",
+        "date": "March 23, 2022",
+        "cancer_type": "metastatic castration-resistant prostate cancer"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "March 21, 2022",
+        "cancer_type": "advanced endometrial carcinoma"
+    },
+    {
+        "drug_name": "Opdualag",
+        "date": "March 18, 2022",
+        "cancer_type": "unresectable or metastatic melanoma"
+    },
+    {
+        "drug_name": "olaparib",
+        "date": "March 11, 2022",
+        "cancer_type": "adjuvant treatment of high-risk early breast cancer"
+    },
+    {
+        "drug_name": "nivolumab and platinum-doublet chemotherapy",
+        "date": "March 4, 2022",
+        "cancer_type": "early-stage non-small cell lung cancer"
+    },
+    {
+        "drug_name": "ciltacabtagene autoleucel",
+        "date": "February 28, 2022",
+        "cancer_type": "relapsed or refractory multiple myeloma"
+    },
+    {
+        "drug_name": "tebentafusp-tebn",
+        "date": "January 25, 2022",
+        "cancer_type": "unresectable or metastatic uveal melanoma"
+    },
+    {
+        "drug_name": "lisocabtagene maraleucel",
+        "date": "February 5, 2021",
+        "cancer_type": "relapsed or refractory large B-cell lymphoma"
+    },
+    {
+        "drug_name": "umbralisib",
+        "date": "February 5, 2021",
+        "cancer_type": "marginal zone lymphoma and follicular lymphoma"
+    },
+    {
+        "drug_name": "tepotinib",
+        "date": "February 3, 2021",
+        "cancer_type": "metastatic non-small cell lung cancer"
+    },
+    {
+        "drug_name": "nivolumab plus cabozantinib",
+        "date": "January 22, 2021",
+        "cancer_type": "advanced renal cell carcinoma"
+    },
+    {
+        "drug_name": "Darzalex Faspro",
+        "date": "January 15, 2021",
+        "cancer_type": "newly diagnosed light chain amyloidosis"
+    },
+    {
+        "drug_name": "fam-trastuzumab deruxtecan-nxki",
+        "date": "January 15, 2021",
+        "cancer_type": "HER2-positive gastric adenocarcinomas"
+    },
+    {
+        "drug_name": "crizotinib",
+        "date": "January 14, 2021",
+        "cancer_type": "children and young adults with relapsed or refractory, systemic anaplastic large cell lymphoma"
+    },
+    {
+        "drug_name": "osimertinib",
+        "date": "December 18, 2020",
+        "cancer_type": "adjuvant therapy for non-small cell lung cancer with EGFR mutations"
+    },
+    {
+        "drug_name": "relugolix",
+        "date": "December 18, 2020",
+        "cancer_type": "advanced prostate cancer"
+    },
+    {
+        "drug_name": "selinexor",
+        "date": "December 18, 2020",
+        "cancer_type": "refractory or relapsed multiple myeloma"
+    },
+    {
+        "drug_name": "margetuximab",
+        "date": "December 16, 2020",
+        "cancer_type": "metastatic HER2-positive breast cancer"
+    },
+    {
+        "drug_name": "pralsetinib",
+        "date": "December 1, 2020",
+        "cancer_type": "RET-altered thyroid cancers"
+    },
+    {
+        "drug_name": "naxitamab",
+        "date": "November 25, 2020",
+        "cancer_type": "high-risk neuroblastoma in bone or bone marrow"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "November 13, 2020",
+        "cancer_type": "locally recurrent unresectable or metastatic triple negative breast cancer"
+    },
+    {
+        "drug_name": "liquid biopsy NGS companion diagnostic test",
+        "date": "October 26, 2020",
+        "cancer_type": "multiple cancers and biomarkers"
+    },
+    {
+        "drug_name": "Companion Diagnostic to identify NTRK fusions",
+        "date": "October 26, 2020",
+        "cancer_type": "solid tumors for Vitrakvi"
+    },
+    {
+        "drug_name": "venetoclax in combination",
+        "date": "October 16, 2020",
+        "cancer_type": "untreated acute myeloid leukemia"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "October 14, 2020",
+        "cancer_type": "classical Hodgkin lymphoma"
+    },
+    {
+        "drug_name": "nivolumab and ipilimumab",
+        "date": "October 2, 2020",
+        "cancer_type": "unresectable malignant pleural mesothelioma"
+    },
+    {
+        "drug_name": "atezolizumab",
+        "date": "September 8, 2020",
+        "cancer_type": "combination with paclitaxel for treatment of breast cancer"
+    },
+    {
+        "drug_name": "pralsetinib",
+        "date": "September 4, 2020",
+        "cancer_type": "lung cancer with RET gene fusions"
+    },
+    {
+        "drug_name": "Onureg (azacitidine tablets)",
+        "date": "September 1, 2020",
+        "cancer_type": "acute myeloid leukemia"
+    },
+    {
+        "drug_name": "Liquid Biopsy Next-Generation Sequencing Companion Diagnostic Test",
+        "date": "August 26, 2020",
+        "cancer_type": "multiple cancers and biomarkers"
+    },
+    {
+        "drug_name": "carfilzomib and daratumumab with dexamethasone",
+        "date": "August 20, 2020",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "belantamab mafodotin-blmf",
+        "date": "August 5, 2020",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "tafasitamab-cxix",
+        "date": "July 31, 2020",
+        "cancer_type": "diffuse large B-cell lymphoma"
+    },
+    {
+        "drug_name": "atezolizumab",
+        "date": "July 30, 2020",
+        "cancer_type": "BRAF V600 unresectable or metastatic melanoma"
+    },
+    {
+        "drug_name": "brexucabtagene autoleucel",
+        "date": "July 24, 2020",
+        "cancer_type": "relapsed or refractory mantle cell lymphoma"
+    },
+    {
+        "drug_name": "oral combination of decitabine and cedazuridine",
+        "date": "July 7, 2020",
+        "cancer_type": "myelodysplastic syndromes"
+    },
+    {
+        "drug_name": "avelumab",
+        "date": "June 30, 2020",
+        "cancer_type": "urothelial carcinoma maintenance treatment"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "June 29, 2020",
+        "cancer_type": "first-line treatment of MSI-H/dMMR colorectal cancer"
+    },
+    {
+        "drug_name": "combination of pertuzumab, trastuzumab, and hyaluronidase-zzxf",
+        "date": "June 29, 2020",
+        "cancer_type": "HER2-positive breast cancer"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "June 24, 2020",
+        "cancer_type": "cutaneous squamous cell carcinoma"
+    },
+    {
+        "drug_name": "selinexor",
+        "date": "June 22, 2020",
+        "cancer_type": "relapsed/refractory diffuse large B-cell lymphoma"
+    },
+    {
+        "drug_name": "tazemetostat",
+        "date": "June 18, 2020",
+        "cancer_type": "follicular lymphoma"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "June 16, 2020",
+        "cancer_type": "adults and children with TMB-H solid tumors"
+    },
+    {
+        "drug_name": "gemtuzumab ozogamicin",
+        "date": "June 16, 2020",
+        "cancer_type": "CD33-positive AML in pediatric patients"
+    },
+    {
+        "drug_name": "lurbinectedin",
+        "date": "June 15, 2020",
+        "cancer_type": "metastatic small cell lung cancer"
+    },
+    {
+        "drug_name": "nivolumab",
+        "date": "June 10, 2020",
+        "cancer_type": "esophageal squamous cell carcinoma"
+    },
+    {
+        "drug_name": "ramucirumab plus erlotinib",
+        "date": "May 29, 2020",
+        "cancer_type": "first-line metastatic NSCLC"
+    },
+    {
+        "drug_name": "atezolizumab plus bevacizumab",
+        "date": "May 29, 2020",
+        "cancer_type": "unresectable hepatocellular carcinoma"
+    },
+    {
+        "drug_name": "nivolumab plus ipilimumab and chemotherapy",
+        "date": "May 26, 2020",
+        "cancer_type": "first-line treatment of metastatic NSCLC"
+    },
+    {
+        "drug_name": "brigatinib",
+        "date": "May 22, 2020",
+        "cancer_type": "ALK-positive metastatic NSCLC"
+    },
+    {
+        "drug_name": "olaparib",
+        "date": "May 19, 2020",
+        "cancer_type": "HRR gene-mutated metastatic castration-resistant prostate cancer"
+    },
+    {
+        "drug_name": "atezolizumab",
+        "date": "May 18, 2020",
+        "cancer_type": "first-line treatment of metastatic NSCLC with high PD-L1 expression"
+    },
+    {
+        "drug_name": "ripretinib",
+        "date": "May 15, 2020",
+        "cancer_type": "advanced gastrointestinal stromal tumor"
+    },
+    {
+        "drug_name": "rucaparib",
+        "date": "May 15, 2020",
+        "cancer_type": "BRCA-mutated metastatic castration-resistant prostate cancer"
+    },
+    {
+        "drug_name": "nivolumab",
+        "date": "May 15, 2020",
+        "cancer_type": "esophageal squamous cell carcinoma"
+    },
+    {
+        "drug_name": "pomalidomide",
+        "date": "May 14, 2020",
+        "cancer_type": "Kaposi sarcoma"
+    },
+    {
+        "drug_name": "olaparib plus bevacizumab",
+        "date": "May 8, 2020",
+        "cancer_type": "maintenance treatment for ovarian, fallopian tube, or primary peritoneal cancers"
+    },
+    {
+        "drug_name": "selpercatinib",
+        "date": "May 8, 2020",
+        "cancer_type": "lung and thyroid cancers with RET gene mutations or fusions"
+    },
+    {
+        "drug_name": "capmatinib",
+        "date": "May 6, 2020",
+        "cancer_type": "metastatic non-small cell lung cancer"
+    },
+    {
+        "drug_name": "daratumumab and hyaluronidase-fihj",
+        "date": "May 1, 2020",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "niraparib",
+        "date": "April 29, 2020",
+        "cancer_type": "first-line maintenance of advanced ovarian cancer"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "April 28, 2020",
+        "cancer_type": "new dosing regimen"
+    },
+    {
+        "drug_name": "sacituzumab govitecan-hziy",
+        "date": "April 22, 2020",
+        "cancer_type": "metastatic triple negative breast cancer"
+    },
+    {
+        "drug_name": "ibrutinib plus rituximab",
+        "date": "April 21, 2020",
+        "cancer_type": "chronic lymphocytic leukemia"
+    },
+    {
+        "drug_name": "pemigatinib",
+        "date": "April 20, 2020",
+        "cancer_type": "cholangiocarcinoma with an FGFR2 rearrangement or fusion"
+    },
+    {
+        "drug_name": "tucatinib",
+        "date": "April 17, 2020",
+        "cancer_type": "HER2-positive metastatic breast cancer"
+    },
+    {
+        "drug_name": "mitomycin",
+        "date": "April 15, 2020",
+        "cancer_type": "low-grade upper tract urothelial cancer"
+    },
+    {
+        "drug_name": "selumetinib",
+        "date": "April 10, 2020",
+        "cancer_type": "neurofibromatosis type 1 with symptomatic, inoperable plexiform neurofibromas"
+    },
+    {
+        "drug_name": "encorafenib in combination with cetuximab",
+        "date": "April 8, 2020",
+        "cancer_type": "metastatic colorectal cancer with a BRAF V600E mutation"
+    },
+    {
+        "drug_name": "luspatercept-aamt",
+        "date": "April 3, 2020",
+        "cancer_type": "anemia in adults with MDS"
+    },
+    {
+        "drug_name": "durvalumab",
+        "date": "March 30, 2020",
+        "cancer_type": "extensive-stage small cell lung cancer"
+    },
+    {
+        "drug_name": "nivolumab and ipilimumab",
+        "date": "March 10, 2020",
+        "cancer_type": "hepatocellular carcinoma"
+    },
+    {
+        "drug_name": "isatuximab-irfc",
+        "date": "March 2, 2020",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "neratinib",
+        "date": "February 25, 2020",
+        "cancer_type": "metastatic HER2-positive breast cancer"
+    },
+    {
+        "drug_name": "tazemetostat",
+        "date": "January 23, 2020",
+        "cancer_type": "advanced epithelioid sarcoma"
+    },
+    {
+        "drug_name": "avapritinib",
+        "date": "January 9, 2020",
+        "cancer_type": "gastrointestinal stromal tumor with a rare mutation"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "January 8, 2020",
+        "cancer_type": "BCG-unresponsive, high-risk non-muscle invasive bladder cancer"
+    },
+    {
+        "drug_name": "nilotinib (Tasigna, Novartis Pharmaceuticals Corp.)",
+        "date": "December 22, 2017",
+        "cancer_type": "Philadelphia chromosome positive (Ph+) chronic myeloid leukemia (CML)"
+    },
+    {
+        "drug_name": "hydroxyurea (Siklos, Addmedica)",
+        "date": "December 21, 2017",
+        "cancer_type": "sickle cell anemia with recurrent moderate to severe painful crises in pediatric patients from 2 years of age and older"
+    },
+    {
+        "drug_name": "pertuzumab (PERJETA, Genentech, Inc.)",
+        "date": "December 20, 2017",
+        "cancer_type": "HER2-positive early breast cancer at high risk of recurrence"
+    },
+    {
+        "drug_name": "nivolumab (OPDIVO, Bristol-Myers Squibb Company)",
+        "date": "December 20, 2017",
+        "cancer_type": "melanoma with involvement of lymph nodes or metastatic disease who have undergone complete resection"
+    },
+    {
+        "drug_name": "bosutinib (BOSULIF, Pfizer Inc.)",
+        "date": "December 19, 2017",
+        "cancer_type": "newly-diagnosed chronic phase (CP) Philadelphia chromosome positive (Ph+) chronic myelogenous leukemia (CML)"
+    },
+    {
+        "drug_name": "cabozantinib (Cabometyx, Exelixis, Inc.)",
+        "date": "December 19, 2017",
+        "cancer_type": "advanced renal cell carcinoma (RCC)"
+    },
+    {
+        "drug_name": "Ogivri (trastuzumab-dkst, Mylan)",
+        "date": "December 1, 2017",
+        "cancer_type": "HER2-overexpressing breast or metastatic stomach cancer (gastric or gastroesophageal junction adenocarcinoma)"
+    },
+    {
+        "drug_name": "FoundationOne CDx (F1CDx, Foundation Medicine, Inc.)",
+        "date": "November 30, 2017",
+        "cancer_type": "detect genetic mutations in 324 genes and two genomic signatures in any solid tumor type"
+    },
+    {
+        "drug_name": "sunitinib malate (Sutent, Pfizer Inc.)",
+        "date": "November 16, 2017",
+        "cancer_type": "adjuvant treatment of adult patients at high risk of recurrent renal cell carcinoma following nephrectomy"
+    },
+    {
+        "drug_name": "obinutuzumab (GAZYVA, Genentech, Inc.)",
+        "date": "November 16, 2017",
+        "cancer_type": "previously untreated stage II bulky, III, or IV follicular lymphoma (FL)"
+    },
+    {
+        "drug_name": "emicizumab-kxwh (HEMLIBRA, Genentech, Inc.)",
+        "date": "November 16, 2017",
+        "cancer_type": "routine prophylaxis to prevent or reduce the frequency of bleeding episodes in adult and pediatric patients with hemophilia A (congenital factor VIII deficiency) with factor VIII inhibitors"
+    },
+    {
+        "drug_name": "dasatinib (SPRYCEL, Bristol-Myers Squibb Co.)",
+        "date": "November 9, 2017",
+        "cancer_type": "treatment of pediatric patients with Philadelphia chromosome-positive (Ph+) chronic myeloid leukemia (CML) in the chronic phase"
+    },
+    {
+        "drug_name": "brentuximab vedotin (ADCETRIS, Seattle Genetics, Inc.)",
+        "date": "November 9, 2017",
+        "cancer_type": "treatment of adult patients with primary cutaneous anaplastic large cell lymphoma (pcALCL) or CD30-expressing mycosis fungoides (MF) who have received prior systemic therapy"
+    },
+    {
+        "drug_name": "alectinib (ALECENSA, Hoffmann-La Roche, Inc./Genentech, Inc.)",
+        "date": "November 6, 2017",
+        "cancer_type": "treatment of patients with anaplastic lymphoma kinase (ALK)-positive metastatic non-small cell lung cancer (NSCLC), as detected by an FDA-approved test"
+    },
+    {
+        "drug_name": "vemurafenib (ZELBORAF, Hoffmann-La Roche Inc.)",
+        "date": "November 6, 2017",
+        "cancer_type": "treatment of patients with Erdheim-Chester Disease (ECD) with BRAF V600 mutation"
+    },
+    {
+        "drug_name": "acalabrutinib (Calquence, AstraZeneca Pharmaceuticals Inc. under license of Acerta Pharma BV)",
+        "date": "October 31, 2017",
+        "cancer_type": "treatment of adult patients with mantle cell lymphoma (MCL) who have received at least one prior therapy"
+    },
+    {
+        "drug_name": "axicabtagene ciloleucel (YESCARTA, Kite Pharma, Inc.)",
+        "date": "October 18, 2017",
+        "cancer_type": "treatment of adult patients with relapsed or refractory large B-cell lymphoma after two or more lines of systemic therapy, including diffuse large B-cell lymphoma (DLBCL) not otherwise specified, primary mediastinal large B-cell lymphoma, high-grade B-cell lymphoma, and DLBCL arising from follicular lymphoma"
+    },
+    {
+        "drug_name": "abemaciclib (VERZENIO, Eli Lilly and Company)",
+        "date": "September 28, 2017",
+        "cancer_type": "in combination with fulvestrant for women with HR-positive, HER2-negative advanced or metastatic breast cancer with disease progression following endocrine therapy"
+    },
+    {
+        "drug_name": "nivolumab (OPDIVO, Bristol-Myers Squibb Co.)",
+        "date": "September 22, 2017",
+        "cancer_type": "treatment of hepatocellular carcinoma (HCC) in patients who have been previously treated with sorafenib"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck & Co., Inc.)",
+        "date": "September 22, 2017",
+        "cancer_type": "patients with recurrent locally advanced or metastatic, gastric or gastroesophageal junction adenocarcinoma whose tumors express PD-L1 as determined by an FDA-approved test"
+    },
+    {
+        "drug_name": "cabazitaxel (JEVTANA, Sanofi-Aventis)",
+        "date": "September 14, 2017",
+        "cancer_type": "metastatic castration-resistant prostate cancer previously treated with a docetaxel-containing treatment regimen"
+    },
+    {
+        "drug_name": "copanlisib (ALIQOPA, Bayer HealthCare Pharmaceuticals Inc.)",
+        "date": "September 14, 2017",
+        "cancer_type": "treatment of adult patients with relapsed follicular lymphoma who have received at least two prior systemic therapies"
+    },
+    {
+        "drug_name": "Mvasi (bevacizumab-awwb, Amgen Inc.)",
+        "date": "September 14, 2017",
+        "cancer_type": "first biosimilar approved in the U.S. for the treatment of cancer"
+    },
+    {
+        "drug_name": "gemtuzumab ozogamicin (Mylotarg, Pfizer Inc.)",
+        "date": "September 1, 2017",
+        "cancer_type": "treatment of newly-diagnosed CD33-positive acute myeloid leukemia (AML) in adults and for treatment of relapsed or refractory CD33-positive AML in adults and in pediatric patients 2 years and older"
+    },
+    {
+        "drug_name": "tisagenlecleucel (KYMRIAH, Novartis Pharmaceuticals Corp.)",
+        "date": "August 30, 2017",
+        "cancer_type": "treatment of patients up to age 25 years with B-cell precursor acute lymphoblastic leukemia (ALL) that is refractory or in second or later relapse"
+    },
+    {
+        "drug_name": "olaparib tablets (Lynparza, AstraZeneca)",
+        "date": "August 17, 2017",
+        "cancer_type": "maintenance treatment of adult patients with recurrent epithelial ovarian, fallopian tube, or primary peritoneal cancer, who are in a complete or partial response to platinum-based chemotherapy"
+    },
+    {
+        "drug_name": "inotuzumab ozogamicin (BESPONSA, Wyeth Pharmaceuticals Inc., a subsidiary of Pfizer Inc.)",
+        "date": "August 17, 2017",
+        "cancer_type": "treatment of adults with relapsed or refractory B-cell precursor acute lymphoblastic leukemia (ALL)"
+    },
+    {
+        "drug_name": "a liposome-encapsulated combination of daunorubicin and cytarabine (VYXEOS, Jazz Pharmaceuticals, Inc.)",
+        "date": "August 3, 2017",
+        "cancer_type": "treatment of adults with newly-diagnosed therapy-related AML (t-AML) or AML with myelodysplasia-related changes (AML-MRC)"
+    },
+    {
+        "drug_name": "nivolumab (OPDIVO, Bristol-Myers Squibb Co.)",
+        "date": "August 2, 2017",
+        "cancer_type": "patients with mismatch repair deficient (dMMR) and microsatellite instability high (MSI-H) metastatic colorectal cancer that has progressed following treatment with a fluoropyrimidine, oxaliplatin, and irinotecan"
+    },
+    {
+        "drug_name": "enasidenib (IDHIFA, Celgene Corp.)",
+        "date": "August 1, 2017",
+        "cancer_type": "treatment of adult patients with relapsed or refractory acute myeloid leukemia (AML) with an isocitrate dehydrogenase-2 (IDH2) mutation"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck & Co., Inc.)",
+        "date": "May 23, 2017",
+        "cancer_type": "patients whose cancers have a specific genetic feature (biomarker); the first time the FDA has approved a cancer treatment based on a common biomarker rather than the location in the body where the tumor originated"
+    },
+    {
+        "drug_name": "tagraxofusp-erzs (ELZONRIS, Stemline Therapeutics)",
+        "date": "December 21, 2018",
+        "cancer_type": "blastic plasmacytoid dendritic cell neoplasm (BPDCN) in adults and in pediatric patients 2 years and older"
+    },
+    {
+        "drug_name": "ravulizumab-cwvz (ULTOMIRIS, Alexion Pharmaceuticals, Inc.)",
+        "date": "December 21, 2018",
+        "cancer_type": "paroxysmal nocturnal hemoglobinuria (PNH)"
+    },
+    {
+        "drug_name": "calaspargase pegol-mknl (ASPARLAS, Servier Pharmaceuticals LLC)",
+        "date": "December 20, 2018",
+        "cancer_type": "acute lymphoblastic leukemia (ALL) in pediatric and young adult patients age 1 month to 21 years"
+    },
+    {
+        "drug_name": "olaparib (LYNPARZA, AstraZeneca Pharmaceuticals LP)",
+        "date": "December 19, 2018",
+        "cancer_type": "maintenance treatment of adult patients with deleterious or suspected deleterious germline or somatic BRCA-mutated (gBRCAm or sBRCAm) advanced epithelial ovarian, fallopian tube or primary peritoneal cancer"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck & Co. Inc.)",
+        "date": "December 19, 2018",
+        "cancer_type": "recurrent locally advanced or metastatic Merkel cell carcinoma (MCC)"
+    },
+    {
+        "drug_name": "Herzuma (trastuzumab-pkrb, Celltrion Inc.)",
+        "date": "December 14, 2018",
+        "cancer_type": "HER2-overexpressing breast cancer"
+    },
+    {
+        "drug_name": "romiplostim (NPLATE, Amgen Inc.)",
+        "date": "December 14, 2018",
+        "cancer_type": "immune thrombocytopenia (ITP) for pediatric patients 1 year of age and older"
+    },
+    {
+        "drug_name": "atezolizumab (TECENTRIQ, Genentech, Inc.)",
+        "date": "December 6, 2018",
+        "cancer_type": "metastatic non-squamous, non-small cell lung cancer (NSq NSCLC) with no EGFR or ALK genomic tumor aberrations"
+    },
+    {
+        "drug_name": "gilteritinib (XOSPATA, Astellas Pharma US Inc.)",
+        "date": "November 28, 2018",
+        "cancer_type": "relapsed or refractory acute myeloid leukemia (AML) with a FLT3 mutation"
+    },
+    {
+        "drug_name": "Truxima (rituximab-abbs, Celltrion Inc.)",
+        "date": "November 28, 2018",
+        "cancer_type": "CD20-positive, B-cell non-Hodgkin’s lymphoma (NHL)"
+    },
+    {
+        "drug_name": "larotrectinib (VITRAKVI, Loxo Oncology Inc. and Bayer)",
+        "date": "November 26, 2018",
+        "cancer_type": "solid tumors that have a neurotrophic receptor tyrosine kinase (NTRK) gene fusion"
+    },
+    {
+        "drug_name": "venetoclax (VENCLEXTA, AbbVie Inc. and Genentech Inc.)",
+        "date": "November 21, 2018",
+        "cancer_type": "newly-diagnosed acute myeloid leukemia (AML) in adults"
+    },
+    {
+        "drug_name": "glasdegib (DAURISMO, Pfizer Labs)",
+        "date": "November 21, 2018",
+        "cancer_type": "newly-diagnosed acute myeloid leukemia (AML)"
+    },
+    {
+        "drug_name": "emapalumab (GAMIFANT, Novimmune SA)",
+        "date": "November 20, 2018",
+        "cancer_type": "primary hemophagocytic lymphohistiocytosis (HLH)"
+    },
+    {
+        "drug_name": "brentuximab vedotin (ADCETRIS, Seattle Genetics Inc.)",
+        "date": "November 16, 2018",
+        "cancer_type": "previously untreated systemic anaplastic large cell lymphoma or other CD30-expressing peripheral T-cell lymphomas"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck & Co., Inc.)",
+        "date": "November 9, 2018",
+        "cancer_type": "hepatocellular carcinoma (HCC)"
+    },
+    {
+        "drug_name": "lorlatinib (LORBRENA, Pfizer, Inc.)",
+        "date": "November 2, 2018",
+        "cancer_type": "anaplastic lymphoma kinase (ALK)-positive metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck & Co. Inc.)",
+        "date": "October 30, 2018",
+        "cancer_type": "metastatic squamous non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "talazoparib (TALZENNA, Pfizer Inc.)",
+        "date": "October 16, 2018",
+        "cancer_type": "deleterious or suspected deleterious germline BRCA-mutated (gBRCAm), HER2 negative locally advanced or metastatic breast cancer"
+    },
+    {
+        "drug_name": "emicizumab-kxwh injection (HEMLIBRA, Genentech, Inc.)",
+        "date": "October 4, 2018",
+        "cancer_type": "hemophilia A (congenital factor VIII deficiency) with or without factor VIII (FVIII) inhibitors"
+    },
+    {
+        "drug_name": "cemiplimab-rwlc (LIBTAYO, Regeneron Pharmaceuticals Inc.)",
+        "date": "September 28, 2018",
+        "cancer_type": "metastatic cutaneous squamous cell carcinoma (CSCC) or locally advanced CSCC"
+    },
+    {
+        "drug_name": "dacomitinib tablets (VIZIMPRO, Pfizer Pharmaceutical Company)",
+        "date": "September 27, 2018",
+        "cancer_type": "metastatic non-small cell lung cancer (NSCLC) with epidermal growth factor receptor (EGFR) exon 19 deletion or exon 21 L858R substitution mutations"
+    },
+    {
+        "drug_name": "duvelisib (COPIKTRA, Verastem, Inc.)",
+        "date": "September 24, 2018",
+        "cancer_type": "relapsed or refractory chronic lymphocytic leukemia (CLL) or small lymphocytic lymphoma (SLL)"
+    },
+    {
+        "drug_name": "moxetumomab pasudotox-tdfk (LUMOXITI, AstraZeneca Pharmaceuticals LP)",
+        "date": "September 13, 2018",
+        "cancer_type": "relapsed or refractory hairy cell leukemia (HCL)"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck & Co., Inc.)",
+        "date": "August 20, 2018",
+        "cancer_type": "metastatic, non-squamous non-small cell lung cancer (NSqNSCLC)"
+    },
+    {
+        "drug_name": "nivolumab (Opdivo, Bristol-Myers Squibb Company Inc.)",
+        "date": "August 16, 2018",
+        "cancer_type": "metastatic small cell lung cancer (SCLC)"
+    },
+    {
+        "drug_name": "lenvatinib capsules (Lenvima, Eisai Inc.)",
+        "date": "August 16, 2018",
+        "cancer_type": "unresectable hepatocellular carcinoma (HCC)"
+    },
+    {
+        "drug_name": "mogamulizumab-kpkc (Poteligeo, Kyowa Kirin, Inc.)",
+        "date": "August 8, 2018",
+        "cancer_type": "relapsed or refractory mycosis fungoides (MF) or Sézary syndrome (SS)"
+    },
+    {
+        "drug_name": "lusutrombopag (Mulpleta, Shionogi Inc.)",
+        "date": "July 31, 2018",
+        "cancer_type": "thrombocytopenia in adults with chronic liver disease"
+    },
+    {
+        "drug_name": "iobenguane I 131 (AZEDRA, Progenics Pharmaceuticals, Inc.)",
+        "date": "July 30, 2018",
+        "cancer_type": "unresectable, locally advanced or metastatic pheochromocytoma or paraganglioma (PPGL)"
+    },
+    {
+        "drug_name": "ivosidenib (Tibsovo, Agios Pharmaceuticals, Inc.)",
+        "date": "July 20, 2018",
+        "cancer_type": "relapsed or refractory acute myeloid leukemia (AML) with a susceptible isocitrate dehydrogenase-1 (IDH1) mutation"
+    },
+    {
+        "drug_name": "encorafenib and binimetinib (Braftovi and Mektovi, Array BioPharma, Inc.)",
+        "date": "June 27, 2018",
+        "cancer_type": "unresectable or metastatic melanoma with a BRAF V600E or V600K mutation"
+    },
+    {
+        "drug_name": "apalutamide (Erleada, Janssen Biotech, Inc.)",
+        "date": "February 14, 2018",
+        "cancer_type": "non-metastatic, castration-resistant prostate cancer (CRPC)"
+    },
+    {
+        "drug_name": "olaparib (LYNPARZA, AstraZeneca Pharmaceuticals LP)",
+        "date": "December 27, 2019",
+        "cancer_type": "maintenance treatment of adult patients with deleterious or suspected deleterious germline BRCA-mutated (gBRCAm) metastatic pancreatic adenocarcinoma"
+    },
+    {
+        "drug_name": "fam-trastuzumab deruxtecan-nxki (ENHERTU, Daiichi Sankyo)",
+        "date": "December 20, 2019",
+        "cancer_type": "unresectable or metastatic HER2-positive breast cancer"
+    },
+    {
+        "drug_name": "enfortumab vedotin-ejfv (PADCEV, Astellas Pharma US, Inc.)",
+        "date": "December 18, 2019",
+        "cancer_type": "locally advanced or metastatic urothelial cancer"
+    },
+    {
+        "drug_name": "enzalutamide (XTANDI, Astellas Pharma Inc.)",
+        "date": "December 16, 2019",
+        "cancer_type": "metastatic castration-sensitive prostate cancer (mCSPC)"
+    },
+    {
+        "drug_name": "atezolizumab (TECENTRIQ, Genentech Inc.)",
+        "date": "December 3, 2019",
+        "cancer_type": "metastatic non-squamous non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "voxelotor (Oxbryta, Global Blood Therapeutics)",
+        "date": "November 25, 2019",
+        "cancer_type": "sickle cell disease"
+    },
+    {
+        "drug_name": "acalabrutinib (CALQUENCE, AstraZeneca)",
+        "date": "November 21, 2019",
+        "cancer_type": "chronic lymphocytic leukemia (CLL) or small lymphocytic lymphoma (SLL)"
+    },
+    {
+        "drug_name": "givosiran (GIVLAARI, Alnylam Pharmaceuticals, Inc.)",
+        "date": "November 20, 2019",
+        "cancer_type": "acute hepatic porphyria (AHP)"
+    },
+    {
+        "drug_name": "crizanlizumab-tmca (ADAKVEO, Novartis)",
+        "date": "November 15, 2019",
+        "cancer_type": "reduce the frequency of vaso-occlusive crises (VOCs) in sickle cell disease"
+    },
+    {
+        "drug_name": "zanubrutinib (BRUKINSA, BeiGene, Ltd.)",
+        "date": "November 14, 2019",
+        "cancer_type": "mantle cell lymphoma (MCL)"
+    },
+    {
+        "drug_name": "luspatercept-aamt (REBLOZYL, Celgene Corp.)",
+        "date": "November 8, 2019",
+        "cancer_type": "treatment of anemia in beta thalassemia"
+    },
+    {
+        "drug_name": "niraparib (ZEJULA, Tesaro, Inc.)",
+        "date": "October 23, 2019",
+        "cancer_type": "advanced ovarian, fallopian tube, or primary peritoneal cancer"
+    },
+    {
+        "drug_name": "daratumumab (DARZALEX, Janssen)",
+        "date": "September 26, 2019",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "apalutamide (ERLEADA, Janssen Biotech, Inc)",
+        "date": "September 17, 2019",
+        "cancer_type": "metastatic castration-sensitive prostate cancer (mCSPC)"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck) plus lenvatinib (LENVIMA, Eisai)",
+        "date": "September 17, 2019",
+        "cancer_type": "advanced endometrial carcinoma"
+    },
+    {
+        "drug_name": "fedratinib (INREBIC, Impact Biomedicines, Inc.)",
+        "date": "August 16, 2019",
+        "cancer_type": "primary or secondary myelofibrosis (MF)"
+    },
+    {
+        "drug_name": "entrectinib (ROZLYTREK, Genentech Inc.)",
+        "date": "August 15, 2019",
+        "cancer_type": "solid tumors with NTRK gene fusion"
+    },
+    {
+        "drug_name": "pexidartinib",
+        "date": "August 2, 2019",
+        "cancer_type": "tenosynovial giant cell tumor"
+    },
+    {
+        "drug_name": "pembrolizumab",
+        "date": "July 30, 2019",
+        "cancer_type": "advanced esophageal squamous cell cancer"
+    },
+    {
+        "drug_name": "darolutamide (NUBEQA, Bayer HealthCare Pharmaceuticals Inc.)",
+        "date": "July 30, 2019",
+        "cancer_type": "non-metastatic castration-resistant prostate cancer"
+    },
+    {
+        "drug_name": "selinexor (XPOVIO, Karyopharm Therapeutics)",
+        "date": "July 3, 2019",
+        "cancer_type": "relapsed or refractory multiple myeloma (RRMM)"
+    },
+    {
+        "drug_name": "daratumumab (DARZALEX, Janssen Biotech, Inc.)",
+        "date": "June 27, 2019",
+        "cancer_type": "newly diagnosed multiple myeloma"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck)",
+        "date": "June 17, 2019",
+        "cancer_type": "metastatic small cell lung cancer (SCLC)"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck)",
+        "date": "June 10, 2019",
+        "cancer_type": "metastatic or unresectable recurrent head and neck squamous cell carcinoma (HNSCC)"
+    },
+    {
+        "drug_name": "polatuzumab vedotin-piiq (POLIVY, Genentech, Inc.)",
+        "date": "June 10, 2019",
+        "cancer_type": "relapsed or refractory diffuse large B-cell lymphoma (DLBCL)"
+    },
+    {
+        "drug_name": "gilteritinib (XOSPATA, Astellas Pharma US, Inc.)",
+        "date": "May 29, 2019",
+        "cancer_type": "relapsed or refractory acute myeloid leukemia (AML) with a FLT3 mutation"
+    },
+    {
+        "drug_name": "lenalidomide (REVLIMID, Celgene Corp.)",
+        "date": "May 28, 2019",
+        "cancer_type": "previously treated follicular lymphoma (FL) and previously treated marginal zone lymphoma (MZL)"
+    },
+    {
+        "drug_name": "alpelisib (PIQRAY, Novartis Pharmaceuticals Corporation)",
+        "date": "May 24, 2019",
+        "cancer_type": "hormone receptor (HR)-positive, human epidermal growth factor receptor 2 (HER2)-negative, PIK3CA-mutated, advanced or metastatic breast cancer"
+    },
+    {
+        "drug_name": "ruxolitinib (JAKAFI, Incyte Corporation)",
+        "date": "May 24, 2019",
+        "cancer_type": "steroid-refractory acute graft-versus-host disease (GVHD)"
+    },
+    {
+        "drug_name": "dalteparin sodium (FRAGMIN, Pfizer, Inc.)",
+        "date": "May 16, 2019",
+        "cancer_type": "reduce the recurrence of symptomatic venous thromboembolism (VTE) in pediatric patients 1 month of age and older"
+    },
+    {
+        "drug_name": "venetoclax (VENCLEXTA, AbbVie Inc. and Genentech Inc.)",
+        "date": "May 15, 2019",
+        "cancer_type": "chronic lymphocytic leukemia (CLL) or small lymphocytic lymphoma (SLL)"
+    },
+    {
+        "drug_name": "avelumab (BAVENCIO, EMD Serono, Inc.)",
+        "date": "May 14, 2019",
+        "cancer_type": "advanced renal cell carcinoma (RCC)"
+    },
+    {
+        "drug_name": "ramucirumab (CYRAMZA, Eli Lilly and Company)",
+        "date": "May 10, 2019",
+        "cancer_type": "hepatocellular carcinoma (HCC) in patients who have an alpha fetoprotein (AFP) of ≥ 400 ng/mL"
+    },
+    {
+        "drug_name": "ado-trastuzumab emtansine (KADCYLA, Genentech, Inc.)",
+        "date": "May 3, 2019",
+        "cancer_type": "HER2-positive early breast cancer (EBC) with residual invasive disease"
+    },
+    {
+        "drug_name": "ivosidenib (TIBSOVO, Agios Pharmaceuticals, Inc.)",
+        "date": "May 2, 2019",
+        "cancer_type": "newly-diagnosed acute myeloid leukemia (AML) with a susceptible IDH1 mutation"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck &amp; Co. Inc.)",
+        "date": "April 19, 2019",
+        "cancer_type": "advanced renal cell carcinoma (RCC)"
+    },
+    {
+        "drug_name": "erdafitinib (BALVERSA, Janssen Pharmaceutical Companies)",
+        "date": "April 12, 2019",
+        "cancer_type": "locally advanced or metastatic urothelial carcinoma with FGFR3 or FGFR2 genetic alterations"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck Inc.)",
+        "date": "April 11, 2019",
+        "cancer_type": "stage III non-small cell lung cancer (NSCLC) or metastatic NSCLC"
+    },
+    {
+        "drug_name": "atezolizumab (TECENTRIQ, Genentech Inc.)",
+        "date": "March 18, 2019",
+        "cancer_type": "extensive-stage small cell lung cancer (ES-SCLC)"
+    },
+    {
+        "drug_name": "atezolizumab",
+        "date": "March 8, 2019",
+        "cancer_type": "PD-L1 positive unresectable locally advanced or metastatic triple-negative breast cancer"
+    },
+    {
+        "drug_name": "trastuzumab and hyaluronidase-oysk injection (Herceptin Hylecta, Genentech Inc.)",
+        "date": "February 28, 2019",
+        "cancer_type": "HER2 overexpressing breast cancer"
+    },
+    {
+        "drug_name": "trifluridine/ tipiracil tablets (LONSURF, Taiho Pharmaceutical Co., Ltd.)",
+        "date": "February 22, 2019",
+        "cancer_type": "metastatic gastric or gastroesophageal junction (GEJ) adenocarcinoma"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck)",
+        "date": "February 15, 2019",
+        "cancer_type": "adjuvant treatment of melanoma with involvement of lymph node(s) following complete resection"
+    },
+    {
+        "drug_name": "caplacizumab-yhdp (CABLIVI, Ablynx NV)",
+        "date": "February 6, 2019",
+        "cancer_type": "acquired thrombotic thrombocytopenic purpura (aTTP)"
+    },
+    {
+        "drug_name": "cabozantinib (CABOMETYX, Exelixis, Inc.)",
+        "date": "January 14, 2019",
+        "cancer_type": "hepatocellular carcinoma (HCC) previously treated with sorafenib"
+    },
+    {
+        "drug_name": "osimertinib (TAGRISSO, AstraZeneca Pharmaceuticals LP)",
+        "date": "December 18, 2020",
+        "cancer_type": "non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "relugolix, (ORGOVYX, Myovant Sciences, Inc.)",
+        "date": "December 18, 2020",
+        "cancer_type": "advanced prostate cancer"
+    },
+    {
+        "drug_name": "selinexor (XPOVIO, Karyopharm Therapeutics Inc.)",
+        "date": "December 18, 2020",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "margetuximab-cmkb (MARGENZA, MacroGenics)",
+        "date": "December 16, 2020",
+        "cancer_type": "metastatic HER2-positive breast cancer"
+    },
+    {
+        "drug_name": "pralsetinib (GAVRETO, Blueprint Medicines Corporation)",
+        "date": "December 1, 2020",
+        "cancer_type": "advanced or metastatic RET-mutant medullary thyroid cancer (MTC)"
+    },
+    {
+        "drug_name": "Sonalleve MR-HIFU system (Profound Medical Inc.)",
+        "date": "November 27, 2020",
+        "cancer_type": "osteoid osteoma in the extremities"
+    },
+    {
+        "drug_name": "naxitamab (DANYELZA, Y-mAbs Therapeutics, Inc.)",
+        "date": "November 25, 2020",
+        "cancer_type": "relapsed or refractory high-risk neuroblastoma"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck &amp; Co.)",
+        "date": "November 13, 2020",
+        "cancer_type": "locally recurrent unresectable or metastatic triple-negative breast cancer (TNBC)"
+    },
+    {
+        "drug_name": "FoundationOne Liquid CDx test (Foundation Medicine, Inc.)",
+        "date": "October 26, 2020 and November 6, 2020",
+        "cancer_type": "multiple additional biomarkers"
+    },
+    {
+        "drug_name": "FoundationOne CDx test (Foundation Medicine, Inc.)",
+        "date": "October 26, 2020",
+        "cancer_type": "neurotrophic receptor tyrosine kinase (NTRK) gene fusions"
+    },
+    {
+        "drug_name": "venetoclax",
+        "date": "October 16, 2020",
+        "cancer_type": "untreated acute myeloid leukemia"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA®, Merck Sharp &amp; Dohme Corp.)",
+        "date": "October 14, 2020",
+        "cancer_type": "classical Hodgkin lymphoma (cHL)"
+    },
+    {
+        "drug_name": "nivolumab (OPDIVO, Bristol-Myers Squibb Co.) plus ipilimumab (YERVOY, Bristol-Myers Squibb Co.)",
+        "date": "October 2, 2020",
+        "cancer_type": "unresectable malignant pleural mesothelioma"
+    },
+    {
+        "drug_name": "atezolizumab in combination with paclitaxel",
+        "date": "September 8, 2020",
+        "cancer_type": "breast cancer"
+    },
+    {
+        "drug_name": "pralsetinib (GAVRETO, Blueprint Medicines Corporation)",
+        "date": "September 4, 2020",
+        "cancer_type": "metastatic RET fusion-positive non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "azacitidine tablets (ONUREG, Celgene Corporation)",
+        "date": "September 1, 2020",
+        "cancer_type": "acute myeloid leukemia"
+    },
+    {
+        "drug_name": "FoundationOne Liquid CDx test (Foundation Medicine, Inc.)",
+        "date": "August 26, 2020",
+        "cancer_type": "mutations in BRCA1 and BRCA2 genes"
+    },
+    {
+        "drug_name": "carfilzomib (KYPROLIS, Onyx Pharmaceuticals, Inc.) and daratumumab (DARZALEX, Janssen Biotech, Inc.)",
+        "date": "August 20, 2020",
+        "cancer_type": "relapsed or refractory multiple myeloma"
+    },
+    {
+        "drug_name": "belantamab mafodotin-blmf (Blenrep, GlaxoSmithKline)",
+        "date": "August 5, 2020",
+        "cancer_type": "relapsed or refractory multiple myeloma"
+    },
+    {
+        "drug_name": "tafasitamab-cxix (MONJUVI, MorphoSys US Inc.)",
+        "date": "July 31, 2020",
+        "cancer_type": "relapsed or refractory diffuse large B-cell lymphoma (DLBCL)"
+    },
+    {
+        "drug_name": "atezolizumab (Tecentriq, Genentech, Inc.)",
+        "date": "July 30, 2020",
+        "cancer_type": "BRAF V600 mutation-positive unresectable or metastatic melanoma"
+    },
+    {
+        "drug_name": "brexucabtagene autoleucel (TECARTUS, Kite, a Gilead Company)",
+        "date": "July 24, 2020",
+        "cancer_type": "relapsed or refractory mantle cell lymphoma (MCL)"
+    },
+    {
+        "drug_name": "decitabine and cedazuridine (INQOVI, Astex Pharmaceuticals, Inc.)",
+        "date": "July 7, 2020",
+        "cancer_type": "myelodysplastic syndromes (MDS)"
+    },
+    {
+        "drug_name": "avelumab (BAVENCIO, EMD Serono, Inc.)",
+        "date": "June 30, 2020",
+        "cancer_type": "locally advanced or metastatic urothelial carcinoma (UC)"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck &amp; Co.)",
+        "date": "June 29, 2020",
+        "cancer_type": "unresectable or metastatic microsatellite instability-high (MSI-H) or mismatch repair deficient (dMMR) colorectal cancer"
+    },
+    {
+        "drug_name": "pertuzumab, trastuzumab, and hyaluronidase–zzxf (PHESGO, Genentech, Inc.)",
+        "date": "June 29, 2020",
+        "cancer_type": "HER2-positive breast cancer"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck &amp; Co., Inc.)",
+        "date": "June 24, 2020",
+        "cancer_type": "recurrent or metastatic cutaneous squamous cell carcinoma (cSCC)"
+    },
+    {
+        "drug_name": "selinexor (XPOVIO, Karyopharm Therapeutics)",
+        "date": "June 22,2020",
+        "cancer_type": "relapsed or refractory diffuse large B-cell lymphoma (DLBCL)"
+    },
+    {
+        "drug_name": "tazemetostat (TAZVERIK, Epizyme, Inc.)",
+        "date": "June 18, 2020",
+        "cancer_type": "relapsed or refractory follicular lymphoma (FL)"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck &amp; Co., Inc.)",
+        "date": "June 16, 2020",
+        "cancer_type": "unresectable or metastatic tumor mutational burden-high (TMB H) solid tumors"
+    },
+    {
+        "drug_name": "gemtuzumab ozogamicin (MYLOTARG, Wyeth Pharmaceuticals LLC)",
+        "date": "June 16, 2020",
+        "cancer_type": "newly-diagnosed CD33-positive acute myeloid leukemia (AML)"
+    },
+    {
+        "drug_name": "lurbinectedin (ZEPZELCA, Pharma Mar S.A.)",
+        "date": "June 15, 2020",
+        "cancer_type": "metastatic small cell lung cancer (SCLC)"
+    },
+    {
+        "drug_name": "nivolumab (OPDIVO, Bristol-Myers Squibb Co.)",
+        "date": "June 10, 2020",
+        "cancer_type": "unresectable advanced, recurrent or metastatic esophageal squamous cell carcinoma (ESCC)"
+    },
+    {
+        "drug_name": "ramucirumab (CYRAMZA, Eli Lilly and Company) in combination with erlotinib",
+        "date": "May 29, 2020",
+        "cancer_type": "metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "atezolizumab (TECENTRIQ, Genentech Inc.)",
+        "date": "May 18, 2020",
+        "cancer_type": "first-line treatment of adults with metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "olaparib (LYNPARZA, AstraZeneca Pharmaceuticals LP)",
+        "date": "May 8, 2020",
+        "cancer_type": "germline BRCA-mutated (gBRCAm) metastatic pancreatic adenocarcinoma"
+    },
+    {
+        "drug_name": "ripretinib (QINLOCK, Deciphera Pharmaceuticals, LLC)",
+        "date": "May 15, 2020",
+        "cancer_type": "advanced gastrointestinal stromal tumor (GIST)"
+    },
+    {
+        "drug_name": "atezolizumab (TECENTRIQ, Genentech, Inc.)",
+        "date": "May 15, 2020",
+        "cancer_type": "metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "capmatinib (TABRECTA, Novartis Pharmaceuticals Corporation)",
+        "date": "May 6, 2020",
+        "cancer_type": "metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "atezolizumab (TECENTRIQ, Genentech, Inc.)",
+        "date": "May 6, 2020",
+        "cancer_type": "advanced or metastatic urothelial carcinoma (UC)"
+    },
+    {
+        "drug_name": "atezolizumab (TECENTRIQ, Genentech Inc.)",
+        "date": "April 17, 2020",
+        "cancer_type": "melanoma"
+    },
+    {
+        "drug_name": "niraparib (ZEJULA, GlaxoSmithKline)",
+        "date": "April 29, 2020",
+        "cancer_type": "advanced ovarian, fallopian tube, or primary peritoneal cancer"
+    },
+    {
+        "drug_name": "sacituzumab govitecan-hziy (TRODELVY, Immunomedics, Inc.)",
+        "date": "April 22, 2020",
+        "cancer_type": "metastatic triple-negative breast cancer (mTNBC)"
+    },
+    {
+        "drug_name": "avelumab (BAVENCIO, EMD Serono, Inc.)",
+        "date": "June 30, 2020",
+        "cancer_type": "locally advanced or metastatic urothelial carcinoma (UC)"
+    },
+    {
+        "drug_name": "durvalumab (IMFINZI, AstraZeneca)",
+        "date": "February 17, 2020",
+        "cancer_type": "extensive-stage small cell lung cancer (ES-SCLC)"
+    },
+    {
+        "drug_name": "fam-trastuzumab deruxtecan-nxki (ENHERTU, Daiichi Sankyo, Inc.)",
+        "date": "December 20, 2019",
+        "cancer_type": "unresectable or metastatic HER2-positive breast cancer"
+    },
+    {
+        "drug_name": "enfortumab vedotin-ejfv (PADCEV, Astellas Pharma US, Inc.)",
+        "date": "December 18, 2019",
+        "cancer_type": "locally advanced or metastatic urothelial cancer"
+    },
+    {
+        "drug_name": "gadobutrol (GADAVIST, Bayer HealthCare Pharmaceuticals Inc.)",
+        "date": "December 19, 2019",
+        "cancer_type": "adult and pediatric patients aged 2 years and older undergoing contrast-enhanced magnetic resonance imaging (MRI) of the CNS"
+    },
+    {
+        "drug_name": "trastuzumab deruxtecan (ENHERTU, Daiichi Sankyo, Inc.)",
+        "date": "December 20, 2019",
+        "cancer_type": "unresectable or metastatic HER2-positive breast cancer"
+    },
+    {
+        "drug_name": "rucaparib (RUBRACA, Clovis Oncology, Inc.)",
+        "date": "December 19, 2016",
+        "cancer_type": "advanced ovarian cancer"
+    },
+    {
+        "drug_name": "daratumumab (DARZALEX, Janssen Biotech, Inc.)",
+        "date": "November 21, 2016",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "nivolumab (OPDIVO Injection, Bristol-Myers Squibb Company)",
+        "date": "November 10, 2016",
+        "cancer_type": "squamous cell carcinoma of the head and neck (SCCHN)"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck &amp; Co., Inc.)",
+        "date": "October 24, 2016",
+        "cancer_type": "metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "olaratumab (LARTRUVO, Eli Lilly and Company)",
+        "date": "October 19, 2016",
+        "cancer_type": "soft tissue sarcoma (STS)"
+    },
+    {
+        "drug_name": "atezolizumab (TECENTRIQ, Genentech Oncology)",
+        "date": "October 18, 2016",
+        "cancer_type": "metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "erlotinib (TARCEVA, Astellas Pharm Global Development Inc.)",
+        "date": "October 18, 2016",
+        "cancer_type": "non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "nivolumab (Opdivo, Bristol-Myers Squibb Co.)",
+        "date": "September 13, 2016",
+        "cancer_type": "renal cell carcinoma, metastatic melanoma, and non-small cell lung cancer"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA injection, Merck Sharp &amp; Dohme Corp.)",
+        "date": "August 5, 2016",
+        "cancer_type": "recurrent or metastatic head and neck squamous cell carcinoma (HNSCC)"
+    },
+    {
+        "drug_name": "cobas EGFR Mutation Test v2 (Roche Molecular Systems, Inc.)",
+        "date": "June 1, 2016",
+        "cancer_type": "metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "atezolizumab injection (Tecentriq, Genentech, Inc.)",
+        "date": "May 18, 2016",
+        "cancer_type": "locally advanced or metastatic urothelial carcinoma"
+    },
+    {
+        "drug_name": "nivolumab (Opdivo, marketed by Bristol-Myers Squibb)",
+        "date": "May 17, 2016",
+        "cancer_type": "classical Hodgkin lymphoma (cHL)"
+    },
+    {
+        "drug_name": "lenvatinib capsules (Lenvima, Eisai, Inc.)",
+        "date": "May 13, 2016",
+        "cancer_type": "advanced renal cell carcinoma"
+    },
+    {
+        "drug_name": "cabozantinib (CABOMETYX, Exelixis, Inc.)",
+        "date": "April 25, 2016",
+        "cancer_type": "advanced renal cell carcinoma"
+    },
+    {
+        "drug_name": "venetoclax (VENCLEXTA tablets, marketed by AbbVie, Inc. and Genentech USA, Inc.)",
+        "date": "April 11, 2016",
+        "cancer_type": "chronic lymphocytic leukemia (CLL)"
+    },
+    {
+        "drug_name": "Defitelio (defibrotide sodium, Jazz Pharmaceuticals, Inc.)",
+        "date": "March 30, 2016",
+        "cancer_type": "hepatic veno-occlusive disease (VOD)"
+    },
+    {
+        "drug_name": "crizotinib capsules (Xalkori, Pfizer, Inc.)",
+        "date": "March 11, 2016",
+        "cancer_type": "metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "everolimus (Afinitor, Novartis)",
+        "date": "February 26, 2016",
+        "cancer_type": "progressive, well-differentiated non-functional, neuroendocrine tumors (NET)"
+    },
+    {
+        "drug_name": "obinutuzumab (Gazyva Injection, Genentech, Inc.)",
+        "date": "February 26, 2016",
+        "cancer_type": "follicular lymphoma (FL)"
+    },
+    {
+        "drug_name": "palbociclib (IBRANCE Capsules, Pfizer, Inc.)",
+        "date": "February 19, 2016",
+        "cancer_type": "advanced or metastatic breast cancer"
+    },
+    {
+        "drug_name": "eribulin (HALAVEN injection, Eisai Co., Ltd.)",
+        "date": "January 28, 2016",
+        "cancer_type": "unresectable or metastatic liposarcoma"
+    },
+    {
+        "drug_name": "ofatumumab (Arzerra Injection, Novartis Pharmaceuticals Corporation)",
+        "date": "January 19, 2016",
+        "cancer_type": "recurrent or progressive chronic lymphocytic leukemia (CLL)"
+    },
+    {
+        "drug_name": "pembrolizumab (Keytruda Injection, Merck Sharp &amp; Dohme Corp.)",
+        "date": "December 18, 2015",
+        "cancer_type": "unresectable or metastatic melanoma"
+    },
+    {
+        "drug_name": "alectinib (ALECENSA capsules, Hoffmann-La Roche Inc.)",
+        "date": "December 11, 2015",
+        "cancer_type": "ALK-positive metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "uridine triacetate (VISTOGARD granules, Wellstat Therapeutics Corporation)",
+        "date": "December 11, 2015",
+        "cancer_type": "fluorouracil or capecitabine overdose or severe toxicity"
+    },
+    {
+        "drug_name": "elotuzumab (EMPLICITI, Bristol-Myers Squibb Company)",
+        "date": "November 30, 2015",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "necitumumab (PORTRAZZA, Eli Lilly and Company)",
+        "date": "November 24, 2015",
+        "cancer_type": "metastatic squamous non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "nivolumab (Opdivo Injection, Bristol-Myers Squibb Company)",
+        "date": "November 23, 2015",
+        "cancer_type": "advanced renal cell carcinoma"
+    },
+    {
+        "drug_name": "trametinib (Mekinist, Novartis Pharmaceuticals Corp.) and dabrafenib (Tafinlar, Novartis Pharmaceuticals Corp.)",
+        "date": "November 20, 2015",
+        "cancer_type": "unresectable or metastatic melanoma with BRAF V600E or V600K mutations"
+    },
+    {
+        "drug_name": "ixazomib (NINLARO, Millennium Pharmaceuticals, Inc.)",
+        "date": "November 20, 2015",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "daratumumab injection (DARZALEX, Janssen Biotech, Inc.)",
+        "date": "November 16, 2015",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "osimertinib (TAGRISSO) once daily tablets, AstraZeneca Pharmaceuticals LP",
+        "date": "November 13, 2015",
+        "cancer_type": "metastatic non-small cell lung cancer (NSCLC) with EGFR T790M mutation"
+    },
+    {
+        "drug_name": "cobimetinib (COTELLIC Tablets, Genentech, Inc.)",
+        "date": "November 10, 2015",
+        "cancer_type": "unresectable or metastatic melanoma with BRAF V600E or V600K mutation"
+    },
+    {
+        "drug_name": "ipilimumab (Yervoy Injection)",
+        "date": "October 28, 2015",
+        "cancer_type": "adjuvant treatment of cutaneous melanoma"
+    },
+    {
+        "drug_name": "talimogene laherparepvec (IMLYGIC, Amgen, Inc.)",
+        "date": "October 27, 2015",
+        "cancer_type": "unresectable cutaneous, subcutaneous, and nodal lesions in melanoma"
+    },
+    {
+        "drug_name": "trabectedin (Yondelis Injection, Janssen)",
+        "date": "October 23, 2015",
+        "cancer_type": "unresectable or metastatic liposarcoma or leiomyosarcoma"
+    },
+    {
+        "drug_name": "irinotecan liposome injection (ONIVYDE, Merrimack Pharmaceuticals, Inc.)",
+        "date": "October 22, 2015",
+        "cancer_type": "metastatic adenocarcinoma of the pancreas"
+    },
+    {
+        "drug_name": "idarucizumab (Praxbind Injection, Boehringer Ingelheim Pharmaceuticals, Inc.)",
+        "date": "October 16, 2015",
+        "cancer_type": "reversal of anticoagulant effects of dabigatran"
+    },
+    {
+        "drug_name": "nivolumab (Opdivo Injection, Bristol-Myers Squibb Company)",
+        "date": "October 9, 2015",
+        "cancer_type": "metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA Injection, Merck Sharp and Dohme Corporation)",
+        "date": "October 2, 2015",
+        "cancer_type": "metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "nivolumab (Opdivo Injection, Bristol-Myers Squibb Company)",
+        "date": "September 30, 2015",
+        "cancer_type": "unresectable or metastatic melanoma"
+    },
+    {
+        "drug_name": "trifluridine/tipiracil (LONSURF, Taiho Oncology, Inc.)",
+        "date": "September 22, 2015",
+        "cancer_type": "metastatic colorectal cancer"
+    },
+    {
+        "drug_name": "eltrombopag (Promacta for oral suspension, Novartis)",
+        "date": "August 24, 2015",
+        "cancer_type": "chronic immune (idiopathic) thrombocytopenia (ITP)"
+    },
+    {
+        "drug_name": "brentuximab vedotin (ADCETRIS)",
+        "date": "August 17, 2015",
+        "cancer_type": "classical Hodgkin lymphoma (HL)"
+    },
+    {
+        "drug_name": "carfilzomib (Kyprolis, Onyx Pharmaceuticals, Inc.)",
+        "date": "July 24, 2015",
+        "cancer_type": "relapsed multiple myeloma"
+    },
+    {
+        "drug_name": "sonidegib (Odomzo Capsules, Novartis Pharmaceuticals Corporation)",
+        "date": "July 24, 2015",
+        "cancer_type": "locally advanced basal cell carcinoma (BCC)"
+    },
+    {
+        "drug_name": "gefitinib (IRESSA)",
+        "date": "July 13, 2015",
+        "cancer_type": "metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "ramucirumab (CYRAMZA, Eli Lilly and Company)",
+        "date": "April 24, 2015",
+        "cancer_type": "metastatic colorectal cancer (mCRC)"
+    },
+    {
+        "drug_name": "dinutuximab (Unituxin, United Therapeutics Corporation)",
+        "date": "March 10, 2015",
+        "cancer_type": "high-risk neuroblastoma"
+    },
+    {
+        "drug_name": "filgrastim-sndz (ZARXIO Injection, Sandoz Inc.)",
+        "date": "March 6, 2015",
+        "cancer_type": "biosimilar to US-licensed Neupogen"
+    },
+    {
+        "drug_name": "nivolumab (OPDIVO, Bristol-Myers Squibb Company)",
+        "date": "March 4, 2015",
+        "cancer_type": "metastatic squamous non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "panobinostat (FARYDAK capsules, Novartis Pharmaceuticals)",
+        "date": "February 23, 2015",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "lenvatinib (Lenvima)",
+        "date": "February 13, 2015",
+        "cancer_type": "radioactive iodine-refractory differentiated thyroid cancer"
+    },
+    {
+        "drug_name": "palbociclib (IBRANCE, Pfizer, Inc.)",
+        "date": "February 3, 2015",
+        "cancer_type": "ER-positive, HER2-negative advanced breast cancer"
+    },
+    {
+        "drug_name": "ibrutinib (Imbruvica Capsules, Pharmacyclics, Inc.)",
+        "date": "January 29, 2015",
+        "cancer_type": "Waldenstrom’s macroglobulinemia (WM)"
+    },
+    {
+        "drug_name": "nivolumab (OPDIVO, Bristol-Myers Squibb Company)",
+        "date": "December 22, 2014",
+        "cancer_type": "unresectable or metastatic melanoma"
+    },
+    {
+        "drug_name": "olaparib capsules (Lynparza, AstraZeneca Pharmaceuticals LP)",
+        "date": "December 19, 2014",
+        "cancer_type": "advanced ovarian cancer"
+    },
+    {
+        "drug_name": "lanreotide (Somatuline Depot Injection, Ipsen Pharma)",
+        "date": "December 16, 2014",
+        "cancer_type": "unresectable, well or moderately differentiated, locally advanced or metastatic gastroenteropancreatic neuroendocrine tumors (GEP-NETs)"
+    },
+    {
+        "drug_name": "ramucirumab (Cyramza Injection, Eli Lilly and Company)",
+        "date": "December 12, 2014",
+        "cancer_type": "metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "ruxolitinib (Jakafi, Incyte Corporation)",
+        "date": "December 4, 2014",
+        "cancer_type": "polycythemia vera (PV)"
+    },
+    {
+        "drug_name": "blinatumomab (BLINCYTO, Amgen Inc.)",
+        "date": "December 3, 2014",
+        "cancer_type": "Philadelphia chromosome-negative relapsed or refractory B-cell precursor acute lymphoblastic leukemia (R/R ALL)"
+    },
+    {
+        "drug_name": "bevacizumab solution for intravenous infusion (Avastin, Genentech, Inc.)",
+        "date": "November 14, 2014",
+        "cancer_type": "platinum-resistant, recurrent epithelial ovarian, fallopian tube, or primary peritoneal cancer"
+    },
+    {
+        "drug_name": "ramucirumab (Cyramza, Eli Lilly and Company)",
+        "date": "November 5, 2014",
+        "cancer_type": "advanced gastric or gastroesophageal junction (GEJ) adenocarcinoma"
+    },
+    {
+        "drug_name": "pembrolizumab (KEYTRUDA, Merck Sharp &amp; Dohme Corp.)",
+        "date": "September 4, 2014",
+        "cancer_type": "unresectable or metastatic melanoma"
+    },
+    {
+        "drug_name": "bevacizumab solution for intravenous infusion (Avastin, Genentech, Inc.)",
+        "date": "August 14, 2014",
+        "cancer_type": "persistent, recurrent or metastatic cervical cancer"
+    },
+    {
+        "drug_name": "idelalisib (Zydelig tablets, GileadSciences, Inc.)",
+        "date": "July 23, 2014",
+        "cancer_type": "relapsed chronic lymphocytic leukemia (CLL)"
+    },
+    {
+        "drug_name": "belinostat (BELEODAQ, Spectrum Pharmaceuticals, Inc.)",
+        "date": "July 3, 2014",
+        "cancer_type": "relapsed or refractory peripheral T-cell lymphoma (PTCL)"
+    },
+    {
+        "drug_name": "ceritinib (ZYKADIA, Novartis Pharmaceuticals Corporation)",
+        "date": "April 29, 2014",
+        "cancer_type": "ALK-positive, metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "mercaptopurine (Purixan, NOVA Laboratories Limited)",
+        "date": "April 28, 2014",
+        "cancer_type": "acute lymphoblastic leukemia (ALL)"
+    },
+    {
+        "drug_name": "siltuximab (Sylvant Injection Janssen Biotech, Inc.)",
+        "date": "April 23, 2014",
+        "cancer_type": "multicentric Castleman’s disease (MCD)"
+    },
+    {
+        "drug_name": "ramucirumab (Cyramza, Eli Lilly and Company)",
+        "date": "April 21, 2014",
+        "cancer_type": "advanced or metastatic, gastric or gastroesophageal junction (GEJ) adenocarcinoma"
+    },
+    {
+        "drug_name": "ofatumumab (Arzerra Injection, GlaxoSmithKline)",
+        "date": "April 17, 2014",
+        "cancer_type": "chronic lymphocytic leukemia (CLL)"
+    },
+    {
+        "drug_name": "ibrutinib (IMBRUVICA, Pharmacyclics, Inc.)",
+        "date": "February 12, 2014",
+        "cancer_type": "chronic lymphocytic leukemia (CLL)"
+    },
+    {
+        "drug_name": "trametinib (Mekinist tablets, GlaxoSmithKline, LLC) and dabrafenib (Tafinlar capsules, GlaxoSmithKline, LLC)",
+        "date": "January 10, 2014",
+        "cancer_type": "unresectable or metastatic melanoma with BRAF V600E or V600K mutation"
+    },
+    {
+        "drug_name": "sorafenib (NEXAVAR tablets, Bayer Healthcare Pharmaceuticals Inc.)",
+        "date": "November 22, 2013",
+        "cancer_type": "locally recurrent or metastatic, progressive, differentiated thyroid carcinoma (DTC) refractory to radioactive iodine treatment"
+    },
+    {
+        "drug_name": "crizotinib (Xalkori, Pfizer, Inc.)",
+        "date": "November 20, 2013",
+        "cancer_type": "metastatic non-small cell lung cancer (NSCLC) with ALK-positive tumors"
+    },
+    {
+        "drug_name": "ibrutinib (IMBRUVICA, Pharmacyclics, Inc.)",
+        "date": "November 13, 2013",
+        "cancer_type": "mantle cell lymphoma (MCL) who have received at least one prior therapy"
+    },
+    {
+        "drug_name": "obinutuzumab (GAZYVA injection, Genentech, Inc.; previously known as GA101)",
+        "date": "November 1, 2013",
+        "cancer_type": "previously untreated chronic lymphocytic leukemia (CLL)"
+    },
+    {
+        "drug_name": "Iclusig (ponatinib)",
+        "date": "October 31, 2013",
+        "cancer_type": "leukemia"
+    },
+    {
+        "drug_name": "doxorubicin hydrochloride liposome injection",
+        "date": "October 8, 2013",
+        "cancer_type": "supplying the U.S. market"
+    },
+    {
+        "drug_name": "pertuzumab injection (PERJETA, Genentech, Inc.)",
+        "date": "September 30, 2013",
+        "cancer_type": "HER2-positive, locally advanced, inflammatory, or early stage breast cancer"
+    },
+    {
+        "drug_name": "paclitaxel protein-bound particles (albumin-bound) (Abraxane for injectable suspension, Abraxis BioScience, LLC, a wholly owned subsidiary of Celgene Corporation)",
+        "date": "September 6, 2013",
+        "cancer_type": "metastatic adenocarcinoma of the pancreas"
+    },
+    {
+        "drug_name": "afatinib (Gilotrif tablets, Boehringer Ingelheim Pharmaceuticals, Inc.)",
+        "date": "July 12, 2013",
+        "cancer_type": "metastatic non-small cell lung cancer (NSCLC) with EGFR exon 19 deletions or exon 21 (L858R) substitution mutations"
+    },
+    {
+        "drug_name": "denosumab (Xgeva injection, Amgen Inc.)",
+        "date": "June 13, 2013",
+        "cancer_type": "giant cell tumor of bone"
+    },
+    {
+        "drug_name": "lenalidomide capsules (REVLIMID, Celgene Corporation)",
+        "date": "June 5, 2013",
+        "cancer_type": "mantle cell lymphoma (MCL)"
+    },
+    {
+        "drug_name": "trametinib (MEKINIST tablet, GlaxoSmithKline, LLC)",
+        "date": "May 29, 2013",
+        "cancer_type": "unresectable or metastatic melanoma with BRAF V600E or V600K mutation"
+    },
+    {
+        "drug_name": "dabrafenib (TAFINLAR capsule, GlaxoSmithKline, LLC)",
+        "date": "May 29, 2013",
+        "cancer_type": "unresectable or metastatic melanoma with BRAF V600E mutation"
+    },
+    {
+        "drug_name": "radium Ra 223 dichloride (Xofigo Injection, Bayer HealthCare Pharmaceuticals Inc.)",
+        "date": "May 15, 2013",
+        "cancer_type": "castration-resistant prostate cancer, symptomatic bone metastases"
+    },
+    {
+        "drug_name": "erlotinib (Tarceva, Astellas Pharma Inc.)",
+        "date": "May 14, 2013",
+        "cancer_type": "metastatic non-small cell lung cancer (NSCLC) with EGFR exon 19 deletions or exon 21 (L858R) substitution mutations"
+    },
+    {
+        "drug_name": "ado-trastuzumab emtansine (KADCYLA for injection, Genentech, Inc.)",
+        "date": "February 22, 2013",
+        "cancer_type": "HER2-positive, metastatic breast cancer"
+    },
+    {
+        "drug_name": "pomalidomide (POMALYST capsules, Celgene Corporation)",
+        "date": "February 8, 2013",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "doxorubicin hydrochloride liposome injection (Sun Pharma Global FZE)",
+        "date": "February 4, 2013",
+        "cancer_type": "ovarian cancer or AIDS-related Kaposi’s sarcoma"
+    },
+    {
+        "drug_name": "bevacizumab (Avastin, Genentech U.S., Inc.)",
+        "date": "January 23, 2013",
+        "cancer_type": "metastatic colorectal cancer (mCRC)"
+    },
+    {
+        "drug_name": "ponatinib (Iclusig)",
+        "date": "December 17, 2012",
+        "cancer_type": "adult patients with chronic phase, accelerated phase, or blast phase chronic myeloid leukemia (CML) resistant or intolerant to prior tyrosine kinase inhibitor therapy, and Philadelphia chromosome positive acute lymphoblastic leukemia (Ph+ALL) resistant or intolerant to prior tyrosine kinase inhibitor therapy"
+    },
+    {
+        "drug_name": "abiraterone acetate (Zytiga)",
+        "date": "December 10, 2012",
+        "cancer_type": "metastatic castration-resistant prostate cancer"
+    },
+    {
+        "drug_name": "cabozantinib (COMETRIQ)",
+        "date": "November 29, 2012",
+        "cancer_type": "progressive metastatic medullary thyroid cancer (MTC)"
+    },
+    {
+        "drug_name": "omacetaxine mepesuccinate (SYNRIBO)",
+        "date": "October 26, 2012",
+        "cancer_type": "chronic or accelerated phase chronic myeloid leukemia (CML) with resistance and/or intolerance to two or more tyrosine kinase inhibitors (TKIs)"
+    },
+    {
+        "drug_name": "rituximab (Rituxan)",
+        "date": "October 19, 2012",
+        "cancer_type": "non-Hodgkin’s lymphoma (NHL) for faster infusion"
+    },
+    {
+        "drug_name": "pemetrexed (ALIMTA)",
+        "date": "October 17, 2012",
+        "cancer_type": "locally advanced or metastatic, non-squamous, non-small cell lung cancer"
+    },
+    {
+        "drug_name": "paclitaxel protein-bound particles (ABRAXANE)",
+        "date": "October 11, 2012",
+        "cancer_type": "locally advanced or metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "regorafenib (Stivarga)",
+        "date": "September 27, 2012",
+        "cancer_type": "metastatic colorectal cancer (mCRC)"
+    },
+    {
+        "drug_name": "bosutinib (Bosulif)",
+        "date": "September 4, 2012",
+        "cancer_type": "Philadelphia chromosome positive (Ph+) chronic myelogenous leukemia (CML) with resistance or intolerance to prior therapy"
+    },
+    {
+        "drug_name": "enzalutamide (XTANDI)",
+        "date": "August 31, 2012",
+        "cancer_type": "metastatic castration-resistant prostate cancer"
+    },
+    {
+        "drug_name": "everolimus (Afinitor Disperz)",
+        "date": "August 30, 2012",
+        "cancer_type": "pediatric and adult patients with tuberous sclerosis complex (TSC) and subependymal giant cell astrocytoma (SEGA)"
+    },
+    {
+        "drug_name": "vinCRIStine sulfate LIPOSOME (Marqibo)",
+        "date": "August 9, 2012",
+        "cancer_type": "Philadelphia chromosome-negative (Ph-) acute lymphoblastic leukemia (ALL)"
+    },
+    {
+        "drug_name": "ziv-aflibercept (ZALTRAP)",
+        "date": "August 3, 2012",
+        "cancer_type": "metastatic colorectal cancer (mCRC) resistant to or progressed following oxaliplatin-containing regimen"
+    },
+    {
+        "drug_name": "everolimus (Afinitor)",
+        "date": "July 20, 2012",
+        "cancer_type": "advanced hormone receptor-positive, HER2-negative breast cancer"
+    },
+    {
+        "drug_name": "carfilzomib (Kyprolis)",
+        "date": "July 20, 2012",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "cetuximab (Erbitux)",
+        "date": "July 9, 2012",
+        "cancer_type": "metastatic colorectal cancer (mCRC)"
+    },
+    {
+        "drug_name": "pertuzumab (PERJETA)",
+        "date": "June 8, 2012",
+        "cancer_type": "HER2-positive metastatic breast cancer"
+    },
+    {
+        "drug_name": "pazopanib (VOTRIENT)",
+        "date": "April 26, 2012",
+        "cancer_type": "advanced soft tissue sarcoma (STS)"
+    },
+    {
+        "drug_name": "everolimus (Afinitor)",
+        "date": "April 26, 2012",
+        "cancer_type": "renal angiomyolipoma associated with tuberous sclerosis complex (TSC)"
+    },
+    {
+        "drug_name": "imatinib mesylate (Gleevec)",
+        "date": "January 31, 2012",
+        "cancer_type": "adjuvant treatment of Kit (CD117) positive Gastrointestinal Stromal Tumors (GIST)"
+    },
+    {
+        "drug_name": "vismodegib (ERIVEDGE)",
+        "date": "January 30, 2012",
+        "cancer_type": "metastatic or locally advanced basal cell carcinoma"
+    },
+    {
+        "drug_name": "axitinib (Inlyta)",
+        "date": "January 27, 2012",
+        "cancer_type": "advanced renal cell carcinoma"
+    },
+    {
+        "drug_name": "glucarpidase (Voraxaze)",
+        "date": "January 17, 2012",
+        "cancer_type": "toxic plasma methotrexate concentrations in patients with delayed methotrexate clearance"
+    },
+    {
+        "drug_name": "methotrexate",
+        "date": "December 21, 2011",
+        "cancer_type": "changes to the package inserts for intravenous administration"
+    },
+    {
+        "drug_name": "romiplostim (Nplate) and eltrombopag (Promacta)",
+        "date": "December 6, 2011",
+        "cancer_type": "changes to the Risk Evaluation and Mitigation Strategies (REMS)"
+    },
+    {
+        "drug_name": "asparaginase Erwinia chrysanthemi (Erwinaze)",
+        "date": "November 18, 2011",
+        "cancer_type": "acute lymphoblastic leukemia (ALL) in patients with hypersensitivity to E. coli-derived asparaginase"
+    },
+    {
+        "drug_name": "ruxolitinib (Jakafi)",
+        "date": "November 16, 2011",
+        "cancer_type": "intermediate and high risk myelofibrosis"
+    },
+    {
+        "drug_name": "cetuximab (Erbitux)",
+        "date": "November 7, 2011",
+        "cancer_type": "recurrent locoregional and/or metastatic squamous cell carcinoma of the head and neck (SCCHN)"
+    },
+    {
+        "drug_name": "deferiprone (Ferriprox)",
+        "date": "October 14, 2011",
+        "cancer_type": "transfusional iron overload due to thalassemia syndromes"
+    },
+    {
+        "drug_name": "bevacizumab (Avastin)",
+        "date": "September 30, 2011",
+        "cancer_type": "changes regarding risk of ovarian failure, osteonecrosis of the jaw, risk of venous thromboembolic event (VTE) and bleeding in patients receiving anticoagulation therapy"
+    },
+    {
+        "drug_name": "eculizumab (Soliris)",
+        "date": "September 23, 2011",
+        "cancer_type": "atypical hemolytic uremic syndrome (aHUS)"
+    },
+    {
+        "drug_name": "denosumab (Prolia)",
+        "date": "September 16, 2011",
+        "cancer_type": "increase bone mass in patients at high risk for fracture receiving androgen deprivation therapy (ADT) for nonmetastatic prostate cancer or adjuvant aromatase inhibitor (AI) therapy for breast cancer"
+    },
+    {
+        "drug_name": "crizotinib (XALKORI)",
+        "date": "August 26, 2011",
+        "cancer_type": "locally advanced or metastatic non-small cell lung cancer (NSCLC) that is anaplastic lymphoma kinase (ALK)-positive"
+    },
+    {
+        "drug_name": "brentuximab vedotin (Adcetris)",
+        "date": "August 19, 2011",
+        "cancer_type": "Hodgkin lymphoma after failure of autologous stem cell transplant (ASCT) or after failure of at least two prior multi-agent chemotherapy regimens, and systemic anaplastic large cell lymphoma (ALCL) after failure of at least one prior multi-agent chemotherapy regimen"
+    },
+    {
+        "drug_name": "vemurafenib (ZELBORAF)",
+        "date": "August 17, 2011",
+        "cancer_type": "unresectable or metastatic melanoma with the BRAFV600E mutation"
+    },
+    {
+        "drug_name": "sunitinib (Sutent)",
+        "date": "May 20, 2011",
+        "cancer_type": "progressive, well-differentiated pancreatic neuroendocrine tumors (pNET) in patients with unresectable, locally advanced, or metastatic disease"
+    },
+    {
+        "drug_name": "everolimus (Afinitor)",
+        "date": "May 5, 2011",
+        "cancer_type": "progressive neuroendocrine tumors of pancreatic origin (PNET) in patients with unresectable, locally advanced or metastatic disease"
+    },
+    {
+        "drug_name": "abiraterone acetate (Zytiga)",
+        "date": "April 28, 2011",
+        "cancer_type": "metastatic castration-resistant prostate cancer (mCRPC) in combination with prednisone"
+    },
+    {
+        "drug_name": "vandetanib (Vandetanib)",
+        "date": "April 6, 2011",
+        "cancer_type": "symptomatic or progressive medullary thyroid cancer in patients with unresectable, locally advanced, or metastatic disease"
+    },
+    {
+        "drug_name": "peginterferon alfa-2b (Sylatron)",
+        "date": "March 29, 2011",
+        "cancer_type": "melanoma with microscopic or gross nodal involvement"
+    },
+    {
+        "drug_name": "ipilimumab (YERVOY)",
+        "date": "March 25, 2011",
+        "cancer_type": "unresectable or metastatic melanoma"
+    },
+    {
+        "drug_name": "rituximab (Rituxan)",
+        "date": "January 28, 2011",
+        "cancer_type": "maintenance therapy for previously untreated follicular, CD-20 positive, B-cell non-Hodgkin lymphoma"
+    },
+    {
+        "drug_name": "denosumab (Xgeva, Amgen Inc.)",
+        "date": "November 18, 2010",
+        "cancer_type": "prevention of skeletal-related events (SREs) in patients with bone metastases from solid tumors"
+    },
+    {
+        "drug_name": "eribulin mesylate (Halaven Injection, Eisai Inc.)",
+        "date": "November 15, 2010",
+        "cancer_type": "metastatic breast cancer"
+    },
+    {
+        "drug_name": "trastuzumab (Herceptin, Genentech Incorporated)",
+        "date": "November 1, 2010",
+        "cancer_type": "important new safety information regarding oligohydramnios sequence"
+    },
+    {
+        "drug_name": "everolimus (Afinitor, Novartis)",
+        "date": "October 29, 2010",
+        "cancer_type": "subependymal giant cell astrocytoma (SEGA) associated with tuberous sclerosis (TS)"
+    },
+    {
+        "drug_name": "dasatinib (Sprycel, Bristol-Myers Squibb)",
+        "date": "October 28, 2010",
+        "cancer_type": "newly diagnosed adult patients with Philadelphia chromosome positive chronic myeloid leukemia in chronic phase (CP-CML)"
+    },
+    {
+        "drug_name": "trastuzumab (Herceptin), Genentech, Inc.",
+        "date": "October 20, 2010",
+        "cancer_type": "HER2 overexpressing metastatic gastric or gastroesophageal (GE) junction adenocarcinoma"
+    },
+    {
+        "drug_name": "carboplatin",
+        "date": "October 10, 2010",
+        "cancer_type": "potential safety issue with carboplatin dosing"
+    },
+    {
+        "drug_name": "gemtuzumab ozogamicin (Mylotarg, Pfizer Inc.)",
+        "date": "June 21, 2010",
+        "cancer_type": "commercial marketing of Mylotarg will be voluntarily discontinued"
+    },
+    {
+        "drug_name": "nilotinib (Tasigna Capsules, Novartis Pharmaceuticals Corporation)",
+        "date": "June 17, 2010",
+        "cancer_type": "newly diagnosed Philadelphia chromosome positive chronic myeloid leukemia (Ph+ CML) in chronic phase (CP-CML)"
+    },
+    {
+        "drug_name": "cabazitaxel (Jevtana Injection, sanofi-aventis)",
+        "date": "June 17, 2010",
+        "cancer_type": "metastatic hormone-refractory prostate cancer (mHRPC) previously treated with a docetaxel-containing regimen"
+    },
+    {
+        "drug_name": "hexaminolevulinate hydrochloride (Cysview for Intravesical Solution, Photocure ASA)",
+        "date": "May 28, 2010",
+        "cancer_type": "non-muscle invasive papillary cancer of the bladder"
+    },
+    {
+        "drug_name": "erlotinib (Tarceva)",
+        "date": "April 16, 2010",
+        "cancer_type": "maintenance treatment of patients with locally advanced or metastatic non-small cell lung cancer (NSCLC)"
+    },
+    {
+        "drug_name": "mechlorethamine HCl (Mustargen)",
+        "date": "April 9, 2010",
+        "cancer_type": "extended supply shortage"
+    },
+    {
+        "drug_name": "rituximab (Rituxan, Genentech)",
+        "date": "February 18, 2010",
+        "cancer_type": "chronic lymphocytic leukemia (CLL)"
+    },
+    {
+        "drug_name": "Erythropoiesis-Stimulating Agents (ESAs) - Aranesp (darbepoetin alfa), Epogen (epoetin alfa), Procrit (epoetin alfa)",
+        "date": "February 16, 2010",
+        "cancer_type": "increased risk of tumor growth and shortened survival in patients with cancer"
+    },
+    {
+        "drug_name": "lapatinib (Tykerb) tablets",
+        "date": "January 29, 2010",
+        "cancer_type": "postmenopausal women with hormone receptor positive metastatic breast cancer that overexpresses the HER2 receptor"
+    },
+    {
+        "drug_name": "romidepsin (ISTODAX, Gloucester Pharmaceuticals Inc.)",
+        "date": "November 6, 2009",
+        "cancer_type": "cutaneous T-cell lymphoma (CTCL)"
+    },
+    {
+        "drug_name": "ofatumumab (Arzerra, GlaxoSmithKline)",
+        "date": "October 26, 2009",
+        "cancer_type": "chronic lymphocytic leukemia (CLL)"
+    },
+    {
+        "drug_name": "pazopanib (VOTRIENT, GlaxoSmithKline)",
+        "date": "October 19, 2009",
+        "cancer_type": "advanced renal cell carcinoma"
+    },
+    {
+        "drug_name": "pralatrexate (FOLOTYN, Allos Therapeutics, Inc.)",
+        "date": "September 24, 2009",
+        "cancer_type": "relapsed or refractory peripheral T-cell lymphoma (PTCL)"
+    },
+    {
+        "drug_name": "bevacizumab (Avastin, Genentech, Inc.)",
+        "date": "July 31, 2009",
+        "cancer_type": "metastatic renal cell carcinoma"
+    },
+    {
+        "drug_name": "cetuximab (Erbitux, ImClone Systems)",
+        "date": "July 17, 2009",
+        "cancer_type": "KRAS Mutations changes"
+    },
+    {
+        "drug_name": "panitumumab (Vectibix, Amgen)",
+        "date": "July 17, 2009",
+        "cancer_type": "KRAS Mutations changes"
+    },
+    {
+        "drug_name": "pemetrexed (Alimta)",
+        "date": "July 2, 2009",
+        "cancer_type": "locally advanced or metastatic nonsquamous non-small cell lung cancer"
+    },
+    {
+        "drug_name": "ferumoxytol (Feraheme, AMAG Pharmaceuticals, Inc.)",
+        "date": "June 30, 2009",
+        "cancer_type": "iron deficiency anemia in adult patients with chronic kidney disease (CKD)"
+    },
+    {
+        "drug_name": "bevacizumab (Avastin, Genentech, Inc.)",
+        "date": "May 5, 2009",
+        "cancer_type": "glioblastoma"
+    },
+    {
+        "drug_name": "everolimus (AFINITOR, Novartis)",
+        "date": "March 31, 2009",
+        "cancer_type": "advanced renal cell carcinoma"
+    },
+    {
+        "drug_name": "degarelix (Ferring Pharmaceuticals Inc.)",
+        "date": "December 24, 2008",
+        "cancer_type": "advanced prostate cancer"
+    },
+    {
+        "drug_name": "imatinib (Gleevec, Novartis Pharmaceuticals)",
+        "date": "December 19, 2008",
+        "cancer_type": "Kit (CD117) positive Gastrointestinal Stromal Tumor (GIST)"
+    },
+    {
+        "drug_name": "plerixafor (Mozobil, Genzyme Corp.)",
+        "date": "December 15, 2008",
+        "cancer_type": "non-Hodgkin’s lymphoma (NHL) and multiple myeloma (MM)"
+    },
+    {
+        "drug_name": "eltrombopag (Promacta, GlaxoSmithKline Inc.)",
+        "date": "November 20, 2008",
+        "cancer_type": "chronic immune (idiopathic) thrombocytopenic purpura (ITP)"
+    },
+    {
+        "drug_name": "bendamustine hydrochloride (TREANDA, Cephalon, Inc.)",
+        "date": "October 31, 2008",
+        "cancer_type": "indolent B-cell non-Hodgkin’s lymphoma (NHL)"
+    },
+    {
+        "drug_name": "Denileukin diftitox (Ontak, Eisai Medical Research)",
+        "date": "October 15, 2008",
+        "cancer_type": "CD-25 positive cutaneous T-cell lymphoma"
+    },
+    {
+        "drug_name": "Alimta",
+        "date": "October 2, 2008",
+        "cancer_type": "Metastatic Non-Aquamous Non-Small Cell Lung Cancer (NSCLC)"
+    },
+    {
+        "drug_name": "iobenguane I 123",
+        "date": "September 19, 2008",
+        "cancer_type": "primary or metastatic pheochromocytoma or neuroblastoma"
+    },
+    {
+        "drug_name": "romiplostim (Nplate)",
+        "date": "August 22, 2008",
+        "cancer_type": "thrombocytopenia"
+    },
+    {
+        "drug_name": "Velcade (bortezomib)",
+        "date": "June 23, 2008",
+        "cancer_type": "Multiple Myeloma"
+    },
+    {
+        "drug_name": "bendamustine hydochloride (Treanda)",
+        "date": "March 20, 2008",
+        "cancer_type": "chronic lymphocytic leukemia (CLL)"
+    },
+    {
+        "drug_name": "Bevacizumab (Avastin)",
+        "date": "February 22, 2008",
+        "cancer_type": "metastatic HER2 negative breast cancer"
+    },
+    {
+        "drug_name": "sorafenib (Nexavar)",
+        "date": "November 19, 2007",
+        "cancer_type": "unresectable hepatocellular carcinoma"
+    },
+    {
+        "drug_name": "Dasatinib (Sprycel)",
+        "date": "November 8, 2007",
+        "cancer_type": "chronic myeloid leukemia"
+    },
+    {
+        "drug_name": "nilotinib (Tasigna)",
+        "date": "October 30, 2007",
+        "cancer_type": "leukemia"
+    },
+    {
+        "drug_name": "ixabepilone (Ixempra)",
+        "date": "October 16, 2007",
+        "cancer_type": "breast cancer"
+    },
+    {
+        "drug_name": "cetuximab (Erbitux)",
+        "date": "October 2, 2007",
+        "cancer_type": "colorectal cancer"
+    },
+    {
+        "drug_name": "docetaxel (Taxotere)",
+        "date": "September 28, 2007",
+        "cancer_type": "breast cancer, prostate cancer, non-small cell lung cancer, gastric adenocarcinoma, and squamous cell carcinoma of the head and neck"
+    },
+    {
+        "drug_name": "raloxifene hydrochloride (Evista)",
+        "date": "September 13, 2007",
+        "cancer_type": "breast cancer"
+    },
+    {
+        "drug_name": "Dexrazoxane hydrochloride (Totect)",
+        "date": "September 6, 2007",
+        "cancer_type": "anthracycline extravasation"
+    },
+    {
+        "drug_name": "Temsirolimus (Torisel)",
+        "date": "May 30, 2007",
+        "cancer_type": "advanced renal cell carcinoma"
+    },
+    {
+        "drug_name": "Doxorubicin HCl liposome injection (Doxil)",
+        "date": "May 17, 2007",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "dalteparin sodium injection (Fragmin)",
+        "date": "May 1, 2007",
+        "cancer_type": "deep vein thrombosis"
+    },
+    {
+        "drug_name": "Eculizumab injection (Soliris)",
+        "date": "March 16, 2007",
+        "cancer_type": "paroxysmal nocturnal hemoglobinuria"
+    },
+    {
+        "drug_name": "Lapatinib tablets (Tykerb)",
+        "date": "March 13, 2007",
+        "cancer_type": "advanced metastatic breast cancer"
+    },
+    {
+        "drug_name": "sunitinib malate (Sutent)",
+        "date": "February 2, 2007",
+        "cancer_type": "advanced renal cell carcinoma"
+    },
+    {
+        "drug_name": "bortezomib (Velcade)",
+        "date": "December 8, 2006",
+        "cancer_type": "mantle cell lymphoma"
+    },
+    {
+        "drug_name": "trastuzumab (Herceptin)",
+        "date": "November 16, 2006",
+        "cancer_type": "early stage breast cancer"
+    },
+    {
+        "drug_name": "imatinib mesylate (Gleevec)",
+        "date": "October 19, 2006",
+        "cancer_type": "multiple indications"
+    },
+    {
+        "drug_name": "docetaxel (Taxotere)",
+        "date": "October 17, 2006",
+        "cancer_type": "inoperable, locally advanced squamous cell carcinoma of the head and neck"
+    },
+    {
+        "drug_name": "bevacizumab (Avastin)",
+        "date": "October 11, 2006",
+        "cancer_type": "non-small cell lung cancer"
+    },
+    {
+        "drug_name": "vorinostat (Zolinza)",
+        "date": "October 6, 2006",
+        "cancer_type": "cutaneous T-cell lymphoma (CTCL)"
+    },
+    {
+        "drug_name": "rituximab (Rituxan)",
+        "date": "September 29, 2006",
+        "cancer_type": "low grade or follicular, CD20-positive B-cell non-Hodgkin’s lymphoma"
+    },
+    {
+        "drug_name": "imatinib mesylate (Gleevec)",
+        "date": "September 27, 2006",
+        "cancer_type": "Philadelphia chromosome positive chronic myelogenous leukemia (Ph+ CML)"
+    },
+    {
+        "drug_name": "panitumumab (vectibix)",
+        "date": "September 27, 2006",
+        "cancer_type": "metastatic colorectal carcinoma"
+    },
+    {
+        "drug_name": "bevacizumab (Avastin)",
+        "date": "September 21, 2006",
+        "cancer_type": "Reversible Posterior Leukoencephalopathy Syndrome, Nasal septum perforation"
+    },
+    {
+        "drug_name": "oprelvekin (Neumega)",
+        "date": "September 13, 2006",
+        "cancer_type": "thrombocytopenia"
+    },
+    {
+        "drug_name": "pegaspargase (Oncaspar, Enzon Pharmaceuticals, Inc)",
+        "date": "July 24, 2006",
+        "cancer_type": "acute lymphoblastic leukemia"
+    },
+    {
+        "drug_name": "gemcitabine (Gemzar)",
+        "date": "July 14, 2006",
+        "cancer_type": "advanced ovarian cancer"
+    },
+    {
+        "drug_name": "lenalidomide oral capsules (Revlimid, Celgene Corporation)",
+        "date": "June 29, 2006",
+        "cancer_type": "multiple myeloma"
+    },
+    {
+        "drug_name": "dasatinib (Sprycel)",
+        "date": "June 28, 2006",
+        "cancer_type": "chronic myeloid leukemia"
+    },
+    {
+        "drug_name": "bevacizumab (Avastin)",
+        "date": "June 20, 2006",
+        "cancer_type": "metastatic carcinoma of the colon or rectum"
+    },
+    {
+        "drug_name": "topotecan hydrochloride (Hycamtin)",
+        "date": "June 14, 2006",
+        "cancer_type": "Stage IVB recurrent or persistent carcinoma of the cervix"
+    },
+    {
+        "drug_name": "thalidomide (Thalomid)",
+        "date": "May 26, 2006",
+        "cancer_type": "multiple myeloma (MM)"
+    },
+    {
+        "drug_name": "decitabine (Dacogen)",
+        "date": "May 2, 2006",
+        "cancer_type": "myelodysplastic syndromes (MDS)"
+    },
+    {
+        "drug_name": "denileukin diftitox (Ontak)",
+        "date": "March 3, 2006",
+        "cancer_type": "ophthalmologic adverse events"
+    },
+    {
+        "drug_name": "cetuximab (Erbitux)",
+        "date": "March 1, 2006",
+        "cancer_type": "squamous cell carcinoma of the head and neck (SCCHN)"
+    },
+    {
+        "drug_name": "rituximab (Rituxan)",
+        "date": "February 10, 2006",
+        "cancer_type": "diffuse large B-cell, CD20-positive, non-Hodgkin's lymphoma"
+    }
+]
