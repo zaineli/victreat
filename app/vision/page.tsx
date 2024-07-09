@@ -6,6 +6,6 @@ export default function Page() {
     <div className="flex justify-center items-center h-screen w-screen bg-gray-100">
       <CustomBarChart1 />
 
-    </div>
+    </div>d
   );
 }
