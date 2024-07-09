@@ -1,202 +1,144 @@
+'use client';
+
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { accyearApproved } from '@/app/discover/data';
+import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
+import useMouseHover from "@/lib/useMouseHover";
 
 function map(n: number, start1: number, stop1: number, start2: number, stop2: number) {
     return (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
 }
 
+type Drug = {
+    cancer_type: string;
+    date: string;
+    drug_name: string;
+}
+
 const CustomBarChart1 = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [transition, setTransition] = useState(false);
-    const [selectedLabel, setSelectedLabel] = useState(null);
-
-    // const accyearApproved = [
-    //     {
-    //         label: 'Jan',
-    //         value: 10,
-    //         cards: [
-    //             { id: 1, content: 'Card 1 for Jan', carousel: ['Card 1', 'Card 2', 'Card 3'] },
-    //             { id: 2, content: 'Card 2 for Jan', carousel: ['Card 1', 'Card 2', 'Card 3'] },
-    //             { id: 3, content: 'Card 3 for Jan', carousel: ['Card 1', 'Card 2', 'Card 3'] }
-    //         ]
-    //     },
-    //     {
-    //         label: 'Feb',
-    //         value: 20,
-    //         cards: [
-    //             { id: 4, content: 'Card 1 for Feb', carousel: ['Card 1', 'Card 2'] },
-    //             { id: 5, content: 'Card 2 for Feb', carousel: ['Card 1', 'Card 2'] }
-    //         ]
-    //     },
-
-    //     {
-    //         label: 'Mar',
-    //         value: 50,
-    //         cards: [
-    //             { id: 6, content: 'Card 1 for Mar', carousel: ['Card 1', 'Card 2', 'Card 3', 'Card 4'] },
-    //             { id: 7, content: 'Card 2 for Mar', carousel: ['Card 1', 'Card 2', 'Card 3', 'Card 4'] },
-    //             { id: 8, content: 'Card 3 for Mar', carousel: ['Card 1', 'Card 2', 'Card 3', 'Card 4'] },
-    //             { id: 9, content: 'Card 4 for Mar', carousel: ['Card 1', 'Card 2', 'Card 3', 'Card 4'] }
-    //         ]
-    //     },
-    //     {
-    //         label: 'Jan',
-    //         value: 10,
-    //         cards: [
-    //             { id: 1, content: 'Card 1 for Jan', carousel: ['Card 1', 'Card 2', 'Card 3'] },
-    //             { id: 2, content: 'Card 2 for Jan', carousel: ['Card 1', 'Card 2', 'Card 3'] },
-    //             { id: 3, content: 'Card 3 for Jan', carousel: ['Card 1', 'Card 2', 'Card 3'] }
-    //         ]
-    //     },
-    //     {
-    //         label: 'Feb',
-    //         value: 20,
-    //         cards: [
-    //             { id: 4, content: 'Card 1 for Feb', carousel: ['Card 1', 'Card 2'] },
-    //             { id: 5, content: 'Card 2 for Feb', carousel: ['Card 1', 'Card 2'] }
-    //         ]
-    //     },
-
-    //     {
-    //         label: 'Mar',
-    //         value: 50,
-    //         cards: [
-    //             { id: 6, content: 'Card 1 for Mar', carousel: ['Card 1', 'Card 2', 'Card 3', 'Card 4'] },
-    //             { id: 7, content: 'Card 2 for Mar', carousel: ['Card 1', 'Card 2', 'Card 3', 'Card 4'] },
-    //             { id: 8, content: 'Card 3 for Mar', carousel: ['Card 1', 'Card 2', 'Card 3', 'Card 4'] },
-    //             { id: 9, content: 'Card 4 for Mar', carousel: ['Card 1', 'Card 2', 'Card 3', 'Card 4'] }
-    //         ]
-    //     },
-    //     {
-    //         label: 'Jan',
-    //         value: 10,
-    //         cards: [
-    //             { id: 1, content: 'Card 1 for Jan', carousel: ['Card 1', 'Card 2', 'Card 3'] },
-    //             { id: 2, content: 'Card 2 for Jan', carousel: ['Card 1', 'Card 2', 'Card 3'] },
-    //             { id: 3, content: 'Card 3 for Jan', carousel: ['Card 1', 'Card 2', 'Card 3'] }
-    //         ]
-    //     },
-    //     {
-    //         label: 'Feb',
-    //         value: 20,
-    //         cards: [
-    //             { id: 4, content: 'Card 1 for Feb', carousel: ['Card 1', 'Card 2'] },
-    //             { id: 5, content: 'Card 2 for Feb', carousel: ['Card 1', 'Card 2'] }
-    //         ]
-    //     },
-
-    //     {
-    //         label: 'Mar',
-    //         value: 50,
-    //         cards: [
-    //             { id: 6, content: 'Card 1 for Mar', carousel: ['Card 1', 'Card 2', 'Card 3', 'Card 4'] },
-    //             { id: 7, content: 'Card 2 for Mar', carousel: ['Card 1', 'Card 2', 'Card 3', 'Card 4'] },
-    //             { id: 8, content: 'Card 3 for Mar', carousel: ['Card 1', 'Card 2', 'Card 3', 'Card 4'] },
-    //             { id: 9, content: 'Card 4 for Mar', carousel: ['Card 1', 'Card 2', 'Card 3', 'Card 4'] }
-    //         ]
-    //     },
-    //     {
-    //         label: 'Jan',
-    //         value: 10,
-    //         cards: [
-    //             { id: 1, content: 'Card 1 for Jan', carousel: ['Card 1', 'Card 2', 'Card 3'] },
-    //             { id: 2, content: 'Card 2 for Jan', carousel: ['Card 1', 'Card 2', 'Card 3'] },
-    //             { id: 3, content: 'Card 3 for Jan', carousel: ['Card 1', 'Card 2', 'Card 3'] }
-    //         ]
-    //     },
-    //     {
-    //         label: 'Feb',
-    //         value: 20,
-    //         cards: [
-    //             { id: 4, content: 'Card 1 for Feb', carousel: ['Card 1', 'Card 2'] },
-    //             { id: 5, content: 'Card 2 for Feb', carousel: ['Card 1', 'Card 2'] }
-    //         ]
-    //     },
-
-    //     {
-    //         label: 'Mar',
-    //         value: 50,
-    //         cards: [
-    //             { id: 6, content: 'Card 1 for Mar', carousel: ['Card 1', 'Card 2', 'Card 3', 'Card 4'] },
-    //             { id: 7, content: 'Card 2 for Mar', carousel: ['Card 1', 'Card 2', 'Card 3', 'Card 4'] },
-    //             { id: 8, content: 'Card 3 for Mar', carousel: ['Card 1', 'Card 2', 'Card 3', 'Card 4'] },
-    //             { id: 9, content: 'Card 4 for Mar', carousel: ['Card 1', 'Card 2', 'Card 3', 'Card 4'] }
-    //         ]
-    //     },
-    // ];
+    const [stopped, setStopped] = useState(false);
+    const [drugs, setDrugs] = useState<Drug[]>([]);
+    const ref = useRef<HTMLDivElement>();
+    const isHovered = useMouseHover(ref);
+    const intervelRef = useRef();
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
-            setTransition(true);
-            setTimeout(() => {
-                setCurrentIndex(prevIndex => (prevIndex + 1) % accyearApproved.length);
-                setTransition(false);
-            }, 500);
-        }, 2000);
+        fetch('/drugs.json').then(res => res.text())
+            .then(JSON.parse)
+            .then(setDrugs)
+    }, [])
 
-        return () => clearInterval(intervalId);
-    }, []);
+    function getDrugsByYear(year: number, max: number) {
+        return drugs.filter(({ date }) => date.endsWith(year.toString())).slice(0, max);
+    }
 
-    const handleClick = () => {
 
-    };
+    useEffect(() => {
+        console.log('clearing', stopped, isHovered);
+        clearInterval(intervelRef.current);
+        if (stopped || isHovered) return;
+        console.log('interval');
+        intervelRef.current = setInterval(() => {
+            setCurrentIndex(prevIndex => (prevIndex + 1) % accyearApproved.length);
+        }, 1000);
 
+        return () => {console.log('clearing');clearInterval(intervelRef.current)};
+    }, [stopped, isHovered]);
     // get only five bars
     const inView = accyearApproved.slice(currentIndex, currentIndex + 3);
     // if (currentIndex + 6 > accyearApproved.length) {
-    
-        inView.unshift(...accyearApproved.slice(Math.max(0, currentIndex-3), currentIndex));
+
+    inView.unshift(...accyearApproved.slice(Math.max(0, currentIndex - 2), currentIndex));
     // }
 
-    if (currentIndex < 3) {
-        inView.unshift(...Array.from({length: Math.max(0, 2 - currentIndex)}, (_, i) => 0));
+    function handleClick(i: number) {
+        setCurrentIndex(j => j + i);
+        setStopped(true);
     }
 
-    console.log(inView);
+    if (currentIndex < 2) {
+        inView.unshift(...Array.from({ length: Math.max(0, 2 - currentIndex) }, (_, i) => 0));
+    }
+
+    if (currentIndex > accyearApproved.length - 3) {
+        inView.push(...Array.from({ length: Math.max(0, accyearApproved.length - currentIndex) }, (_, i) => 0));
+    }
+
+    const selected = currentIndex + 2006;
+
+    const yearDrugs = getDrugsByYear(selected, 20);
+
+    // console.log(inView);
 
     return (
-        <div className="w-4/5 max-w-2xl mx-auto overflow-hidden">
-            <div className="flex relative" style={{ width: '100%', overflow: 'hidden' }}>
-                <motion.div className="flex w-full h-[400px] bg-gray-400">
-                    <AnimatePresence>
+        <div className=" flex gap-16 mx-auto overflow-hidden">
+            <div ref={ref} className="flex  overflow-hidden relative" >
+                <span
+                    onClick={() => setCurrentIndex(i => i - 1)}
+                    className='absolute cursor-pointer text-white bg-black bg-opacity-50 p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] left-4 translate-y-[-50%]]'>
+                    <FaChevronLeft />
+                </span>
+                <span
+                    onClick={() => setCurrentIndex(i => i + 1)}
+                    className='absolute cursor-pointer text-white bg-black bg-opacity-50 p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] right-4 translate-y-[-50%]]'>
+                    <FaChevronRight />
+                </span>
+                <motion.div className="flex h-[400px] w-[500px]  bg-gray-400">
+                    <AnimatePresence mode="popLayout">
                         {inView.map((d, index) => (
                             <motion.div
                                 key={currentIndex + d.toString() + index}
                                 className="flex flex-col items-center w-1/4 px-2"
-                                // initial={{ opacity: index == inView.length - 1 ? 0: 1, x: "100%" }}
+                                initial={{ opacity: index == inView.length - 1 ? 0 : 1, x: "100%" }}
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: index == 0 ? 0 : 1, x: "-100%" }}
                                 transition={{ duration: 0.5 }}
                                 style={{ minWidth: '20%' }}
+                                onClick={() => handleClick(index - 2)}
                             >
-                                <span className=' flex-1'></span>
-                                <div
-                                    className={`bg-blue-600 hover:bg-blue-400 transition-all duration-300 cursor-pointer ${selectedLabel === d.label ? 'opacity-50' : 'opacity-100'}`}
-                                    style={{ height: map(d, 0, Math.max(...accyearApproved), 0, 85) + "%", width: '100%' }}
-                                ></div>
-                                <span className="mt-2 text-center">{currentIndex + 2006 + index - 2}</span>
+                                {d != 0 &&
+                                    <>
+                                        <span className=' flex-1 flex flex-col justify-end'>{d}</span>
+                                        <motion.div
+                                            key={currentIndex + d.toString() + index}
+                                            className={cn(` bg-blue-600  transition-all cursor-pointer `)}
+                                            style={{ height: map(d, 0, Math.max(...accyearApproved), 0, 85) + "%", width: '100%' }}
+                                        ></motion.div>
+                                        <span className="mt-2 text-center">{currentIndex + 2006 + index - 2}</span>
+                                    </>
+                                }
                             </motion.div>
                         ))}
                     </AnimatePresence>
                 </motion.div>
             </div>
-            {selectedLabel && (
-                <div className="flex mt-4 overflow-x-auto scrollbar-hidden">
-                    {accyearApproved.find(item => item.label === selectedLabel)?.cards.map((card, index) => (
-                        <div key={index} className="p-4 border border-gray-200 rounded-md mx-2" style={{ minWidth: '300px', maxWidth: '90vw' }}>
-                            <p className="text-gray-700">{card.content}</p>
-                            <div className="flex mt-2">
-                                {card.carousel.map((item, idx) => (
-                                    <div key={idx} className="bg-gray-300 rounded-md px-3 py-1 mx-1">
-                                        <p className="text-gray-700">{item}</p>
-                                    </div>
-                                ))}
+            {/* {selectedLabel && ( */}
+            <div className="bg-neutral-500 rounded-t-xl ">
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{
+                        opacity: 1, transition: {
+                            delay: 0.25,
+                            duration: 0.5
+                        }
+                    }}
+                    key={selected}
+                    className="flex  w-[500px] h-[400px] flex-col p-4 gap-2 overflow-hidden scrollbar-hidden">
+                    {yearDrugs.map(({ cancer_type, drug_name, date }) =>
+                        <div className=' bg-neutral-300 rounded-xl p-2'>
+                            <div className="flex items-center justify-between">
+                                <span className='font-bold '>{drug_name}</span> <span className=' text-sm min-w-max font-light'>{date}</span>
                             </div>
-                        </div>
-                    ))}
-                </div>
-            )}
+                            <div>{cancer_type}</div>
+                        </div>)}
+
+                </motion.div>
+            </div>
+            {/* )} */}
         </div>
     );
 };
