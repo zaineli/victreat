@@ -6,7 +6,6 @@ export type Mutation = {
 export const yearApproved = [22, 14, 12, 11, 16, 19, 23, 19, 19, 33, 22, 31, 33, 49, 108, 58, 41, 45, 31]; // start 2006 end 2024
 // accumulative 22, 36, 48, 59, 75, 94, 117, 136, 155, 188, 210, 241, 274, 323, 431, 489, 530, 575, 606
 export const accyearApproved = yearApproved.map((d, i) => yearApproved.slice(0, i + 1).reduce((a, b) => a + b, 0));
-console.log(yearApproved, accyearApproved)
 
 export const mutations: Mutation[] = [
   {

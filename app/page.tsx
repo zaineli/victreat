@@ -10,6 +10,7 @@ import Trials from '@/components/custom/trials';
 import CallToAction from '@/components/custom/callToAction';
 import ScrollButton from '@/components/custom/scroll-button';
 import Footer from '@/components/custom/footer';
+import CustomBarChart1 from '@/components/custom/CustomBarChart1';
 
 const animationVariants = {
   hidden: { y: "100%" },
@@ -198,6 +199,9 @@ function Home() {
       </section>
 
 
+      <section>
+        <CustomBarChart1 />
+      </section>
 
         <section className='w-full mt-12 lg:p-32  p-4 sm:p-16 flex flex-col items-center justify-center '>
           <div className='lg:text-6xl md:text-3xl text-3xl font-semibold text-center'>
@@ -208,6 +212,9 @@ function Home() {
           </p>
           <Trials className={'flex justify-center w-[80%] mx-auto'} />
         </section>
+      
+
+
       <section id={'mutations'} className='w-full  mt-64 lg:p-32  p-4 sm:p-16 '>
         <div className='lg:text-6xl md:text-4xl text-3xl text-center font-bold'>
           Victreat aspires to be your partner at navigating  cancer stages, mutations and myriad of clinical trial options 
