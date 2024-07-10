@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion';
 
 const pathVariants = {
-  hidden: {
+  hidden: {                                                         
     opacity: 0,
     pathLength: 0,
   },
@@ -16,8 +16,8 @@ const pathVariants = {
     transition: {
       duration: 2,
       ease: "easeInOut",
-      repeat: Infinity,
-      repeatType: "reverse",
+      // repeat: Infinity,
+      // repeatType: "reverse",
     },
   },
 };
@@ -111,7 +111,23 @@ const AnimatedSVG = () => {
     //   </motion.g>
     // </motion.svg>
 
-    <Image src="/images/logo.svg" alt="My SVG" width={300} height={200} />
+    
+
+<div className="flex justify-center items-center h-screen overflow-hidden">
+  <div className="w-1/3 bg-slate-500 flex justify-center items-center">
+    <div className="w-full">
+      <img
+        src="/images/logo.svg"
+        // className="transform scale-150"
+        alt="My SVG"
+        className='w-full h-full scale-200'
+        style={{scale: 4.0}}
+      />
+    </div>
+  </div>
+</div>
+
+
 
   );
 };
