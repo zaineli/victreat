@@ -11,6 +11,7 @@ import CallToAction from '@/components/custom/callToAction';
 import ScrollButton from '@/components/custom/scroll-button';
 import Footer from '@/components/custom/footer';
 import CustomBarChart1 from '@/components/custom/CustomBarChart1';
+import CardsBanner from '@/components/custom/cardsBanner';
 
 const animationVariants = {
   hidden: { y: "100%" },
