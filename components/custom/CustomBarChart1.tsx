@@ -41,7 +41,7 @@ const CustomBarChart1 = () => {
         if (stopped || isHovered) return;
         console.log('interval');
         intervelRef.current = setInterval(() => {
-            // setCurrentIndex(prevIndex => (prevIndex + 1) % (accyearApproved.length + 1));
+            setCurrentIndex(prevIndex => (prevIndex + 1) % (accyearApproved.length + 1));
         }, 1000);
 
         return () => { console.log('clearing'); clearInterval(intervelRef.current) };
