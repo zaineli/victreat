@@ -198,7 +198,9 @@ function Home() {
         </div>
       </section>
 
-
+      <section>
+        <CardsBanner />
+      </section>
       <section>
         <CustomBarChart1 />
       </section>
