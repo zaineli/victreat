@@ -8,7 +8,7 @@ import { useRef, useEffect, useState } from 'react';
 import useMouseHover from "@/lib/useMouseHover";
 import { Button } from "../ui/button";
 
-function map(n: number, start1: number, stop1: number, start2: number, stop2: number) {
+export function map(n: number, start1: number, stop1: number, start2: number, stop2: number) {
     return (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
 }
 
@@ -98,8 +98,6 @@ const CustomBarChart1 = () => {
     const heights = [0, 0, ...accyearApproved, 0, 0]
 
     const yearDrugs = getDrugsByYear(selected, 20);
-
-    console.log(scrollTop);
 
 
     return (

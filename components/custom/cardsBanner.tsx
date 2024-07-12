@@ -1,9 +1,29 @@
+import { useRef, useState } from "react";
+import { map } from "./CustomBarChart1";
+import useMouseHover from "@/lib/useMouseHover";
 
 
 export default function CardsBanner() {
-    return (
-        <div className="bg-neutral-400">
+    const cards = [
+        {
+            heading: "Beat Cancer",
+            content: "We help you beat cancer."
+        },
+        {
+            heading: "Beat Cancer",
+            content: "We help you beat cancer."
+        },
+        {
+            heading: "Beat Cancer",
+            content: "We help you beat cancer."
+        },
+        
+    ]
 
+    return (
+        <div className=" bg-gradient-to-tr from-[#8346b4] to-[#46b4ab] flex lg:p-32 md:p-16 p-4 gap-16 justify-between relative flex-col md:flex-row flex-wrap ">
+            {/* <img src="/images/ribbons.jpeg" className="absolute left-0 bottom-0 h-full w-full bg-left bg-repeat" alt="" /> */} 
+            {cards.map((card, i) => <Card key={i} {...card} />)}
         </div>
     );
 }
@@ -12,9 +32,12 @@ function Card({ heading, content }: {
     heading: string;
     content: string;
 }) {
+    const ref = useRef<HTMLDivElement>();
+    const [mouse, setMouse] = useState({ x: 0, y: 0 });
+    const [glare, setGlare] = useState({ x: 0, y: 0, opacity: 0 });
+    const isHovered = useMouseHover(ref);
 
-    const ref = useRef();
-    const [mouse,setMouse] = useState();
+
 
     return (
         <div
@@ -24,16 +47,16 @@ function Card({ heading, content }: {
                 const boundingRect = ref.current.getBoundingClientRect();
                 const x = (e.clientX - boundingRect.x - boundingRect.width / 2) / boundingRect.width;
                 const y = (e.clientY - boundingRect.y - boundingRect.height / 2) / boundingRect.height;;
-                setMouse({ x: map(x, -0.5, 0.5, -30, 30), y: map(-y, -0.5, 0.5, -30, 30) });
+                setMouse({ x: map(x, -0.5, 0.5, -15, 15), y: map(-y, -0.5, 0.5, -15, 15) });
                 const glareX = boundingRect.width - (e.clientX - boundingRect.x);
                 const glareY = boundingRect.width - (e.clientY - boundingRect.y);
                 const distance = Math.sqrt((glareX - (boundingRect.width / 2)) ** 2 + (glareY - (boundingRect.height / 2)) ** 2);
-                const maxDistance = Math.sqrt((boundingRect.width / 2) ** 2 + (boundingRect.height / 2) ** 2);
+                const maxDistance = Math.sqrt((boundingRect.width/2) ** 2 + (boundingRect.height / 2) ** 2);
                 setGlare(
                     {
                         x: glareX,
                         y: glareY,
-                        opacity: map(distance, 0, maxDistance, 0, 1)
+                        opacity: map(distance, 0, maxDistance, 0, 0.4)
                     }
                 )
                 // const cx = 
