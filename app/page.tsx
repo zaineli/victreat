@@ -24,7 +24,7 @@ function Home() {
       </section>
       <section id='2'>
         <div className='bg-[#fee0dde0] min-h-screen flex justify-center items-center font-sans'>
-          Card Section
+          <CardsBanner />
         </div>
       </section>
       <section id='3'>
