@@ -1,6 +1,6 @@
 'use client';
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type AnimatedLogoProps = {
     className: string;
@@ -9,6 +9,20 @@ type AnimatedLogoProps = {
 const AnimatedLogo = ({className}:AnimatedLogoProps) => {
   const [isFilled, setIsFilled] = useState(false);
 
+  const ref = useRef<HTMLDivElement>();
+  const [dimensions, setDimensions] = useState({width: 0, height: 0})
+
+  useEffect(() => {
+    // resize the svg when the window is resized
+    const handleResize = () => {
+      setDimensions({
+        width: ref.current?.clientWidth || 0,
+        height: ref.current?.clientHeight || 0
+      });
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+  }, []);
 
   const handleAnimationComplete = () => {
     setIsFilled(true);
@@ -17,9 +31,9 @@ const AnimatedLogo = ({className}:AnimatedLogoProps) => {
 
   return (
 
-      <div className={className}>
+      <div ref={ref} className={className}>
           <motion.svg
-            width="400" height="400" viewBox="0 0 1456 1455" fill="none" xmlns="http://www.w3.org/2000/svg">
+            width={dimensions.width} height={dimensions.height} viewBox="0 0 1456 1455" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="paint0_linear_105_106" x1="589.858" y1="-357.18" x2="1074.61" y2="881.791" gradientUnits="userSpaceOnUse">
                 <stop offset="0" stop-color="#F89B3A" />

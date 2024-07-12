@@ -37,7 +37,7 @@ const ProgressTracker = ({ sections }) => {
           <div key={index} className="flex flex-col items-center z-10">
             <div
               className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                index <= activeIndex ? 'bg-[#e8a29ce0]' : 'bg-gray-300'
+                index <= activeIndex ? 'bg-[#92e665aa]' : 'bg-gray-300'
               }`}
             >
               <FontAwesomeIcon
@@ -46,7 +46,7 @@ const ProgressTracker = ({ sections }) => {
               />
             </div>
             {index !== sections.length - 1 && (
-              <div className={`w-1 h-16 ${index < activeIndex ? 'bg-[#e8a29ce0]' : 'bg-gray-300'}`}></div>
+              <div className={`w-1 h-16 ${index < activeIndex ? 'bg-[#92e665aa]' : 'bg-gray-300'}`}></div>
             )}
           </div>
         ))}

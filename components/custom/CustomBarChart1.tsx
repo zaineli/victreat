@@ -101,8 +101,8 @@ const CustomBarChart1 = () => {
 
 
     return (
-        <div className="h-screen bg-[#FFEDED] py-48 lg:px-32 md:px-16 px-4">
-            <h1 className=" lg:text-5xl md:text-3xl text-2xl font-bold text-center mx-auto mb-8 max-w-4xl">Accelerating Approval of new Drugs from 2006 to 2024 </h1>
+        <div className="h-screen bg-[#f1ffe9ab] py-48 lg:px-32 md:px-16 px-4">
+            <h1 className=" lg:text-5xl md:text-3xl text-2xl font-bold text-center mx-auto mb-32 max-w-4xl">Accelerating Approval of new Drugs from 2006 to 2024 </h1>
             <div ref={ref} className="flex flex-col  items-stretch lg:flex-row gap-16 justify-between">
                 <div className="flex lg:flex-[3_3_0]   overflow-hidden  relative" >
                     <span
@@ -115,7 +115,7 @@ const CustomBarChart1 = () => {
                         className='absolute cursor-pointer text-pink-700 p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] right-4 translate-y-[-50%]]'>
                         <FaChevronRight />
                     </span>
-                    <div className={cn("flex overflow-hidden w-full lg:w-[unset] h-[400px]  border-4 border-[#fdb1abe0] rounded-2xl", {
+                    <div className={cn("flex overflow-hidden w-full lg:w-[unset] h-[400px]  border-4 pb-5 border-[#a9ff77ab] rounded-2xl", {
                         // 'opacity-0': currentIndex == 0,
                     })}>
                         {heights.map((d, index) => (
@@ -139,8 +139,8 @@ const CustomBarChart1 = () => {
                                         <span className=' flex-1 flex flex-col justify-end'>{d}</span>
                                         <div
                                             key={currentIndex + d.toString() + index}
-                                            className={cn(` bg-[#fee0dde0]  transition-all cursor-pointer  rounded-t-2xl `, {
-                                                'bg-[#fdb1abe0]': selected == index + 2004
+                                            className={cn(` bg-[#a9ff7770]  transition-all cursor-pointer  rounded-t-2xl `, {
+                                                'bg-[#80bf5be4]': selected == index + 2004
                                             })}
                                             style={{ height: map(d, 0, Math.max(...accyearApproved), 0, 85) + "%", width: '100%' }}
                                         ></div>
@@ -166,7 +166,7 @@ const CustomBarChart1 = () => {
                         <div
                             className="flex  md:flex-col gap-2">
                             {yearDrugs.map(({ cancer_type, drug_name, date }) =>
-                                <div className=' bg-[#fdb1abe0] w-full min-w-full h-full  rounded-xl p-2 '>
+                                <div className=' bg-[#80bf5be4] w-full min-w-full h-full  rounded-xl p-2 '>
                                     <div className='font-bold bgtruncate'>{drug_name}</div> <div className='  overflow-ellipsis  text-xs min-w-max font-light'>{date}</div>
                                     <div className=" truncate overflow-ellipsis">{cancer_type}</div>
                                 </div>)
