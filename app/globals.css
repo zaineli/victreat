@@ -582,8 +582,8 @@
 
 
 .gradient-glow {
-  box-shadow: 0 0 10px 10px #FFC7C7, 
+  box-shadow: 0 0 10px 10px #c4f5aaaa, 
              
-              0 0 30px 30px #ffdada;
+              0 0 30px 30px #bedfacaa;
 }
 
