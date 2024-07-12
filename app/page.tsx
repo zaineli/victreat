@@ -23,7 +23,7 @@ function Home() {
         <HeroSection />
       </section>
       <section id='2'>
-        <div className='bg-[#fee0dde0] min-h-screen flex justify-center items-center font-sans'>
+        <div className='bg-[#fee0dde0] flex justify-center items-center font-sans'>
           <CardsBanner />
         </div>
       </section>
