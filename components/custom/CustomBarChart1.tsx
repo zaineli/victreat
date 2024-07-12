@@ -42,7 +42,7 @@ const CustomBarChart1 = () => {
         console.log('interval');
         intervelRef.current = setInterval(() => {
             setCurrentIndex(prevIndex => (prevIndex + 1) % (accyearApproved.length + 1));
-        }, 1000);
+        }, 2000);
 
         return () => { console.log('clearing'); clearInterval(intervelRef.current) };
     }, [stopped, isHovered]);
@@ -103,21 +103,21 @@ const CustomBarChart1 = () => {
 
 
     return (
-        <div className="  my-96 bg-[#DBE5EB] py-16 lg:px-32 md:px-16 px-4">
+        <div className="h-screen bg-[#FFEDED] py-48 lg:px-32 md:px-16 px-4">
             <h1 className=" lg:text-5xl md:text-3xl text-2xl font-bold text-center mx-auto mb-8 max-w-4xl">Accelerating Approval of new Drugs from 2006 to 2024 </h1>
             <div ref={ref} className="flex flex-col  items-stretch lg:flex-row gap-16 justify-between">
                 <div className="flex lg:flex-[3_3_0]   overflow-hidden  relative" >
                     <span
                         onClick={() => setCurrentIndex(i => i - 1)}
-                        className='absolute cursor-pointer text-white bg-black bg-opacity-50 p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] left-4 translate-y-[-50%]]'>
+                        className='absolute cursor-pointer text-pink-700 p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] left-4 translate-y-[-50%]]'>
                         <FaChevronLeft />
                     </span>
                     <span
                         onClick={() => setCurrentIndex(i => i + 1)}
-                        className='absolute cursor-pointer text-white bg-black bg-opacity-50 p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] right-4 translate-y-[-50%]]'>
+                        className='absolute cursor-pointer text-pink-700 p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] right-4 translate-y-[-50%]]'>
                         <FaChevronRight />
                     </span>
-                    <div className={cn("flex overflow-hidden w-full lg:w-[unset] h-[400px]  bg-white", {
+                    <div className={cn("flex overflow-hidden w-full lg:w-[unset] h-[400px]  border-4 border-[#fdb1abe0] rounded-2xl", {
                         // 'opacity-0': currentIndex == 0,
                     })}>
                         {heights.map((d, index) => (
@@ -141,8 +141,8 @@ const CustomBarChart1 = () => {
                                         <span className=' flex-1 flex flex-col justify-end'>{d}</span>
                                         <div
                                             key={currentIndex + d.toString() + index}
-                                            className={cn(` bg-[#A5AFB5]  transition-all cursor-pointer  rounded-t-xl `, {
-                                                'bg-[#747b80]': selected == index + 2004
+                                            className={cn(` bg-[#fee0dde0]  transition-all cursor-pointer  rounded-t-2xl `, {
+                                                'bg-[#fdb1abe0]': selected == index + 2004
                                             })}
                                             style={{ height: map(d, 0, Math.max(...accyearApproved), 0, 85) + "%", width: '100%' }}
                                         ></div>
@@ -153,7 +153,7 @@ const CustomBarChart1 = () => {
                         ))}
                     </div>
                 </div>
-                <div className="bg-[#747b80]  lg:flex-[2_2_0] text-white rounded-t-xl overflow-hidden relative ">
+                <div className="lg:flex-[2_2_0] text-white rounded-xl overflow-hidden relative ">
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{
@@ -168,15 +168,15 @@ const CustomBarChart1 = () => {
                         <div
                             className="flex  md:flex-col gap-2">
                             {yearDrugs.map(({ cancer_type, drug_name, date }) =>
-                                <div className=' bg-[#A5AFB5] w-full min-w-full h-full  rounded-xl p-2 '>
-                                    <div className='font-bold truncate'>{drug_name}</div> <div className='  overflow-ellipsis  text-xs min-w-max font-light'>{date}</div>
+                                <div className=' bg-[#fdb1abe0] w-full min-w-full h-full  rounded-xl p-2 '>
+                                    <div className='font-bold bgtruncate'>{drug_name}</div> <div className='  overflow-ellipsis  text-xs min-w-max font-light'>{date}</div>
                                     <div className=" truncate overflow-ellipsis">{cancer_type}</div>
                                 </div>)
                             }
                         </div>
                     </motion.div>
                     <div
-                        className={cn(" z-40 hidden md:flex justify-center items-start absolute inset-x-0 left-0 w-full h-1/4 top-0 bg-gradient-to-b from-[#ffffff80] dark:from-background",
+                        className={cn(" z-40 hidden md:flex justify-center items-start absolute inset-x-0 left-0 w-full h-1/4 top-0    ",
                             {
                                 'opacity-0': scrollTop < 1,
                                 'opacity-100': scrollTop >= 1
@@ -184,12 +184,12 @@ const CustomBarChart1 = () => {
                         )}>
                         <Button
                             onClick={scrollUp}
-                            className=" absolute mb-4 rounded-full z-40">
+                            className=" absolute bg-transparent mt-4 text-pink-800 rounded-full z-40">
                             <FaChevronUp />
                         </Button>
                     </div>
                     <div
-                        className={cn(" z-40 hidden md:flex justify-center items-end absolute inset-x-0 left-0 w-full h-1/4 bottom-0 bg-gradient-to-t from-[#ffffff80] dark:from-background",
+                        className={cn(" z-40 hidden md:flex justify-center items-end absolute inset-x-0 left-0 w-full h-1/4 bottom-0 ",
                             {
                                 'opacity-0': !showScrollBottom,
                                 'opacity-100': showScrollBottom
@@ -197,18 +197,18 @@ const CustomBarChart1 = () => {
                         )}>
                         <Button
                             onClick={scrollDown}
-                            className=" absolute mb-4 rounded-full z-40">
+                            className=" absolute mb-4 bg-transparent text-pink-800 rounded-full z-40">
                             <FaChevronDown />
                         </Button>
                     </div>
                     <button
                         onClick={scrollRight}
-                        className=" bg-black bg-opacity-40 p-4 md:hidden text-white absolute mb-4 right-1 top-[50%] translate-y-[-50%] rounded-full  aspect-square  z-40">
+                        className="  p-4 md:hidden text-pink-700 absolute mb-4 right-1 top-[50%] translate-y-[-50%] rounded-full  aspect-square  z-40">
                         <FaChevronRight />
                     </button>
                     <button
                         onClick={scrollLeft}
-                        className=" bg-black bg-opacity-40 p-4 md:hidden text-white absolute mb-4 left-1 top-[50%] translate-y-[-50%] rounded-full  aspect-square  z-40">
+                        className="  p-4 md:hidden text-pink-700 absolute mb-4 left-1 top-[50%] translate-y-[-50%] rounded-full  aspect-square  z-40">
                         <FaChevronLeft />
                     </button>
                 </div>
