@@ -21,7 +21,7 @@ export default function CardsBanner() {
     ]   
 
     return (
-        <div className=" bg-gradient-to-tr from-[#8346b4] to-[#46b4ab] flex w-full lg:p-16 lg:gap-16 md:gap-8 md:p-8 gap-4 p-4 justify-between relative flex-col md:flex-row flex-wrap ">
+        <div className="  bg-[#F3FFEB] to-[#DBE5EB] flex w-full lg:p-16 lg:gap-16 md:gap-8 md:p-8 gap-4 p-4 justify-between relative flex-col md:flex-row flex-wrap ">
             {/* <img src="https://www.nationalbreastcancer.org/wp-content/uploads/2023/06/Various-Ribbons-featured-v01Artboard-1-1.png" className="absolute left-0 bottom-0 h-full w-full bg-left bg-repeat" alt="" />  */}
             {cards.map((card, i) => <Card key={i} {...card} />)}
         </div>
@@ -66,7 +66,7 @@ function Card({ heading, content }: {
                 setMouse({ x: 0, y: 0 })
                 setGlare({ ...glare, opacity: 0 })
             }}
-            className="p-4 z-50 group flex-1"
+            className="p-4 z-50 group aspect-square w-full lg:flex-1"
         >
             <div
                 style={{
@@ -74,7 +74,7 @@ function Card({ heading, content }: {
                     transform: `perspective(3000px) rotateX(${(mouse.y).toFixed(1)}deg) rotateY(${(mouse.x).toFixed(1)}deg)`,//, ${(mouse.x * 360).toFixed(1)}deg)`
                     transition: !isHovered ? "transform 0.5s ease, box-shadow 0.5s ease" : " box-shadow 0.5s ease",
                 }}
-                className="overflow-hidden text-white hover:[box-shadow:0_40px_70px_-15px_rgba(0,0,0,0.3)] aspect-square  h-auto lg:p-16 p-8 bg-pink-200 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border border-gray-100">
+                className="overflow-hidden text-gray-600 hover:[box-shadow:0_40px_70px_-15px_rgba(0,0,0,0.3)] aspect-square  h-auto lg:p-16 p-8 bg-[#DEF5D2] rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-100 border border-gray-100">
                 <h1 className="lg:text-3xl md:text-2xl text-xl font-black mb-4">{heading}</h1>
                 <p className="lg:text-xl md:text-lg">{content}</p>
                 <span
@@ -84,7 +84,7 @@ function Card({ heading, content }: {
                         translate: '-50% -50%',
                         opacity: glare.opacity
                     }}
-                    className=" pointer-events-none  absolute block rounded-full w-full h-full  bg-[radial-gradient(circle_at_center,#ffffffff,#ffffff00,#ffffff00)] scale-[2.4] blur-xl group-hover:opacity-35 opacity-0">asd</span>
+                    className=" pointer-events-none  absolute block rounded-full w-full h-full  bg-[radial-gradient(circle_at_center,#ffffffff,#ffffff00,#ffffff00)] blur-xl group-hover:opacity-35 opacity-0">asd</span>
                 {/* <span className=" absolute -z-50 -inset-10 bg-red-500 [transform:translateZ(-100px)]"></span> */}
             </div>
         </div >

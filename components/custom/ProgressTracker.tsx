@@ -33,11 +33,11 @@ const ProgressTracker = ({ sections }) => {
   return (
     <div className="hidden md:flex fixed right-14 top-[30%] z-[2000]">
       <div className="relative flex flex-col items-center h-full">
-        {sections.map((_, index) => (
-          <div key={index} className="flex flex-col items-center z-10">
+        {sections.map((id, index) => (
+          <a href={'#'+id} key={index} className="flex flex-col items-center z-10">
             <div
               className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                index <= activeIndex ? 'bg-[#92e665aa]' : 'bg-gray-300'
+                index <= activeIndex ? 'bg-[#aade8d]' : 'bg-gray-300'
               }`}
             >
               <FontAwesomeIcon
@@ -48,7 +48,7 @@ const ProgressTracker = ({ sections }) => {
             {index !== sections.length - 1 && (
               <div className={`w-1 h-16 ${index < activeIndex ? 'bg-[#92e665aa]' : 'bg-gray-300'}`}></div>
             )}
-          </div>
+          </a>
         ))}
       </div>
     </div>
