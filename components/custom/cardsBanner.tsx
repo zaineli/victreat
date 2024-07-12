@@ -7,22 +7,22 @@ export default function CardsBanner() {
     const cards = [
         {
             heading: "Beat Cancer",
-            content: "We help you beat cancer."
+            content: "Your cancer journey is unique, and so is your support. Victreat provides personalized guidance, connecting you with trusted experts, resources, and a supportive community."
         },
         {
             heading: "Beat Cancer",
-            content: "We help you beat cancer."
+            content: "We help you beat cancer.  "
         },
         {
             heading: "Beat Cancer",
             content: "We help you beat cancer."
         },
         
-    ]
+    ]   
 
     return (
-        <div className=" bg-gradient-to-tr from-[#8346b4] to-[#46b4ab] flex lg:p-32 md:p-16 p-4 gap-16 justify-between relative flex-col md:flex-row flex-wrap ">
-            <img src="/images/wallpaper.webp" className="absolute left-0 bottom-0 h-full w-full bg-left bg-repeat" alt="" /> 
+        <div className=" bg-gradient-to-tr from-[#8346b4] to-[#46b4ab] flex w-full lg:p-16 lg:gap-16 md:gap-8 md:p-8 gap-4 p-4 justify-between relative flex-col md:flex-row flex-wrap ">
+            {/* <img src="https://www.nationalbreastcancer.org/wp-content/uploads/2023/06/Various-Ribbons-featured-v01Artboard-1-1.png" className="absolute left-0 bottom-0 h-full w-full bg-left bg-repeat" alt="" />  */}
             {cards.map((card, i) => <Card key={i} {...card} />)}
         </div>
     );
@@ -66,7 +66,7 @@ function Card({ heading, content }: {
                 setMouse({ x: 0, y: 0 })
                 setGlare({ ...glare, opacity: 0 })
             }}
-            className="p-4 z-50 group"
+            className="p-4 z-50 group flex-1"
         >
             <div
                 style={{
