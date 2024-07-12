@@ -579,3 +579,11 @@
 .cls-33 {
   fill: #696b68;
 }
+
+
+.gradient-glow {
+  box-shadow: 0 0 10px 10px #FFC7C7, 
+             
+              0 0 30px 30px #ffdada;
+}
+
