@@ -66,6 +66,7 @@ function Histogram({dimensions}: {dimensions: {width: number; height: number;}})
         const x = d3.scaleBand()
             .domain(dataArray.map(d => d.year.toString()))
             .range([margin.left, width - margin.right])
+            // .ticks(5)
             .padding(0.1);
 
         const y = d3.scaleLinear()
@@ -81,15 +82,23 @@ function Histogram({dimensions}: {dimensions: {width: number; height: number;}})
             .data(dataArray)
             .join('rect')
             .attr('x', d => x(d.year.toString())!)
+            .attr('class', 'bg-green-500')
             .attr('width', x.bandwidth())
-            .attr('fill', '#DBE5EB')
+            .attr('fill', '#F8DDC3')
             .attr('y', height - margin.bottom)  // Start from the bottom
             .attr('height', 0)  // Initial height of 0
+            .attr('rx', 10)  // Initial height of 0
             .transition()
             .duration(1000)
             .attr('y', d => y(d.cancer))
-            .attr('height', d => y(0) - y(d.cancer));
+            .attr('height', d => y(0) - y(d.cancer) + 20);
 
+        barContainer.append('rect')
+            .attr('x', 0)
+            .attr('width', width)
+            .attr('fill', '#F6FFF0')
+            .attr('y', height - 40)  // Start from the bottom
+            .attr('height', 20)  // Initial height of 0
         // Draw white dots on top of each bar
         // barContainer.selectAll('.dot')
         //     .data(dataArray)
@@ -103,12 +112,12 @@ function Histogram({dimensions}: {dimensions: {width: number; height: number;}})
         // Add the line chart
         const line = d3.line<Data>()
             .x(d => x(d.year.toString())! + x.bandwidth() / 2)
-            .y(d => y(d.cancer));
+            .y(d => y(d.cancer + 200));
 
         svg.append('path')
             .datum(dataArray)
             .attr('fill', 'none')
-            .attr('stroke', '#a5afb5')
+            .attr('stroke', '#F9C19E')
             .attr('stroke-width', 10)
             .attr('d', line)
             .attr('stroke-dasharray', function () { return this.getTotalLength() })

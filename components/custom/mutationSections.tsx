@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import WheelCarousel from "@/components/custom/wheelCarousel";
-import { AnimatedBeamMultipleOutputDemo } from "../AnimatedBeam";
+import { MutationsGraph } from "../AnimatedBeam";
 import useMouseHover from "@/lib/useMouseHover";
 import { AnimatePresence, motion } from "framer-motion";
 import { useMediaQuery } from "@/lib/useMediaQuery";
@@ -96,7 +96,7 @@ function MutationSection({ small = true }) {
                             }}
                             key={cancer.name + i}
                         >
-                            <AnimatedBeamMultipleOutputDemo
+                            <MutationsGraph
                                 cancer={!small ? cancer : { name: cancer.name, mutations: cancer.mutations.slice(0, 3) }}
                                 showLines={i === center}
                                 className="w-full h-full" />
