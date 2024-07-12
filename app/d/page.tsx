@@ -6,7 +6,7 @@
 // import {  usePathname, useRouter } from 'next/navigation';
 // import React, { useEffect, useState } from 'react';
 // import { GiSelfLove } from 'react-icons/gi';
-// import { ProgressTracker, type Stages } from '@atlaskit/progress-tracker';
+import { ProgressTracker, type Stages } from '@atlaskit/progress-tracker';
 // import { Input } from '@/components/ui/input';
 // import { CancerType } from '../discover/data';
 // import { CiSearch } from 'react-icons/ci';
