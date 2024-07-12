@@ -31,7 +31,7 @@ const ProgressTracker = ({ sections }) => {
   const icons = [faHome, faBullseye, faCogs];
 
   return (
-    <div className="hidden md:flex fixed right-32 top-[30%] z-[2000]">
+    <div className="hidden md:flex fixed right-14 top-[30%] z-[2000]">
       <div className="relative flex flex-col items-center h-full">
         {sections.map((_, index) => (
           <div key={index} className="flex flex-col items-center z-10">
