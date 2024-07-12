@@ -93,22 +93,6 @@ function Home() {
   }, []);
 
 
-  // return (
-  //   <div className='mt-48 w-96 h-96 bg-red-200 rounded-[15%] overflow-hidden m-2'>
-  //     <RibbonsCard />
-  //   </div>
-  // );
-
-  // const renderChart = () => {
-  //   const { type, dataPoints } = charts[activeIndex];
-  //   switch (type) {
-  //     case "AnimatedBeam":
-  //       return <AnimatedBeamMultipleOutputDemo dataPoints={dataPoints} />;
-  //     default:
-  //       return null;
-  //   }
-  // };
-
   return (
     <div className="">
 
@@ -199,7 +183,7 @@ function Home() {
       </section>
 
       <section>
-        <CardsBanner />
+        {/* <CardsBanner /> */}
       </section>
       <section>
         <CustomBarChart1 />
