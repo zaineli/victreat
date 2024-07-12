@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 216 195'>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox='0 0 216 190'>
   <defs>
     <style>
       .cls-1 {
@@ -14,21 +14,21 @@
         fill: url(#linear-gradient);
       }
 
-      <!-- .cls-3 {
+      .cls-3 {
         fill: url(#linear-gradient-29);
-      } -->
-<!-- 
+      }
+
       .cls-4 {
         fill: url(#linear-gradient-32);
-      } -->
+      }
 
-      <!-- .cls-5 {
+      .cls-5 {
         fill: url(#linear-gradient-30);
-      } -->
+      }
 
-      <!-- .cls-6 {
+      .cls-6 {
         fill: url(#linear-gradient-31);
-      } -->
+      }
 
       .cls-7 {
         fill: url(#linear-gradient-28);
@@ -66,29 +66,29 @@
         fill: url(#linear-gradient-19);
       }
 
-      <!-- .cls-16 {
+      .cls-16 {
         fill: url(#linear-gradient-15);
-      } -->
+      }
 
-      <!-- .cls-17 {
+      .cls-17 {
         fill: url(#linear-gradient-23);
-      } -->
-<!-- 
+      }
+
       .cls-18 {
         fill: url(#linear-gradient-21);
-      } -->
+      }
 
       .cls-19 {
         fill: url(#linear-gradient-18);
       }
 
-      <!-- .cls-20 {
+      .cls-20 {
         fill: url(#linear-gradient-14);
-      } -->
+      }
 
-      <!-- .cls-21 {
+      .cls-21 {
         fill: url(#linear-gradient-22);
-      } -->
+      }
 
       .cls-22 {
         fill: url(#linear-gradient-20);
@@ -97,10 +97,10 @@
       .cls-23 {
         fill: url(#linear-gradient-27);
       }
-<!-- 
+
       .cls-24 {
         fill: url(#linear-gradient-24);
-      } -->
+      }
 
       .cls-25 {
         fill: url(#linear-gradient-26);
@@ -110,13 +110,13 @@
         fill: url(#linear-gradient-4);
       }
 
-      <!-- .cls-27 {
+      .cls-27 {
         fill: url(#linear-gradient-2);
-      } -->
+      }
 
-      <!-- .cls-28 {
+      .cls-28 {
         fill: url(#linear-gradient-3);
-      } -->
+      }
 
       .cls-29 {
         fill: url(#linear-gradient-8);
@@ -126,17 +126,17 @@
         fill: url(#linear-gradient-9);
       }
 
-      <!-- .cls-31 {
+      .cls-31 {
         fill: url(#linear-gradient-7);
-      } -->x
+      }
 
       .cls-32 {
         fill: url(#linear-gradient-5);
       }
 
-      <!-- .cls-33 {
+      .cls-33 {
         fill: url(#linear-gradient-6);
-      } -->
+      }
     </style>
     <linearGradient id="linear-gradient" x1="104.44" y1="68.36" x2="116.96" y2="100.36" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#f89b3a"/>
