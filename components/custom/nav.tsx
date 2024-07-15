@@ -32,7 +32,6 @@ const Navbar = () => {
         <Link href='/'><div className='text-lg'>Home</div></Link>
         <Link href='/about'><div className='text-lg'>About</div></Link>
         <Link href='/careers'><div className='text-lg'>Careers</div></Link>
-        <Link href='/contact'><div className='text-lg'>Contact</div></Link>
       </div>
       <div className='md:hidden'>
         <AiOutlineMenu className='text-2xl' onClick={toggleMenu} />
@@ -45,7 +44,7 @@ const Navbar = () => {
             variants={menuVariants} 
             initial='hidden' 
             animate='visible' 
-            exit='exit's
+            exit='exit'
           >
             <div className='flex justify-between items-center'>
               <div className='text-xl font-semibold'>Victreat</div>
@@ -55,7 +54,6 @@ const Navbar = () => {
               <Link href='/'><div className='' onClick={toggleMenu}>Home</div></Link>
               <Link href='/about'><div className='' onClick={toggleMenu}>About</div></Link>
               <Link href='/careers'><div className='' onClick={toggleMenu}>Careers</div></Link>
-              <Link href='/contact'><div className='' onClick={toggleMenu}>Contact</div></Link>
             </div>
           </motion.div>
         )}

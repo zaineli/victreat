@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faBullseye, faCogs } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faBullseye, faCogs, faChartBar, faChartSimple, faDiagramProject, faMagnifyingGlassChart } from '@fortawesome/free-solid-svg-icons';
 
 const ProgressTracker = ({ sections }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -28,7 +28,7 @@ const ProgressTracker = ({ sections }) => {
     };
   }, [sections]);
 
-  const icons = [faHome, faBullseye, faCogs];
+  const icons = [faHome, faBullseye, faMagnifyingGlassChart, faChartSimple, faDiagramProject];
 
   return (
     <div className="hidden md:flex fixed right-14 top-[30%] z-[2000]">
@@ -46,7 +46,7 @@ const ProgressTracker = ({ sections }) => {
               />
             </div>
             {index !== sections.length - 1 && (
-              <div className={`w-1 h-16 ${index < activeIndex ? 'bg-[#92e665aa]' : 'bg-gray-300'}`}></div>
+              <div className={`w-1 h-8 ${index < activeIndex ? 'bg-[#92e665aa]' : 'bg-gray-300'}`}></div>
             )}
           </a>
         ))}

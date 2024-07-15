@@ -2,42 +2,41 @@ import { useRef, useState } from "react";
 import { map } from "./CustomBarChart1";
 import useMouseHover from "@/lib/useMouseHover";
 
-
-export default function CardsBanner() {
+export function CardsBanner() {
     const cards = [
         {
-            heading: "Beat Cancer",
-            content: "Your cancer journey is unique, and so is your support. Victreat provides personalized guidance, connecting you with trusted experts, resources, and a supportive community."
+            number: 1,
+            heading: "Personalized Treatment",
+            content: "Your cancer journey is unique, and so is your support. Victreat provides personalized guidance, connecting you with trusted experts, resources, and a supportive community. We tailor treatments based on your specific diagnosis and medical history, ensuring the best possible outcomes."
         },
         {
-            heading: "Beat Cancer",
-            content: "We help you beat cancer.  "
+            number: 2,
+            heading: "Innovative Technologies",
+            content: "Stay ahead with the latest advancements in cancer treatment technologies. Our platform ensures you have access to cutting-edge therapies, including immunotherapy, targeted therapy, and advanced radiation techniques. We keep you informed about new research and clinical trials that may benefit your treatment plan."
         },
         {
-            heading: "Beat Cancer",
-            content: "We help you beat cancer."
+            number: 3,
+            heading: "Expert Navigation",
+            content: "Navigate your treatment options with the help of expert guidance and support tailored to your individual needs. Our team of experienced oncologists and patient advocates work with you to understand your options, manage side effects, and connect you with additional resources and support networks."
         },
-        
-    ]   
+    ];
 
     return (
-        <div className="  bg-[#F3FFEB] to-[#DBE5EB] flex w-full lg:p-16 lg:gap-16 md:gap-8 md:p-8 gap-4 p-4 justify-between relative flex-col md:flex-row flex-wrap ">
-            {/* <img src="https://www.nationalbreastcancer.org/wp-content/uploads/2023/06/Various-Ribbons-featured-v01Artboard-1-1.png" className="absolute left-0 bottom-0 h-full w-full bg-left bg-repeat" alt="" />  */}
+        <div className="bg-[#F3FFEB] to-[#DBE5EB] flex w-full lg:p-16 lg:gap-16 md:gap-8 md:p-8 gap-4 p-4 justify-between relative flex-col md:flex-row flex-wrap ">
             {cards.map((card, i) => <Card key={i} {...card} />)}
         </div>
     );
 }
 
-function Card({ heading, content }: {
+export function Card({ number, heading, content }: {
+    number: number;
     heading: string;
     content: string;
 }) {
-    const ref = useRef<HTMLDivElement>();
+    const ref = useRef<HTMLDivElement>(null);
     const [mouse, setMouse] = useState({ x: 0, y: 0 });
     const [glare, setGlare] = useState({ x: 0, y: 0, opacity: 0 });
     const isHovered = useMouseHover(ref);
-
-
 
     return (
         <div
@@ -46,37 +45,37 @@ function Card({ heading, content }: {
                 if (!ref.current) return;
                 const boundingRect = ref.current.getBoundingClientRect();
                 const x = (e.clientX - boundingRect.x - boundingRect.width / 2) / boundingRect.width;
-                const y = (e.clientY - boundingRect.y - boundingRect.height / 2) / boundingRect.height;;
+                const y = (e.clientY - boundingRect.y - boundingRect.height / 2) / boundingRect.height;
                 setMouse({ x: map(x, -0.5, 0.5, -15, 15), y: map(-y, -0.5, 0.5, -15, 15) });
                 const glareX = boundingRect.width - (e.clientX - boundingRect.x);
                 const glareY = boundingRect.width - (e.clientY - boundingRect.y);
                 const distance = Math.sqrt((glareX - (boundingRect.width / 2)) ** 2 + (glareY - (boundingRect.height / 2)) ** 2);
-                const maxDistance = Math.sqrt((boundingRect.width/2) ** 2 + (boundingRect.height / 2) ** 2);
-                setGlare(
-                    {
-                        x: glareX,
-                        y: glareY,
-                        opacity: map(distance, 0, maxDistance, 0, 0.4)
-                    }
-                )
-                // const cx = 
-                // console.log({y, y});
+                const maxDistance = Math.sqrt((boundingRect.width / 2) ** 2 + (boundingRect.height / 2) ** 2);
+                setGlare({
+                    x: glareX,
+                    y: glareY,
+                    opacity: map(distance, 0, maxDistance, 0, 0.4)
+                });
             }}
             onMouseLeave={() => {
-                setMouse({ x: 0, y: 0 })
-                setGlare({ ...glare, opacity: 0 })
+                setMouse({ x: 0, y: 0 });
+                setGlare({ ...glare, opacity: 0 });
             }}
             className="p-4 z-50 group aspect-square w-full lg:flex-1"
         >
             <div
                 style={{
                     transformStyle: 'preserve-3d',
-                    transform: `perspective(3000px) rotateX(${(mouse.y).toFixed(1)}deg) rotateY(${(mouse.x).toFixed(1)}deg)`,//, ${(mouse.x * 360).toFixed(1)}deg)`
-                    transition: !isHovered ? "transform 0.5s ease, box-shadow 0.5s ease" : " box-shadow 0.5s ease",
+                    transform: `perspective(3000px) rotateX(${(mouse.y).toFixed(1)}deg) rotateY(${(mouse.x).toFixed(1)}deg)`,
+                    transition: !isHovered ? "transform 0.5s ease, box-shadow 0.5s ease" : "box-shadow 0.5s ease",
                 }}
-                className="overflow-hidden text-gray-600 hover:[box-shadow:0_40px_70px_-15px_rgba(0,0,0,0.3)] aspect-square  h-auto lg:p-16 p-8 bg-[#DEF5D2] rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-100 border border-gray-100">
-                <h1 className="lg:text-3xl md:text-2xl text-xl font-black mb-4">{heading}</h1>
-                <p className="lg:text-xl md:text-lg">{content}</p>
+                className="overflow-hidden text-gray-600 hover:[box-shadow:0_40px_70px_-15px_rgba(0,0,0,0.3)] aspect-square h-auto lg:p-16 md:p-12 p-8 bg-[#DEF5D2] rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-100 border border-gray-100"
+            >
+                <div className="flex items-center mb-4">
+                    <div className="text-5xl lg:text-7xl font-bold text-[#3C6E71] mr-4">{number}</div>
+                    <h1 className="lg:text-3xl md:text-2xl text-[1.25rem] font-black">{heading}</h1>
+                </div>
+                <p className="lg:text-xl md:text-lg text-base">{content}</p>
                 <span
                     style={{
                         top: glare.y,
@@ -84,8 +83,8 @@ function Card({ heading, content }: {
                         translate: '-50% -50%',
                         opacity: glare.opacity
                     }}
-                    className=" pointer-events-none  absolute block rounded-full w-full h-full  bg-[radial-gradient(circle_at_center,#ffffffff,#ffffff00,#ffffff00)] blur-xl group-hover:opacity-35 opacity-0">asd</span>
-                {/* <span className=" absolute -z-50 -inset-10 bg-red-500 [transform:translateZ(-100px)]"></span> */}
+                    className="pointer-events-none absolute block rounded-full w-full h-full bg-[radial-gradient(circle_at_center,#ffffffff,#ffffff00,#ffffff00)] blur-xl group-hover:opacity-35 opacity-0"
+                ></span>
             </div>
         </div >
     )
