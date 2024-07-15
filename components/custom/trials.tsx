@@ -1,4 +1,3 @@
-'use client'
 import React, { useRef, useEffect, useState } from 'react';
 import * as d3 from 'd3';
 import { motion } from 'framer-motion';
@@ -44,7 +43,6 @@ const dataArray: Data[] = [
     { year: 2021, cancer: 7427 },
     { year: 2022, cancer: 7117 },
     { year: 2023, cancer: 7155 },
-
 ];
 
 function Histogram({ dimensions }: { dimensions: { width: number; height: number; } }) {
@@ -71,6 +69,11 @@ function Histogram({ dimensions }: { dimensions: { width: number; height: number
             .domain([0, d3.max(dataArray, d => d.cancer) as number])
             .nice()
             .range([height - margin.bottom, margin.top]);
+
+        // Determine which ticks to display based on viewport width
+        const ticksToShow = width < 600 
+            ? dataArray.filter(d => d.year % 3 === 0).map(d => d.year.toString())
+            : dataArray.map(d => d.year.toString());
 
         // Create a container for the bars
         const barContainer = svg.append('g');
@@ -109,7 +112,7 @@ function Histogram({ dimensions }: { dimensions: { width: number; height: number
             .datum(dataArray)
             .attr('fill', 'none')
             .attr('stroke', '#F9C19E')
-            .attr('stroke-width', 10)
+            .attr('stroke-width', width < 600 ? 5 : 10)  // Adjust stroke width based on viewport width
             .attr('d', line)
             .attr('stroke-dasharray', function () { return this.getTotalLength() })
             .attr('stroke-dashoffset', function () { return this.getTotalLength() })
@@ -121,7 +124,7 @@ function Histogram({ dimensions }: { dimensions: { width: number; height: number
         // Add the x-axis
         svg.append('g')
             .attr('transform', `translate(0,${height - margin.bottom})`)
-            .call(d3.axisBottom(x).tickFormat(d3.format('d')))
+            .call(d3.axisBottom(x).tickValues(ticksToShow))
             .selectAll('text')
             .attr('transform', 'rotate(-45)')
             .style('text-anchor', 'end');
@@ -145,7 +148,6 @@ function Trials({ className }: { className?: string }) {
         const resizeObserver = new ResizeObserver((entries) => {
             if (!ref.current) return;
             const { width, height } = entries[0].contentRect;
-            console.log(width, height)
             setDimensions({ width, height });
         });
         resizeObserver.observe(ref.current);

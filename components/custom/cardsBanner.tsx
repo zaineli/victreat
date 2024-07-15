@@ -7,17 +7,17 @@ export function CardsBanner() {
         {
             number: 1,
             heading: "Personalized Treatment",
-            content: "Your cancer journey is unique, and so is your support. Victreat provides personalized guidance, connecting you with trusted experts, resources, and a supportive community. We tailor treatments based on your specific diagnosis and medical history, ensuring the best possible outcomes."
+            content: "Your cancer journey is unique, and so is your support. Victreat provides personalized guidance, connecting you with trusted experts, resources, and a supportive community. We tailor treatments based on your specific diagnosis, ensuring the best possible outcomes."
         },
         {
             number: 2,
             heading: "Innovative Technologies",
-            content: "Stay ahead with the latest advancements in cancer treatment technologies. Our platform ensures you have access to cutting-edge therapies, including immunotherapy, targeted therapy, and advanced radiation techniques. We keep you informed about new research and clinical trials that may benefit your treatment plan."
+            content: "Stay ahead with the latest advancements in cancer treatment technologies. Our platform ensures you have access to cutting-edge therapies, including immunotherapy, targeted therapy, and advanced radiation techniques."
         },
         {
             number: 3,
             heading: "Expert Navigation",
-            content: "Navigate your treatment options with the help of expert guidance and support tailored to your individual needs. Our team of experienced oncologists and patient advocates work with you to understand your options, manage side effects, and connect you with additional resources and support networks."
+            content: "Navigate your treatment options with the help of expert guidance and support tailored to your individual needs. Our team of experienced oncologists and patient advocates work with you to understand your options, manage side effects."
         },
     ];
 
