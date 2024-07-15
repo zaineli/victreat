@@ -50,7 +50,7 @@ function JobDetails({ params }: Props) {
   }
 
   return (
-    <div className="max-w-[95rem] mx-auto p-6 bg-white rounded-lg mt-32">
+    <div className="max-w-[95rem] mx-auto p-6 bg-white rounded-lg mt-24">
       <div className="flex flex-wrap -mx-4">
         <div className="w-full md:w-1/2 p-4">
 
