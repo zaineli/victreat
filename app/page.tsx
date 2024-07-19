@@ -37,7 +37,7 @@ function Home() {
       </section>
       <section id={'mutations'} className='w-full lg:p-32  p-4 sm:p-16 '>
         <div className='lg:text-5xl md:text-4xl text-3xl text-center mb-24'>
-          Victreat aims to be your <span className="font-bold text-[#4b92f6]">trusted partner in navigating the complexities</span> of cancer stages, mutations and the multitude of clinical trial options available.        </div>
+          Victreat aims to be your <span className="font-bold text-[#22c1d6]">trusted partner in navigating the complexities</span> of cancer stages, mutations and the multitude of clinical trial options available.        </div>
         <div className="lg:max-w-[75%] w-full mx-auto">
 
           <MutationSection small={false} />
