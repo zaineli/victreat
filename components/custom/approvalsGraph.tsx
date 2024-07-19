@@ -4,7 +4,7 @@ import { FaChevronLeft, FaChevronRight, FaChevronDown, FaChevronUp } from "react
 import { accyearApproved } from '@/app/discover/data';
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, useCallback } from 'react';
 import useMouseHover from "@/lib/useMouseHover";
 import { Button } from "../ui/button";
 
@@ -19,7 +19,13 @@ type Drug = {
 }
 
 const CustomBarChart1 = () => {
-    const [currentIndex, setCurrentIndex] = useState(4);
+    const [prevIndex, setPrevIndex] = useState(3);
+    const [currentIndex, sCI] = useState(4);
+    const setCurrentIndex = useCallback((i) => {
+        console.log("changing Index", currentIndex)
+        setPrevIndex(currentIndex);
+        sCI(i);
+    }, [currentIndex]);
     const [stopped, setStopped] = useState(false);
     const [drugs, setDrugs] = useState<Drug[]>([]);
     const ref = useRef<HTMLDivElement>();
@@ -37,15 +43,13 @@ const CustomBarChart1 = () => {
     }, [])
 
     useEffect(() => {
-        console.log('clearing', stopped, isHovered);
         clearInterval(intervelRef.current);
         if (stopped || isHovered) return;
-        console.log('interval');
         intervelRef.current = setInterval(() => {
-            setCurrentIndex(prevIndex => (prevIndex + 1) % (accyearApproved.length + 1));
+            setCurrentIndex(prevIndex => (prevIndex + 2) % (accyearApproved.length + 2) - 1);
         }, 2000);
 
-        return () => { console.log('clearing'); clearInterval(intervelRef.current) };
+        return () => clearInterval(intervelRef.current);
     }, [stopped, isHovered]);
 
 
@@ -69,7 +73,6 @@ const CustomBarChart1 = () => {
         if (!scrollRef.current) return;
 
         const width = scrollRef.current.getBoundingClientRect().width;
-        console.log("moving!", scrollRef.current, width)
         scrollRef.current?.scrollBy({ left: -width + 24, behavior: 'smooth' })
     }
 
@@ -77,7 +80,6 @@ const CustomBarChart1 = () => {
         if (!scrollRef.current) return;
 
         const width = scrollRef.current.getBoundingClientRect().width;
-        console.log("moving!", scrollRef.current, width)
         scrollRef.current?.scrollBy({ left: width - 24, behavior: 'smooth' },)
     }
 
@@ -88,17 +90,27 @@ const CustomBarChart1 = () => {
 
 
 
-    function handleClick(i: number) {
-        setCurrentIndex(j => j + i);
+    function handleClick(fn: (i: number) => number) {
+        // console.log(i % (accyearApproved.length + 2) - 1);
+        setCurrentIndex(fn);
+        setStopped(true);
+        setTimeout(() => setStopped(false), 3000);
+        // setCurrentIndex(i => {
+        //     i == 0 || i == accyearApproved.length ? 0 : i
+        // })
         // setStopped(true);
     }
+    // console.log(currentIndex);
 
 
     const selected = currentIndex + 2006;
 
+
     const heights = [0, 0, ...accyearApproved, 0, 0]
 
     const yearDrugs = getDrugsByYear(selected, 20);
+
+    console.log({prevIndex, currentIndex})
 
 
     return (
@@ -107,18 +119,18 @@ const CustomBarChart1 = () => {
             <div ref={ref} className="flex flex-col  items-stretch lg:flex-row gap-16 justify-between">
                 <div className="flex lg:flex-[3_3_0]   overflow-hidden  relative" >
                     <span
-                        onClick={() => {setCurrentIndex(i => i - 1); setStopped(true);}}
+                        onClick={() => { handleClick(i => (i + accyearApproved.length + 2) % (accyearApproved.length + 2) -1 ) }}
                         className='absolute cursor-pointer text-[#aade8d] p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] left-4 translate-y-[-50%]]'>
                         <FaChevronLeft />
                     </span>
                     <span
-                        onClick={() => {setCurrentIndex(i => i + 1); setStopped(true);}}
+                        onClick={() => { handleClick(i => (i + 2) % (accyearApproved.length + 2) - 1) }}
                         className='absolute cursor-pointer text-[#aade8d] p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] right-4 translate-y-[-50%]]'>
                         <FaChevronRight />
                     </span>
-                    <div className={cn("flex overflow-hidden w-full lg:w-[unset] h-[400px]  border-4 pb-5 border-[#aade8d] rounded-2xl", {
-                        // 'opacity-0': currentIndex == 0,
-                    })}>
+                    <div className={cn("flex overflow-hidden w-full lg:w-[unset] h-[400px]  border-4 pb-5 border-[#aade8d] rounded-2xl", 
+                        ""
+                    )}>
                         {heights.map((d, index) => (
                             <div
                                 key={index}
@@ -129,11 +141,12 @@ const CustomBarChart1 = () => {
                                 // exit={{ opacity: index == 0 ? 0 : 1, x: "-100%" }}
                                 style={{
                                     minWidth: '20%',
-                                    transition: currentIndex == 0 ? 'opacity 1s ease-in-out' : 'all 1s ease-in-out',
+                                    // transition: 'all 1s ease-in-out',
+                                    transition: prevIndex == accyearApproved.length && currentIndex == 0 ? 'opacity 1s ease-in-out' : 'all 1s ease-in-out',
                                     transform: `translateX(${-currentIndex * 100}%) `,
-                                    opacity: currentIndex == accyearApproved.length ? 0 : 1
+                                    opacity: currentIndex == accyearApproved.length || currentIndex == -1 ? 0 : 1
                                 }}
-                                onClick={() => handleClick(index - 2)}
+                                onClick={() => { handleClick(_ => (index - 1) % (accyearApproved.length + 2) - 1); }}
                             >
                                 {d != 0 &&
                                     <>
