@@ -4,7 +4,7 @@ import Trials from '@/components/custom/trials';
 import CallToAction from '@/components/custom/callToAction';
 import ScrollButton from '@/components/custom/scroll-button';
 import Footer from '@/components/custom/footer';
-import CustomBarChart1 from '@/components/custom/CustomBarChart1';
+import CustomBarChart1 from '@/components/custom/approvalsGraph';
 import ProgressTracker from '@/components/custom/ProgressTracker';
 import HeroSection from '@/components/custom/hero-section';
 import { CardsBanner } from '@/components/custom/cardsBanner';
