@@ -26,8 +26,8 @@ const Navbar = () => {
   // return <div></div>;
 
   return (
-    <nav className={cn('absolute top-0 p-4 flex justify-between text-black   lg:w-1/3  w-full lg:mx-auto left-[50%] translate-x-[-50%] z-[1500]', {"h-screen": isOpen})}>
-      <div className='text-xl font-semibold mr-24'>Victreat</div>
+    <nav className={cn('absolute top-0 py-4 px-8 flex justify-between text-black  lg:mx-auto right-0 z-[1500]', {"h-screen": isOpen})}>
+      {/* <div className='text-xl font-semibold mr-24'>Victreat</div> */}
       <div className='hidden md:flex gap-8'>
         <Link href='/'><div className='text-lg'>Home</div></Link>
         <Link href='/careers'><div className='text-lg'>Careers</div></Link>

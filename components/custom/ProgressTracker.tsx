@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Home, Target, Search, PieChart } from 'lucide-react';
+import { Home, Target, Search, PieChart, LineChartIcon } from 'lucide-react';
 
 console.log({ Home, Target, Search, PieChart });
 
@@ -29,7 +29,7 @@ const ProgressTracker = ({ sections }) => {
     };
   }, [sections]);
 
-  const icons = [Home, Target, Search, PieChart, PieChart];
+  const icons = [Home, Target, Search, PieChart, LineChartIcon ];
 
   return (
     <div className="hidden md:flex fixed right-14 top-[30%] z-[2000]">
