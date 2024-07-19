@@ -37,7 +37,7 @@ const AnimatedLogo = ({className}:AnimatedLogoProps) => {
             <defs>
               <linearGradient id="paint0_linear_105_106" x1="589.858" y1="-357.18" x2="1074.61" y2="881.791" gradientUnits="userSpaceOnUse">
                 <stop offset="0" stop-color="#F89B3A" />
-                <stop offset="1" stop-color="#F8EC1E" />589
+                <stop offset="1" stop-color="#F8EC1E" />
               </linearGradient>
               <linearGradient id="paint1_linear_105_106" x1="457.057" y1="-253.8" x2="920.51" y2="929.804" gradientUnits="userSpaceOnUse">
                 <stop offset="0" stop-color="#F89B3A" />

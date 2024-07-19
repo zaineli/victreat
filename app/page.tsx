@@ -2,7 +2,7 @@
 import MutationSection from '@/components/custom/mutationSections';
 import Trials from '@/components/custom/trials';
 import Footer from '@/components/custom/footer';
-import Approvals from '@/components/custom/CustomBarChart1';
+import Approvals from '@/components/custom/approvalsGraph';
 import ProgressTracker from '@/components/custom/ProgressTracker';
 import HeroSection from '@/components/custom/hero-section';
 import CardsBanner from '@/components/custom/cardsBanner';
@@ -24,14 +24,6 @@ function Home() {
           <CardsBanner />
         </div>
       </section>
-      <section id={'mutations'} className='w-full  mt-52 lg:p-32  p-4 sm:p-16 '>
-        <div className='lg:text-6xl md:text-4xl text-3xl text-center font-bold mb-24'>
-          Victreat aims to be your trusted partner in navigating the complexities of cancer stages, mutations and the multitude of clinical trial options available.        </div>
-        <div className="lg:max-w-[75%] w-full mx-auto">
-
-          <MutationSection small={false} />
-        </div>
-      </section>
       <section id='3'>
         <Approvals />
       </section>
@@ -42,6 +34,14 @@ function Home() {
         <p className='lg:text-lg text-sm sm:text-base  w-4/5 mb-16'>
         </p>
         <Trials className={'flex justify-center w-[80%] mx-auto'} />
+      </section>
+      <section id={'mutations'} className='w-full  mt-52 lg:p-32  p-4 sm:p-16 '>
+        <div className='lg:text-6xl md:text-4xl text-3xl text-center font-bold mb-24'>
+          Victreat aims to be your trusted partner in navigating the complexities of cancer stages, mutations and the multitude of clinical trial options available.        </div>
+        <div className="lg:max-w-[75%] w-full mx-auto">
+
+          <MutationSection small={false} />
+        </div>
       </section>
       <section className='w-full bg-black text-white'>
         <Footer />

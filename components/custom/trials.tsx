@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import * as d3 from 'd3';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import useSectionInView from '@/lib/useSectionInView';
 
 type Data = {

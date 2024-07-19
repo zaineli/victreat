@@ -43,8 +43,9 @@ const ProgressTracker = ({ sections }) => {
                   index <= activeIndex ? 'bg-[#aade8d]' : 'bg-gray-300'
                 }`}
               >
+                {/* <Home /> */}
                 <Icon
-                  className={`text-white ${index === activeIndex ? 'animate-bounce' : ''}`}
+                  className=  {`text-white ${index === activeIndex ? 'animate-pulse' : ''}`}
                 />
               </div>
               {index !== sections.length - 1 && (
