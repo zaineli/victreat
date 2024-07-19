@@ -2,7 +2,7 @@
 import MutationSection from '@/components/custom/mutationSections';
 import Trials from '@/components/custom/trials';
 import Footer from '@/components/custom/footer';
-import CustomBarChart1 from '@/components/custom/CustomBarChart1';
+import Approvals from '@/components/custom/CustomBarChart1';
 import ProgressTracker from '@/components/custom/ProgressTracker';
 import HeroSection from '@/components/custom/hero-section';
 import CardsBanner from '@/components/custom/cardsBanner';
@@ -33,7 +33,7 @@ function Home() {
         </div>
       </section>
       <section id='3'>
-        <CustomBarChart1 />
+        <Approvals />
       </section>
       <section id='4' className='w-full mt-12 lg:p-32  p-4 sm:p-16 flex flex-col items-center justify-center '>
         <div className='lg:text-6xl md:text-3xl text-3xl font-semibold text-center'>

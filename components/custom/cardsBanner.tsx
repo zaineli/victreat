@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { map } from "./CustomBarChart1";
+import { map } from "./approvalsGraph";
 import useMouseHover from "@/lib/useMouseHover";
 
 export default function CardsBanner() {
@@ -11,13 +11,13 @@ export default function CardsBanner() {
         },
         {
             number: 2,
-            heading: "Informed Decision",
-            content: "By keeping abreast of new developments, patients and healthcare professionals can make informed decisions for better healthcare and enhanced quality of life."
+            heading: "Navigate With Ease and Confidence",
+            content: "Victreat serves as a portal that simplifies the complex treatment landscape and guides individuals through treatment guidelines with ease and confidence."
         },
         {
             number: 3,
-            heading: "Navigate With Ease and Confidence",
-            content: "Victreat serves as a portal that simplifies the complex treatment landscape and guides individuals through treatment guidelines with ease and confidence."
+            heading: "Take Informed Decision",
+            content: "By keeping abreast of new developments, patients and healthcare professionals can make informed decisions for better healthcare and enhanced quality of life."
         },
     ];
 
