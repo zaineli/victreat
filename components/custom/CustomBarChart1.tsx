@@ -107,12 +107,12 @@ const CustomBarChart1 = () => {
             <div ref={ref} className="flex flex-col  items-stretch lg:flex-row gap-16 justify-between">
                 <div className="flex lg:flex-[3_3_0]   overflow-hidden  relative" >
                     <span
-                        onClick={() => setCurrentIndex(i => i - 1)}
+                        onClick={() => {setCurrentIndex(i => i - 1); setStopped(true);}}
                         className='absolute cursor-pointer text-[#aade8d] p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] left-4 translate-y-[-50%]]'>
                         <FaChevronLeft />
                     </span>
                     <span
-                        onClick={() => setCurrentIndex(i => i + 1)}
+                        onClick={() => {setCurrentIndex(i => i + 1); setStopped(true);}}
                         className='absolute cursor-pointer text-[#aade8d] p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] right-4 translate-y-[-50%]]'>
                         <FaChevronRight />
                     </span>
