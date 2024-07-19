@@ -21,7 +21,7 @@ type Drug = {
     drug_name: string;
 }
 
-const CustomBarChart1 = () => {
+const Approvals = () => {
     const [currentIndex, setCurrentIndex] = useState(4);
     const [stopped, setStopped] = useState(false);
     const [drugs, setDrugs] = useState<Drug[]>([]);
@@ -228,4 +228,4 @@ const CustomBarChart1 = () => {
     );
 };
 
-export default CustomBarChart1;
+export default Approvals;
