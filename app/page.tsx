@@ -7,7 +7,7 @@ import ProgressTracker from '@/components/custom/ProgressTracker';
 import HeroSection from '@/components/custom/hero-section';
 import CardsBanner from '@/components/custom/cardsBanner';
 
-const sections = ['1', '2', 'mutations', '3','4'];
+const sections = ['1', '2', 'mutations', '3', '4'];
 
 
 function Home() {
@@ -21,13 +21,12 @@ function Home() {
       </section>
       <section id='2'>
         <div className='bg-[#fee0dde0] flex justify-center items-center font-sans'>
-         <CardsBanner />
+          <CardsBanner />
         </div>
       </section>
       <section id={'mutations'} className='w-full  mt-52 lg:p-32  p-4 sm:p-16 '>
         <div className='lg:text-6xl md:text-4xl text-3xl text-center font-bold mb-24'>
-          Victreat aspires to be your partner at navigating  cancer stages, mutations and myriad of clinical trial options
-        </div>
+          Victreat aims to be your trusted partner in navigating the complexities of cancer stages, mutations and the multitude of clinical trial options available.        </div>
         <div className="lg:max-w-[75%] w-full mx-auto">
 
           <MutationSection small={false} />
@@ -36,9 +35,9 @@ function Home() {
       <section id='3'>
         <CustomBarChart1 />
       </section>
-      <section id='4'className='w-full mt-12 lg:p-32  p-4 sm:p-16 flex flex-col items-center justify-center '>
+      <section id='4' className='w-full mt-12 lg:p-32  p-4 sm:p-16 flex flex-col items-center justify-center '>
         <div className='lg:text-6xl md:text-3xl text-3xl font-semibold text-center'>
-          Meanwhile, exponential growth in trials will only add to the complexity in onology treatment landscape.
+          The exponential increase in clinical trials will further complicate the landscape of oncology treatment.
         </div>
         <p className='lg:text-lg text-sm sm:text-base  w-4/5 mb-16'>
         </p>
