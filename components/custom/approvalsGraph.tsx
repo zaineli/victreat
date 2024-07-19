@@ -112,11 +112,13 @@ const CustomBarChart1 = () => {
 
     return (
         <div className="min-h-screen bg-[#f1ffe9ab] py-48 lg:px-32 md:px-16 px-4">
-            <h1 className=" lg:text-5xl md:text-3xl text-2xl font-bold text-center mx-auto lg:mb-32 mb-8  max-w-4xl">Accelerating Approval of new Drugs from 2006 to 2024 </h1>
+            <h1 className=" lg:text-5xl md:text-3xl text-2xl font-bold text-center mx-auto lg:mb-32 mb-8  max-w-4xl">
+                The number of cancer drugs approved by the FDA is continually increasing every year.
+            </h1>
             <div ref={ref} className="flex flex-col  items-stretch lg:flex-row gap-16 justify-between">
                 <div className="flex lg:flex-[3_3_0]   overflow-hidden  relative" >
                     <span
-                        onClick={() => { handleClick(i => (i + accyearApproved.length + 2) % (accyearApproved.length + 2) -1 ) }}
+                        onClick={() => { handleClick(i => (i + accyearApproved.length + 2) % (accyearApproved.length + 2) - 1) }}
                         className='absolute cursor-pointer text-[#aade8d] p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] left-4 translate-y-[-50%]]'>
                         <FaChevronLeft />
                     </span>
