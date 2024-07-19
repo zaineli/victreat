@@ -1,12 +1,14 @@
 'use client';
 
 import { FaChevronLeft, FaChevronRight, FaChevronDown, FaChevronUp } from "react-icons/fa";
-import { accyearApproved } from '@/app/discover/data';
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
-import useMouseHover from "@/lib/useMouseHover";
 import { Button } from "../ui/button";
+
+const yearApproved = [22, 14, 12, 11, 16, 19, 23, 19, 19, 33, 22, 31, 33, 49, 108, 58, 41, 45, 31]; // start 2006 end 2024
+export const accyearApproved = yearApproved.map((d, i) => yearApproved.slice(0, i + 1).reduce((a, b) => a + b, 0));
+
 
 export function map(n: number, start1: number, stop1: number, start2: number, stop2: number) {
     return (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
