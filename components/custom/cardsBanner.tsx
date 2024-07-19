@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { map } from "./CustomBarChart1";
 import useMouseHover from "@/lib/useMouseHover";
 
-export function CardsBanner() {
+export default function CardsBanner() {
     const cards = [
         {
             number: 1,
