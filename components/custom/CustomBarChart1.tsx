@@ -23,7 +23,8 @@ const CustomBarChart1 = () => {
     const [stopped, setStopped] = useState(false);
     const [drugs, setDrugs] = useState<Drug[]>([]);
     const ref = useRef<HTMLDivElement>();
-    const isHovered = useMouseHover(ref);
+    // const isHovered = useMouseHover(ref);
+    const isHovered = false;
     const intervelRef = useRef<NodeJS.Timeout>();
     const scrollRef = useRef<HTMLDivElement>();
     const [showScrollBottom, setShowScrollBottom] = useState(true);
