@@ -6,18 +6,18 @@ export default function CardsBanner() {
     const cards = [
         {
             number: 1,
-            heading: "Personalized Treatment",
-            content: "Your cancer journey is unique, and so is your support. Victreat provides personalized guidance, connecting you with trusted experts, resources, and a supportive community. We tailor treatments based on your specific diagnosis, ensuring the best possible outcomes."
+            heading: "Stay Updated",
+            content: "Staying informed about the latest advancements in cancer treatment is essential, as the field is rapidly evolving with groundbreaking discoveries."
         },
         {
             number: 2,
-            heading: "Innovative Technologies",
-            content: "Stay ahead with the latest advancements in cancer treatment technologies. Our platform ensures you have access to cutting-edge therapies, including immunotherapy, targeted therapy, and advanced radiation techniques."
+            heading: "Informed Decision",
+            content: "By keeping abreast of new developments, patients and healthcare professionals can make informed decisions for better healthcare and enhanced quality of life."
         },
         {
             number: 3,
-            heading: "Expert Navigation",
-            content: "Navigate your treatment options with the help of expert guidance and support tailored to your individual needs. Our team of experienced oncologists and patient advocates work with you to understand your options, manage side effects."
+            heading: "Navigate With Ease and Confidence",
+            content: "Victreat serves as a portal that simplifies the complex treatment landscape and guides individuals through treatment guidelines with ease and confidence."
         },
     ];
 
