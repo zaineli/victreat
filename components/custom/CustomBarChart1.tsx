@@ -45,10 +45,10 @@ const CustomBarChart1 = () => {
         if (stopped || isHovered) return;
         console.log('interval');
         intervelRef.current = setInterval(() => {
-            setCurrentIndex(prevIndex => (prevIndex + 1) % (accyearApproved.length + 1));
+            setCurrentIndex(prevIndex => (prevIndex + 2) % (accyearApproved.length + 2) - 1);
         }, 2000);
 
-        return () => { console.log('clearing'); clearInterval(intervelRef.current) };
+        return () => clearInterval(intervelRef.current);
     }, [stopped, isHovered]);
 
 
@@ -91,8 +91,14 @@ const CustomBarChart1 = () => {
 
 
 
-    function handleClick(i: number) {
-        setCurrentIndex(j => j + i);
+    function handleClick(fn: (i: number) => number) {
+        // console.log(i % (accyearApproved.length + 2) - 1);
+        setCurrentIndex(fn);
+        setStopped(true);
+        setTimeout(() => setStopped(false), 3000);
+        // setCurrentIndex(i => {
+        //     i == 0 || i == accyearApproved.length ? 0 : i
+        // })
         // setStopped(true);
     }
 
@@ -110,12 +116,12 @@ const CustomBarChart1 = () => {
             <div ref={ref} className="flex flex-col  items-stretch lg:flex-row gap-16 justify-between">
                 <div className="flex lg:flex-[3_3_0]   overflow-hidden  relative" >
                     <span
-                        onClick={() => {setCurrentIndex(i => i - 1); setStopped(true);}}
+                        onClick={() => { handleClick(i => (i + accyearApproved.length + 2) % (accyearApproved.length + 2) -1 ) }}
                         className='absolute cursor-pointer text-[#aade8d] p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] left-4 translate-y-[-50%]]'>
                         <FaChevronLeft />
                     </span>
                     <span
-                        onClick={() => {setCurrentIndex(i => i + 1); setStopped(true);}}
+                        onClick={() => { handleClick(i => (i + 2) % (accyearApproved.length + 2) - 1) }}
                         className='absolute cursor-pointer text-[#aade8d] p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] right-4 translate-y-[-50%]]'>
                         <FaChevronRight />
                     </span>
@@ -132,11 +138,12 @@ const CustomBarChart1 = () => {
                                 // exit={{ opacity: index == 0 ? 0 : 1, x: "-100%" }}
                                 style={{
                                     minWidth: '20%',
-                                    transition: currentIndex == 0 ? 'opacity 1s ease-in-out' : 'all 1s ease-in-out',
+                                    transition: 'all 1s ease-in-out',
+                                    // transition: currentIndex == 0 ? 'opacity 1s ease-in-out' : 'all 1s ease-in-out',
                                     transform: `translateX(${-currentIndex * 100}%) `,
-                                    opacity: currentIndex == accyearApproved.length ? 0 : 1
+                                    opacity: currentIndex == accyearApproved.length || currentIndex == -1 ? 0 : 1
                                 }}
-                                onClick={() => handleClick(index - 2)}
+                                onClick={() => { handleClick(_ => (index - 1) % (accyearApproved.length + 2) - 1); }}
                             >
                                 {d != 0 &&
                                     <>
