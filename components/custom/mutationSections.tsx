@@ -70,11 +70,11 @@ function MutationSection({ small = true }) {
 
                     {near.map((cancer, i) => (
                         (<motion.div
-                            className={cn("lg:origin-left origin-top invisible sm:visible", { "visible": i === center })}
+                            className={cn("lg:origin-left origin-top sm:visible", { "visible z-50": i === center })}
                             initial={{
                                 transform: `translate(${!large ? (i - center - 1) / 2 * 55 : 0}%, ${!large ? 0 : (i - center + 1) / 2 * 55}%) scale(${Math.pow(1 - Math.abs(i - center + (large ? +1 : -1)) / 2, 0.5)})`,
                                 // transform: `translate(0, ${(i - center + 1) / 2 * 55}%) scale(${Math.pow(1 - Math.abs(i - center + 1) / 2, 0.5)})`,
-                                opacity: Math.pow(1 - Math.abs(i - center + 1) / 2, 1),
+                                opacity: Math.pow(1 - Math.abs(i - center + 1) / 2, 1.5),
                                 position: i == center ? "static" : 'absolute',
                                 z: i == center ? 1 : 0,
                                 inset: 0
@@ -83,7 +83,7 @@ function MutationSection({ small = true }) {
                                 transform: `translate(${!large ? (i - center) / 2 * 55 : 0}%, ${!large ? 0 : (i - center) / 2 * 55}%) scale(${Math.pow(1 - Math.abs(i - center) / 2, 0.5)})`,
                                 // transform: `translate(${(i - center) / 2 * 55}%, 0%) scale(${Math.pow(1 - Math.abs(i - center) / 2, 0.5)})`,
                                 // transform: `translate(0%, ${(i - center) / 2 * 55}%) scale(${Math.pow(1 - Math.abs(i - center) / 2, 0.5)})`,
-                                opacity: Math.pow(1 - Math.abs(i - center) / 2, 1),
+                                opacity: Math.pow(1 - Math.abs(i - center) / 2, 1.5),
                                 position: i == center ? "static" : 'absolute',
                                 z: i == center ? 1 : 0,
                                 transition: { duration: 0.5, ease: 'easeInOut', }
