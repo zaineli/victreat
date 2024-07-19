@@ -61,7 +61,7 @@ export function Card({ number, heading, content }: {
                 setMouse({ x: 0, y: 0 });
                 setGlare({ ...glare, opacity: 0 });
             }}
-            className="p-4 z-50 group aspect-square w-full lg:flex-1"
+            className="p-4 z-50 group w-full lg:flex-1"
         >
             <div
                 style={{
@@ -69,7 +69,7 @@ export function Card({ number, heading, content }: {
                     transform: `perspective(3000px) rotateX(${(mouse.y).toFixed(1)}deg) rotateY(${(mouse.x).toFixed(1)}deg)`,
                     transition: !isHovered ? "transform 0.5s ease, box-shadow 0.5s ease" : "box-shadow 0.5s ease",
                 }}
-                className="overflow-hidden text-gray-600 hover:[box-shadow:0_40px_70px_-15px_rgba(0,0,0,0.3)] aspect-square h-auto lg:p-16 md:p-12 p-8 bg-[#DEF5D2] rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-100 border border-gray-100"
+                className=" text-gray-600 h-full hover:[box-shadow:0_40px_70px_-15px_rgba(0,0,0,0.3)] lg:p-16 md:p-12 p-8 bg-[#DEF5D2] rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-100 border border-gray-100"
             >
                 <div className="flex items-center mb-4">
                     <div className="text-5xl lg:text-7xl font-bold text-[#3C6E71] mr-4">{number}</div>
@@ -83,7 +83,7 @@ export function Card({ number, heading, content }: {
                         translate: '-50% -50%',
                         opacity: glare.opacity
                     }}
-                    className="pointer-events-none absolute block rounded-full w-full h-full bg-[radial-gradient(circle_at_center,#ffffffff,#ffffff00,#ffffff00)] blur-xl group-hover:opacity-35 opacity-0"
+                    className="pointer-events-none absolute block rounded-full bg-[radial-gradient(circle_at_center,#ffffffff,#ffffff00,#ffffff00)] blur-xl group-hover:opacity-35 opacity-0"
                 ></span>
             </div>
         </div >
