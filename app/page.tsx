@@ -5,7 +5,7 @@ import Footer from '@/components/custom/footer';
 import CustomBarChart1 from '@/components/custom/approvalsGraph';
 import ProgressTracker from '@/components/custom/ProgressTracker';
 import HeroSection from '@/components/custom/hero-section';
-import { CardsBanner } from '@/components/custom/cardsBanner';
+import CardsBanner from '@/components/custom/cardsBanner';
 
 const sections = ['1', '2', 'mutations', '3','4'];
 

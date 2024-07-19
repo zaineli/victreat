@@ -3,12 +3,8 @@
 import { FaChevronLeft, FaChevronRight, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'framer-motion';
-<<<<<<< HEAD:components/custom/approvalsGraph.tsx
 import { useRef, useEffect, useState, useCallback } from 'react';
 import useMouseHover from "@/lib/useMouseHover";
-=======
-import { useRef, useEffect, useState } from 'react';
->>>>>>> f0eb6dd6078e94258147ec44c7edbaa29ad97ad2:components/custom/CustomBarChart1.tsx
 import { Button } from "../ui/button";
 
 const yearApproved = [22, 14, 12, 11, 16, 19, 23, 19, 19, 33, 22, 31, 33, 49, 108, 58, 41, 45, 31]; // start 2006 end 2024
