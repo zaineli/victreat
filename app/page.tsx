@@ -1,8 +1,6 @@
 'use client';
 import MutationSection from '@/components/custom/mutationSections';
 import Trials from '@/components/custom/trials';
-import CallToAction from '@/components/custom/callToAction';
-import ScrollButton from '@/components/custom/scroll-button';
 import Footer from '@/components/custom/footer';
 import CustomBarChart1 from '@/components/custom/CustomBarChart1';
 import ProgressTracker from '@/components/custom/ProgressTracker';
@@ -17,14 +15,13 @@ function Home() {
 
   return (
     <div className="bg-[#f1ffe9ab] text-gray-700">
-      {/* <ScrollButton /> */}
       <ProgressTracker sections={sections} />
       <section id='1' className=''>
         <HeroSection />
       </section>
       <section id='2'>
         <div className='bg-[#fee0dde0] flex justify-center items-center font-sans'>
-        <CardsBanner />
+         <CardsBanner />
         </div>
       </section>
       <section id={'mutations'} className='w-full  mt-52 lg:p-32  p-4 sm:p-16 '>
@@ -47,10 +44,6 @@ function Home() {
         </p>
         <Trials className={'flex justify-center w-[80%] mx-auto'} />
       </section>
-
-      {/* <section id='5' className='w-full max-w-full'>
-        <CallToAction />
-      </section> */}
       <section className='w-full bg-black text-white'>
         <Footer />
       </section>
