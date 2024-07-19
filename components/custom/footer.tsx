@@ -9,7 +9,7 @@ function Footer() {
           <div className="flex flex-col justify-center items-start md:items-start mb-8 md:mb-0">
             <h2 className="text-gray-900 text-xl font-bold mb-4">Connect with Us</h2>
             <div className="flex gap-6">
-              <a href="#" className="text-gray-700 hover:text-yellow-600">
+              {/* <a href="#" className="text-gray-700 hover:text-yellow-600">
                 <Instagram className="text-2xl" />
               </a>
               <a href="#" className="text-gray-700 hover:text-blue-600">
@@ -20,13 +20,13 @@ function Footer() {
               </a>
               <a href="#" className="text-gray-700 hover:text-red-600">
                 <Youtube className="text-2xl" />
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="flex flex-col justify-center items-start mb-8 md:mb-0">
             <h2 className="text-gray-900 text-xl font-bold mb-4">Contact Us</h2>
             <div className="flex gap-4 items-center">
-              <Mail className="text-gray-700 text-xl" />
+              {/* <Mail className="text-gray-700 text-xl" /> */}
               <p className="text-gray-700">info@victreat.com</p>
             </div>
           </div>

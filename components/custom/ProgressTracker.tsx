@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Home, Target, Search, PieChart } from 'lucide-react';
-// import Home from 'lucide-react';
-// import Target from 'lucide-react';
-// import Search from 'lucide-react';
-// import PieChart from 'lucide-react';
 
 console.log({ Home, Target, Search, PieChart });
 
@@ -47,7 +43,6 @@ const ProgressTracker = ({ sections }) => {
                   index <= activeIndex ? 'bg-[#aade8d]' : 'bg-gray-300'
                 }`}
               >
-                {/* <Home /> */}
                 <Icon
                   className={`text-white ${index === activeIndex ? 'animate-bounce' : ''}`}
                 />
