@@ -21,6 +21,7 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        antipasto: ['Antipasto', 'sans-serif'],
       },
       colors: {
         accent: '#c4efacaa',
