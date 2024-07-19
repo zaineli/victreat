@@ -579,3 +579,17 @@
 .cls-33 {
   fill: #696b68;
 }
+
+
+.gradient-glow {
+  /* box-shadow: 0 0 10px 10px #aade8d, 
+             
+              0 0 30px 30px #a9de8d9c; */
+
+  background: #aade8d;
+  color: white;
+  text-shadow: 0 0 10px #00000020, 
+               0 0 30px #00000020;
+  /* font-weight: bolder; */
+            }
+

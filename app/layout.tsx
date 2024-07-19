@@ -5,7 +5,7 @@ import "./globals.css";
 import Nav from "@/components/custom/nav";
 
 const fontSans = FontSans({
-  subsets: ["latin"],
+  subsets: ["latin-ext"],
   variable: "--font-sans",
 })
 

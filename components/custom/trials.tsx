@@ -1,4 +1,3 @@
-'use client'
 import React, { useRef, useEffect, useState } from 'react';
 import * as d3 from 'd3';
 import { motion } from 'framer-motion';
@@ -44,10 +43,9 @@ const dataArray: Data[] = [
     { year: 2021, cancer: 7427 },
     { year: 2022, cancer: 7117 },
     { year: 2023, cancer: 7155 },
-
 ];
 
-function Histogram({dimensions}: {dimensions: {width: number; height: number;}}) {
+function Histogram({ dimensions }: { dimensions: { width: number; height: number; } }) {
     const [svgRef, inView] = useSectionInView();
 
     useEffect(() => {
@@ -56,7 +54,6 @@ function Histogram({dimensions}: {dimensions: {width: number; height: number;}})
         const svg = d3.select(svgRef.current);
         const width = dimensions.width;
         const height = dimensions.height;
-        // const margin = { top: 0, right: 0, bottom: 0, left: 0 };
         const margin = { top: 20, right: 30, bottom: 40, left: 40 };
 
         // Clear previous content
@@ -73,6 +70,11 @@ function Histogram({dimensions}: {dimensions: {width: number; height: number;}})
             .nice()
             .range([height - margin.bottom, margin.top]);
 
+        // Determine which ticks to display based on viewport width
+        const ticksToShow = width < 600 
+            ? dataArray.filter(d => d.year % 3 === 0).map(d => d.year.toString())
+            : dataArray.map(d => d.year.toString());
+
         // Create a container for the bars
         const barContainer = svg.append('g');
 
@@ -81,35 +83,36 @@ function Histogram({dimensions}: {dimensions: {width: number; height: number;}})
             .data(dataArray)
             .join('rect')
             .attr('x', d => x(d.year.toString())!)
+            .attr('class', 'bg-green-500')
             .attr('width', x.bandwidth())
-            .attr('fill', '#DBE5EB')
+            .attr('fill', '#F8DDC3')
             .attr('y', height - margin.bottom)  // Start from the bottom
             .attr('height', 0)  // Initial height of 0
+            .attr('rx', 10)
             .transition()
             .duration(1000)
             .attr('y', d => y(d.cancer))
-            .attr('height', d => y(0) - y(d.cancer));
+            .attr('height', d => y(0) - y(d.cancer) + 20);
 
-        // Draw white dots on top of each bar
-        // barContainer.selectAll('.dot')
-        //     .data(dataArray)
-        //     .join('circle')
-        //     .attr('class', 'dot')
-        //     .attr('cx', d => x(d.year.toString())! + x.bandwidth() / 2)
-        //     .attr('cy', d => y(d.cancer))
-        //     .attr('r', x.bandwidth()/2)  // Radius of the dot
-        //     .attr('fill', '#ff0000');
+        // Draw background rectangle
+        barContainer.append('rect')
+            .attr('x', 0)
+            .attr('width', width)
+            .attr('fill', '#F6FFF0')
+            .attr('y', height - 40)
+            .attr('height', 20);
 
         // Add the line chart
         const line = d3.line<Data>()
             .x(d => x(d.year.toString())! + x.bandwidth() / 2)
-            .y(d => y(d.cancer));
+            .y(d => y(d.cancer + 200))
+            .curve(d3.curveBasis); // Smooth the line with B-spline interpolation
 
         svg.append('path')
             .datum(dataArray)
             .attr('fill', 'none')
-            .attr('stroke', '#a5afb5')
-            .attr('stroke-width', 10)
+            .attr('stroke', '#F9C19E')
+            .attr('stroke-width', width < 600 ? 5 : 10)  // Adjust stroke width based on viewport width
             .attr('d', line)
             .attr('stroke-dasharray', function () { return this.getTotalLength() })
             .attr('stroke-dashoffset', function () { return this.getTotalLength() })
@@ -121,7 +124,7 @@ function Histogram({dimensions}: {dimensions: {width: number; height: number;}})
         // Add the x-axis
         svg.append('g')
             .attr('transform', `translate(0,${height - margin.bottom})`)
-            .call(d3.axisBottom(x).tickFormat(d3.format('d')))
+            .call(d3.axisBottom(x).tickValues(ticksToShow))
             .selectAll('text')
             .attr('transform', 'rotate(-45)')
             .style('text-anchor', 'end');
@@ -135,27 +138,26 @@ function Histogram({dimensions}: {dimensions: {width: number; height: number;}})
 
     return <svg ref={svgRef} width={dimensions.width} height={dimensions.height}></svg>;
 }
+
 function Trials({ className }: { className?: string }) {
     const ref = useRef<HTMLDivElement>(null);
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
     useEffect(() => {
-        // update the dimensions when ref.current is resized
         if (!ref.current) return;
         const resizeObserver = new ResizeObserver((entries) => {
             if (!ref.current) return;
             const { width, height } = entries[0].contentRect;
-            console.log(width, height)
             setDimensions({ width, height });
         });
         resizeObserver.observe(ref.current);
         return () => {
             resizeObserver.disconnect();
         };
-    }, [ref.current]);
+    }, [ref]);
 
     return (
-        <div ref={ref} className={" aspect-video h-auto max-h-[50vh]    " + className}>
+        <div ref={ref} className={`aspect-video h-auto max-h-[50vh] ${className}`}>
             <Histogram dimensions={dimensions} />
         </div>
     );

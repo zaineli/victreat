@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import useMouseHover from '@/lib/useMouseHover';
-import { AnimatedBeamMultipleOutputDemo } from '../AnimatedBeam';
+import { MutationsGraph } from '../AnimatedBeam';
 import { useMediaQuery } from '@/lib/useMediaQuery';
 import { index } from 'd3';
 

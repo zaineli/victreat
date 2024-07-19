@@ -12,7 +12,7 @@ const Circle = React.forwardRef<
     <div
       ref={ref}
       className={cn(
-        "z-10 flex  aspect-square w-max min-w-max box-border  items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+        "z-10 flex  aspect-square w-max min-w-max box-border  items-center justify-center rounded-full  bg-[#DFF5D2] border-2 border-[#92e665aa] p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
         className
       )}
     >
@@ -23,7 +23,7 @@ const Circle = React.forwardRef<
 
 Circle.displayName = "Circle";
 
-export function AnimatedBeamMultipleOutputDemo({
+export function MutationsGraph({
   className,
   cancer,
   nextCancer,
@@ -64,7 +64,7 @@ export function AnimatedBeamMultipleOutputDemo({
             {/* <Circle ref={mainCircleRef}>
               {cancer.name}
             </Circle> */}
-            <div ref={mainCircleRef} className="bg-gray-200 text-2xl px-4 z-10 flex h-12 w-max items-center justify-center rounded-full  p-3 " >
+            <div ref={mainCircleRef} className="bg-[#DFF5D2] text-green-700 border-[#92e665aa] border-2 text-2xl px-4 z-10 flex h-12 w-max items-center justify-center rounded-full  p-3 " >
               {cancer.name}
             </div>
           </div>
