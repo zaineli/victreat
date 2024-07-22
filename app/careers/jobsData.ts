@@ -1,86 +1,80 @@
 export const jobsData = [
   {
-    id: 'software-engineer',
-    title: "Software Engineer",
-    expectations: "We expect our colleague to collaborate effectively with team members, write clean and maintainable code, and contribute to architectural decisions. They should be proactive in learning new technologies and improving existing systems.",
-    wishlist: [
-      "Experience with React, Redux, and TypeScript",
-      "Proficiency in Node.js, Express, and RESTful API development",
-      "Knowledge of relational databases such as MySQL or PostgreSQL",
-      "Familiarity with cloud platforms like AWS or Azure",
-      "Proven experience in product management, preferably in SaaS or tech industry",
-      "Strong analytical skills and the ability to interpret data to make informed decisions",
-      "Excellent communication and presentation skills to effectively convey ideas and product vision",
-      "Experience with Agile methodologies and product lifecycle management"
+    "id": "senior-full-stack-developer",
+    "title": "Senior Full Stack Developer",
+    "expectations": "The role involves leading the design, development, and maintenance of the Victreat patient-facing technology portal aimed at enhancing patient engagement and treatment accessibility. Key responsibilities include implementing backend services, APIs, and databases to help identify treatment options, as well as developing responsive user interfaces for seamless navigation. \\\nCollaboration with cross-functional teams is essential to integrate AI and machine learning algorithms for personalized treatment recommendations. The position also requires ensuring the platform's scalability, performance, and security, along with conducting thorough code reviews, testing, and debugging to deliver high-quality software solutions that meet the evolving needs of patients and healthcare providers.",
+    "wishlist": [
+      "Bachelor's or Master's degree in Computer Science, Software Engineering, or a related field",
+      "Proven experience as a full stack developer with expertise in Python and web frameworks like Django or Flask",
+      "Strong proficiency in front-end technologies such as HTML, CSS, JavaScript, and modern frameworks like Next",
+      "Experience with Elasticsearch is a big plus",
+      "Knowledge of software development best practices, version control systems and agile methodologies",
+      "Ability to translate complex requirements into scalable and efficient technical solutions",
+      "Excellent problem-solving skills",
+      "Prior experience in healthcare technology or related fields is a plus"
     ],
-    offerings: "We offer competitive salary, comprehensive health benefits, retirement plans, and professional development opportunities including conference attendance and certification support."
+    "offerings": "Join our team and enjoy an attractive compensation package that reflects your skills and contributions. We are committed to your professional development, offering a variety of learning opportunities and clear pathways for career advancement. Our engaging team culture fosters collaboration and creativity, ensuring that you thrive in a dynamic work environment. Plus, you’ll have the chance to be at the forefront of groundbreaking advancements in healthcare technology, making a meaningful impact in the industry."
   },
   {
-    id: 'product-manager',
-    title: "Product Manager",
-    expectations: "We expect our colleague to lead product development from ideation to launch, gather and prioritize user requirements through market research and user feedback, and drive product strategy aligned with business goals. They should have strong problem-solving skills and the ability to influence cross-functional teams.",
-    wishlist: [
-      "Proven experience in product management, preferably in SaaS or tech industry",
-      "Strong analytical skills and the ability to interpret data to make informed decisions",
-      "Excellent communication and presentation skills to effectively convey ideas and product vision",
-      "Experience with Agile methodologies and product lifecycle management",
-      "Experience with React, Redux, and TypeScript",
-      "Proficiency in Node.js, Express, and RESTful API development",
-      "Knowledge of relational databases such as MySQL or PostgreSQL",
-      "Familiarity with cloud platforms like AWS or Azure",
-      "Proven experience in product management, preferably in SaaS or tech industry",
-      "Strong analytical skills and the ability to interpret data to make informed decisions",
-      "Excellent communication and presentation skills to effectively convey ideas and product vision",
-      "Experience with Agile methodologies and product lifecycle management"
+    "id": "computer-vision-engineer",
+    "title": "Computer Vision Engineer",
+    "expectations": "We expect you to design and implement computer vision algorithms aimed at effectively interpreting visual data to extract meaningful insights that enhance treatment suggestions and navigation. You will work closely with software engineers, data scientists, and product managers to create integrated solutions that drive innovation. Staying current with the latest research and advancements in computer vision and machine learning will be essential for continuously improving our products. Additionally, you will maintain thorough documentation of algorithms and models, providing technical support to team members as needed to ensure smooth project execution and knowledge sharing.",
+    "wishlist": [
+      "Bachelor’s or Master’s degree in Computer Science, Electrical Engineering, Mathematics, or a related field.",
+      "Proven experience in developing computer vision algorithms using programming languages such as Python or C++.",
+      "Familiarity with frameworks like OpenCV, TensorFlow, and PyTorch is essential.",
+      "Experience with data extraction from visual graphs, flow charts and tables is a big plus.",
+      "Excellent analytical skills with a keen attention to detail, capable of addressing complex challenges in computer vision.",
+      "Willingness to learn and adapt to new technologies and methodologies in the rapidly evolving field of computer vision."
     ],
-    offerings: "We offer competitive compensation, stock options, flexible work hours, and a collaborative work environment where your ideas and contributions are valued."
+    "offerings": "Join our team and enjoy an attractive compensation package that reflects your skills and contributions. We are committed to your professional development, offering a variety of learning opportunities and clear pathways for career advancement. Our engaging team culture fosters collaboration and creativity, ensuring that you thrive in a dynamic work environment. Plus, you’ll have the chance to be at the forefront of groundbreaking advancements in healthcare technology, making a meaningful impact in the industry."
   },
   {
-    id: 'ux-ui-designer',
-    title: "UX/UI Designer",
-    expectations: "We expect our colleague to create intuitive and visually appealing designs that enhance user experience across web and mobile platforms. They should conduct user research, collaborate closely with product managers and developers, and iterate on designs based on feedback and usability testing results.",
-    wishlist: [
-      "Proficiency in design tools such as Sketch, Figma, or Adobe XD",
-      "Strong understanding of user-centered design principles and best practices",
-      "Experience designing responsive web applications and mobile interfaces",
-      "Ability to prototype interactions and user flows using tools like InVision or Marvel",
-      "Proven experience in product management, preferably in SaaS or tech industry",
-      "Strong analytical skills and the ability to interpret data to make informed decisions",
-      "Excellent communication and presentation skills to effectively convey ideas and product vision",
-      "Experience with Agile methodologies and product lifecycle management"
+    "id": "ui-ux-expert",
+    "title": "UI/UX Expert",
+    "expectations": "The responsibilities for this role center around designing an intuitive user interface for the Victreat patient-facing technology portal. This involves conducting user research to understand patient needs, creating wireframes and prototypes that deliver exceptional user experiences, and collaborating with cross-functional teams to align designs with standards of care. Implementing best practices in usability and accessibility, while continuously iterating on designs based on user feedback and data insights, is essential to enhance the interface and promote patient engagement.",
+    "wishlist": [
+      "4+ years of experience in UI/UX design, preferably in the healthcare or health tech industry",
+      "Ability to translate complex healthcare information into clear and engaging user interfaces",
+      "Proficiency in design tools such as Figma, Sketch, or Adobe Creative Suite",
+      "Strong portfolio showcasing user-centered design solutions and successful projects",
+      "Knowledge of human-computer interaction, usability principles, and accessibility standards",
+      "Excellent communication skills and a collaborative mindset",
+      "Passion for improving patient experiences and outcomes through technology"
+
     ],
-    offerings: "We offer remote work options, competitive salary, health benefits, and the opportunity to work on diverse projects with a talented team of designers and developers."
+    "offerings": "Join our team and enjoy an attractive compensation package that reflects your skills and contributions. We are committed to your professional development, offering a variety of learning opportunities and clear pathways for career advancement. Our engaging team culture fosters collaboration and creativity, ensuring that you thrive in a dynamic work environment. Plus, you’ll have the chance to be at the forefront of groundbreaking advancements in healthcare technology, making a meaningful impact in the industry."
   },
+
   {
-    id: 'data-scientist',
-    title: "Data Scientist",
-    expectations: "We expect our colleague to apply advanced statistical and machine learning techniques to analyze large datasets, extract insights, and build predictive models. They should have experience in data preprocessing, feature engineering, and model evaluation, with a focus on delivering actionable insights to stakeholders.",
-    wishlist: [
-      "Strong programming skills in languages such as Python or R, with knowledge of libraries like Pandas, NumPy, and SciPy",
-      "Experience with machine learning frameworks such as TensorFlow or PyTorch",
-      "Knowledge of data visualization tools like Tableau or Power BI to communicate findings effectively",
-      "Background in statistics and experimental design to conduct rigorous analysis",
-      "Proven experience in product management, preferably in SaaS or tech industry",
-      "Strong analytical skills and the ability to interpret data to make informed decisions",
-      "Excellent communication and presentation skills to effectively convey ideas and product vision",
-      "Experience with Agile methodologies and product lifecycle management"
+    "id": "software-engineer-python",
+    "title": "Software Engineer (Python)",
+    "expectations": "In this role, we expect you to develop Python solutions to gather data from various online sources and integrate it into our databases and processing pipelines. A strong emphasis will be placed on optimizing data collection techniques for accuracy and reliability. You will collaborate with cross-functional teams to translate business requirements into technical solutions, while also documenting code and processes to ensure transparency and knowledge sharing within the organization",
+    "wishlist": [
+      "Bachelor's degree in Computer Science, Engineering, or a related field",
+      "2+ years of experience in web scraping and Python development",
+      "Proficiency in Python and familiarity with web scraping libraries such as Scrapy, Beautiful Soup, and Selenium",
+      "Strong understanding of web technologies (HTML, CSS, JavaScript, XPath, Regex)",
+      "Experience with Elasticsearch is a big plus",
+      "Excellent problem-solving and analytical skills",
+      "Ability to work independently and as part of a team",
+      "Good communication and documentation skills"
     ],
-    offerings: "We offer competitive compensation, flexible work hours, opportunities for skill development in cutting-edge technologies, and a collaborative work environment where you can make a significant impact with your data-driven insights."
+    "offerings": "Join our team and enjoy an attractive compensation package that reflects your skills and contributions. We are committed to your professional development, offering a variety of learning opportunities and clear pathways for career advancement. Our engaging team culture fosters collaboration and creativity, ensuring that you thrive in a dynamic work environment. Plus, you’ll have the chance to be at the forefront of groundbreaking advancements in healthcare technology, making a meaningful impact in the industry."
   },
+
   {
-    id: 'devops-engineer',
-    title: "DevOps Engineer",
-    expectations: "We expect our colleague to design and implement scalable infrastructure solutions, automate deployment pipelines, and monitor system performance and reliability. They should have strong problem-solving skills and the ability to collaborate with development and operations teams to ensure smooth deployment and operation of applications.",
-    wishlist: [
-      "Experience with cloud platforms such as AWS, Azure, or Google Cloud Platform",
-      "Proficiency in infrastructure as code tools like Terraform or CloudFormation",
-      "Knowledge of container orchestration tools such as Docker and Kubernetes",
-      "Ability to configure and manage CI/CD pipelines using Jenkins, GitLab CI, or similar tools",
-      "Proven experience in product management, preferably in SaaS or tech industry",
-      "Strong analytical skills and the ability to interpret data to make informed decisions",
-      "Excellent communication and presentation skills to effectively convey ideas and product vision",
-      "Experience with Agile methodologies and product lifecycle management"
+    "id": "ai-ml-expert",
+    "title": "AI/ML Expert",
+    "expectations": "We expect you to implement advanced machine learning models focused on NLP algorithms, utilizing sophisticated embedding techniques to enhance semantic search and information retrieval. Your role will involve creating algorithms for neural search systems that efficiently handle complex data and leveraging LLMs to develop generative AI capable of performing human-level comparative analyses on medical treatments. Collaboration with cross-functional teams, including data scientists and healthcare professionals, will be essential to align AI solutions with user needs, while staying current with advancements in the field and rigorously testing models to ensure high performance and reliability.",
+    "wishlist": [
+      "A Master’s in Computer Science, Data Science, AI/ML, or a related field.",
+      "Minimum of 4-5 years of hands-on experience in AI/ML, with a strong focus on NLP, embedding techniques, vector search and LLMs.",
+      "Proficiency in programming languages such as Python, and familiarity with ML frameworks (e.g., TensorFlow, PyTorch). ",
+      "Experience with Elasticsearch and other vector databases is a big plus.",
+      "Strong analytical and problem-solving abilities, with a solid understanding of statistical learning methods.",
+      "Excellent verbal and written communication skills, with the ability to convey complex technical concepts to non-technical stakeholders."
     ],
-    offerings: "We offer competitive salary, health benefits, remote work options, and the opportunity to work with cutting-edge technologies to build and maintain reliable and scalable infrastructure."
+    "offerings": "Join our team and enjoy an attractive compensation package that reflects your skills and contributions. We are committed to your professional development, offering a variety of learning opportunities and clear pathways for career advancement. Our engaging team culture fosters collaboration and creativity, ensuring that you thrive in a dynamic work environment. Plus, you’ll have the chance to be at the forefront of groundbreaking advancements in healthcare technology, making a meaningful impact in the industry."
   }
-];
+]
