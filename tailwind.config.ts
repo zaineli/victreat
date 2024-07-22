@@ -21,9 +21,10 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        antipasto: ['Antipasto', 'sans-serif'],
       },
       colors: {
-        accent: '#c4efacaa',
+        // accent: '#c4efacaa',
         customGray: '#F0F2F8',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
