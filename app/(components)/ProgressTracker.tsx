@@ -3,7 +3,9 @@ import { Home, Target, Search, PieChart, LineChartIcon } from 'lucide-react';
 
 console.log({ Home, Target, Search, PieChart });
 
-const ProgressTracker = ({ sections }) => {
+const ProgressTracker = ({ sections }: {
+  sections: string[];
+}) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
