@@ -19,10 +19,10 @@ function newTransport() {
 }
 
 
-async function send(subject: string, message: string, attachments: {filename: string; content: Buffer}[]) {
+async function send(subject: string, message: string, email: string, attachments: {filename: string; content: Buffer}[]) {
     const mailOptions = {
-        from: 'zali.bscs22seecs@seecs.edu.pk',
-        to: 'jobs@victreat.com',
+        from: email,
+        to: 'zali.bscs22seecs@seecs.edu.pk',
         subject,
         text: message,
         attachments
@@ -47,7 +47,7 @@ export async function POST(req: Request) {
     // console.log()
     const message = `Name: ${first_name} ${last_name}\nEmail: ${email}\nLinkedIn: ${linkedin}\nPhone: ${phone}\nPosition: ${position}\n\n${cover}`;
     const subject = `New Job Application from ${first_name} ${last_name} for ${position}`;
-    await send(subject, message, [{
+    await send(subject, message, email, [{
         filename: cv.name,
         content: Buffer.from(await cv.arrayBuffer())
     }]);
