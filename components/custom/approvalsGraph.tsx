@@ -26,8 +26,7 @@ const Approvals = () => {
     const [stopped, setStopped] = useState(false);
     const [drugs, setDrugs] = useState<Drug[]>([]);
     const ref = useRef<HTMLDivElement>();
-    // const isHovered = useMouseHover(ref);
-    const isHovered = false;
+    const isHovered = useMouseHover(ref);
     const intervelRef = useRef<NodeJS.Timeout>();
     const scrollRef = useRef<HTMLDivElement>();
     const [showScrollBottom, setShowScrollBottom] = useState(true);
@@ -96,10 +95,10 @@ const Approvals = () => {
         setCurrentIndex(fn);
         setStopped(true);
         setTimeout(() => setStopped(false), 3000);
-        // setCurrentIndex(i => {
-        //     i == 0 || i == accyearApproved.length ? 0 : i
-        // })
-        // setStopped(true);
+        setCurrentIndex(i => {
+            i == 0 || i == accyearApproved.length ? 0 : i
+        })
+        setStopped(true);
     }
 
 
@@ -112,8 +111,8 @@ const Approvals = () => {
 
     return (
         <div className="min-h-screen bg-[#f1ffe9ab] py-32 lg:px-32 md:px-16 px-4">
-            <h1 className=" lg:text-5xl md:text-3xl text-2xl text-center mx-auto lg:mb-32 mb-8  ">
-                The number of<span className="font-bold text-green-500"> cancer drugs approved by the FDA</span> is continually increasing every year.
+            <h1 className="lg:text-4xl md:text-2xl text-2xl text-center mx-auto lg:mb-32 mb-8  ">
+            <br/><span className="font-bold text-green-500 lg:text-6xl md:text-5xl text-4xl">Cancer drugs approved by the FDA</span><br/>are continually increasing every year.
             </h1>
             <div ref={ref} className="flex flex-col  items-stretch lg:flex-row gap-16 justify-between">
                 <div className="flex lg:flex-[3_3_0]   overflow-hidden  relative" >
@@ -164,7 +163,7 @@ const Approvals = () => {
                         ))}
                     </div>
                 </div>
-                <div className="lg:flex-[2_2_0] text-white rounded-xl overflow-hidden relative ">
+                <div className="lg:flex-[2_2_0] text-[#80b465] rounded-xl overflow-hidden relative ">
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{
@@ -175,13 +174,13 @@ const Approvals = () => {
                         }}
                         key={selected}
                         ref={scrollRef}
-                        className="flex  z-10 md:h-[400px] flex-col p-4 gap-2 overflow-hidden  ">
+                        className="flex  z-10 md:h-[400px] flex-col p-4 gap-2 overflow-x-auto ">
                         <div
                             className="flex  md:flex-col gap-2">
                             {yearDrugs.map(({ cancer_type, drug_name, date }) =>
-                                <div className=' bg-[#aade8d] w-full min-w-full h-full  rounded-xl p-2 '>
+                                <div className='border-2 border-[#aade8d] bg-transparent w-full min-w-full h-full  rounded-xl p-2 '>
                                     <div className='font-bold truncate overflow-ellipsis'>{drug_name}</div> <div className='  overflow-ellipsis  text-xs min-w-max font-light'>{date}</div>
-                                    <div className=" truncate overflow-ellipsis">{cancer_type}</div>
+                                    <div className=" truncate overflow-ellipsis ">{cancer_type}</div>
                                 </div>)
                             }
                         </div>
