@@ -50,17 +50,17 @@ function JobDetails({ params }: Props) {
   }
 
   return (
-    <div className="max-w-[95rem] mx-auto p-6 bg-white rounded-lg mt-24">
+    <div className="min-h-screen flex items-center max-w-[95rem] mx-auto p-6 bg-white rounded-lg pt-16">
       <div className="flex flex-wrap -mx-4">
         <div className="w-full md:w-1/2 p-4">
 
           <div className="text-3xl font-bold mb-4 flex gap-3 items-center">
-            <Link href="/careers">
-              <ArrowLeft className="h-6 w-6 inline-block hover:cursor-pointer hover:-translate-x-2 hover:scale-[1.05] transition-all " />
+            <Link href="/careers" className='group '>
+              <ArrowLeft className="h-8 w-8 inline-block group-hover:cursor-pointer group-hover:-translate-x-2 group-hover:scale-[1.1] transition-all " />
             </Link>
             {job.title}
           </div>
-          <h2 className="text-xl mb-2">What we expect from our new colleague</h2>
+          <h2 className="text-lg mb-2 font-semibold">What we expect from our new colleague</h2>
           <p className="text-gray-700 mb-4">{job.expectations}</p>
           <h3 className="text-lg font-semibold mb-2">Wishlist for a {job.title}:</h3>
           <ul className="list-disc list-inside mb-4">
@@ -70,9 +70,9 @@ function JobDetails({ params }: Props) {
           </ul>
           <h2 className="text-lg font-semibold mb-2">What Victreat Solution has to offer</h2>
           <p className="text-gray-700 mb-4">{job.offerings}</p>
-          <Link href="/careers">
+          {/* <Link href="/careers">
             <div className="text-blue-500 hover:text-blue-700">Back to Careers</div>
-          </Link>
+          </Link> */}
         </div>
         <div className="w-full md:w-1/2 px-4">
           <div className="bg-white p-8  rounded-lg">
