@@ -45,6 +45,7 @@ const Approvals = () => {
         console.log('interval');
         intervelRef.current = setInterval(() => {
             setCurrentIndex(prevIndex => (prevIndex + 2) % (accyearApproved.length + 2) - 1);
+            console.log('interval', currentIndex);
         }, 2000);
 
         return () => clearInterval(intervelRef.current);
@@ -95,9 +96,9 @@ const Approvals = () => {
         setCurrentIndex(fn);
         setStopped(true);
         setTimeout(() => setStopped(false), 3000);
-        setCurrentIndex(i => {
-            i == 0 || i == accyearApproved.length ? 0 : i
-        })
+        // setCurrentIndex(i => {
+        //     i == 0 || i == accyearApproved.length ? 0 : i
+        // })
         setStopped(true);
     }
 
