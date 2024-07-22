@@ -35,7 +35,7 @@ const Page = (props: Props) => {
           </motion.p>
         </motion.div>
 
-        <motion.div className='flex flex-col  gap-8 lg:gap-16  px-4 sm:px-8 md:px-16 lg:px-20  items-center'
+        <motion.div className='flex flex-col  gap-8 lg:gap-16  px-4 sm:px-8 md:px-16 lg:px-32  items-center'
           initial='hidden'
           animate='visible'
           variants={variants}
@@ -73,7 +73,7 @@ const Page = (props: Props) => {
           </div>
         </motion.div>
 
-        <div className='flex flex-col  lg:flex-row gap-8 lg:gap-32 pt-12 md:pt-24 py-12 md:py-24 px-4 sm:px-8 md:px-16 lg:px-20 pb-12- md:pb-24'>
+        <div className='flex flex-col  lg:flex-row gap-8 lg:gap-32 pt-12 md:pt-24 py-12 md:py-24 px-4 sm:px-8 md:px-16 lg:px-32 pb-12- md:pb-24'>
           <div className='text-lg sm:text-xl md:text-2xl lg:text-3xl bg-[#F9F9F9] w-full rounded-xl p-4 sm:p-6 md:p-8'>
             <span className='font-semibold'>{jobsData.length} Open Positions</span>
             {jobsData.map(job => (

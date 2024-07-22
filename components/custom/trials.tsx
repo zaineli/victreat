@@ -83,7 +83,7 @@ function Histogram({ dimensions }: { dimensions: { width: number; height: number
             .data(dataArray)
             .join('rect')
             .attr('x', d => x(d.year.toString())!)
-            .attr('class', 'bg-green-500')
+            // .attr('class', 'bg-green-500')
             .attr('width', x.bandwidth())
             .attr('fill', '#F8DDC3')
             .attr('y', height - margin.bottom)  // Start from the bottom
