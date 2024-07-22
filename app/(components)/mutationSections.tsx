@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { MutationsGraph } from "../AnimatedBeam";
+import { MutationsGraph } from "./AnimatedBeam";
 import useMouseHover from "@/lib/useMouseHover";
 import { AnimatePresence, motion } from "framer-motion";
 import { useMediaQuery } from "@/lib/useMediaQuery";
