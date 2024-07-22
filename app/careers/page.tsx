@@ -35,42 +35,38 @@ const Page = (props: Props) => {
           </motion.p>
         </motion.div>
 
-        <motion.div className='flex flex-col  lg:flex-row gap-8 lg:gap-32  md:mt-24 lg:mt-32 pt-12 md:pt-24 py-12 md:py-24 px-4 sm:px-16 md:px-32 lg:px-40 xl:px-80 items-center'
+        <motion.div className='flex flex-col  gap-8 lg:gap-16  md:mt-24 lg:mt-32 pt-12 md:pt-24 py-12 md:py-24 px-4 sm:px-16 md:px-32 lg:px-36 xl:px-40 items-center'
           initial='hidden'
           animate='visible'
           variants={variants}
         >
-          <div className="flex-col flex gap-4 sm:gap-6 md:gap-10 ">
+          <div className="flex-col h-full flex gap-4 sm:gap-6 md:gap-10 flex-1 self-stretch ">
             <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Benefits at Victreat</div>
             <p className='text-base sm:text-lg md:text-xl'>We offer the following benefits at Victreat, some of which are location dependent.</p>
-            <img className="rounded-2xl" src="/images/vicWallpaper3.png" alt="" />
+            {/* <img className="rounded-2xl max-w-96 mx-auto" src="/images/vicWallpaper3.png" alt="" /> */}
           </div>
-          <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 mt-8 md:mt-12 lg:mt-0 h-2/3 '>
-            <motion.div className='bg-[#FAFAFA] rounded-lg shadow-md p-6 md:px-[3.5rem] md:py-[2.5rem]'
+          <div className='flex-1 grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 mt-8 md:mt-12 lg:mt-0 h-2/3 '>
+            <motion.div className='bg-[#FAFAFA] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
               variants={variants}
             >
-              <IoMdGlobe className='text-4xl sm:text-5xl md:text-6xl text-[#D4D4D4]' />
               <div className='text-lg sm:text-xl md:text-2xl font-semibold mt-2 sm:mt-3 md:mt-4'>Flexible working</div>
               <div className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3 md:mt-4'>We offer flexible working hours and the option to work from home.</div>
             </motion.div>
             <motion.div className='bg-[#FAFAFA] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
               variants={variants}
             >
-              <BsClockFill className='text-4xl sm:text-5xl md:text-6xl text-[#D4D4D4]' />
               <div className='text-lg sm:text-xl md:text-2xl font-semibold mt-2 sm:mt-3 md:mt-4'>Competitive salary</div>
               <div className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3 md:mt-4'>We offer competitive salaries to attract the best talent.</div>
             </motion.div>
             <motion.div className='bg-[#FAFAFA] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
               variants={variants}
             >
-              <GiUmbrella className='text-4xl sm:text-5xl md:text-6xl text-[#D4D4D4]' />
               <div className='text-lg sm:text-xl md:text-2xl font-semibold mt-2 sm:mt-3 md:mt-4'>Training and development</div>
               <div className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3 md:mt-4'>We offer training and development opportunities to help you grow.</div>
             </motion.div>
             <motion.div className='bg-[#FAFAFA] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
               variants={variants}
             >
-              <GiPawHeart className='text-4xl sm:text-5xl md:text-6xl text-[#D4D4D4]' />
               <div className='text-lg sm:text-xl md:text-2xl font-semibold mt-2 sm:mt-3 md:mt-4'>Health and wellness</div>
               <div className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3 md:mt-4'>We offer health and wellness benefits to keep you healthy.</div>
             </motion.div>
@@ -87,14 +83,14 @@ const Page = (props: Props) => {
                     variants={variants}
                   >
                     <div className='text-sm sm:text-base md:text-lg'>{job.title}</div>
-                    <div>&rarr;</div> 
+                    <div>&rarr;</div>
                   </motion.div>
                 </div>
               </Link>
             ))}
           </div>
         </div>
-        
+
       </div>
     </div>
   );
