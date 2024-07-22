@@ -20,13 +20,13 @@ const Page = (props: Props) => {
   return (
     <div className='bg-[#f1ffe9]  text-gray-700'>
       <div>
-        <motion.div className='mb-8 py-32 px-4 sm:px-16 md:px-32 lg:px-40 xl:px-80'
+        <motion.div className='mb-8 py-32 px-4 sm:px-8 md:px-16 lg:px-20 max-w-[1280px] w-[80%] mx-auto box-content'
           initial='hidden'
           animate='visible'
           variants={variants}
         >
-          <motion.div className='text-5xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold text-center pt-32 sm:pt-32 md:pt-32 lg:pt-52'>
-            Help us build technology for<br /> the next era of Cancer.
+          <motion.div className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-center pt-32 sm:pt-32 md:pt-32 lg:pt-52'>
+            Help us build technology for the next era&nbsp;of&nbsp;Cancer.
           </motion.div>
           <motion.p className='text-center mx-auto text-base sm:text-lg md:text-xl mt-4 sm:mt-6 md:mt-8 w-11/12 sm:w-2/3 md:w-1/2 '
             variants={variants}
@@ -35,7 +35,7 @@ const Page = (props: Props) => {
           </motion.p>
         </motion.div>
 
-        <motion.div className='flex flex-col  gap-8 lg:gap-16  md:mt-24 lg:mt-32 pt-12 md:pt-24 py-12 md:py-24 px-4 sm:px-16 md:px-32 lg:px-36 xl:px-40 items-center'
+        <motion.div className='flex flex-col  gap-8 lg:gap-16  px-4 sm:px-8 md:px-16 lg:px-20  items-center'
           initial='hidden'
           animate='visible'
           variants={variants}
@@ -45,7 +45,7 @@ const Page = (props: Props) => {
             <p className='text-base sm:text-lg md:text-xl'>We offer the following benefits at Victreat, some of which are location dependent.</p>
             {/* <img className="rounded-2xl max-w-96 mx-auto" src="/images/vicWallpaper3.png" alt="" /> */}
           </div>
-          <div className='flex-1 grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 mt-8 md:mt-12 lg:mt-0 h-2/3 '>
+          <div className='flex-1 grid md:grid-cols-2 grid-cols-1 gap-4 sm:gap-6 md:gap-8 lg:gap-12'>
             <motion.div className='bg-[#FAFAFA] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
               variants={variants}
             >
@@ -73,7 +73,7 @@ const Page = (props: Props) => {
           </div>
         </motion.div>
 
-        <div className='flex flex-col  lg:flex-row gap-8 lg:gap-32 pt-12 md:pt-24 py-12 md:py-24 px-4 sm:px-16 md:px-32 lg:px-40 xl:px-80 pb-12- md:pb-24'>
+        <div className='flex flex-col  lg:flex-row gap-8 lg:gap-32 pt-12 md:pt-24 py-12 md:py-24 px-4 sm:px-8 md:px-16 lg:px-20 pb-12- md:pb-24'>
           <div className='text-lg sm:text-xl md:text-2xl lg:text-3xl bg-[#F9F9F9] w-full rounded-xl p-4 sm:p-6 md:p-8'>
             <span className='font-semibold'>{jobsData.length} Open Positions</span>
             {jobsData.map(job => (
