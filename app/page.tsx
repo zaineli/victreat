@@ -16,9 +16,9 @@ function Home() {
   return (
     <div className="bg-[#f1ffe9ab] text-gray-700">
       <ProgressTracker sections={sections} />
-        <section id='1' className=''>
-          <HeroSection />
-        </section>
+      <section id='1' className=''>
+        <HeroSection />
+      </section>
       <section id='2'>
         <div className='bg-[#fee0dde0] flex justify-center items-center font-sans'>
           <CardsBanner />
@@ -27,17 +27,17 @@ function Home() {
       <section id='3'>
         <Approvals />
       </section>
-      <section id='4' className='w-full lg:p-32  p-4 sm:p-16 flex flex-col items-center justify-center '>
-        <div className='lg:text-4xl md:text-2xl text-2xl text-center mb-4'>
-        <br/><span className="font-bold bg-orange-500 bg-clip-text text-transparent lg:text-6xl md:text-5xl text-4xl">Exponential increase in clinical trials</span><br/> will further complicate the landscape of oncology treatment.
+      <section id='4' className='w-full bg-[#f1ffe9ab] lg:p-32  p-4 sm:p-16 flex flex-col items-center justify-center '>
+        <div className='lg:text-4xl md:text-2xl text-md text-center mb-4 px-3 lg:leading-normal md:leading-normal leading-normal'>
+          <span className="font-bold text-orange-500 lg:text-6xl md:text-5xl text-2xl">Exponential increase in&nbsp;clinical&nbsp;trials</span> will further complicate the landscape of oncology treatment.
         </div>
         <p className='lg:text-lg text-sm sm:text-base  w-4/5'>
         </p>
         <Trials className={'flex justify-center w-[80%] mx-auto'} />
       </section>
-      <section id={'mutations'} className='w-full lg:p-32  p-4 sm:p-16 '>
-        <div className='lg:text-[40px] md:text-xl text-xl text-center mb-24'>
-          Victreat aspires to be your <br/><span className="font-bold text-[#4b92f6] lg:text-6xl md:text-3xl text-3xl">trusted partner at navigating the complexities</span><br/> of cancer stages, mutations and the multitude of clinical trial options available.        </div>
+      <section id={'mutations'} className='bg-[#f1ffe9ab] w-full lg:p-32  p-4 sm:p-16  my-24'>
+        <div className='lg:text-4xl md:text-2xl text-md text-center mb-24 lg:leading-normal md:leading-normal leading-normal px-2'>
+          Victreat aspires to be your <span className=" font-bold text-[#22c1d6] lg:text-6xl md:text-5xl text-2xl ">trusted partner at navigating the complexities</span> of cancer stages, mutations and the multitude of clinical trial options available.        </div>
         <div className="lg:max-w-[75%] w-full mx-auto">
 
           <MutationSection small={false} />

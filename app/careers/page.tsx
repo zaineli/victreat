@@ -46,6 +46,7 @@ const Page = (props: Props) => {
             <img className="rounded-2xl" src="/images/vicWallpaper3.png" alt="" />
           </div>
           <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 mt-8 md:mt-12 lg:mt-0 h-2/3 '>
+          {/* <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 mt-8 md:mt-12 lg:mt-0 h-2/3 '> */}
             <motion.div className='bg-[#FAFAFA] rounded-lg shadow-md p-6 md:px-[3.5rem] md:py-[2.5rem]'
               variants={variants}
             >
