@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 import useMouseHover from "@/lib/useMouseHover";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import { map } from "@/lib/utils";
 
 const yearApproved = [22, 14, 12, 11, 16, 19, 23, 19, 19, 33, 22, 31, 33, 49, 108, 58, 41, 45, 31]; // start 2006 end 2024
