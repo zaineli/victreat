@@ -2,7 +2,6 @@ import React from 'react';
 import AnimatedLogo from '@/components/custom/AnimatedLogo';
 
 const HeroSection = () => {
-  const text = 'Treatment Navigator';
   return (
     <div className="bg-[#f1ffe9ab] min-h-screen px-4 relative flex flex-col md:flex-row justify-center md:items-center items-start font-sans">
       <div className="md:pl-20 z-[999] w-full md:w-1/3 text-center  flex flex-col items-center">
@@ -11,11 +10,11 @@ const HeroSection = () => {
         </div>
 
         <p className="text-base md:text-2xl mt-4 drop-shadow-xl bottom-8 absolute max-w-[800px] w-full translate-x-[-50%] left-[50%] text-center px-4">
-          With an increasingly complex treatment landscape, how can you ensure that you're getting the right drug for YOU?
+          With an increasingly complex treatment landscape, how can you ensure that you're getting the right drug?
         </p>
 
-        <div className="absolute text-5xl md:text-6xl lg:text-8xl bottom-28 mt-12 md:mt-0  translate-x-[-50%] left-[50%] text-center w-full antipasto font-thin px-4">
-          {text}
+        <div className="absolute text-5xl md:text-6xl lg:text-8xl bottom-28 mt-12 md:mt-0  translate-x-[-50%] left-[50%] text-center w-full font-thin px-4">
+        Treatment Navigator
         </div>
       </div>
       <div className="absolute w-full md:h-full md:w-1/2 top-0 left-0 bg-gradient-to-b from-[#d3f0c3ab_80%] to-[#f1ffe9ab_90%] h-0 z-50"></div>
