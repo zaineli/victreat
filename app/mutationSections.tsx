@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import WheelCarousel from "@/components/custom/wheelCarousel";
 import { MutationsGraph } from "../AnimatedBeam";
 import useMouseHover from "@/lib/useMouseHover";
 import { AnimatePresence, motion } from "framer-motion";
@@ -61,10 +60,6 @@ function MutationSection({ small = true }) {
             className="flex gap-16 w-full md:h-[500px] flex-col justify-center lg:items-center lg:flex-row items-stretch rounded-2xl overflow-hidden"
         // className="flex gap-16 w-full h-[500px] flex-col justify-center lg:items-center lg:flex-row items-stretch rounded-2xl bg-neutral-200 overflow-hidden"
         >
-            {/* <WheelCarousel
-                cancers={near}
-                className=" lg:w-1/3 w-full"
-            /> */}
             <AnimatePresence mode="popLayout">
                 <div className=" w-full lg:self-stretch  justify-center flex flex-col relative overflow-hidden lg:origin-left origin-top">
 

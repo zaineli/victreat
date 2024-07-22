@@ -9,8 +9,7 @@ type AnimatedLogoProps = {
 
 const AnimatedLogo = ({ className, animate = true }: AnimatedLogoProps) => {
   const [isFilled, setIsFilled] = useState(false);
-
-  const ref = useRef<HTMLDivElement>();
+  const ref = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
 
   useEffect(() => {
