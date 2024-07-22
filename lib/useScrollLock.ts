@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 
-import { useIsomorphicLayoutEffect } from 'usehooks-ts'
+import { useIsomorphicLayoutEffect } from 'usehooks-ts';
 
 type UseScrollLockOptions = {
   autoLock?: boolean

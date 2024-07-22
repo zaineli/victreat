@@ -1,11 +1,11 @@
 'use client';
-import MutationSection from '@/components/custom/mutationSections';
-import Trials from '@/components/custom/trials';
-import Footer from '@/components/custom/footer';
-import Approvals from '@/components/custom/approvalsGraph';
-import ProgressTracker from '@/components/custom/ProgressTracker';
-import HeroSection from '@/components/custom/hero-section';
-import CardsBanner from '@/components/custom/cardsBanner';
+import MutationSection from './(components)/mutationSections';
+import Trials from './(components)/trials';
+import Footer from '@/app/(components)/footer';
+import Approvals from './(components)/approvalsGraph';
+import ProgressTracker from '@/app/(components)/ProgressTracker';
+import HeroSection from '@/app/(components)/hero-section';
+import CardsBanner from './(components)/cardsBanner';
 
 const sections = ['1', '2', '3', '4', 'mutations'];
 

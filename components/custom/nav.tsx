@@ -3,10 +3,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { IoMdGlobe } from "react-icons/io";
-import { BsClockFill } from "react-icons/bs";
-import { GiUmbrella } from "react-icons/gi";
-import { GiPawHeart } from "react-icons/gi";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { cn } from '@/lib/utils';
 import AnimatedLogo from './AnimatedLogo';

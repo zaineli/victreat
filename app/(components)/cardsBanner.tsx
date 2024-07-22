@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { map } from "./approvalsGraph";
+import { map } from "@/lib/utils";
 import useMouseHover from "@/lib/useMouseHover";
 
 export default function CardsBanner() {
