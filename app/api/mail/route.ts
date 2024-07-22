@@ -22,7 +22,7 @@ function newTransport() {
 async function send(subject: string, message: string, email: string, attachments: {filename: string; content: Buffer}[]) {
     const mailOptions = {
         from: email,
-        to: 'zali.bscs22seecs@seecs.edu.pk',
+        to: 'jobs@victreat.com',
         subject,
         text: message,
         attachments
