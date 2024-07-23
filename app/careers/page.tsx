@@ -26,7 +26,7 @@ const Page = (props: Props) => {
           variants={variants}
         >
           <motion.div className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-center pt-32 sm:pt-32 md:pt-32 lg:pt-52'>
-            Help us build technology for the next era&nbsp;of&nbsp;Cancer.
+            Join us in developing technology for the future of&nbsp;cancer&nbsp;treatment.
           </motion.div>
           <motion.p className='text-center mx-auto text-base sm:text-lg md:text-xl mt-4 sm:mt-6 md:mt-8 w-11/12 sm:w-2/3 md:w-1/2 '
             variants={variants}
@@ -49,26 +49,26 @@ const Page = (props: Props) => {
             <motion.div className='bg-[#FAFAFA] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
               variants={variants}
             >
-              <div className='text-lg sm:text-xl md:text-2xl font-semibold mt-2 sm:mt-3 md:mt-4'>Flexible working</div>
-              <div className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3 md:mt-4'>We offer flexible working hours and the option to work from home.</div>
-            </motion.div>
-            <motion.div className='bg-[#FAFAFA] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
-              variants={variants}
-            >
               <div className='text-lg sm:text-xl md:text-2xl font-semibold mt-2 sm:mt-3 md:mt-4'>Competitive salary</div>
-              <div className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3 md:mt-4'>We offer competitive salaries to attract the best talent.</div>
+              <div className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3 md:mt-4'>Our competitive salary structure is designed to attract and retain the best talent in the industry.</div>
             </motion.div>
             <motion.div className='bg-[#FAFAFA] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
               variants={variants}
             >
-              <div className='text-lg sm:text-xl md:text-2xl font-semibold mt-2 sm:mt-3 md:mt-4'>Training and development</div>
-              <div className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3 md:mt-4'>We offer training and development opportunities to help you grow.</div>
+              <div className='text-lg sm:text-xl md:text-2xl font-semibold mt-2 sm:mt-3 md:mt-4'>Professional Growth</div>
+              <div className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3 md:mt-4'>Opportunities for professional growth, learning and career advancement</div>
             </motion.div>
             <motion.div className='bg-[#FAFAFA] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
               variants={variants}
             >
-              <div className='text-lg sm:text-xl md:text-2xl font-semibold mt-2 sm:mt-3 md:mt-4'>Health and wellness</div>
-              <div className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3 md:mt-4'>We offer health and wellness benefits to keep you healthy.</div>
+              <div className='text-lg sm:text-xl md:text-2xl font-semibold mt-2 sm:mt-3 md:mt-4'>Creativity and Innovation Environment</div>
+              <div className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3 md:mt-4'>Collaborative and dynamic work environment that encourages innovation and creativity.</div>
+            </motion.div>
+            <motion.div className='bg-[#FAFAFA] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
+              variants={variants}
+            >
+              <div className='text-lg sm:text-xl md:text-2xl font-semibold mt-2 sm:mt-3 md:mt-4'>Leading Edge</div>
+              <div className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3 md:mt-4'>Chance to be at the forefront of healthcare technology advancements</div>
             </motion.div>
           </div>
         </motion.div>
