@@ -3,6 +3,43 @@
 @tailwind utilities;
 /* @import "node_modules/progress-tracker/src/styles/progress-tracker.css"; */
 
+/* uncomment */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.kanit {
+  font-family: 'Kanit', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.monterrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+.nunito {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+.noto-sans {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+@font-face {
+  font-family: 'antipasto_pro_regular';
+  src: url('/fonts/antipasto-pro-regular-trial-webfont.woff2') format('woff2'),
+       url('/fonts/antipasto-pro-regular-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.antipasto {
+  font-family: 'antipasto_pro_regular', sans-serif;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -376,62 +413,13 @@
   margin-top: 10px;
 }
 
-.circle {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.circle .icon {
-  font-size: 1.5rem;
-}
-
-.circle:nth-child(2) { --i: 0; top: 10%; left: 50%; transform: translate(-50%, -50%); }
-.circle:nth-child(3) { --i: 1; top: 30%; left: 80%; transform: translate(-50%, -50%); }
-.circle:nth-child(4) { --i: 2; top: 70%; left: 80%; transform: translate(-50%, -50%); }
-.circle:nth-child(5) { --i: 3; top: 90%; left: 50%; transform: translate(-50%, -50%); }
-.circle:nth-child(6) { --i: 4; top: 70%; left: 20%; transform: translate(-50%, -50%); }
-.circle:nth-child(7) { --i: 5; top: 30%; left: 20%; transform: translate(-50%, -50%); }
-
-.hexagon-lines {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.hexagon-lines path {
-  fill: none;
-  stroke: #666;
-  stroke-width: 2;
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-}
-
-.react-flow__edge-path {
-  stroke: #333;
-  stroke-width: 2;
-}
-
-.temp .react-flow__edge-path {
-  stroke: #bbb;
-  stroke-dasharray: 5 5;
-}
+.gradient-glow {
 
 
+  background: #aade8d;
+  color: white;
+  text-shadow: 0 0 10px #00000020, 
+               0 0 30px #00000020;
 
-.canvas-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
+            }
 
-
-/* .slide {
-  transition: transform 1s ease-in-out;
-} */

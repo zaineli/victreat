@@ -32,7 +32,7 @@ const borderVariant = {
 
 export default function CancerDiagnosisPage() {
   return (
-    <div className="relative h-screen flex flex-col justify-start items-start bg-white w-full px-8 py-32 md:px-24 md:py-48">
+    <div className="relative h-screen flex flex-col justify-start items-start bg-[#f1ffe9] text-gray-700 w-full px-8 py-32 md:px-24 md:py-48">
       <main className="w-full">
         <section className="mb-12 md:mb-24 text-start">
           <motion.h1
@@ -41,7 +41,7 @@ export default function CancerDiagnosisPage() {
             animate="visible"
             variants={textVariant}
           >
-            Empowering patients to <span className="font-bold">navigate cancer</span><br />
+            Empowering patients to <span className="font-bold ">navigate cancer</span><br />
           </motion.h1>
         </section>
 
