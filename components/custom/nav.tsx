@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <nav className={cn(' antipasto absolute top-0 py-4 px-8 flex justify-between text-black  lg:mx-auto right-0 z-[1500]', { "h-screen": isOpen })}>
       {/* <div className='text-xl font-semibold mr-24'>Victreat</div> */}
-      <div className='hidden md:flex gap-8 px-8'>
+      <div className='hidden md:flex gap-8 px-24'>
         <Link href='/'><div className='text-lg'>Home</div></Link>
         <Link href='/careers'><div className='text-lg'>Careers</div></Link>
         <Link href='/about'><div className='text-lg'>About</div></Link>

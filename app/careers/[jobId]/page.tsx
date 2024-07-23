@@ -8,7 +8,7 @@ type Job = {
   id: string;
   title: string;
   expectations: string;
-  wishlist: string[];
+  requirments: string[];
   offerings: string;
 };
 
@@ -40,7 +40,7 @@ function JobDetails({ params }: Props) {
     setLoading(true);
     fetch('/api/mail', {
       method: 'POST',
-      body: formData, 
+      body: formData,
     }).then(() => { setLoading(false); setSent(true) })
     // console.log(data);
   }
@@ -61,10 +61,10 @@ function JobDetails({ params }: Props) {
             {job.title}
           </div>
           <h2 className="text-lg mb-2 font-semibold">What we expect from our new colleague</h2>
-          <p className="text-gray-700 mb-4">{job.expectations}</p>
+          <p className="text-gray-700 mb-4">{job.expectations.replaceAll('\n', '\n-\n').split('\n').map(e => e === '-' ? <br /> : e)}</p>
           <h3 className="text-lg font-semibold mb-2">Wishlist for a {job.title}:</h3>
           <ul className="list-disc list-inside mb-4">
-            {job.wishlist.map((requirement, index) => (
+            {job.requirments.map((requirement, index) => (
               <li key={index} className="text-gray-700">{requirement}</li>
             ))}
           </ul>
@@ -88,6 +88,8 @@ function JobDetails({ params }: Props) {
                     <input
                       id="firstName"
                       name="first_name"
+                      maxLength={24}
+                      required
                       type="text"
                       placeholder="First name"
                       className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -98,8 +100,10 @@ function JobDetails({ params }: Props) {
                       Last name
                     </label>
                     <input
+                      required
                       id="lastName"
                       name="last_name"
+                      maxLength={24}
                       type="text"
                       placeholder="Last name"
                       className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -107,11 +111,13 @@ function JobDetails({ params }: Props) {
                   </div>
                   <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                      Mail address
+                      Mail address <span className="text-xs font-normal">(example@example.com)</span>
                     </label>
                     <input
+                      required
                       id="email"
                       type="email"
+                      pattern='.*@.*\..*'
                       name="email"
                       placeholder="Email"
                       className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -119,16 +125,19 @@ function JobDetails({ params }: Props) {
                   </div>
                   <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
-                      Phone number
+                      Phone number <span className="text-xs font-normal">(+92 xxx xxxxxxx)</span>
                     </label>
                     <input
                       id="phone"
                       name='phone'
+                      required
                       type="tel"
-                      placeholder="+32 *** ** ** **"
+                      placeholder="+92 *** *******"
+                      pattern='\+92 [0-9]{3} [0-9]{7}'
                       className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     />
                   </div>
+
                   <div className="mb-4">
                     {/* <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="resume">
                       Resume or CV
@@ -143,9 +152,11 @@ function JobDetails({ params }: Props) {
                       LinkedIn
                     </label>
                     <input
+                      
                       id="linkedin"
                       type="text"
                       name='linkedin'
+                      required
                       placeholder='Your linkedIn profile link'
                       className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     />
@@ -157,6 +168,7 @@ function JobDetails({ params }: Props) {
                     <input
                       id="cv"
                       name='cv'
+                      required
                       type='file'
                       placeholder="Your updated CV."
                       className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -174,6 +186,21 @@ function JobDetails({ params }: Props) {
                     />
                   </div>
                   <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="salary_expectations">
+                      Salary Expectations <span className='text-xs font-normal'>(20000)</span>
+                    </label>
+                    <input
+                      min="0"
+                      required
+                      id="salary_expectations"
+                      name='salary_expectations'
+                      pattern='[0-9]+'
+                      type="number"
+                      placeholder="In PKR"
+                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                  </div>
+                  <div className="mb-4">
                     <label className="inline-flex items-center">
                       <input type="checkbox" required className="form-checkbox h-5 w-5 text-blue-600" />
                       <span className="ml-2 text-gray-700">I have read the job description and I have the skills required.</span>
@@ -187,7 +214,8 @@ function JobDetails({ params }: Props) {
                     Submit application
                   </button>
                 </form>
-            }          </div>
+            }
+          </div>
         </div>
       </div>
     </div>
