@@ -13,7 +13,7 @@ const HeroSection = () => {
           <AnimatedLogo className="md:w-[400px] w-full aspect-square h-auto md:mt-0" />
         </div>
         <div className="w-full">
-          <div className=" drop-shadow-[0_0px_3px_rgba(121,145,104,0.75)]  text-5xl md:text-6xl lg:text-8xl bottom-28 md:mt-0   left-[50%] text-center w-full font-thin  px-4">
+          <div className="  text-5xl md:text-6xl lg:text-8xl bottom-28 md:mt-0   left-[50%] text-center w-full font-thin  px-4">
             Treatment Navigator
           </div>
           <p className="mx-auto text-base md:text-2xl mt-4 drop-shadow-xl bottom-8 md:w-[70%]  max-w-[800px] text-[#408410] left-[50%] text-center ">
