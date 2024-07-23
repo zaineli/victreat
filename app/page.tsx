@@ -35,7 +35,7 @@ function Home() {
         </p>
         <Trials className={'flex justify-center w-[80%] mx-auto'} />
       </section>
-      <section id={'mutations'} className='bg-[#f1ffe9ab] w-full lg:p-32  p-4 sm:p-16  my-24'>
+      <section id={'mutations'} className='bg-[#f1ffe9ab] w-full lg:p-32  p-4 sm:p-16 '>
         <div className='lg:text-4xl md:text-2xl text-md text-center mb-24 lg:leading-normal md:leading-normal leading-normal px-2'>
           Victreat aspires to be your <span className=" font-bold text-[#22c1d6] lg:text-6xl md:text-5xl text-2xl ">trusted partner at navigating the complexities</span> of cancer stages, mutations and the multitude of clinical trial options available.        </div>
         <div className="lg:max-w-[75%] w-full mx-auto">
