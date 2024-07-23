@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" >
       <body className={cn(
-        " noto-sans antialiased flex-col items-center justify-center m-0",
+        "noto-sans antialiased flex-col items-center justify-center m-0",
         // fontSans.variable
       )}>
 

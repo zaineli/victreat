@@ -29,6 +29,7 @@ const Approvals = () => {
     const scrollRef = useRef<HTMLDivElement>(null);
     const [showScrollBottom, setShowScrollBottom] = useState(true);
     const [scrollTop, setScrollTop] = useState(0);
+    const stoppedTimeout = useRef<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
         fetch('/drugs.json').then(res => res.text())
@@ -89,15 +90,19 @@ const Approvals = () => {
 
 
 
+    function stop(ms: number) {
+        clearTimeout(stoppedTimeout.current || undefined);
+        setStopped(true);
+        stoppedTimeout.current = setTimeout(() => setStopped(false), ms);
+    }
+
     function handleClick(fn: (i: number) => number) {
         // console.log(i % (accyearApproved.length + 2) - 1);
         setCurrentIndex(fn);
-        setStopped(true);
-        setTimeout(() => setStopped(false), 3000);
+        stop(3000);
         // setCurrentIndex(i => {
         //     i == 0 || i == accyearApproved.length ? 0 : i
         // })
-        setStopped(true);
     }
 
 
@@ -173,6 +178,7 @@ const Approvals = () => {
                         }}
                         key={selected}
                         ref={scrollRef}
+                        onScroll={() => stop(5000) }
                         className="flex  z-10 md:h-[400px] flex-col p-4 gap-2 overflow-x-auto ">
                         <div
                             className="flex  md:flex-col gap-2">

@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <div className="bg-[#f1ffe9ab] min-h-screen px-4 relative flex flex-col md:flex-row justify-center md:items-center items-start">
       <div className="md:pl-20 z-[999] w-full md:w-1/3 text-center  flex flex-col items-center">
-        <div className="text-8xl md:text-8xl absolute top-32 font-thin translate-x-[-50%] left-[50%] antipasto">
+        <div className="text-8xl drop-shadow-[0_0px_3px_rgba(121,145,104,0.75)] md:text-8xl absolute top-32 font-thin translate-x-[-50%] left-[50%] antipasto">
           Victreat
         </div>
 
@@ -13,7 +13,7 @@ const HeroSection = () => {
           With an increasingly complex treatment landscape, how can you ensure that you're getting the right medication?
         </p>
 
-        <div className="absolute text-5xl md:text-6xl lg:text-8xl bottom-28 mt-12 md:mt-0  translate-x-[-50%]  left-[50%] text-center w-full  px-4">
+        <div className="absolute drop-shadow-[0_0px_3px_rgba(121,145,104,0.75)] text-5xl md:text-6xl lg:text-8xl bottom-28 mt-12 md:mt-0  translate-x-[-50%]  left-[50%] text-center w-full font-thin  px-4">
         Treatment Navigator
         </div>
       </div>
