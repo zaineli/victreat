@@ -4,19 +4,19 @@ import AnimatedLogo from '@/components/custom/AnimatedLogo';
 const HeroSection = () => {
   return (
     <div className="bg-[#f1ffe9ab] min-h-screen px-4 relative flex flex-col md:flex-row justify-center md:items-center items-start">
-      <div className="z-[999] w-full text-center  flex flex-col items-center justify-between min-h-screen pt-32 pb-16 box-border">
+      <div className="z-[999] w-full text-center  flex flex-col items-center justify-between min-h-screen lg:pt-32 pt-16 pb-16 box-border">
         <div className="text-8xl md:text-8xl  top-32 font-thin left-[50%] antipasto">
           Victreat
         </div>
 
-        <div className="p-4 aspect-square h-auto max-w-[400px] mx-auto mt-12 md:mt-0 md:p-0 w-full ">
+        <div className=" aspect-square h-auto max-w-[400px] mx-auto md:mt-0 md:p-0 w-full ">
           <AnimatedLogo className="md:w-[400px] w-full aspect-square h-auto md:mt-0" />
         </div>
-        <div className="">
-          <div className=" drop-shadow-[0_0px_3px_rgba(121,145,104,0.75)]  text-5xl md:text-6xl lg:text-8xl bottom-28 mt-12 md:mt-0   left-[50%] text-center w-full font-thin  px-4">
+        <div className="w-full">
+          <div className=" drop-shadow-[0_0px_3px_rgba(121,145,104,0.75)]  text-5xl md:text-6xl lg:text-8xl bottom-28 md:mt-0   left-[50%] text-center w-full font-thin  px-4">
             Treatment Navigator
           </div>
-          <p className="mx-auto text-base md:text-2xl mt-4 drop-shadow-xl bottom-8 w-[70%]  max-w-[800px] text-[#408410] left-[50%] text-center px-4">
+          <p className="mx-auto text-base md:text-2xl mt-4 drop-shadow-xl bottom-8 md:w-[70%]  max-w-[800px] text-[#408410] left-[50%] text-center ">
             With an increasingly complex treatment landscape, how can you ensure that you're getting the right medication?
           </p>
         </div>
