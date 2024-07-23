@@ -13,15 +13,20 @@ function MutationSection({ small = true }) {
     const isHovered = false;
     // const isHovered = useMouseHover(ref);
     const cancers = [
-        { name: "Lung Cancer", mutations: ["EGFR", "KRAS", "ALK"] },
-        { name: "Breast Cancer", mutations: ["BRCA1", "BRCA2", "HER2", "TP53"] },
-        { name: "Prostate Cancer", mutations: ["BRCA2", "HOXB13", "TP53", "RB1", "PIK3CA", "RB1"] },
-        { name: "Colon Cancer", mutations: ["APC", "KRAS", "TP53", "PIK3CA"] },
-        { name: "Bladder Cancer", mutations: ["FGFR3", "TP53", "RB1", "PIK3CA", "RB1", "PIK3CA"] },
-        { name: "Melanoma", mutations: ["BRAF", "NRAS", "KIT", "GNAQ"] },
-        { name: "Leukemia", mutations: ["BCR-ABL1", "FLT3", "NPM1", "CEBPA"] },
-        { name: "Lymphoma", mutations: ["MYC", "BCL2", "BCL6", "EZH2"] },
+        { name: "Lung Cancer", mutations: ["PDL1", "EGFR", "KRAS", "ALK", "ERBB2", "BRAF", "PIK3CA", "MET"] },
+        {
+            name: "Breast Cancer", mutations: ["ER", "HER2",
+                // "Triple negative",
+                "PI3KCA"]
+        },
+        { name: "Colorectal Cancer", mutations: ["KRAS G12C", "KRAS G12D", "BRAF"] },
+        { name: "Melanoma", mutations: ["BRAF", "NRAS", "TP53"] },
+        { name: "Thyroid Cancer", mutations: ["RET", "BRAF"] },
+        { name: "Ovarian Cancer", mutations: ["BRCA1", "BRCA2"] },
+        { name: "Pancreatic Cancer", mutations: ["BRCA1", "BRCA2"] },
+        { name: "AML", mutations: ["FLT3", "NPM1", "IDH1", "IDH2"] }
     ];
+
 
     const large = useMediaQuery("(min-width: 1024px)");
     const [index, setIndex] = useState(0);
