@@ -114,8 +114,8 @@ const Approvals = () => {
 
 
     return (
-        <div className="min-h-screen bg-[#f1ffe9ab] py-32 lg:px-32 md:px-16 px-4">
-            <h1 className="lg:text-4xl md:text-2xl text-md text-center mx-auto lg:mb-32 mb-8 lg:leading-normal md:leading-normal leading-normal  ">
+        <div className="bg-[#f1ffe9ab] my-20 lg:px-32 md:px-16 px-4">
+            <h1 className="lg:text-4xl md:text-2xl text-md text-center mx-auto mb-8 lg:leading-normal md:leading-normal leading-normal  ">
                 <span className="font-bold text-green-500 lg:text-6xl md:text-5xl text-2xl">Cancer drugs approved by the&nbsp;FDA</span> are continually increasing every year.
             </h1>
             <div ref={ref} className="flex flex-col  items-stretch lg:flex-row gap-16 justify-between">
