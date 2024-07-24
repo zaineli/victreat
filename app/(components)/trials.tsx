@@ -46,7 +46,7 @@ const dataArray: Data[] = [
 ];
 
 function Histogram({ dimensions }: { dimensions: { width: number; height: number; } }) {
-    const [svgRef, inView] = useSectionInView();
+    const [svgRef, inView] = useSectionInView({threshold: 0.5});
 
     useEffect(() => {
         if (!svgRef.current) return;
