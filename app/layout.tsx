@@ -26,14 +26,9 @@ export default function RootLayout({
 
       </head>
       <body className={cn(
-<<<<<<< HEAD
-        " noto-sans antialiased flex-col items-center justify-center m-0",
-        // fontSans.variable
-=======
         " antialiased flex-col items-center justify-center m-0",
-        fontSans.variable,
+        // fontSans.variable,
         fontSans.className
->>>>>>> a1387e0df96df296f8c132b0bfd1c64d4a64fee0
       )}>
 
         <Navbar />
