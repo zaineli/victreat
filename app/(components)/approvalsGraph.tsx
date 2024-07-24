@@ -29,6 +29,10 @@ const Approvals = () => {
     const scrollRef = useRef<HTMLDivElement>(null);
     const [showScrollBottom, setShowScrollBottom] = useState(true);
     const [scrollTop, setScrollTop] = useState(0);
+<<<<<<< HEAD
+=======
+    const stoppedTimeout = useRef<NodeJS.Timeout | null>(null);
+>>>>>>> a1387e0df96df296f8c132b0bfd1c64d4a64fee0
 
     useEffect(() => {
         fetch('/drugs.json').then(res => res.text())
@@ -89,6 +93,7 @@ const Approvals = () => {
 
 
 
+<<<<<<< HEAD
     function handleClick(fn: (i: number) => number) {
         // console.log(i % (accyearApproved.length + 2) - 1);
         setCurrentIndex(fn);
@@ -98,6 +103,21 @@ const Approvals = () => {
         //     i == 0 || i == accyearApproved.length ? 0 : i
         // })
         setStopped(true);
+=======
+    function stop(ms: number) {
+        clearTimeout(stoppedTimeout.current || undefined);
+        setStopped(true);
+        stoppedTimeout.current = setTimeout(() => setStopped(false), ms);
+    }
+
+    function handleClick(fn: (i: number) => number) {
+        // console.log(i % (accyearApproved.length + 2) - 1);
+        setCurrentIndex(fn);
+        stop(3000);
+        // setCurrentIndex(i => {
+        //     i == 0 || i == accyearApproved.length ? 0 : i
+        // })
+>>>>>>> a1387e0df96df296f8c132b0bfd1c64d4a64fee0
     }
 
 
@@ -109,8 +129,13 @@ const Approvals = () => {
 
 
     return (
+<<<<<<< HEAD
         <div className="min-h-screen bg-[#f1ffe9ab] py-32 lg:px-32 md:px-16 px-4">
             <h1 className="lg:text-4xl md:text-2xl text-md text-center mx-auto lg:mb-32 mb-8 lg:leading-normal md:leading-normal leading-normal  ">
+=======
+        <div className="bg-[#f1ffe9ab] my-20 lg:px-32 md:px-16 px-4">
+            <h1 className="lg:text-4xl md:text-2xl text-md text-center mx-auto mb-8 lg:leading-normal md:leading-normal leading-normal  ">
+>>>>>>> a1387e0df96df296f8c132b0bfd1c64d4a64fee0
                 <span className="font-bold text-green-500 lg:text-6xl md:text-5xl text-2xl">Cancer drugs approved by the&nbsp;FDA</span> are continually increasing every year.
             </h1>
             <div ref={ref} className="flex flex-col  items-stretch lg:flex-row gap-16 justify-between">
@@ -173,6 +198,10 @@ const Approvals = () => {
                         }}
                         key={selected}
                         ref={scrollRef}
+<<<<<<< HEAD
+=======
+                        onScroll={() => stop(5000) }
+>>>>>>> a1387e0df96df296f8c132b0bfd1c64d4a64fee0
                         className="flex  z-10 md:h-[400px] flex-col p-4 gap-2 overflow-x-auto ">
                         <div
                             className="flex  md:flex-col gap-2">

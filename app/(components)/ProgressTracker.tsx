@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 import { Home, Target, Search, PieChart, LineChartIcon } from 'lucide-react';
 
 console.log({ Home, Target, Search, PieChart });
+=======
+import { Home, Goal, FlaskConical, PieChart, Map, Pill } from 'lucide-react';
+
+console.log({ Home, Goal, Pill, PieChart });
+>>>>>>> a1387e0df96df296f8c132b0bfd1c64d4a64fee0
 
 const ProgressTracker = ({ sections }: {
   sections: string[];
@@ -31,7 +37,11 @@ const ProgressTracker = ({ sections }: {
     };
   }, [sections]);
 
+<<<<<<< HEAD
   const icons = [Home, Target, Search, PieChart, LineChartIcon ];
+=======
+  const icons = [Home, Goal, Pill, FlaskConical, Map ];
+>>>>>>> a1387e0df96df296f8c132b0bfd1c64d4a64fee0
 
   return (
     <div className="hidden md:flex fixed right-14 top-[30%] z-[2000]">
@@ -41,7 +51,11 @@ const ProgressTracker = ({ sections }: {
           return (
             <a href={'#' + id} key={index} className="flex flex-col items-center z-10">
               <div
+<<<<<<< HEAD
                 className={`w-8 h-8 rounded-full flex items-center justify-center ${
+=======
+                className={`w-10 h-10 p-2  rounded-full flex items-center justify-center ${
+>>>>>>> a1387e0df96df296f8c132b0bfd1c64d4a64fee0
                   index <= activeIndex ? 'bg-[#aade8d]' : 'bg-gray-300'
                 }`}
               >

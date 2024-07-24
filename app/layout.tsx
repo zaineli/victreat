@@ -21,9 +21,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" >
+      <head>
+        <link rel="icon" href="/images/fav.svg" sizes="any" />
+
+      </head>
       <body className={cn(
+<<<<<<< HEAD
         " noto-sans antialiased flex-col items-center justify-center m-0",
         // fontSans.variable
+=======
+        " antialiased flex-col items-center justify-center m-0",
+        fontSans.variable,
+        fontSans.className
+>>>>>>> a1387e0df96df296f8c132b0bfd1c64d4a64fee0
       )}>
 
         <Navbar />

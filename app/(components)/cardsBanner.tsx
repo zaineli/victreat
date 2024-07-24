@@ -22,7 +22,11 @@ export default function CardsBanner() {
     ];
 
     return (
+<<<<<<< HEAD
         <div className="bg-[#F3FFEB] to-[#DBE5EB] flex w-full lg:p-16 lg:gap-16 md:gap-8 md:p-8 gap-4 p-4 justify-between relative flex-col md:flex-row flex-wrap ">
+=======
+        <div className="bg-[#F3FFEB] to-[#DBE5EB] flex w-full lg:px-16 lg:gap-16 md:gap-8 md:px-8 gap-4 px-4 justify-between relative flex-col md:flex-row flex-wrap ">
+>>>>>>> a1387e0df96df296f8c132b0bfd1c64d4a64fee0
             {cards.map((card, i) => <Card key={i} {...card} />)}
         </div>
     );
@@ -61,7 +65,11 @@ export function Card({ number, heading, content }: {
                 setMouse({ x: 0, y: 0 });
                 setGlare({ ...glare, opacity: 0 });
             }}
+<<<<<<< HEAD
             className="p-4 z-50 group w-full lg:flex-1"
+=======
+            className="px-4 z-50 group w-full lg:flex-1"
+>>>>>>> a1387e0df96df296f8c132b0bfd1c64d4a64fee0
         >
             <div
                 style={{
