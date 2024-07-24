@@ -27,7 +27,7 @@ function Home() {
       <section id='3'>
         <Approvals />
       </section>
-      <section id='4' className='w-full bg-[#f1ffe9ab] my-20 lg:px-32  px-4 sm:px-16 flex flex-col items-center justify-center '>
+      <section id='4' className='w-full bg-[#f1ffe9ab] lg:my-48 my-20 lg:px-32  px-4 sm:px-16 flex flex-col items-center justify-center '>
         <div className='lg:text-4xl md:text-2xl text-md text-center mb-4 px-3 lg:leading-normal md:leading-normal leading-normal'>
           <span className="font-bold text-orange-500 lg:text-6xl md:text-5xl text-2xl">Exponential increase in&nbsp;clinical&nbsp;trials</span> will further complicate the landscape of oncology treatment.
         </div>
@@ -35,7 +35,7 @@ function Home() {
         </p>
         <Trials className={'flex justify-center w-[80%] mx-auto'} />
       </section>
-      <section id={'mutations'} className='bg-[#f1ffe9ab] my-20 w-full lg:px-32  px-4 sm:px-16 '>
+      <section id={'mutations'} className='bg-[#f1ffe9ab] lg:my-48 my-20 w-full lg:px-32  px-4 sm:px-16 '>
         <div className='lg:text-4xl md:text-2xl text-md text-center lg:leading-normal md:leading-normal leading-normal px-2'>
           Victreat aspires to be your <span className=" font-bold text-[#22c1d6] lg:text-6xl md:text-5xl text-2xl ">trusted partner at navigating the complexities</span> of cancer stages, mutations and the multitude of clinical trial options available.        </div>
         <div className="lg:max-w-[65%] w-full mx-auto">
@@ -43,9 +43,9 @@ function Home() {
           <MutationSection small={false} />
         </div>
       </section>
-      <section className='w-full bg-black text-white'>
+      {/* <section className='w-full bg-black text-white'>
         <Footer />
-      </section>
+      </section> */}
     </div>
   );
 }
