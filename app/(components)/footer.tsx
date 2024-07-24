@@ -15,7 +15,7 @@ function Footer() {
               <a href="#" className="text-gray-700 hover:text-blue-600">
                 <Twitter className="text-2xl" />
               </a>
-              <a href="#" className="text-gray-700 hover:text-blue-600">
+              <a target="_blank" href="https://www.linkedin.com/company/victreat/" className="text-gray-700 hover:text-blue-600">
                 <Linkedin className="text-2xl" />
               </a>
               <a href="#" className="text-gray-700 hover:text-red-600">
