@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Home, Target, Search, PieChart, LineChartIcon } from 'lucide-react';
+import { Home, Goal, FlaskConical, PieChart, Map, Pill } from 'lucide-react';
 
-console.log({ Home, Target, Search, PieChart });
+console.log({ Home, Goal, Pill, PieChart });
 
 const ProgressTracker = ({ sections }: {
   sections: string[];
@@ -31,7 +31,7 @@ const ProgressTracker = ({ sections }: {
     };
   }, [sections]);
 
-  const icons = [Home, Target, Search, PieChart, LineChartIcon ];
+  const icons = [Home, Goal, Pill, FlaskConical, Map ];
 
   return (
     <div className="hidden md:flex fixed right-14 top-[30%] z-[2000]">
@@ -41,7 +41,7 @@ const ProgressTracker = ({ sections }: {
           return (
             <a href={'#' + id} key={index} className="flex flex-col items-center z-10">
               <div
-                className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                className={`w-10 h-10 p-2  rounded-full flex items-center justify-center ${
                   index <= activeIndex ? 'bg-[#aade8d]' : 'bg-gray-300'
                 }`}
               >
