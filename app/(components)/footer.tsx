@@ -1,5 +1,5 @@
 import React from "react";
-import { Instagram, Twitter, Linkedin, Youtube, Mail } from "lucide-react";
+import { Instagram, Twitter, Linkedin, Youtube, Mail, Facebook } from "lucide-react";
 import Link from "next/link";
 
 function Footer() {
@@ -24,7 +24,7 @@ function Footer() {
           {/* <div className="flex lg:flex-col gap-8 w-full lg:justify-center items-start md:items-start mb-8 md:mb-0"> */}
           <h2 className="text-gray-900 text-xl font-bold">Connect with Us</h2>
           <div className="flex gap-6">
-            <a href="#" className="text-gray-700 hover:text-yellow-600">
+            <a href="https://www.instagram.com/victreat.official?igsh=MTlrZTFvMXltZnYxOQ%3D%3D&utm_source=qr" className="text-gray-700 hover:text-yellow-600">
               <Instagram className="text-2xl" />
             </a>
             <a href="#" className="text-gray-700 hover:text-blue-600">
@@ -33,8 +33,8 @@ function Footer() {
             <a target="_blank" href="https://www.linkedin.com/company/victreat/" className="text-gray-700 hover:text-blue-600">
               <Linkedin className="text-2xl" />
             </a>
-            <a href="#" className="text-gray-700 hover:text-red-600">
-              <Youtube className="text-2xl" />
+            <a href="https://www.facebook.com/victreat" className="text-gray-700 hover:text-red-600">
+              <Facebook className="text-2xl" />
             </a>
           </div>
           {/* </div> */}

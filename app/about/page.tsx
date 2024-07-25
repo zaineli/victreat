@@ -53,7 +53,8 @@ export default function CancerDiagnosisPage() {
             variants={staggeredLinks}
           >
             <motion.a
-              href="#"
+              target="_blank"
+              href="https://www.instagram.com/victreat.official?igsh=MTlrZTFvMXltZnYxOQ%3D%3D&utm_source=qr"
               className="hover:underline"
               whileHover="hover"
               whileTap={{ scale: 0.9 }}
@@ -62,7 +63,8 @@ export default function CancerDiagnosisPage() {
               Instagram
             </motion.a>
             <motion.a
-              href="#"
+              href="https://www.facebook.com/victreat"
+              target="_blank"
               className="hover:underline"
               whileHover="hover"
               whileTap={{ scale: 0.9 }}
@@ -71,8 +73,9 @@ export default function CancerDiagnosisPage() {
               Facebook
             </motion.a>
             <motion.a
-              href="#"
+              href="https://www.linkedin.com/company/victreat/"
               className="hover:underline"
+              target="_blank"
               whileHover="hover"
               whileTap={{ scale: 0.9 }}
               variants={linkHover}
