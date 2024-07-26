@@ -61,7 +61,11 @@ function JobDetails({ params }: Props) {
             {job.title}
           </div>
           <h2 className="text-lg mb-2 font-semibold">What we expect from our new colleague</h2>
-          <p className="text-gray-700 mb-4">{job.expectations.replaceAll('\n', '\n-\n').split('\n').map(e => e === '-' ? <br /> : e)}</p>
+          {job.expectations.split('\n').map(p =>
+            <p className="text-gray-700 mb-4 first-letter:pl-2">
+              {p}
+            </p>
+          )}
           <h3 className="text-lg font-semibold mb-2">Wishlist for a {job.title}:</h3>
           <ul className="list-disc list-inside mb-4">
             {job.requirments.map((requirement, index) => (
