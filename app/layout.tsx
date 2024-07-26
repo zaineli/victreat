@@ -27,7 +27,7 @@ export default function RootLayout({
 
       </head>
       <body className={cn(
-        " antialiased flex-col items-center justify-center m-0",
+        " antialiased flex-col items-center justify-center m-0 bg-[#F3FFEB]",
         // fontSans.variable,
         fontSans.className
       )}>

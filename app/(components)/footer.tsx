@@ -34,7 +34,7 @@ function Footer() {
               <a href="https://www.instagram.com/victreat.official?igsh=MTlrZTFvMXltZnYxOQ%3D%3D&utm_source=qr" className="text-gray-700 hover:text-yellow-600">
                 <Instagram className="text-2xl" />
               </a>
-              <a href="#" className="text-gray-700 hover:text-blue-600">
+              <a href="https://x.com/victreat" className="text-gray-700 hover:text-blue-600">
                 <Twitter className="text-2xl" />
               </a>
               <a target="_blank" href="https://www.linkedin.com/company/victreat/" className="text-gray-700 hover:text-blue-600">
