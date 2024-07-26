@@ -31,7 +31,7 @@ const Page = (props: Props) => {
           <motion.p className='text-center mx-auto text-base sm:text-lg md:text-xl mt-4 sm:mt-6 md:mt-8 w-11/12 sm:w-2/3 md:w-1/2 '
             variants={variants}
           >
-            We're looking for exceptional talent to join us in creating technology that propels the Cancer industry forward.
+            We're looking for exceptional talent to help us develop technology that elevates cancer treatment methods.
           </motion.p>
         </motion.div>
 
