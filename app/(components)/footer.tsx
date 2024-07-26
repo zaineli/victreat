@@ -27,6 +27,7 @@ function Footer() {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
 
           <div className="space-y-4">
             <h2 className="text-gray-900 text-xl font-bold">Connect with Us</h2>
@@ -44,6 +45,24 @@ function Footer() {
                 <Facebook className="text-2xl" />
               </a>
             </div>
+=======
+          {/* </div> */}
+          {/* <div className="flex lg:flex-col gap-8 w-full lg:justify-center items-start md:items-start mb-8 md:mb-0"> */}
+          <h2 className="text-gray-900 text-xl font-bold">Connect with Us</h2>
+          <div className="flex gap-6">
+            <a href="https://www.instagram.com/victreat.official?igsh=MTlrZTFvMXltZnYxOQ%3D%3D&utm_source=qr" className="text-gray-700 hover:text-yellow-600">
+              <Instagram className="text-2xl" />
+            </a>
+            <a href="https://x.com/victreat" className="text-gray-700 hover:text-blue-600">
+              <Twitter className="text-2xl" />
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/company/victreat/" className="text-gray-700 hover:text-blue-600">
+              <Linkedin className="text-2xl" />
+            </a>
+            <a href="https://www.facebook.com/victreat" className="text-gray-700 hover:text-red-600">
+              <Facebook className="text-2xl" />
+            </a>
+>>>>>>> staging
           </div>
 
           <div className="space-y-4">
