@@ -26,7 +26,7 @@ const Page = (props: Props) => {
           variants={variants}
         >
           <motion.div className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-center pt-32 sm:pt-32 md:pt-32 lg:pt-52'>
-            Join us in developing technology for the future of&nbsp;cancer&nbsp;treatment.
+            Join us in developing technology for the future of cancer treatment.
           </motion.div>
           <motion.p className='text-center mx-auto text-base sm:text-lg md:text-xl mt-4 sm:mt-6 md:mt-8 w-11/12 sm:w-2/3 md:w-1/2 '
             variants={variants}
@@ -42,7 +42,7 @@ const Page = (props: Props) => {
         >
           <div className="flex-col h-full flex gap-4 sm:gap-6 md:gap-10 flex-1 self-stretch ">
             <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Benefits at Victreat</div>
-            <p className='text-base sm:text-lg md:text-xl'>We offer the following benefits at Victreat, some of which are location dependent.</p>
+            {/* <p className='text-base sm:text-lg md:text-xl'>We offer the following benefits at Victreat, some of which are location dependent.</p> */}
             {/* <img className="rounded-2xl max-w-96 mx-auto" src="/images/vicWallpaper3.png" alt="" /> */}
           </div>
           <div className='flex-1 grid md:grid-cols-2 grid-cols-1 gap-4 sm:gap-6 md:gap-8 lg:gap-12'>
