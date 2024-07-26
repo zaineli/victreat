@@ -36,9 +36,9 @@ function MutationSection({ small = true }) {
         }
         if (!isHovered) {
             interval.current = setInterval(() => {
-                // setIndex(
-                //     (prev) => (prev + (large ? +1 : -1) + cancers.length * 2) % cancers.length
-                // );
+                setIndex(
+                    (prev) => (prev + (large ? +1 : -1) + cancers.length * 2) % cancers.length
+                );
             }, 3000);
         }
         return () => {
