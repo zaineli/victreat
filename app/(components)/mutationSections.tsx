@@ -13,7 +13,7 @@ function MutationSection({ small = true }) {
     const isHovered = false;
     // const isHovered = useMouseHover(ref);
     const cancers = [
-        { name: "Lung Cancer", mutations: ["PDL1", "EGFR", "KRAS", "ALK", "ERBB2", "BRAF", "PIK3CA", "MET"] },
+        { name: "Lung Cancer", mutations: ["PDL1", "EGFR", "KRAS",  "ERBB2", "BRAF", "PIK3CA"] },
         {
             name: "Breast Cancer", mutations: ["ER", "HER2",
                 // "Triple negative",
@@ -36,9 +36,9 @@ function MutationSection({ small = true }) {
         }
         if (!isHovered) {
             interval.current = setInterval(() => {
-                setIndex(
-                    (prev) => (prev + (large ? +1 : -1) + cancers.length * 2) % cancers.length
-                );
+                // setIndex(
+                //     (prev) => (prev + (large ? +1 : -1) + cancers.length * 2) % cancers.length
+                // );
             }, 3000);
         }
         return () => {
