@@ -18,7 +18,7 @@ const Page = (props: Props) => {
   };
 
   return (
-    <div className='bg-[#f1ffe9]  text-gray-700'>
+    <div className='bg-[#fafafa]  text-gray-700'>
       <div>
         <motion.div className='mb-8 py-32 px-4 sm:px-8 md:px-16 lg:px-20 max-w-[1280px] w-[80%] mx-auto box-content'
           initial='hidden'
@@ -46,25 +46,25 @@ const Page = (props: Props) => {
             {/* <img className="rounded-2xl max-w-96 mx-auto" src="/images/vicWallpaper3.png" alt="" /> */}
           </div>
           <div className='flex-1 grid md:grid-cols-2 grid-cols-1 gap-4 sm:gap-6 md:gap-8 lg:gap-12'>
-            <motion.div className='bg-[#FAFAFA] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
+            <motion.div className='bg-[#eee] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
               variants={variants}
             >
               <div className='text-lg sm:text-xl md:text-2xl font-semibold mt-2 sm:mt-3 md:mt-4'>Competitive salary</div>
               <div className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3 md:mt-4'>Our competitive salary structure is designed to attract and retain the best talent in the industry.</div>
             </motion.div>
-            <motion.div className='bg-[#FAFAFA] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
+            <motion.div className='bg-[#eee] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
               variants={variants}
             >
               <div className='text-lg sm:text-xl md:text-2xl font-semibold mt-2 sm:mt-3 md:mt-4'>Professional Growth</div>
               <div className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3 md:mt-4'>Opportunities for professional growth, learning and career advancement</div>
             </motion.div>
-            <motion.div className='bg-[#FAFAFA] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
+            <motion.div className='bg-[#eee] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
               variants={variants}
             >
               <div className='text-lg sm:text-xl md:text-2xl font-semibold mt-2 sm:mt-3 md:mt-4'>Creativity and Innovation Environment</div>
               <div className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3 md:mt-4'>Collaborative and dynamic work environment that encourages innovation and creativity.</div>
             </motion.div>
-            <motion.div className='bg-[#FAFAFA] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
+            <motion.div className='bg-[#eee] p-6 md:px-[3.5rem] md:py-[2.5rem] rounded-lg shadow-md'
               variants={variants}
             >
               <div className='text-lg sm:text-xl md:text-2xl font-semibold mt-2 sm:mt-3 md:mt-4'>Leading Edge</div>

@@ -27,7 +27,7 @@ function Home() {
       <section id='3'>
         <Approvals />
       </section>
-      <section id='4' className='w-full  lg:my-48 my-20 lg:px-32  px-4 sm:px-16 flex flex-col items-center justify-center '>
+      <section id='4' className='w-full  lg:py-48 py-20 lg:px-32  px-4 sm:px-16 flex flex-col items-center justify-center '>
         <div className='lg:text-4xl md:text-2xl text-md text-center mb-8 lg:mb-20 px-3 lg:leading-normal md:leading-normal leading-normal'>
           <span className="font-bold text-orange-500 lg:text-6xl md:text-5xl text-2xl">Exponential increase in&nbsp;clinical&nbsp;trials</span> will further complicate the landscape of oncology treatment.
         </div>

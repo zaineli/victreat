@@ -34,9 +34,9 @@ const Navbar = () => {
     <nav className={cn(' antipasto absolute top-0 py-4 px-8 flex justify-between text-black  lg:mx-auto right-0 z-[1500]', { "h-screen": isOpen })}>
       {/* <div className='text-xl font-semibold mr-24'>Victreat</div> */}
       <div className='hidden md:flex gap-8 px-24'>
-        <Link href='/'><div className='text-lg after:absolute after:bg-green-500 after:bottom-0 after:left-0 relative w-min hover:after:scale-x-100 after:w-full  after:h-[2px] after:scale-x-0 after:origin-right duration-1000 hover:after:origin-left after:transition-transform'>Home</div></Link>
-        <Link href='/careers'><div className='text-lg after:absolute after:bg-green-500 after:bottom-0 after:left-0 relative w-min hover:after:scale-x-100 after:w-full  after:h-[2px] after:scale-x-0 after:origin-right duration-1000 hover:after:origin-left after:transition-transform'>Careers</div></Link>
-        <Link href='/about'><div className='text-lg after:absolute after:bg-green-500 after:bottom-0 after:left-0 relative w-min hover:after:scale-x-100 after:w-full  after:h-[2px] after:scale-x-0 after:origin-right duration-1000 hover:after:origin-left after:transition-transform'>About</div></Link>
+        <Link href='/'><div className='text-lg after:absolute after:bg-gray-500 after:bottom-0 after:left-0 relative w-min hover:after:scale-x-100 after:w-full  after:h-[2px] after:scale-x-0 after:origin-right duration-1000 hover:after:origin-left after:transition-transform'>Home</div></Link>
+        <Link href='/careers'><div className='text-lg after:absolute after:bg-gray-500 after:bottom-0 after:left-0 relative w-min hover:after:scale-x-100 after:w-full  after:h-[2px] after:scale-x-0 after:origin-right duration-1000 hover:after:origin-left after:transition-transform'>Careers</div></Link>
+        <Link href='/about'><div className='text-lg after:absolute after:bg-gray-500 after:bottom-0 after:left-0 relative w-min hover:after:scale-x-100 after:w-full  after:h-[2px] after:scale-x-0 after:origin-right duration-1000 hover:after:origin-left after:transition-transform'>About</div></Link>
       </div>
       <div className='md:hidden cursor-pointer'>
         <AiOutlineMenu className='text-2xl' onClick={toggleMenu} />

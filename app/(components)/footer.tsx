@@ -11,17 +11,17 @@ function Footer() {
             <h2 className="text-gray-900 text-xl font-bold">Links</h2>
             <div className="flex flex-col text-gray-700 space-y-2">
               <Link href="/">
-                <div className="transition-all ease-in after:h-[2px] after:w-full after:absolute after:bg-green-500 after:bottom-0 after:left-0 relative w-min hover:after:scale-x-100 after:scale-x-0 after:origin-right duration-1000 hover:after:origin-left after:transition-transform">
+                <div className="transition-all ease-in after:h-[2px] after:w-full after:absolute after:bg-gray-500 after:bottom-0 after:left-0 relative w-min hover:after:scale-x-100 after:scale-x-0 after:origin-right duration-1000 hover:after:origin-left after:transition-transform">
                   Home
                 </div>
               </Link>
               <Link href="/careers">
-                <div className="transition-all ease-in after:h-[2px] after:w-full after:absolute after:bg-green-500 after:bottom-0 after:left-0 relative w-min hover:after:scale-x-100 after:scale-x-0 after:origin-right duration-1000 hover:after:origin-left after:transition-transform">
+                <div className="transition-all ease-in after:h-[2px] after:w-full after:absolute after:bg-gray-500 after:bottom-0 after:left-0 relative w-min hover:after:scale-x-100 after:scale-x-0 after:origin-right duration-1000 hover:after:origin-left after:transition-transform">
                   Careers
                 </div>
               </Link>
               <Link href="/about">
-                <div className="transition-all ease-in after:h-[2px] after:w-full after:absolute after:bg-green-500 after:bottom-0 after:left-0 relative w-min hover:after:scale-x-100 after:scale-x-0 after:origin-right duration-1000 hover:after:origin-left after:transition-transform">
+                <div className="transition-all ease-in after:h-[2px] after:w-full after:absolute after:bg-gray-500 after:bottom-0 after:left-0 relative w-min hover:after:scale-x-100 after:scale-x-0 after:origin-right duration-1000 hover:after:origin-left after:transition-transform">
                   About
                 </div>
               </Link>
