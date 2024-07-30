@@ -16,13 +16,13 @@ export default function CardsBanner() {
         },
         {
             number: 3,
-            heading: "Take Informed Decision",
+            heading: "Make Informed Decisions",
             content: "By keeping abreast of new developments, patients and healthcare professionals can make informed decisions for better healthcare and enhanced quality of life."
         },
     ];
 
     return (
-        <div className="bg-[#F3FFEB] to-[#DBE5EB] flex w-full lg:px-16 lg:gap-16 md:gap-8 md:px-8 gap-4 px-4 justify-between relative flex-col md:flex-row flex-wrap ">
+        <div className=" flex w-full lg:px-16 lg:gap-16 md:gap-8 md:px-8 gap-4 px-4 justify-between relative flex-col md:flex-row flex-wrap ">
             {cards.map((card, i) => <Card key={i} {...card} />)}
         </div>
     );
@@ -69,10 +69,10 @@ export function Card({ number, heading, content }: {
                     transform: `perspective(3000px) rotateX(${(mouse.y).toFixed(1)}deg) rotateY(${(mouse.x).toFixed(1)}deg)`,
                     transition: !isHovered ? "transform 0.5s ease, box-shadow 0.5s ease" : "box-shadow 0.5s ease",
                 }}
-                className=" text-gray-600 h-full hover:[box-shadow:0_40px_70px_-15px_rgba(0,0,0,0.3)] lg:p-16 md:p-12 p-8 bg-[#DEF5D2] rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-100 border border-gray-100"
+                className=" text-gray-600 h-full hover:[box-shadow:0_40px_70px_-15px_rgba(0,0,0,0.3)] bg-[#eee] lg:p-16 md:p-12 p-8 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-100 border border-gray-100"
             >
                 <div className="flex items-center mb-4">
-                    <div className="text-5xl lg:text-7xl font-bold text-[#3C6E71] mr-4">{number}</div>
+                    <div className="text-5xl lg:text-7xl font-bold  mr-4">{number}</div>
                     <h1 className="lg:text-3xl md:text-2xl text-[1.25rem] font-black">{heading}</h1>
                 </div>
                 <p className="lg:text-xl md:text-lg text-base">{content}</p>
@@ -83,7 +83,7 @@ export function Card({ number, heading, content }: {
                         translate: '-50% -50%',
                         opacity: glare.opacity
                     }}
-                    className="pointer-events-none absolute block rounded-full bg-[radial-gradient(circle_at_center,#ffffffff,#ffffff00,#ffffff00)] blur-xl group-hover:opacity-35 opacity-0"
+                    className="pointer-events-none absolute block rounded-full blur-xl group-hover:opacity-35 opacity-0"
                 ></span>
             </div>
         </div >

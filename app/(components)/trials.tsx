@@ -98,7 +98,7 @@ function Histogram({ dimensions }: { dimensions: { width: number; height: number
         barContainer.append('rect')
             .attr('x', 0)
             .attr('width', width)
-            .attr('fill', '#F6FFF0')
+            .attr('fill', '#fafafa')
             .attr('y', height - 40)
             .attr('height', 20);
 
