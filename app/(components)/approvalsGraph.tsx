@@ -114,7 +114,7 @@ const Approvals = () => {
 
 
     return (
-        <div className="bg-[#f1ffe9ab] lg:my-48 my-20 lg:px-32 md:px-16 px-4">
+        <div className=" lg:my-48 my-20 lg:px-32 md:px-16 px-4">
             <h1 className="lg:text-4xl md:text-2xl text-md text-center mx-auto mb-8 lg:mb-20 lg:leading-normal md:leading-normal leading-normal  ">
                 <span className="font-bold text-green-500 lg:text-6xl md:text-5xl text-2xl">Cancer drugs approved by the&nbsp;FDA</span> are continually increasing every year.
             </h1>
@@ -130,9 +130,16 @@ const Approvals = () => {
                         className='absolute cursor-pointer text-[#aade8d] p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] right-4 translate-y-[-50%]]'>
                         <FaChevronRight />
                     </span>
-                    <div className={cn("flex overflow-hidden w-full lg:w-[unset] h-[400px]  border-4 pb-5 border-[#aade8d] rounded-2xl", {
+                    <div className={cn("flex w-full lg:w-[unset] h-[400px] relative transition-all duration-1000    pb-5  rounded-2xl", {
                         // 'opacity-0': currentIndex == 0,
-                    })}>
+                        
+                    })}
+                    
+                        style={{
+                            translate: `${(currentIndex+2) * -100}px 0`,
+                            left: `50%`
+                        }}
+                    >
                         {heights.map((d, index) => (
                             <div
                                 key={index}
@@ -142,10 +149,11 @@ const Approvals = () => {
                                 // animate={{ opacity: 1, x: 0 }}
                                 // exit={{ opacity: index == 0 ? 0 : 1, x: "-100%" }}
                                 style={{
-                                    minWidth: '20%',
+                                    minWidth: '100px',
                                     transition: 'all 1s ease-in-out',
                                     // transition: currentIndex == 0 ? 'opacity 1s ease-in-out' : 'all 1s ease-in-out',
-                                    transform: `translateX(${-currentIndex * 100}%) `,
+                                    // transform: `translateX(${-currentIndex * 100}%) `,
+                                    transform: `translateX(-50%) `,
                                     opacity: currentIndex == accyearApproved.length || currentIndex == -1 ? 0 : 1
                                 }}
                                 onClick={() => { handleClick(_ => (index - 1) % (accyearApproved.length + 2) - 1); }}
@@ -167,7 +175,7 @@ const Approvals = () => {
                         ))}
                     </div>
                 </div>
-                <div className="lg:flex-[2_2_0] text-[#80b465] rounded-xl overflow-hidden relative ">
+                <div className="lg:flex-[2_2_0]  rounded-xl overflow-hidden relative ">
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{
@@ -183,8 +191,8 @@ const Approvals = () => {
                         <div
                             className="flex  md:flex-col gap-2">
                             {yearDrugs.map(({ cancer_type, drug_name, date }) =>
-                                <div className='border-2 border-[#aade8d] bg-transparent w-full min-w-full h-full  rounded-xl p-2 '>
-                                    <div className='font-bold truncate overflow-ellipsis'>{drug_name}</div> <div className='  overflow-ellipsis  text-xs min-w-max font-light'>{date}</div>
+                                <div className='border-b-2 mb-1 w-full min-w-full h-full'>
+                                    <div className='font-bold truncate overflow-ellipsis capitalize'>{drug_name}</div> <div className='  overflow-ellipsis  text-xs min-w-max font-light'>{date}</div>
                                     <div className=" truncate overflow-ellipsis ">{cancer_type}</div>
                                 </div>)
                             }

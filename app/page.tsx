@@ -7,33 +7,33 @@ import ProgressTracker from '@/app/(components)/ProgressTracker';
 import HeroSection from '@/app/(components)/hero-section';
 import CardsBanner from './(components)/cardsBanner';
 
-const sections = ['1', '2', '3', '4', 'mutations'];
+const sections = ['1', '3', '4', 'mutations'];
 
 
 function Home() {
 
 
   return (
-    <div className="bg-[#F3FFEB] text-gray-700">
+    <div className="bg-background text-gray-700">
       <ProgressTracker sections={sections} />
       <section id='1' className=''>
         <HeroSection />
       </section>
-      <section id='2'>
-        <div className='bg-[#fee0dde0] flex justify-center items-center'>
+      <section>
+        <div className=' flex justify-center items-center'>
           <CardsBanner />
         </div>
       </section>
       <section id='3'>
         <Approvals />
       </section>
-      <section id='4' className='w-full bg-[#f1ffe9ab] lg:my-48 my-20 lg:px-32  px-4 sm:px-16 flex flex-col items-center justify-center '>
+      <section id='4' className='w-full  lg:my-48 my-20 lg:px-32  px-4 sm:px-16 flex flex-col items-center justify-center '>
         <div className='lg:text-4xl md:text-2xl text-md text-center mb-8 lg:mb-20 px-3 lg:leading-normal md:leading-normal leading-normal'>
           <span className="font-bold text-orange-500 lg:text-6xl md:text-5xl text-2xl">Exponential increase in&nbsp;clinical&nbsp;trials</span> will further complicate the landscape of oncology treatment.
         </div>
         <Trials className={'flex justify-center w-[80%] mx-auto'} />
       </section>
-      <section id={'mutations'} className='bg-[#f1ffe9ab] lg:mt-48 mt-20 lg:pb-48 pb-20 w-full lg:px-32  px-4 sm:px-16 '>
+      <section id={'mutations'} className=' lg:mt-48 mt-20 lg:pb-48 pb-20 w-full lg:px-32  px-4 sm:px-16 '>
         <div className='lg:text-4xl md:text-2xl text-md text-center lg:leading-normal md:leading-normal leading-normal px-2 mb-20'>
           Victreat aspires to be your <span className=" font-bold text-[#22c1d6] lg:text-6xl md:text-5xl text-2xl ">trusted partner at navigating the complexities</span> of cancer stages, mutations and the multitude of clinical trial options available.
         </div>

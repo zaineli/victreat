@@ -45,7 +45,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className='fixed overflow-hidden top-0 left-0 right-0 bottom-0 bg-[#F3FFEB] z-[1500] flex flex-col py-4 px-8'
+            className='fixed overflow-hidden top-0 left-0 right-0 bottom-0 bg-[#eee] z-[1500] flex flex-col py-4 px-8'
             variants={menuVariants}
             initial='hidden'
             animate='visible'

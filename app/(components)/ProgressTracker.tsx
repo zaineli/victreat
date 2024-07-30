@@ -31,7 +31,7 @@ const ProgressTracker = ({ sections }: {
     };
   }, [sections]);
 
-  const icons = [Home, Goal, Pill, FlaskConical, Map ];
+  const icons = [Home, Pill, FlaskConical, Map ];
 
   return (
     <div className="hidden md:flex fixed right-14 top-[30%] z-[2000]">
@@ -42,7 +42,7 @@ const ProgressTracker = ({ sections }: {
             <a href={'#' + id} key={index} className="flex flex-col items-center z-10">
               <div
                 className={`w-10 h-10 p-2  rounded-full flex items-center justify-center ${
-                  index <= activeIndex ? 'bg-[#aade8d]' : 'bg-gray-300'
+                  index <= activeIndex ? 'bg-gray-700' : 'bg-gray-300'
                 }`}
               >
                 {/* <Home /> */}
@@ -51,7 +51,7 @@ const ProgressTracker = ({ sections }: {
                 />
               </div>
               {index !== sections.length - 1 && (
-                <div className={`w-1 h-8 ${index < activeIndex ? 'bg-[#92e665aa]' : 'bg-gray-300'}`}></div>
+                <div className={`w-1 h-8 ${index < activeIndex ? 'bg-gray-700' : 'bg-gray-300'}`}></div>
               )}
             </a>
           );
