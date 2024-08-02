@@ -124,8 +124,8 @@ const Approvals = () => {
 
     return (
         <div className=" lg:my-48 my-20 lg:px-32 md:px-16 px-4">
-            <h1 className="lg:text-4xl md:text-2xl text-md text-center mx-auto mb-8 lg:leading-normal md:leading-normal leading-normal  ">
-                <span className="font-bold text-green-500 lg:text-6xl md:text-5xl text-2xl">Cancer drugs approved by the&nbsp;FDA</span> are continually increasing every year.
+            <h1 className="lg:text-4xl md:text-2xl text-md text-center mx-auto mb-8 lg:mb-20 lg:leading-normal md:leading-normal leading-normal  ">
+                <span className="font-bold text-green-500 lg:text-6xl md:text-5xl text-2xl">Cancer medications approved by the&nbsp;FDA</span> are continually increasing every year.
             </h1>
             <div ref={ref} className="flex flex-col  items-stretch lg:flex-row gap-16 justify-between">
                 <div className="flex lg:flex-[3_3_0]   overflow-hidden  relative" >
@@ -207,7 +207,7 @@ const Approvals = () => {
                             
                             className=' border-2 rounded-2xl py-2 px-4 mb-1 w-full min-w-full h-full'>
                                     <div className='font-bold truncate overflow-ellipsis capitalize'>{drug_name}</div> <div className='  overflow-ellipsis  text-xs min-w-max font-light'>{date}</div>
-                                    <div className=" truncate overflow-ellipsis ">{cancer_type}</div>
+                                    <div className=" truncate overflow-ellipsis capitalize">{cancer_type}</div>
                                 </motion.div>)
                             }
                         </div>

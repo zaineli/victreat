@@ -7,17 +7,17 @@ export default function CardsBanner() {
         {
             number: 1,
             heading: "Stay Updated",
-            content: "Staying informed about the latest advancements in cancer treatment is essential, as the field is rapidly evolving with groundbreaking discoveries."
+            content: "Stay informed about the latest advancements in cancer treatment. The field is rapidly evolving with groundbreaking discoveries."
         },
         {
             number: 2,
             heading: "Navigate With Ease and Confidence",
-            content: "Victreat serves as a portal that simplifies the complex treatment landscape and guides individuals through treatment guidelines with ease and confidence."
+            content: "Victreat serves as a portal that simplifies the complex treatment landscape and treatment guidelines."
         },
         {
             number: 3,
             heading: "Make Informed Decisions",
-            content: "By keeping abreast of new developments, patients and healthcare professionals can make informed decisions for better healthcare and enhanced quality of life."
+            content: "By keeping abreast of new developments, patients and healthcare professionals can make informed decisions for enhanced quality of life."
         },
     ];
 
