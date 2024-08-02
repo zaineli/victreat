@@ -12,7 +12,7 @@ const Circle = React.forwardRef<
     <div
       ref={ref}
       className={cn(
-        "z-10 flex  aspect-square w-max min-w-max box-border  items-center justify-center rounded-full  bg-[#d5eee6] border-2 border-[#8be0f5] text-[#22c1d6] p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+        "z-10 flex  aspect-square w-max min-w-max box-border  items-center justify-center rounded-full  bg-[#d3f0f7] border-2 border-[#8be0f5] text-[#22c1d6] p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
         className
       )}
     >
@@ -64,7 +64,7 @@ export function MutationsGraph({
             {/* <Circle ref={mainCircleRef}>
               {cancer.name}
             </Circle> */}
-            <div ref={mainCircleRef} className="bg-[#d5eee6] text-[#22c1d6] border-[#8be0f5] border-2 text-2xl px-4 z-10 flex h-12 w-max items-center justify-center rounded-full  p-3 " >
+            <div ref={mainCircleRef} className="bg-[#d3f0f7] text-[#22c1d6] border-[#8be0f5] border-2 text-2xl px-4 z-10 flex h-12 w-max items-center justify-center rounded-full  p-3 " >
               {cancer.name}
             </div>
           </div>
