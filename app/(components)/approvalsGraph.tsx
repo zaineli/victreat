@@ -24,9 +24,12 @@ const Approvals = () => {
     const [stopped, setStopped] = useState(false);
     const [drugs, setDrugs] = useState<Drug[]>([]);
     const ref = useRef<HTMLDivElement>(null);
-    const isHovered = useMouseHover(ref);
+    const isHovered = true;
+    // const isHovered = useMouseHover(ref);
     const intervelRef = useRef<NodeJS.Timeout>();
-    const scrollRef = useRef<HTMLDivElement>(null);
+    const scrollXRef = useRef<HTMLDivElement>(null);
+    const scrollYRef = useRef<HTMLDivElement>(null);
+    // const scrollRef = useRef<HTMLDivElement>(null);
     const [showScrollBottom, setShowScrollBottom] = useState(true);
     const [scrollTop, setScrollTop] = useState(0);
     const stoppedTimeout = useRef<NodeJS.Timeout | null>(null);
@@ -52,36 +55,40 @@ const Approvals = () => {
 
 
     function scrollDown() {
-        if (!scrollRef.current) return;
-        const height = scrollRef.current.getBoundingClientRect().height;
-        scrollRef.current?.scrollBy({ top: height, behavior: 'smooth' })
+        if (!scrollYRef.current) return;
+        const height = scrollYRef.current.getBoundingClientRect().height;
+        scrollYRef.current?.scrollBy({ top: height, behavior: 'smooth' })
         setShowScrollBottom(true);
-        setScrollTop(scrollRef.current.scrollTop + height);
+        setScrollTop(scrollYRef.current.scrollTop + height);
+        console.log(scrollYRef.current.scrollTop, height)
     }
 
     function scrollUp() {
-        if (!scrollRef.current) return;
-        const height = scrollRef.current.getBoundingClientRect().height;
-        scrollRef.current?.scrollBy({ top: -height, behavior: 'smooth' },)
+        if (!scrollYRef.current) return;
+        const height = scrollYRef.current.getBoundingClientRect().height;
+        scrollYRef.current?.scrollBy({ top: -height, behavior: 'smooth' },)
         setShowScrollBottom(true);
-        setScrollTop(scrollRef.current.scrollTop - height);
+        setScrollTop(scrollYRef.current.scrollTop - height);
+        console.log(scrollYRef.current.scrollTop, height)
     }
 
     function scrollLeft() {
-        if (!scrollRef.current) return;
+        if (!scrollXRef.current) return;
 
-        const width = scrollRef.current.getBoundingClientRect().width;
-        console.log("moving!", scrollRef.current, width)
-        scrollRef.current?.scrollBy({ left: -width + 72, behavior: 'smooth' })
+        const width = scrollXRef.current.getBoundingClientRect().width;
+        console.log("moving!", scrollXRef.current, width)
+        scrollXRef.current?.scrollBy({ left: -width + 72, behavior: 'smooth' })
                 // scrollRef.current?.scrollBy({ left: -width + 24, behavior: 'smooth' })
     }
 
     function scrollRight() {
-        if (!scrollRef.current) return;
+        console.log(scrollXRef.current)
 
-        const width = scrollRef.current.getBoundingClientRect().width;
-        console.log("moving!", scrollRef.current, width)
-        scrollRef.current?.scrollBy({ left: width - 72, behavior: 'smooth' },)
+        if (!scrollXRef.current) return;
+
+        const width = scrollXRef.current.getBoundingClientRect().width;
+        console.log("moving!", scrollXRef.current, width)
+        scrollXRef.current?.scrollBy({ left: width - 72, behavior: 'smooth' },)
                 // scrollRef.current?.scrollBy({ left: width - 24, behavior: 'smooth' },)
     }
 
@@ -124,15 +131,15 @@ const Approvals = () => {
                 <div className="flex lg:flex-[3_3_0]   overflow-hidden  relative" >
                     <span
                         onClick={() => { handleClick(i => (i + accyearApproved.length + 2) % (accyearApproved.length + 2) - 1) }}
-                        className='absolute cursor-pointer text-[#aade8d] p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] left-4 translate-y-[-50%]]'>
+                        className='absolute bg-[#eef5ee] cursor-pointer text-[#aade8d] p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] left-4 translate-y-[-50%]]'>
                         <FaChevronLeft />
                     </span>
                     <span
                         onClick={() => { handleClick(i => (i + 2) % (accyearApproved.length + 2) - 1) }}
-                        className='absolute cursor-pointer text-[#aade8d] p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] right-4 translate-y-[-50%]]'>
+                        className='absolute bg-[#eef5ee] cursor-pointer text-[#aade8d] p-2 text-lg flex justify-center items-center z-50 box-content rounded-full top-[50%] right-4 translate-y-[-50%]]'>
                         <FaChevronRight />
                     </span>
-                    <div className={cn("flex w-full lg:w-[unset] h-[400px] relative transition-all duration-1000    pb-5  rounded-2xl", {
+                    <div className={cn("flex w-full lg:w-[unset] h-[400px] relative transition-all ease-in-out duration-1000    pb-5  rounded-2xl", {
                         // 'opacity-0': currentIndex == 0,
                         
                     })}
@@ -178,28 +185,33 @@ const Approvals = () => {
                     </div>
                 </div>
                 <div className="lg:flex-[2_2_0]  rounded-xl overflow-hidden relative ">
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{
-                            opacity: 1, transition: {
-                                delay: 0.25,
-                                duration: 0.5
-                            }
-                        }}
+                    <div
+                        // initial={{ opacity: 0 }}
+                        // animate={{
+                        //     opacity: 1, transition: {
+                        //         delay: 0.25,
+                        //         duration: 0.5
+                        //     }
+                        // }}
                         key={selected}
-                        ref={scrollRef}
+                        ref={scrollXRef}
                         onScroll={() => stop(5000) }
                         className="flex  z-10 md:h-[400px] px-10 md:px-0 flex-col md:mx-0 gap-2 overflow-x-auto ">
                         <div
-                            className="flex  md:flex-col gap-2">
+                            ref={scrollYRef}
+                            className="flex  md:flex-col gap-2 md:overflow-x-hidden">
                             {yearDrugs.map(({ cancer_type, drug_name, date }) =>
-                                <div className=' border-2 rounded-2xl py-2 px-4 mb-1 w-full min-w-full h-full'>
+                                <motion.div
+                                initial={{ x: 25, opacity: 0 }}
+                                animate={{ x: 0, opacity: 100, transition: { duration: 1, ease: 'easeInOut' } }}
+                            
+                            className=' border-2 rounded-2xl py-2 px-4 mb-1 w-full min-w-full h-full'>
                                     <div className='font-bold truncate overflow-ellipsis capitalize'>{drug_name}</div> <div className='  overflow-ellipsis  text-xs min-w-max font-light'>{date}</div>
                                     <div className=" truncate overflow-ellipsis ">{cancer_type}</div>
-                                </div>)
+                                </motion.div>)
                             }
                         </div>
-                    </motion.div>
+                    </div>
                     <div
                         className={cn(" z-40 hidden md:flex justify-center items-start absolute inset-x-0 left-0 w-full h-1/4 top-0    ",
                             {
@@ -207,11 +219,11 @@ const Approvals = () => {
                                 'opacity-100': scrollTop >= 1
                             }
                         )}>
-                        <Button
+                        <button
                             onClick={scrollUp}
-                            className=" absolute bg-transparent mt-4 text-[#aade8d] rounded-full z-40">
+                            className=" absolute bg-[#eef5ee] p-2 mt-4 text-[#aade8d] rounded-full z-40">
                             <FaChevronUp />
-                        </Button>
+                        </button>
                     </div>
                     <div
                         className={cn(" z-40 hidden md:flex justify-center items-end absolute inset-x-0 left-0 w-full h-1/4 bottom-0 ",
@@ -220,20 +232,20 @@ const Approvals = () => {
                                 'opacity-100': showScrollBottom
                             }
                         )}>
-                        <Button
+                        <button
                             onClick={scrollDown}
-                            className=" absolute mb-4 bg-transparent text-[#aade8d] rounded-full z-40">
+                            className=" absolute mb-4 bg-[#eef5ee] p-2 text-[#aade8d] rounded-full z-40">
                             <FaChevronDown />
-                        </Button>
+                        </button>
                     </div>
                     <button
                         onClick={scrollRight}
-                        className="   md:hidden bg-[#eeffee] p-2 text-[#aade8d] absolute mb-4 right-1 top-[50%] translate-y-[-50%] rounded-full  aspect-square  z-40">
+                        className="   md:hidden bg-[#eef5ee] p-2 text-[#aade8d] absolute mb-4 right-1 top-[50%] translate-y-[-50%] rounded-full  aspect-square  z-40">
                         <FaChevronRight />
                     </button>
                     <button
                         onClick={scrollLeft}
-                        className="   md:hidden bg-[#eeffee] p-2 text-[#aade8d] absolute mb-4 left-1 top-[50%] translate-y-[-50%] rounded-full  aspect-square  z-40">
+                        className="   md:hidden bg-[#eef5ee] p-2 text-[#aade8d] absolute mb-4 left-1 top-[50%] translate-y-[-50%] rounded-full  aspect-square  z-40">
                         <FaChevronLeft />
                     </button>
                 </div>
