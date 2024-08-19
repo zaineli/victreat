@@ -90,34 +90,38 @@ export const jobsData = [
     id: "medical-research-intern",
     title: "Medical Research Intern",
     expectations:
-      "Our paid Victreat Internship Program for 2024 is specifically designed for medical students. This program offers interns invaluable exposure to world-class medical forums across various specialties, including oncology, neurology, cardiology, endocrinology, psychiatry, and immunology. We are looking for MBBS students to work remotely with us. \nInterns will virtually attend the top medical conferences taking place across the globe, where they will summarize research findings on therapeutic advances and emerging data. These findings will then be presented to our broader team, contributing to our collective knowledge and progress. \nKey responsibilities include attending a medical conference virtually, evaluating the data on the latest drugs by big pharmaceutical companies presenting at the conferences, and staying updated with the latest research being presented at a conference. This also includes compiling relevant information and making presentations on the latest research findings that were presented at the medical conference. The position also requires punctuality and the ability to meet deadlines.\n",
+      "Our paid Victreat Internship Program for 2024 is specifically designed for medical students. This program offers interns invaluable exposure to world-class medical forums across various specialties, including oncology, neurology, cardiology, endocrinology, psychiatry, and immunology. We are looking for MBBS students to work remotely with us. Interns will virtually attend the top medical conferences across the globe, where they will summarize research findings on therapeutic advances and emerging data. These findings will then be presented to our broader team, contributing to our collective knowledge and progress.  Key responsibilities include attending a medical conference virtually, evaluating the data on the latest drugs by big pharmaceutical companies presenting at the conferences, and staying updated with the latest research being presented at a conference. This also includes compiling relevant information and making presentations on the latest research findings that were presented at the medical conference. The position also requires punctuality and the ability to meet deadlines.",
     requirments: [
-        "Currently enrolled in an MBBS program or a related health sciences degree",
-        "Strong interest and proficiency in reading medical literature and the latest research",
-        "Ability to analyze new research data effectively",
-        "Capability to meet deadlines efficiently",
-        "Proficiency in summarizing and presenting research findings",
-        "Excellent communication skills to convey complex medical information clearly",
-        "Strong organizational skills and attention to detail",
-        "Ability to work independently and manage time effectively",
-        "Reliable internet connection and ability to work remotely",
+      "Currently enrolled in an MBBS program or a student enrolled in Biology, Chemistry, or Biochemistry, or a related health sciences degree",
+      "Strong interest and proficiency in reading medical literature and the latest research",
+      "Ability to analyze new research data effectively",
+      "Capability to meet deadlines efficiently",
+      "Proficiency in summarizing and presenting research findings",
+      "Excellent communication skills to convey complex medical information clearly",
+      "Strong organizational skills and attention to detail",
+      "Ability to work independently and manage time effectively",
+      "Reliable internet connection and ability to work remotely",
+
+
     ],
     offerings:
-      "Join our team and enjoy an attractive compensation package that reflects your skills and contributions. We are committed to your professional development, offering a variety of learning opportunities and clear pathways for career advancement. Our engaging team culture fosters collaboration and creativity, ensuring that you thrive in a dynamic work environment. Plus, you’ll have the chance to be at the forefront of groundbreaking advancements in healthcare technology, making a meaningful impact in the industry.",
+      "Join our team and enjoy an attractive compensation package that reflects your skills and contributions. We are committed to your professional development, offering various learning opportunities and clear pathways for career advancement. Our engaging team culture fosters collaboration and creativity, ensuring you thrive in a dynamic work environment. Plus, you’ll have the chance to be at the forefront of groundbreaking advancements in healthcare technology, making a meaningful impact in the industry.",
   },
   {
     id: "research-intern",
     title: "Research Intern",
     expectations:
-      "The role involves supporting the organization and management of all research data related to the Victreat patient-facing portal. Key responsibilities include maintaining comprehensive and up-to-date records of research findings and assisting in the preparation of detailed reports. Additionally, the research intern will be responsible for monitoring upcoming medical conferences. This includes compiling relevant information, making presentations to navigate through the conferences effectively, and staying up-to-date with the most important research being presented at a conference.\n\nThe position also requires strong organizational skills, and the ability to manage multiple tasks simultaneously. The ideal candidate will demonstrate attention to detail, the ability to work independently, and a commitment to contributing to the continuous improvement of patient treatment options through rigorous research.",
+      "The role involves supporting the organization and management of all research data related to the Victreat patient-facing portal. Key responsibilities include maintaining comprehensive and up-to-date records of research findings and assisting in the preparation of detailed reports. Additionally, the research intern will be responsible for monitoring upcoming medical conferences. This includes compiling relevant information, making presentations to navigate through the conferences effectively, and staying up-to-date with the most important research being presented at a conference. The position also requires strong organizational skills, and the ability to manage multiple tasks simultaneously. The ideal candidate will demonstrate attention to detail, the ability to work independently, and a commitment to contributing to the continuous improvement of patient treatment options through rigorous research.",
+
     requirments: [
-      "Preferably a student or a graduate with a degree in Biology, Chemistry, Biotechnology, Biochemistry, or Pharmacy",
-      "Proficient in Microsoft Excel, PowerPoint, and Word",
-      "Exceptional organizational skills with a keen attention to detail",
-      "Punctual and reliable, with a strong sense of responsibility",
-      "Team-driven with the ability to collaborate effectively with cross-functional teams",
+        "Preferably a student or a graduate with a degree in Biology, Chemistry, Biotechnology, Biochemistry, or Pharmacy",
+        "Proficient in Microsoft Excel, PowerPoint, and Word",
+        "Exceptional organizational skills with a keen attention to detail",
+        "Punctual and reliable, with a strong sense of responsibility",
+        "Team-driven with the ability to collaborate effectively with cross-functional teams",
     ],
     offerings:
-      "Join our team and enjoy an attractive compensation package that reflects your skills and contributions. We are committed to your professional development, offering a variety of learning opportunities and clear pathways for career advancement. Our engaging team culture fosters collaboration and creativity, ensuring that you thrive in a dynamic work environment. Plus, you’ll have the chance to be at the forefront of groundbreaking advancements in healthcare technology, making a meaningful impact in the industry.",
+      "Join our team and enjoy an attractive compensation package that reflects your skills and contributions. We are committed to your professional development, offering various learning opportunities and clear pathways for career advancement. Our engaging team culture fosters collaboration and creativity, ensuring you thrive in a dynamic work environment. Plus, you’ll have the chance to be at the forefront of groundbreaking advancements in healthcare technology, making a meaningful impact in the industry.",
   },
+
 ];

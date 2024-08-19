@@ -189,7 +189,7 @@ function JobDetails({ params }: Props) {
                   </div>
                   <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="salary_expectations">
-                      Salary Expectations <span className='text-xs font-normal'>(20000)</span>
+                      Salary Expectations
                     </label>
                     <input
                       min="0"
