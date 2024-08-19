@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 
-const useSectionInView = (options: {
+const useSectionInView = <T>(options: {
   threshold?: number;
   rootMargin?: string;
 } = {
 }) => {
   const [inView, setInView] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<T>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
