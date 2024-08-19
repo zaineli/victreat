@@ -200,8 +200,9 @@ const Approvals = () => {
                         <div
                             ref={scrollYRef}
                             className="flex  md:flex-col gap-2 md:overflow-x-hidden">
-                            {yearDrugs.map(({ cancer_type, drug_name, date }) =>
+                            {yearDrugs.map(({ cancer_type, drug_name, date, id }) =>
                                 <motion.div
+                                key = {cancer_type}
                                 initial={{ x: 25, opacity: 0 }}
                                 animate={{ x: 0, opacity: 100, transition: { duration: 1, ease: 'easeInOut' } }}
                             
