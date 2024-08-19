@@ -66,13 +66,13 @@ function JobDetails({ params }: Props) {
               {p}
             </p>
           )}
-          <h3 className="text-lg font-semibold mb-2">Wishlist for a {job.title}:</h3>
+          <h3 className="text-lg font-semibold mb-2">Requirements</h3>
           <ul className="list-disc list-inside mb-4">
             {job.requirments.map((requirement, index) => (
               <li key={index} className="text-gray-700">{requirement}</li>
             ))}
           </ul>
-          <h2 className="text-lg font-semibold mb-2">What Victreat Solution has to offer</h2>
+          <h2 className="text-lg font-semibold mb-2">What Victreat has to offer</h2>
           <p className="text-gray-700 mb-4">{job.offerings}</p>
           {/* <Link href="/careers">
             <div className="text-blue-500 hover:text-blue-700">Back to Careers</div>
